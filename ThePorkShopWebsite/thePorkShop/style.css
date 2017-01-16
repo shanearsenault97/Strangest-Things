@@ -1,0 +1,134 @@
+/* stylesheet for The Pork Shop website */
+/*--Heather Watterson 7 October 2015 Small Business Assignment 2--*/
+
+#pageHeader {
+
+    height: 400px;
+    background-image: url("Images/porkShopLogo.jpg");
+    width: 800px;
+    margin-left: 10em;
+    font-family: "Arial Rounded MT Bold", cursive, sans-serif;
+
+}
+
+#secondary {
+    height: 50px;
+    width: 800px;
+    align-content: center;
+    text-align: center;
+    margin-left: 10em;
+}
+
+.intro {
+    font-family: Arial;
+    width: 50%;
+    margin: auto;
+}
+
+h1 {
+    color: darkblue
+}
+
+h2 {
+    color: darkslateblue
+}
+
+/*ul.navbar {*/
+    /*list-style-image: url('Images/pork.jpg');*/
+    /*position: absolute;*/
+    /*top: 30em;*/
+    /*left: 2em;*/
+    /*width: 7em;*/
+    /*background-color: #F8F8FF;*/
+/*}*/
+
+ul.navbar {
+    padding: 0;
+}
+
+ul.navbar li {
+    display: inline;
+}
+
+ul.navbar li a {
+    background-color: pink;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px 4px 0 0;
+}
+
+ul.navbar li a:hover {
+    background-color: skyblue;
+}
+
+#menu {
+    width: 600px;
+    background-color: azure;
+    margin: auto;
+
+}
+
+
+
+.food {
+    font-size: larger;
+    color: red;
+    padding: 10px;
+    font-weight: bold;
+}
+
+
+#porkzilla{
+
+    margin-top: 30px;
+}
+#meatloaf{
+
+}
+#steak{
+    float: right;
+
+    margin-right: 105px;
+}
+
+
+.schedule {
+    width: 100%;
+    background-color: beige;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+th {
+    background-color: cornflowerblue;
+    border: 2px solid blue;
+    font-weight: bolder;
+}
+
+tr td {
+    border: solid 2px blue;
+}
+
+body {
+    background-color: aliceblue;
+    margin: auto;
+    text-align: center;
+    width: 80%;
+}
+
+p {
+    word-wrap: normal
+
+}
+
+#links {
+    list-style-image: url('Images/pork.jpg');
+    font-size: x-large;
+    text-transform: uppercase;
+}
+
+span {
+    color: red;
+    font-size: larger;
+}
