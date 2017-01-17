@@ -36,75 +36,85 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.HappyHourCheck = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.HappyHourCheck = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.checkBox19 = new System.Windows.Forms.CheckBox();
             this.checkBox13 = new System.Windows.Forms.CheckBox();
             this.checkBox14 = new System.Windows.Forms.CheckBox();
             this.checkBox15 = new System.Windows.Forms.CheckBox();
             this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.checkBox11 = new System.Windows.Forms.CheckBox();
+            this.checkBox12 = new System.Windows.Forms.CheckBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.checkBox17 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.button24 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.button25 = new System.Windows.Forms.Button();
             this.button26 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.button28 = new System.Windows.Forms.Button();
             this.OrderListBox = new System.Windows.Forms.ListBox();
             this.button29 = new System.Windows.Forms.Button();
             this.button30 = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button27 = new System.Windows.Forms.Button();
+            this.button31 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // BackOfficeButton
@@ -201,122 +211,72 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bar Menu";
             // 
-            // HappyHourCheck
+            // button14
             // 
-            this.HappyHourCheck.AutoSize = true;
-            this.HappyHourCheck.Location = new System.Drawing.Point(7, 23);
-            this.HappyHourCheck.Name = "HappyHourCheck";
-            this.HappyHourCheck.Size = new System.Drawing.Size(93, 20);
-            this.HappyHourCheck.TabIndex = 0;
-            this.HappyHourCheck.Text = "Happy Hour";
-            this.HappyHourCheck.UseVisualStyleBackColor = true;
+            this.button14.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.Location = new System.Drawing.Point(112, 366);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(75, 23);
+            this.button14.TabIndex = 29;
+            this.button14.Text = "Pina Colada";
+            this.button14.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // button16
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 46);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 16);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Domestic Beer";
+            this.button16.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.Location = new System.Drawing.Point(22, 395);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(75, 36);
+            this.button16.TabIndex = 28;
+            this.button16.Text = "Long Island\r\n Ice Tea";
+            this.button16.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // button17
             // 
-            this.button1.Location = new System.Drawing.Point(17, 66);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Canadian";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button17.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.Location = new System.Drawing.Point(112, 395);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(75, 36);
+            this.button17.TabIndex = 27;
+            this.button17.Text = "Alabama\r\n Slammer";
+            this.button17.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // button20
             // 
-            this.button2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(107, 124);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Coors Light";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button20.Location = new System.Drawing.Point(22, 366);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(75, 23);
+            this.button20.TabIndex = 24;
+            this.button20.Text = "Margerita";
+            this.button20.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // label7
             // 
-            this.button3.Location = new System.Drawing.Point(17, 124);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Alpine";
-            this.button3.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(19, 346);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 16);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Cocktails";
             // 
-            // button4
+            // comboBox3
             // 
-            this.button4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(107, 95);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Moose Light";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(17, 95);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Keiths Red";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(107, 66);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "Budweiser";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(108, 178);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 14;
-            this.button7.Text = "Corona";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(18, 207);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 13;
-            this.button8.Text = "MGD";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(18, 178);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
-            this.button12.TabIndex = 9;
-            this.button12.Text = "Guinness";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(15, 158);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 16);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Imported Beer";
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "None",
+            "Rocks",
+            "Pepsi",
+            "Ginger",
+            "7up",
+            "Orange Juice",
+            "Cranberry",
+            "Pineapple"});
+            this.comboBox3.Location = new System.Drawing.Point(111, 316);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(94, 24);
+            this.comboBox3.TabIndex = 22;
+            this.comboBox3.Text = "Choose Mix";
             // 
             // button9
             // 
@@ -377,63 +337,122 @@
             this.label6.Text = "House Shots";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // comboBox3
+            // button7
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(111, 316);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(94, 24);
-            this.comboBox3.TabIndex = 22;
-            this.comboBox3.Text = "Choose Mix";
+            this.button7.Location = new System.Drawing.Point(108, 178);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 14;
+            this.button7.Text = "Corona";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button14
+            // button8
             // 
-            this.button14.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.Location = new System.Drawing.Point(112, 366);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 23);
-            this.button14.TabIndex = 29;
-            this.button14.Text = "Pina Colada";
-            this.button14.UseVisualStyleBackColor = true;
+            this.button8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(18, 207);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 13;
+            this.button8.Text = "MGD";
+            this.button8.UseVisualStyleBackColor = true;
             // 
-            // button16
+            // button12
             // 
-            this.button16.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.Location = new System.Drawing.Point(22, 395);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(75, 36);
-            this.button16.TabIndex = 28;
-            this.button16.Text = "Long Island\r\n Ice Tea";
-            this.button16.UseVisualStyleBackColor = true;
+            this.button12.Location = new System.Drawing.Point(18, 178);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(75, 23);
+            this.button12.TabIndex = 9;
+            this.button12.Text = "Guinness";
+            this.button12.UseVisualStyleBackColor = true;
             // 
-            // button17
+            // label5
             // 
-            this.button17.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.Location = new System.Drawing.Point(112, 395);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(75, 36);
-            this.button17.TabIndex = 27;
-            this.button17.Text = "Alabama\r\n Slammer";
-            this.button17.UseVisualStyleBackColor = true;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(15, 158);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(102, 16);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Imported Beer";
             // 
-            // button20
+            // button6
             // 
-            this.button20.Location = new System.Drawing.Point(22, 366);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(75, 23);
-            this.button20.TabIndex = 24;
-            this.button20.Text = "Margerita";
-            this.button20.UseVisualStyleBackColor = true;
+            this.button6.Location = new System.Drawing.Point(107, 66);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 7;
+            this.button6.Text = "Budweiser";
+            this.button6.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // button5
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(19, 346);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 16);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "Cocktails";
+            this.button5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(17, 95);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Keiths Red";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(107, 95);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "Moose Light";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(17, 124);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Alpine";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(107, 124);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Coors Light";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(17, 66);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Canadian";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(14, 46);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(101, 16);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Domestic Beer";
+            // 
+            // HappyHourCheck
+            // 
+            this.HappyHourCheck.AutoSize = true;
+            this.HappyHourCheck.Location = new System.Drawing.Point(7, 23);
+            this.HappyHourCheck.Name = "HappyHourCheck";
+            this.HappyHourCheck.Size = new System.Drawing.Size(93, 20);
+            this.HappyHourCheck.TabIndex = 0;
+            this.HappyHourCheck.Text = "Happy Hour";
+            this.HappyHourCheck.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -452,52 +471,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Starters";
             // 
-            // button18
+            // checkBox4
             // 
-            this.button18.Location = new System.Drawing.Point(18, 35);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(107, 54);
-            this.button18.TabIndex = 0;
-            this.button18.Text = "Roasted Garlic Soup";
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            this.button19.Location = new System.Drawing.Point(176, 35);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(107, 54);
-            this.button19.TabIndex = 1;
-            this.button19.Text = "Mac N Cheese Balls";
-            this.button19.UseVisualStyleBackColor = true;
-            // 
-            // button21
-            // 
-            this.button21.Location = new System.Drawing.Point(322, 35);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(107, 54);
-            this.button21.TabIndex = 2;
-            this.button21.Text = "Pulled Pork Nachos";
-            this.button21.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(18, 109);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(88, 20);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Crusty Roll";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(121, 109);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(87, 20);
-            this.checkBox2.TabIndex = 7;
-            this.checkBox2.Text = "Cornbread";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(296, 109);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(107, 20);
+            this.checkBox4.TabIndex = 9;
+            this.checkBox4.Text = "Chipotle Mayo";
+            this.checkBox4.UseVisualStyleBackColor = true;
             // 
             // checkBox3
             // 
@@ -509,15 +491,52 @@
             this.checkBox3.Text = "Biscuit";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // checkBox2
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(296, 109);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(107, 20);
-            this.checkBox4.TabIndex = 9;
-            this.checkBox4.Text = "Chipotle Mayo";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(121, 109);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(87, 20);
+            this.checkBox2.TabIndex = 7;
+            this.checkBox2.Text = "Cornbread";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(18, 109);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(88, 20);
+            this.checkBox1.TabIndex = 6;
+            this.checkBox1.Text = "Crusty Roll";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // button21
+            // 
+            this.button21.Location = new System.Drawing.Point(322, 35);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(107, 54);
+            this.button21.TabIndex = 2;
+            this.button21.Text = "Pulled Pork Nachos";
+            this.button21.UseVisualStyleBackColor = true;
+            // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(176, 35);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(107, 54);
+            this.button19.TabIndex = 1;
+            this.button19.Text = "Mac N Cheese Balls";
+            this.button19.UseVisualStyleBackColor = true;
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(18, 35);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(107, 54);
+            this.button18.TabIndex = 0;
+            this.button18.Text = "Roasted Garlic Soup";
+            this.button18.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -535,141 +554,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Main Course";
             // 
-            // button22
-            // 
-            this.button22.Location = new System.Drawing.Point(18, 28);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(107, 63);
-            this.button22.TabIndex = 0;
-            this.button22.Text = "Porkzilla";
-            this.button22.UseVisualStyleBackColor = true;
-            // 
-            // button23
-            // 
-            this.button23.Location = new System.Drawing.Point(176, 28);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(107, 63);
-            this.button23.TabIndex = 1;
-            this.button23.Text = "Bacon Wrapped Meatloaf";
-            this.button23.UseVisualStyleBackColor = true;
-            // 
-            // button24
-            // 
-            this.button24.Location = new System.Drawing.Point(322, 29);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(107, 63);
-            this.button24.TabIndex = 2;
-            this.button24.Text = "Smoked Flap Steak";
-            this.button24.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.checkBox17);
-            this.groupBox4.Controls.Add(this.checkBox8);
-            this.groupBox4.Controls.Add(this.checkBox7);
-            this.groupBox4.Controls.Add(this.checkBox6);
-            this.groupBox4.Controls.Add(this.checkBox5);
-            this.groupBox4.Location = new System.Drawing.Point(10, 105);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(140, 145);
-            this.groupBox4.TabIndex = 3;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Sides";
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(7, 23);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(95, 20);
-            this.checkBox5.TabIndex = 0;
-            this.checkBox5.Text = "Onion Rings";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(8, 46);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(107, 20);
-            this.checkBox6.TabIndex = 1;
-            this.checkBox6.Text = "Mac n Cheese";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(8, 72);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(92, 20);
-            this.checkBox7.TabIndex = 2;
-            this.checkBox7.Text = "Home Fries";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(8, 98);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(124, 20);
-            this.checkBox8.TabIndex = 3;
-            this.checkBox8.Text = "Mashed Potatoes";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.checkBox18);
-            this.groupBox5.Controls.Add(this.checkBox9);
-            this.groupBox5.Controls.Add(this.checkBox10);
-            this.groupBox5.Controls.Add(this.checkBox11);
-            this.groupBox5.Controls.Add(this.checkBox12);
-            this.groupBox5.Location = new System.Drawing.Point(156, 105);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(140, 145);
-            this.groupBox5.TabIndex = 4;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Sides";
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(8, 98);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(124, 20);
-            this.checkBox9.TabIndex = 3;
-            this.checkBox9.Text = "Mashed Potatoes";
-            this.checkBox9.UseVisualStyleBackColor = true;
-            // 
-            // checkBox10
-            // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(8, 72);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(92, 20);
-            this.checkBox10.TabIndex = 2;
-            this.checkBox10.Text = "Home Fries";
-            this.checkBox10.UseVisualStyleBackColor = true;
-            // 
-            // checkBox11
-            // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(8, 46);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(107, 20);
-            this.checkBox11.TabIndex = 1;
-            this.checkBox11.Text = "Mac n Cheese";
-            this.checkBox11.UseVisualStyleBackColor = true;
-            // 
-            // checkBox12
-            // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(7, 23);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(95, 20);
-            this.checkBox12.TabIndex = 0;
-            this.checkBox12.Text = "Onion Rings";
-            this.checkBox12.UseVisualStyleBackColor = true;
-            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.checkBox19);
@@ -683,6 +567,16 @@
             this.groupBox6.TabIndex = 5;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Sides";
+            // 
+            // checkBox19
+            // 
+            this.checkBox19.AutoSize = true;
+            this.checkBox19.Location = new System.Drawing.Point(8, 119);
+            this.checkBox19.Name = "checkBox19";
+            this.checkBox19.Size = new System.Drawing.Size(56, 20);
+            this.checkBox19.TabIndex = 5;
+            this.checkBox19.Text = "None";
+            this.checkBox19.UseVisualStyleBackColor = true;
             // 
             // checkBox13
             // 
@@ -724,15 +618,19 @@
             this.checkBox16.Text = "Onion Rings";
             this.checkBox16.UseVisualStyleBackColor = true;
             // 
-            // checkBox17
+            // groupBox5
             // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.Location = new System.Drawing.Point(8, 119);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(56, 20);
-            this.checkBox17.TabIndex = 4;
-            this.checkBox17.Text = "None";
-            this.checkBox17.UseVisualStyleBackColor = true;
+            this.groupBox5.Controls.Add(this.checkBox18);
+            this.groupBox5.Controls.Add(this.checkBox9);
+            this.groupBox5.Controls.Add(this.checkBox10);
+            this.groupBox5.Controls.Add(this.checkBox11);
+            this.groupBox5.Controls.Add(this.checkBox12);
+            this.groupBox5.Location = new System.Drawing.Point(156, 105);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(140, 145);
+            this.groupBox5.TabIndex = 4;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Sides";
             // 
             // checkBox18
             // 
@@ -744,21 +642,142 @@
             this.checkBox18.Text = "None";
             this.checkBox18.UseVisualStyleBackColor = true;
             // 
-            // checkBox19
+            // checkBox9
             // 
-            this.checkBox19.AutoSize = true;
-            this.checkBox19.Location = new System.Drawing.Point(8, 119);
-            this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(56, 20);
-            this.checkBox19.TabIndex = 5;
-            this.checkBox19.Text = "None";
-            this.checkBox19.UseVisualStyleBackColor = true;
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Location = new System.Drawing.Point(8, 98);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(124, 20);
+            this.checkBox9.TabIndex = 3;
+            this.checkBox9.Text = "Mashed Potatoes";
+            this.checkBox9.UseVisualStyleBackColor = true;
+            // 
+            // checkBox10
+            // 
+            this.checkBox10.AutoSize = true;
+            this.checkBox10.Location = new System.Drawing.Point(8, 72);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(92, 20);
+            this.checkBox10.TabIndex = 2;
+            this.checkBox10.Text = "Home Fries";
+            this.checkBox10.UseVisualStyleBackColor = true;
+            // 
+            // checkBox11
+            // 
+            this.checkBox11.AutoSize = true;
+            this.checkBox11.Location = new System.Drawing.Point(8, 46);
+            this.checkBox11.Name = "checkBox11";
+            this.checkBox11.Size = new System.Drawing.Size(107, 20);
+            this.checkBox11.TabIndex = 1;
+            this.checkBox11.Text = "Mac n Cheese";
+            this.checkBox11.UseVisualStyleBackColor = true;
+            // 
+            // checkBox12
+            // 
+            this.checkBox12.AutoSize = true;
+            this.checkBox12.Location = new System.Drawing.Point(7, 23);
+            this.checkBox12.Name = "checkBox12";
+            this.checkBox12.Size = new System.Drawing.Size(95, 20);
+            this.checkBox12.TabIndex = 0;
+            this.checkBox12.Text = "Onion Rings";
+            this.checkBox12.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.checkBox17);
+            this.groupBox4.Controls.Add(this.checkBox8);
+            this.groupBox4.Controls.Add(this.checkBox7);
+            this.groupBox4.Controls.Add(this.checkBox6);
+            this.groupBox4.Controls.Add(this.checkBox5);
+            this.groupBox4.Location = new System.Drawing.Point(10, 105);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(140, 145);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Sides";
+            // 
+            // checkBox17
+            // 
+            this.checkBox17.AutoSize = true;
+            this.checkBox17.Location = new System.Drawing.Point(8, 119);
+            this.checkBox17.Name = "checkBox17";
+            this.checkBox17.Size = new System.Drawing.Size(56, 20);
+            this.checkBox17.TabIndex = 4;
+            this.checkBox17.Text = "None";
+            this.checkBox17.UseVisualStyleBackColor = true;
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Location = new System.Drawing.Point(8, 98);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(124, 20);
+            this.checkBox8.TabIndex = 3;
+            this.checkBox8.Text = "Mashed Potatoes";
+            this.checkBox8.UseVisualStyleBackColor = true;
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Location = new System.Drawing.Point(8, 72);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(92, 20);
+            this.checkBox7.TabIndex = 2;
+            this.checkBox7.Text = "Home Fries";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(8, 46);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(107, 20);
+            this.checkBox6.TabIndex = 1;
+            this.checkBox6.Text = "Mac n Cheese";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(7, 23);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(95, 20);
+            this.checkBox5.TabIndex = 0;
+            this.checkBox5.Text = "Onion Rings";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // button24
+            // 
+            this.button24.Location = new System.Drawing.Point(322, 29);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(107, 63);
+            this.button24.TabIndex = 2;
+            this.button24.Text = "Smoked Flap Steak";
+            this.button24.UseVisualStyleBackColor = true;
+            // 
+            // button23
+            // 
+            this.button23.Location = new System.Drawing.Point(176, 28);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(107, 63);
+            this.button23.TabIndex = 1;
+            this.button23.Text = "Bacon Wrapped Meatloaf";
+            this.button23.UseVisualStyleBackColor = true;
+            // 
+            // button22
+            // 
+            this.button22.Location = new System.Drawing.Point(18, 28);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(107, 63);
+            this.button22.TabIndex = 0;
+            this.button22.Text = "Porkzilla";
+            this.button22.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(715, 113);
+            this.label8.Location = new System.Drawing.Point(718, 204);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(95, 16);
             this.label8.TabIndex = 11;
@@ -781,15 +800,6 @@
             this.button26.TabIndex = 13;
             this.button26.Text = "Print Bill";
             this.button26.UseVisualStyleBackColor = true;
-            // 
-            // button27
-            // 
-            this.button27.Location = new System.Drawing.Point(769, 24);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(157, 49);
-            this.button27.TabIndex = 14;
-            this.button27.Text = "Show Reservations";
-            this.button27.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -814,15 +824,15 @@
             // 
             this.OrderListBox.FormattingEnabled = true;
             this.OrderListBox.ItemHeight = 16;
-            this.OrderListBox.Location = new System.Drawing.Point(718, 136);
+            this.OrderListBox.Location = new System.Drawing.Point(718, 224);
             this.OrderListBox.Name = "OrderListBox";
-            this.OrderListBox.Size = new System.Drawing.Size(224, 388);
+            this.OrderListBox.Size = new System.Drawing.Size(224, 324);
             this.OrderListBox.TabIndex = 17;
             // 
             // button29
             // 
             this.button29.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button29.Location = new System.Drawing.Point(718, 531);
+            this.button29.Location = new System.Drawing.Point(834, 199);
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(75, 23);
             this.button29.TabIndex = 18;
@@ -839,18 +849,110 @@
             this.button30.Text = "Logout";
             this.button30.UseVisualStyleBackColor = true;
             // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.button31);
+            this.groupBox7.Controls.Add(this.button27);
+            this.groupBox7.Controls.Add(this.textBox3);
+            this.groupBox7.Controls.Add(this.textBox2);
+            this.groupBox7.Controls.Add(this.label12);
+            this.groupBox7.Controls.Add(this.label11);
+            this.groupBox7.Controls.Add(this.dateTimePicker1);
+            this.groupBox7.Controls.Add(this.comboBox4);
+            this.groupBox7.Controls.Add(this.label10);
+            this.groupBox7.Location = new System.Drawing.Point(719, 4);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(234, 189);
+            this.groupBox7.TabIndex = 20;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Reservations";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(89, 53);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(121, 24);
+            this.comboBox4.TabIndex = 6;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(13, 61);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(40, 16);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Table";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(11, 22);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
+            this.dateTimePicker1.TabIndex = 7;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(12, 114);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(76, 16);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Num Guests";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(13, 86);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(41, 16);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "Name";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(61, 86);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(149, 23);
+            this.textBox2.TabIndex = 10;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(91, 116);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(39, 23);
+            this.textBox3.TabIndex = 11;
+            // 
+            // button27
+            // 
+            this.button27.Location = new System.Drawing.Point(138, 116);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(75, 23);
+            this.button27.TabIndex = 12;
+            this.button27.Text = "Reserve";
+            this.button27.UseVisualStyleBackColor = true;
+            // 
+            // button31
+            // 
+            this.button31.Location = new System.Drawing.Point(48, 147);
+            this.button31.Name = "button31";
+            this.button31.Size = new System.Drawing.Size(142, 36);
+            this.button31.TabIndex = 13;
+            this.button31.Text = "Show Reservations";
+            this.button31.UseVisualStyleBackColor = true;
+            // 
             // ThePorkShopPOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(965, 617);
+            this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.button30);
             this.Controls.Add(this.button29);
             this.Controls.Add(this.OrderListBox);
             this.Controls.Add(this.button28);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button27);
             this.Controls.Add(this.button26);
             this.Controls.Add(this.button25);
             this.Controls.Add(this.label8);
@@ -873,12 +975,14 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -951,12 +1055,21 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Button button27;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button28;
         private System.Windows.Forms.ListBox OrderListBox;
         private System.Windows.Forms.Button button29;
         private System.Windows.Forms.Button button30;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button button31;
+        private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Label label10;
     }
 }
 

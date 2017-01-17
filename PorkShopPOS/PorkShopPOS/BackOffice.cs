@@ -31,5 +31,10 @@ namespace PorkShopPOS
         {
 
         }
+
+        private void label30_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

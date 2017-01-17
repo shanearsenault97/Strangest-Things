@@ -9,3 +9,6 @@ E:\Term4\AppDevelopment\TermProject\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPO
 E:\Term4\AppDevelopment\TermProject\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.pdb
 E:\Term4\AppDevelopment\TermProject\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.BackOffice.resources
 E:\Term4\AppDevelopment\TermProject\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.Welcome.resources
+H:\Term4\AppDevelopment\TermProject\PorkShopPOS\PorkShopPOS\bin\Debug\PorkShopPOS.exe.config
+H:\Term4\AppDevelopment\TermProject\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.exe
+H:\Term4\AppDevelopment\TermProject\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.pdb
