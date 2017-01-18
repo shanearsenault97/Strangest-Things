@@ -71,12 +71,22 @@ DROP TABLE IF EXISTS `tables`;
 CREATE TABLE `tables` (
   `tableNum` varchar(6) NOT NULL,
   `tableSeats` int(2) NOT NULL,
-  `tableReserved` tinyint(1) NOT NULL,
-  `tableReservedDate` date DEFAULT NULL,
-  `tableReservedTime` time(5)DEFAULT NULL,
-  `tableReservedBy` varchar(50) DEFAULT NULL,
+  
+  
   PRIMARY KEY (`tableNum`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `reservation`;
+CREATE TABLE `reservation`(
+`reservationID` int(6) AUTO_INCREMENT NOT NULL,
+`tableNum` varchar(6) NOT NULL,
+`reservationDate` date NOT NULL,
+`reservationTime` time(5) NOT NULL,
+`reservationName` varchar(50) NOT NULL,
+`reservationContact` varchar(13) NOT NULL,
+
+  PRIMARY KEY(`reservationID`)
+  )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 DROP TABLE IF EXISTS `timeclock`;
 CREATE TABLE `timeclock` (

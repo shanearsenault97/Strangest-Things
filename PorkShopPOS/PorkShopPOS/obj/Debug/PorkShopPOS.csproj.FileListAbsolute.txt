@@ -12,3 +12,6 @@ E:\Term4\AppDevelopment\TermProject\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPO
 H:\Term4\AppDevelopment\TermProject\PorkShopPOS\PorkShopPOS\bin\Debug\PorkShopPOS.exe.config
 H:\Term4\AppDevelopment\TermProject\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.exe
 H:\Term4\AppDevelopment\TermProject\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.pdb
+C:\git\PorkShopPOS\PorkShopPOS\bin\Debug\PorkShopPOS.exe.config
+C:\git\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.exe
+C:\git\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.pdb
