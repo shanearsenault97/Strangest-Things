@@ -10,6 +10,7 @@ CREATE TABLE `bar` (
   `barPrice` decimal(4,2) NOT NULL,
   `barQOH` int(4) NOT NULL,
   PRIMARY KEY (`barId`)
+  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 DROP TABLE IF EXISTS `customerOrders`;
@@ -20,6 +21,7 @@ CREATE TABLE `customerOrders` (
   `orderDate` date NOT NULL,
   `numGuests` int(3) NOT NULL,
   PRIMARY KEY (`orderNum`)
+ 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 DROP TABLE IF EXISTS `employee`;
@@ -56,6 +58,7 @@ CREATE TABLE `line` (
   `lineQty` int(3) NOT NULL,
   `linePrice` decimal(4,2) NOT NULL,
   PRIMARY KEY (`orderNum`, `lineNum`)
+ 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 DROP TABLE IF EXISTS `salary`;
@@ -65,14 +68,14 @@ CREATE TABLE `salary` (
   `salaryTo` date NOT NULL,
   `salaryAmount` decimal(5,2) NOT NULL,
   PRIMARY KEY (`empNum`, `salaryFrom`)
+ 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 DROP TABLE IF EXISTS `tables`;
 CREATE TABLE `tables` (
   `tableNum` varchar(6) NOT NULL,
   `tableSeats` int(2) NOT NULL,
-  
-  
+   
   PRIMARY KEY (`tableNum`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -86,6 +89,7 @@ CREATE TABLE `reservation`(
 `reservationContact` varchar(13) NOT NULL,
 
   PRIMARY KEY(`reservationID`)
+ 
   )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 DROP TABLE IF EXISTS `timeclock`;
@@ -95,6 +99,7 @@ CREATE TABLE `timeclock` (
   `clockIn` time(5) NOT NULL,
   `clockOut` time(5) NOT NULL,
   PRIMARY KEY (`empNum`, `shiftDate`)
+ 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 DROP TABLE IF EXISTS `userAccess`;
