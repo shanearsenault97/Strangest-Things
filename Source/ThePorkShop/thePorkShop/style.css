@@ -1,5 +1,11 @@
-/* stylesheet for The Pork Shop website */
-/*--Heather Watterson 7 October 2015 Small Business Assignment 2--*/
+/**
+ * Created by PhpStorm.
+ * User: Shane Arsenault
+ * Date: 1/16/2017
+ * Time: 1:28 PM
+ * Originally created by Heather Watterson on 10/7/2015, adapted for CIS2261 Final Project
+ * Purpose: Stylesheet for website
+ */
 
 #pageHeader {
 
@@ -69,15 +75,12 @@ ul.navbar li a:hover {
 
 }
 
-
-
 .food {
     font-size: larger;
     color: red;
     padding: 10px;
     font-weight: bold;
 }
-
 
 #porkzilla{
 
@@ -91,7 +94,6 @@ ul.navbar li a:hover {
 
     margin-right: 105px;
 }
-
 
 .schedule {
     width: 100%;

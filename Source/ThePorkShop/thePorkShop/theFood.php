@@ -1,58 +1,76 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Shane Arsenault
+ * Date: 1/16/2017
+ * Time: 1:28 PM
+ * Originally created by Heather Watterson on 10/7/2015, adapted for CIS2261 Final Project
+ * Purpose: Front page of website.
+ */
+?>
+
 <!DOCTYPE html>
+
 <html>
-<!--Heather Watterson 7 October 2015 Small Business Assignment 2-->
 
 <head>
+
     <meta charset="UTF-8">
+
     <title>The Pork Shop: The Food</title>
-    <script src="jquery-3.1.1.min.js"></script>
 
     <link rel="stylesheet" href="style.css">
-    <!-- Info on menu and restaurant specials -->
 
-    <script>
-        $(document).ready(function(){
-            $("button").click(function(){
-                $(".info").toggle(1000);
-            });
-        });
-    </script>
 </head>
 
 <body>
 
-
 <?php include("header.php") ?>
-
 
 <h1> The Food</h1>
 
-<div class="intro"><p>Our in-house smoker is going 24-hours a day to bring you the best eats your taste buds have ever
+<div class="intro">
+    <p>Our in-house smoker is going 24-hours a day to bring you the best eats your taste buds have ever
         tried.
-        Our Pit Master lets no cut of meat leave the kitchen before its time.</p></div>
+        Our Pit Master lets no cut of meat leave the kitchen before its time.
+    </p>
+</div>
 
 <div id="menu">
-    <h2>Starters</h2>
-    <span class="food">Roasted Garlic Soup - $5</span>
 
+    <h2>Starters</h2>
+
+    <span class="food">Roasted Garlic Soup - $5</span>
     <p class="info">Slow roasted garlic cloves sauteed with leeks and onions, simmered in broth and blended with heavy cream. Served
     with a crusty homemade roll.</p>
+
     <br>
+
     <span class="food">Mac n Cheese Balls - $8</span>
     <p class="info">Made with 5 types of cheese, our spicy mac n cheese is chilled, rolled into panko crusted balls and deep-fried
     for extra cheesy goodness. Served with chipotle mayo.</p>
+
     <br>
+
     <span class="food">Pulled Pork Nachos  - $12</span>
     <p class="info">Our smoky pulled pork on top of homemade nachos topped with a kicked up cheese sauce and sauteed peppers and
     onions.</p>
 
     <h2>Mains</h2>
+
     <span class="food">Porkzilla - $15</span>
-    <p class="info"><img src="Images/porkzilla.png"><br><br>Our succulent pork shoulder, marinated in a sweet, spicy dry rub then smoked over hickory for a minimum
-    12-hours. Pulled and tossed in our tangy Memphis style BBQ sauce. Served on a Chiabatta bun and topped with crispy
-    bacon, deep fried banana peppers, Horseradish dill coleslaw and served with a side of Salt and Pepper Onion
-    Rings.</p>
+
+    <p class="info">
+        <img src="Images/porkzilla.png">
+        <br><br>
+        Our succulent pork shoulder, marinated in a sweet, spicy dry rub then smoked over hickory for a minimum
+        12-hours. Pulled and tossed in our tangy Memphis style BBQ sauce. Served on a Chiabatta bun and topped with crispy
+        bacon, deep fried banana peppers, Horseradish dill coleslaw and served with a side of Salt and Pepper Onion
+        Rings.
+    </p>
+
     <br>
+
     <span class="food">Bacon-Wrapped Meatloaf - $15</span>
     <p class="info"><img src="Images/baconWrappedMeatloaf.png"><br><br>Our traditional style meatloaf made of a mixture of beef and pork, onions and spices. Shaped, wrapped in a bacon
     weave and smoked with apple or hickory smoke for 3 hours.

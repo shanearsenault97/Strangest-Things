@@ -24,10 +24,10 @@
       <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thePorkShop/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="39" column="29" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="2" />
               <folding>
-                <marker date="1484588037451" expanded="true" signature="586:611" ph="..." />
+                <element signature="e#6#224#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -36,21 +36,22 @@
       <file leaf-file-name="howToFindUs.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thePorkShop/howToFindUs.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="561">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding>
+                <element signature="e#6#214#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thePorkShop/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="122" selection-start-line="8" selection-start-column="122" selection-end-line="8" selection-end-column="122" />
+            <state relative-caret-position="102">
+              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
               <folding>
-                <element signature="e#6#99#0#PHP" expanded="true" />
-                <marker date="1484589966431" expanded="true" signature="266:310" ph="..." />
+                <marker date="1484766077266" expanded="true" signature="397:441" ph="..." />
               </folding>
             </state>
           </provider>
@@ -59,18 +60,20 @@
       <file leaf-file-name="theFood.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thePorkShop/theFood.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="61" column="63" selection-start-line="61" selection-start-column="63" selection-end-line="61" selection-end-column="63" />
-              <folding />
+            <state relative-caret-position="714">
+              <caret line="54" column="55" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="55" />
+              <folding>
+                <element signature="e#6#224#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/thePorkShop/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="77" column="21" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
+            <state relative-caret-position="595">
+              <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -79,16 +82,15 @@
       <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thePorkShop/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+            <state relative-caret-position="119">
+              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
               <folding>
-                <element signature="e#6#99#0#PHP" expanded="true" />
-                <marker date="1484589902595" expanded="true" signature="129:476" ph="..." />
-                <marker date="1484589902595" expanded="true" signature="198:468" ph="..." />
-                <marker date="1484589902595" expanded="true" signature="211:249" ph="..." />
-                <marker date="1484589902595" expanded="true" signature="253:298" ph="..." />
-                <marker date="1484589902595" expanded="true" signature="302:349" ph="..." />
-                <marker date="1484589902595" expanded="true" signature="353:405" ph="..." />
+                <marker date="1484766077366" expanded="true" signature="250:597" ph="..." />
+                <marker date="1484766077366" expanded="true" signature="319:589" ph="..." />
+                <marker date="1484766077366" expanded="true" signature="332:370" ph="..." />
+                <marker date="1484766077366" expanded="true" signature="374:419" ph="..." />
+                <marker date="1484766077366" expanded="true" signature="423:470" ph="..." />
+                <marker date="1484766077366" expanded="true" signature="474:526" ph="..." />
               </folding>
             </state>
           </provider>
@@ -107,7 +109,7 @@
       <file leaf-file-name="theMusic.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thePorkShop/theMusic.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="815">
+            <state relative-caret-position="1088">
               <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding />
             </state>
@@ -149,13 +151,13 @@
         <option value="$PROJECT_DIR$/thePorkShop/home.html" />
         <option value="$PROJECT_DIR$/thePorkShop/theFood.html" />
         <option value="$PROJECT_DIR$/thePorkShop/theFunStuff.php" />
-        <option value="$PROJECT_DIR$/thePorkShop/home.php" />
-        <option value="$PROJECT_DIR$/thePorkShop/howToFindUs.php" />
         <option value="$PROJECT_DIR$/thePorkShop/theMusic.php" />
-        <option value="$PROJECT_DIR$/thePorkShop/style.css" />
-        <option value="$PROJECT_DIR$/thePorkShop/theFood.php" />
         <option value="$PROJECT_DIR$/thePorkShop/header.php" />
         <option value="$PROJECT_DIR$/thePorkShop/footer.php" />
+        <option value="$PROJECT_DIR$/thePorkShop/theFood.php" />
+        <option value="$PROJECT_DIR$/thePorkShop/home.php" />
+        <option value="$PROJECT_DIR$/thePorkShop/howToFindUs.php" />
+        <option value="$PROJECT_DIR$/thePorkShop/style.css" />
       </list>
     </option>
   </component>
@@ -197,14 +199,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="thePorkShop" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thePorkShop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThePorkShop" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thePorkShop" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -302,30 +318,31 @@
       <workItem from="1484094201356" duration="1806000" />
       <workItem from="1484161482304" duration="588000" />
       <workItem from="1484162090849" duration="1502000" />
-      <workItem from="1484586055037" duration="3923000" />
+      <workItem from="1484586055037" duration="4644000" />
+      <workItem from="1484765113169" duration="2024000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10291000" />
+    <option name="totallyTimeSpent" value="13036000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23402777" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -354,7 +371,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding />
+          <folding>
+            <element signature="e#6#224#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -387,7 +406,7 @@
         <state relative-caret-position="0">
           <caret line="42" column="80" selection-start-line="42" selection-start-column="80" selection-end-line="42" selection-end-column="80" />
           <folding>
-            <marker date="1484588037451" expanded="true" signature="586:611" ph="..." />
+            <element signature="e#6#224#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -396,7 +415,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding />
+          <folding>
+            <element signature="e#6#224#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -429,7 +450,7 @@
         <state relative-caret-position="0">
           <caret line="42" column="80" selection-start-line="42" selection-start-column="80" selection-end-line="42" selection-end-column="80" />
           <folding>
-            <marker date="1484588037451" expanded="true" signature="586:611" ph="..." />
+            <element signature="e#6#224#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -438,7 +459,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding />
+          <folding>
+            <element signature="e#6#224#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -471,7 +494,7 @@
         <state relative-caret-position="0">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
-            <marker date="1484588037451" expanded="true" signature="586:611" ph="..." />
+            <element signature="e#6#224#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -480,7 +503,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding />
+          <folding>
+            <element signature="e#6#224#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -513,7 +538,7 @@
         <state relative-caret-position="0">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <marker date="1484588037451" expanded="true" signature="586:611" ph="..." />
+            <element signature="e#6#224#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -522,7 +547,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-          <folding />
+          <folding>
+            <element signature="e#6#224#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -555,7 +582,7 @@
         <state relative-caret-position="0">
           <caret line="40" column="85" selection-start-line="40" selection-start-column="85" selection-end-line="40" selection-end-column="85" />
           <folding>
-            <marker date="1484588037451" expanded="true" signature="586:611" ph="..." />
+            <element signature="e#6#224#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -564,7 +591,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-          <folding />
+          <folding>
+            <element signature="e#6#224#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -597,7 +626,7 @@
         <state relative-caret-position="0">
           <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
           <folding>
-            <marker date="1484588037451" expanded="true" signature="586:611" ph="..." />
+            <element signature="e#6#224#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -606,7 +635,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-          <folding />
+          <folding>
+            <element signature="e#6#224#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -639,7 +670,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1484588037451" expanded="true" signature="586:611" ph="..." />
+            <element signature="e#6#224#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -648,7 +679,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#6#224#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -691,35 +724,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thePorkShop/theMusic.php">
+    <entry file="file://$PROJECT_DIR$/thePorkShop/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="815">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thePorkShop/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="77" column="21" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thePorkShop/theFood.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="61" column="63" selection-start-line="61" selection-start-column="63" selection-end-line="61" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thePorkShop/howToFindUs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="119">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <marker date="1484766077366" expanded="true" signature="250:597" ph="..." />
+            <marker date="1484766077366" expanded="true" signature="319:589" ph="..." />
+            <marker date="1484766077366" expanded="true" signature="332:370" ph="..." />
+            <marker date="1484766077366" expanded="true" signature="374:419" ph="..." />
+            <marker date="1484766077366" expanded="true" signature="423:470" ph="..." />
+            <marker date="1484766077366" expanded="true" signature="474:526" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -731,40 +747,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thePorkShop/header.php">
+    <entry file="file://$PROJECT_DIR$/thePorkShop/theMusic.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
-          <folding>
-            <element signature="e#6#99#0#PHP" expanded="true" />
-            <marker date="1484589902595" expanded="true" signature="129:476" ph="..." />
-            <marker date="1484589902595" expanded="true" signature="198:468" ph="..." />
-            <marker date="1484589902595" expanded="true" signature="211:249" ph="..." />
-            <marker date="1484589902595" expanded="true" signature="253:298" ph="..." />
-            <marker date="1484589902595" expanded="true" signature="302:349" ph="..." />
-            <marker date="1484589902595" expanded="true" signature="353:405" ph="..." />
-          </folding>
+        <state relative-caret-position="1088">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thePorkShop/home.php">
+    <entry file="file://$PROJECT_DIR$/thePorkShop/howToFindUs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="39" column="29" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="561">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
-            <marker date="1484588037451" expanded="true" signature="586:611" ph="..." />
+            <element signature="e#6#214#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/thePorkShop/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="122" selection-start-line="8" selection-start-column="122" selection-end-line="8" selection-end-column="122" />
+        <state relative-caret-position="102">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
           <folding>
-            <element signature="e#6#99#0#PHP" expanded="true" />
-            <marker date="1484589966431" expanded="true" signature="266:310" ph="..." />
+            <marker date="1484766077266" expanded="true" signature="397:441" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thePorkShop/theFood.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="54" column="55" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="55" />
+          <folding>
+            <element signature="e#6#224#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thePorkShop/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="2" />
+          <folding>
+            <element signature="e#6#224#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thePorkShop/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
