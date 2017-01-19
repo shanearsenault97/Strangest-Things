@@ -20,6 +20,8 @@ CREATE TABLE `customerOrders` (
   `tableNum` varchar(6) NOT NULL,
   `orderDate` date NOT NULL,
   `numGuests` int(3) NOT NULL,
+  `orderTotal` decimal(6,2),
+  `orderGratuity` decimal(5,2),
   PRIMARY KEY (`orderNum`)
  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -98,6 +100,7 @@ CREATE TABLE `timeclock` (
   `shiftDate` date NOT NULL,
   `clockIn` time(5) NOT NULL,
   `clockOut` time(5) NOT NULL,
+  `empHours` decimal(4,2),
   PRIMARY KEY (`empNum`, `shiftDate`)
  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -110,3 +113,15 @@ CREATE TABLE `userAccess` (
   PRIMARY KEY (`empNum`, `password`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+DROP TABLE IF EXISTS `payroll`;
+CREATE TABLE `payroll` (
+  `payrollCheckNumber` int(6) AUTO_INCREMENT NOT NULL,
+  `empNum` varchar(6) NOT NULL,
+  `payrollStartDate` date NOT NULL,
+  `payrollEndDate` date NOT NULL,
+  `salaryAmount` decimal(5,2) NOT NULL,
+  `empHours` decimal(4,2),
+  `payrollDeductions` decimal(4,2) NOT NULL,
+  PRIMARY KEY (`payrollCheckNumber`,`empNum`)
+  
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
