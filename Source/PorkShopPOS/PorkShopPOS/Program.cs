@@ -16,7 +16,7 @@ namespace PorkShopPOS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ThePorkShopPOS());
+            Application.Run(new Welcome());
         }
     }
 }

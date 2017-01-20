@@ -15,3 +15,14 @@ H:\Term4\AppDevelopment\TermProject\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPO
 C:\git\PorkShopPOS\PorkShopPOS\bin\Debug\PorkShopPOS.exe.config
 C:\git\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.exe
 C:\git\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.pdb
+C:\bitbucket\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\bin\Debug\PorkShopPOS.exe.config
+C:\bitbucket\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.exe
+C:\bitbucket\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.pdb
+C:\bitbucket\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\bin\Debug\PorkShopPOS.exe
+C:\bitbucket\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\bin\Debug\PorkShopPOS.pdb
+C:\bitbucket\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.csprojResolveAssemblyReference.cache
+C:\bitbucket\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.BackOffice.resources
+C:\bitbucket\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.ThePorkShopPOS.resources
+C:\bitbucket\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.Properties.Resources.resources
+C:\bitbucket\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.Welcome.resources
+C:\bitbucket\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.csproj.GenerateResource.Cache
