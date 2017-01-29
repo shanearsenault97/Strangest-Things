@@ -1,8 +1,25 @@
+drop database IF EXISTS pork_shop;
+
+create database IF NOT EXISTS pork_shop;
+use pork_shop;
+
+/*create a user in database*/
+grant select, insert, update, delete on pork_shop.*
+             to 'pork_shop_admin'@'localhost'
+             identified by '5tr&ng3rTh!ng$';
+flush privileges;
+
+
 
 CREATE DATABASE IF NOT EXISTS `pork_shop` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `pork_shop`;
 
-DROP TABLE IF EXISTS `bar`;
+
+--
+-- 1). Table structure for table `bar`
+--
+
+
 CREATE TABLE `bar` (
   `barId` varchar(4) NOT NULL,
   `barDescription` varchar(50) NOT NULL,
@@ -13,7 +30,11 @@ CREATE TABLE `bar` (
   
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `customerOrders`;
+
+--
+-- 2). Table structure for table `customerOrders`
+--
+
 CREATE TABLE `customerOrders` (
   `orderNum` int(6) AUTO_INCREMENT NOT NULL,
   `empNum` varchar(6) NOT NULL,
@@ -26,9 +47,14 @@ CREATE TABLE `customerOrders` (
  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `employee`;
+
+
+--
+-- 3). Table structure for table `employee`
+--
+
 CREATE TABLE `employee` (
-  `empNum` varchar(6) NOT NULL,
+  `empNum` int(3) NOT NULL COMMENT 'This is the primary key for employee',
   `empFName` varchar(25) NOT NULL,
   `empLName` varchar(25) NOT NULL,
   `empAddress` varchar(50) NOT NULL,
@@ -37,12 +63,32 @@ CREATE TABLE `employee` (
   `empPostal` varchar(7) NOT NULL,
   `empPhone` varchar(13) NOT NULL,
   `empSIN` varchar(11) NOT NULL,
-  `empStart` date NOT NULL,
+  `empStartDate` date NOT NULL,
+  `empStatus` varchar(25) NOT NULL,
+  `empEndDate` date DEFAULT NULL,  
   `empPosition` varchar(15) NOT NULL,
   PRIMARY KEY (`empNum`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `food`;
+--
+-- AUTO_INCREMENT for `employee`
+--
+
+ALTER TABLE `employee`
+  MODIFY `empNum` int(3) NOT NULL AUTO_INCREMENT COMMENT 'This is the primary key for `employee`',AUTO_INCREMENT=1;
+
+--
+-- Dump test data for `employee`
+--
+
+INSERT INTO employee (empNum, empFName, empLName, empAddress, empCity, empProv, empPostal, empPhone, empSIN, empStartDate, empStatus, empEndDAte, empPosition)
+VALUES ('1', 'Jerry', 'Lewis', '120 Hope St', 'Summerside', 'PE', 'C1N2G2', '902-555-5555', '223-232-234', '2017-01-01', 'active', '0000-00-00', 'dishwasher');
+
+
+--
+-- 4). Table structure for table `food`
+--
+
 CREATE TABLE `food` (
   `foodId` varchar(4) NOT NULL,
   `foodDescription` varchar(50) NOT NULL,
@@ -51,7 +97,12 @@ CREATE TABLE `food` (
   PRIMARY KEY (`foodId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `line`;
+
+
+--
+-- 5). Table structure for table `line`
+--
+
 CREATE TABLE `line` (
   `orderNum` int(6) NOT NULL,
   `lineNum` int(3) NOT NULL,
@@ -63,7 +114,13 @@ CREATE TABLE `line` (
  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `salary`;
+
+
+
+--
+-- 6). Table structure for table `salary`
+--
+
 CREATE TABLE `salary` (
   `empNum` varchar(6) NOT NULL,
   `salaryFrom` date NOT NULL,
@@ -73,15 +130,26 @@ CREATE TABLE `salary` (
  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `tables`;
-CREATE TABLE `tables` (
+
+
+--
+-- 7). Table structure for table `table`
+--
+
+CREATE TABLE `table` (
   `tableNum` varchar(6) NOT NULL,
   `tableSeats` int(2) NOT NULL,
    
   PRIMARY KEY (`tableNum`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `reservation`;
+
+
+
+--
+-- 8). Table structure for table `reservation`
+--
+
 CREATE TABLE `reservation`(
 `reservationID` int(6) AUTO_INCREMENT NOT NULL,
 `tableNum` varchar(6) NOT NULL,
@@ -94,8 +162,13 @@ CREATE TABLE `reservation`(
  
   )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `timeclock`;
-CREATE TABLE `timeclock` (
+
+
+--
+-- 9). Table structure for table `timeClock`
+--
+
+CREATE TABLE `timeClock` (
   `empNum` varchar(6) NOT NULL,
   `shiftDate` date NOT NULL,
   `clockIn` time(5) NOT NULL,
@@ -105,7 +178,13 @@ CREATE TABLE `timeclock` (
  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `userAccess`;
+
+
+--
+-- 10). Table structure for table `userAccess`
+--
+
+
 CREATE TABLE `userAccess` (
   `empNum` varchar(6) NOT NULL,
   `password` varchar(128) NOT NULL,
@@ -113,7 +192,12 @@ CREATE TABLE `userAccess` (
   PRIMARY KEY (`empNum`, `password`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `payroll`;
+
+
+--
+-- 11). Table structure for table `payroll`
+--
+
 CREATE TABLE `payroll` (
   `payrollCheckNumber` int(6) AUTO_INCREMENT NOT NULL,
   `empNum` varchar(6) NOT NULL,
@@ -125,3 +209,7 @@ CREATE TABLE `payroll` (
   PRIMARY KEY (`payrollCheckNumber`,`empNum`)
   
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+

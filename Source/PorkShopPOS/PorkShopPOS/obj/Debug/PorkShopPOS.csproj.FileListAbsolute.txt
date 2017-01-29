@@ -26,3 +26,15 @@ C:\bitbucket\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopP
 C:\bitbucket\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.Properties.Resources.resources
 C:\bitbucket\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.Welcome.resources
 C:\bitbucket\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.csproj.GenerateResource.Cache
+C:\Users\Jon\Documents\CIS\Final Project\4_Implementation\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\bin\Debug\PorkShopPOS.exe.config
+C:\Users\Jon\Documents\CIS\Final Project\4_Implementation\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.exe
+C:\Users\Jon\Documents\CIS\Final Project\4_Implementation\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.pdb
+C:\Users\Jon\Documents\CIS\Final Project\4_Implementation\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.csprojResolveAssemblyReference.cache
+C:\Users\Jon\Documents\CIS\Final Project\4_Implementation\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.BackOfficeManager.resources
+C:\Users\Jon\Documents\CIS\Final Project\4_Implementation\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.ThePorkShopPOS.resources
+C:\Users\Jon\Documents\CIS\Final Project\4_Implementation\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.Properties.Resources.resources
+C:\Users\Jon\Documents\CIS\Final Project\4_Implementation\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.Welcome.resources
+C:\Users\Jon\Documents\CIS\Final Project\4_Implementation\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.csproj.GenerateResource.Cache
+C:\Users\Jon\Documents\CIS\Final Project\4_Implementation\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\bin\Debug\PorkShopPOS.exe
+C:\Users\Jon\Documents\CIS\Final Project\4_Implementation\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\bin\Debug\PorkShopPOS.pdb
+C:\Users\Jon\Documents\CIS\Final Project\4_Implementation\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\bin\Debug\MySql.Data.dll

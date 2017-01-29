@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Installer for Windows\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,11 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BackOffice.cs">
+    <Compile Include="BackOfficeManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BackOffice.Designer.cs">
-      <DependentUpon>BackOffice.cs</DependentUpon>
+    <Compile Include="BackOfficeManager.Designer.cs">
+      <DependentUpon>BackOfficeManager.cs</DependentUpon>
     </Compile>
     <Compile Include="ThePorkShopPOS.cs">
       <SubType>Form</SubType>
@@ -64,8 +67,8 @@
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BackOffice.resx">
-      <DependentUpon>BackOffice.cs</DependentUpon>
+    <EmbeddedResource Include="BackOfficeManager.resx">
+      <DependentUpon>BackOfficeManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThePorkShopPOS.resx">
       <DependentUpon>ThePorkShopPOS.cs</DependentUpon>
