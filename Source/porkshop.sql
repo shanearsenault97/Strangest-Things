@@ -1,7 +1,7 @@
 drop database IF EXISTS pork_shop;
 
-create database IF NOT EXISTS pork_shop;
-use pork_shop;
+CREATE DATABASE IF NOT EXISTS `pork_shop` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `pork_shop`;
 
 /*create a user in database*/
 grant select, insert, update, delete on pork_shop.*
@@ -11,8 +11,6 @@ flush privileges;
 
 
 
-CREATE DATABASE IF NOT EXISTS `pork_shop` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `pork_shop`;
 
 
 --
@@ -54,14 +52,14 @@ CREATE TABLE `customerOrders` (
 --
 
 CREATE TABLE `employee` (
-  `empNum` int(3) NOT NULL COMMENT 'This is the primary key for employee',
+  `empNum` varchar(6) NOT NULL COMMENT 'This is the primary key for employee',
   `empFName` varchar(25) NOT NULL,
   `empLName` varchar(25) NOT NULL,
   `empAddress` varchar(50) NOT NULL,
   `empCity` varchar(25) NOT NULL,
   `empProv` varchar(2) NOT NULL,
   `empPostal` varchar(7) NOT NULL,
-  `empPhone` varchar(13) NOT NULL,
+  `empPhone` varchar(14) NOT NULL,
   `empSIN` varchar(11) NOT NULL,
   `empStartDate` date NOT NULL,
   `empStatus` varchar(25) NOT NULL,
@@ -70,12 +68,6 @@ CREATE TABLE `employee` (
   PRIMARY KEY (`empNum`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- AUTO_INCREMENT for `employee`
---
-
-ALTER TABLE `employee`
-  MODIFY `empNum` int(3) NOT NULL AUTO_INCREMENT COMMENT 'This is the primary key for `employee`',AUTO_INCREMENT=1;
 
 --
 -- Dump test data for `employee`
@@ -133,10 +125,10 @@ CREATE TABLE `salary` (
 
 
 --
--- 7). Table structure for table `table`
+-- 7). Table structure for table `tables`
 --
 
-CREATE TABLE `table` (
+CREATE TABLE `tables` (
   `tableNum` varchar(6) NOT NULL,
   `tableSeats` int(2) NOT NULL,
    
@@ -209,7 +201,6 @@ CREATE TABLE `payroll` (
   PRIMARY KEY (`payrollCheckNumber`,`empNum`)
   
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 
 
 

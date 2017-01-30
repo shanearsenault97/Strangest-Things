@@ -1,6 +1,6 @@
 ﻿namespace PorkShopPOS
 {
-    partial class BackOfficeManager
+    partial class BackOffice
     {
         /// <summary>
         /// Required designer variable.
@@ -68,6 +68,9 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.employeeTab = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.empDeleteB = new System.Windows.Forms.Button();
+            this.empEndDateMTB = new System.Windows.Forms.MaskedTextBox();
+            this.empSearchB = new System.Windows.Forms.Button();
             this.empSinTB = new System.Windows.Forms.MaskedTextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.empPositionCB = new System.Windows.Forms.ComboBox();
@@ -123,9 +126,6 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label31 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.empSearchB = new System.Windows.Forms.Button();
-            this.empEndDateMTB = new System.Windows.Forms.MaskedTextBox();
-            this.empDeleteB = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -538,13 +538,41 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Employee";
             // 
+            // empDeleteB
+            // 
+            this.empDeleteB.Location = new System.Drawing.Point(328, 303);
+            this.empDeleteB.Name = "empDeleteB";
+            this.empDeleteB.Size = new System.Drawing.Size(75, 30);
+            this.empDeleteB.TabIndex = 117;
+            this.empDeleteB.Text = "Delete";
+            this.empDeleteB.UseVisualStyleBackColor = true;
+            this.empDeleteB.Click += new System.EventHandler(this.empDeleteB_Click);
+            // 
+            // empEndDateMTB
+            // 
+            this.empEndDateMTB.Location = new System.Drawing.Point(361, 80);
+            this.empEndDateMTB.Mask = "0000/00/00";
+            this.empEndDateMTB.Name = "empEndDateMTB";
+            this.empEndDateMTB.Size = new System.Drawing.Size(121, 27);
+            this.empEndDateMTB.TabIndex = 112;
+            // 
+            // empSearchB
+            // 
+            this.empSearchB.Location = new System.Drawing.Point(225, 303);
+            this.empSearchB.Name = "empSearchB";
+            this.empSearchB.Size = new System.Drawing.Size(75, 30);
+            this.empSearchB.TabIndex = 116;
+            this.empSearchB.Text = "Search";
+            this.empSearchB.UseVisualStyleBackColor = true;
+            this.empSearchB.Click += new System.EventHandler(this.empSearchB_Click);
+            // 
             // empSinTB
             // 
             this.empSinTB.Location = new System.Drawing.Point(108, 246);
             this.empSinTB.Mask = "000-000-000";
             this.empSinTB.Name = "empSinTB";
-            this.empSinTB.Size = new System.Drawing.Size(87, 27);
-            this.empSinTB.TabIndex = 32;
+            this.empSinTB.Size = new System.Drawing.Size(100, 27);
+            this.empSinTB.TabIndex = 108;
             // 
             // label30
             // 
@@ -570,7 +598,7 @@
             this.empPositionCB.Location = new System.Drawing.Point(361, 115);
             this.empPositionCB.Name = "empPositionCB";
             this.empPositionCB.Size = new System.Drawing.Size(121, 27);
-            this.empPositionCB.TabIndex = 28;
+            this.empPositionCB.TabIndex = 113;
             // 
             // label28
             // 
@@ -587,7 +615,7 @@
             this.empPhoneTB.Mask = "(999) 000-0000";
             this.empPhoneTB.Name = "empPhoneTB";
             this.empPhoneTB.Size = new System.Drawing.Size(126, 27);
-            this.empPhoneTB.TabIndex = 24;
+            this.empPhoneTB.TabIndex = 107;
             // 
             // label26
             // 
@@ -612,7 +640,7 @@
             this.empPostalTB.Location = new System.Drawing.Point(206, 175);
             this.empPostalTB.Name = "empPostalTB";
             this.empPostalTB.Size = new System.Drawing.Size(57, 27);
-            this.empPostalTB.TabIndex = 21;
+            this.empPostalTB.TabIndex = 106;
             // 
             // label24
             // 
@@ -628,7 +656,7 @@
             this.empProvinceTB.Location = new System.Drawing.Point(108, 175);
             this.empProvinceTB.Name = "empProvinceTB";
             this.empProvinceTB.Size = new System.Drawing.Size(34, 27);
-            this.empProvinceTB.TabIndex = 19;
+            this.empProvinceTB.TabIndex = 105;
             // 
             // label23
             // 
@@ -644,7 +672,7 @@
             this.empCityTB.Location = new System.Drawing.Point(108, 145);
             this.empCityTB.Name = "empCityTB";
             this.empCityTB.Size = new System.Drawing.Size(155, 27);
-            this.empCityTB.TabIndex = 17;
+            this.empCityTB.TabIndex = 104;
             // 
             // label22
             // 
@@ -660,7 +688,7 @@
             this.empAddressTB.Location = new System.Drawing.Point(108, 115);
             this.empAddressTB.Name = "empAddressTB";
             this.empAddressTB.Size = new System.Drawing.Size(155, 27);
-            this.empAddressTB.TabIndex = 14;
+            this.empAddressTB.TabIndex = 103;
             // 
             // label21
             // 
@@ -681,7 +709,7 @@
             this.empStatusCB.Location = new System.Drawing.Point(361, 45);
             this.empStatusCB.Name = "empStatusCB";
             this.empStatusCB.Size = new System.Drawing.Size(121, 27);
-            this.empStatusCB.TabIndex = 11;
+            this.empStatusCB.TabIndex = 110;
             // 
             // label20
             // 
@@ -699,7 +727,7 @@
             this.empStartDateDTP.MinDate = new System.DateTime(2017, 1, 12, 0, 0, 0, 0);
             this.empStartDateDTP.Name = "empStartDateDTP";
             this.empStartDateDTP.Size = new System.Drawing.Size(145, 27);
-            this.empStartDateDTP.TabIndex = 9;
+            this.empStartDateDTP.TabIndex = 109;
             this.empStartDateDTP.Value = new System.DateTime(2017, 1, 12, 13, 48, 47, 0);
             // 
             // label19
@@ -725,7 +753,7 @@
             this.empLNameTB.Location = new System.Drawing.Point(108, 84);
             this.empLNameTB.Name = "empLNameTB";
             this.empLNameTB.Size = new System.Drawing.Size(155, 27);
-            this.empLNameTB.TabIndex = 6;
+            this.empLNameTB.TabIndex = 102;
             // 
             // label17
             // 
@@ -741,7 +769,7 @@
             this.empFNameTB.Location = new System.Drawing.Point(108, 51);
             this.empFNameTB.Name = "empFNameTB";
             this.empFNameTB.Size = new System.Drawing.Size(155, 27);
-            this.empFNameTB.TabIndex = 4;
+            this.empFNameTB.TabIndex = 101;
             // 
             // label16
             // 
@@ -757,14 +785,14 @@
             this.empNumTB.Location = new System.Drawing.Point(108, 18);
             this.empNumTB.Name = "empNumTB";
             this.empNumTB.Size = new System.Drawing.Size(100, 27);
-            this.empNumTB.TabIndex = 2;
+            this.empNumTB.TabIndex = 100;
             // 
             // empUpdateB
             // 
             this.empUpdateB.Location = new System.Drawing.Point(120, 303);
             this.empUpdateB.Name = "empUpdateB";
             this.empUpdateB.Size = new System.Drawing.Size(75, 30);
-            this.empUpdateB.TabIndex = 1;
+            this.empUpdateB.TabIndex = 115;
             this.empUpdateB.Text = "Update";
             this.empUpdateB.UseVisualStyleBackColor = true;
             this.empUpdateB.Click += new System.EventHandler(this.empUpdateB_Click);
@@ -774,7 +802,7 @@
             this.empAddB.Location = new System.Drawing.Point(17, 303);
             this.empAddB.Name = "empAddB";
             this.empAddB.Size = new System.Drawing.Size(75, 30);
-            this.empAddB.TabIndex = 0;
+            this.empAddB.TabIndex = 114;
             this.empAddB.Text = "Add";
             this.empAddB.UseVisualStyleBackColor = true;
             this.empAddB.Click += new System.EventHandler(this.empAddB_Click);
@@ -1060,35 +1088,7 @@
             this.dateTimePicker3.Size = new System.Drawing.Size(229, 27);
             this.dateTimePicker3.TabIndex = 0;
             // 
-            // empSearchB
-            // 
-            this.empSearchB.Location = new System.Drawing.Point(225, 303);
-            this.empSearchB.Name = "empSearchB";
-            this.empSearchB.Size = new System.Drawing.Size(75, 30);
-            this.empSearchB.TabIndex = 33;
-            this.empSearchB.Text = "Search";
-            this.empSearchB.UseVisualStyleBackColor = true;
-            this.empSearchB.Click += new System.EventHandler(this.empSearchB_Click);
-            // 
-            // empEndDateMTB
-            // 
-            this.empEndDateMTB.Location = new System.Drawing.Point(361, 80);
-            this.empEndDateMTB.Mask = "0000/00/00";
-            this.empEndDateMTB.Name = "empEndDateMTB";
-            this.empEndDateMTB.Size = new System.Drawing.Size(121, 27);
-            this.empEndDateMTB.TabIndex = 34;
-            // 
-            // empDeleteB
-            // 
-            this.empDeleteB.Location = new System.Drawing.Point(328, 303);
-            this.empDeleteB.Name = "empDeleteB";
-            this.empDeleteB.Size = new System.Drawing.Size(75, 30);
-            this.empDeleteB.TabIndex = 35;
-            this.empDeleteB.Text = "Delete";
-            this.empDeleteB.UseVisualStyleBackColor = true;
-            this.empDeleteB.Click += new System.EventHandler(this.empDeleteB_Click);
-            // 
-            // BackOfficeManager
+            // BackOffice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1102,8 +1102,8 @@
             this.Controls.Add(this.FrontHouseButton);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "BackOfficeManager";
-            this.Text = "Back Office Manager";
+            this.Name = "BackOffice";
+            this.Text = "Back Office ";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

@@ -47,12 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BackOfficeManager.cs">
+    <Compile Include="BackOffice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BackOfficeManager.Designer.cs">
-      <DependentUpon>BackOfficeManager.cs</DependentUpon>
+    <Compile Include="BackOffice.Designer.cs">
+      <DependentUpon>BackOffice.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employee.cs" />
+    <Compile Include="EmployeeDAO.cs" />
     <Compile Include="ThePorkShopPOS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,8 +69,8 @@
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BackOfficeManager.resx">
-      <DependentUpon>BackOfficeManager.cs</DependentUpon>
+    <EmbeddedResource Include="BackOffice.resx">
+      <DependentUpon>BackOffice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThePorkShopPOS.resx">
       <DependentUpon>ThePorkShopPOS.cs</DependentUpon>
