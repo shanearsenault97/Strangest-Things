@@ -55,6 +55,10 @@
     </Compile>
     <Compile Include="Employee.cs" />
     <Compile Include="EmployeeDAO.cs" />
+    <Compile Include="Payroll.cs" />
+    <Compile Include="PayrollDAO.cs" />
+    <Compile Include="Salary.cs" />
+    <Compile Include="SalaryDAO.cs" />
     <Compile Include="ThePorkShopPOS.cs">
       <SubType>Form</SubType>
     </Compile>

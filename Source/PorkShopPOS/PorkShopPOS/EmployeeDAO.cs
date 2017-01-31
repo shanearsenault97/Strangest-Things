@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace PorkShopPOS
 {
@@ -11,9 +12,7 @@ namespace PorkShopPOS
     {
         // set up connection data
         private MySqlConnection conn;
-        private const string connectionStr = "server=localhost; database=pork_shop; user=pork_shop_admin; password=5tr&ng3rTh!ng$;";
-        
-
+        private const string connectionStr = "server=localhost; database=pork_shop; user=pork_shop_admin; password=5tr&ng3rTh!ng$; Convert Zero Datetime=True; Allow Zero Datetime=True;";
         private string strTable = "";
         private string strFields = "";
         private string strValues = "";
@@ -132,13 +131,14 @@ namespace PorkShopPOS
                 MySqlCommand cmd = new MySqlCommand(Str, conn);
 
                 cmd.ExecuteNonQuery();
-
+                
                 CloseConn();
             }
+
             catch (Exception ex)
             {
                 Console.WriteLine("Exception.Message: {0}", ex.Message);
-            }
+            }           
 
         }
 
@@ -233,8 +233,7 @@ namespace PorkShopPOS
         private String BuildUpdateQuery(Employee emp)
         {
             strTable = "Update " + thisTable;
-            strFields = " Set " + EMP_NUM + " = '" + emp.EmpNum +
-                "' ," + EMP_F_NAME + " = '" + emp.EmpFName +
+            strFields = " Set " + EMP_F_NAME + " = '" + emp.EmpFName +
                 "' ," + EMP_L_NAME + " = '" + emp.EmpLName +
                 "' ," + EMP_ADDRESS + " = '" + emp.EmpAddress +
                 "' ," + EMP_CITY + " = '" + emp.EmpCity +
@@ -246,8 +245,7 @@ namespace PorkShopPOS
                 "' ," + EMP_STATUS + " = '" + emp.EmpStatus +
                 "' ," + EMP_END_DATE + " = '" + emp.EmpEndDate +
                 "' ," + EMP_POSITION + " = '" + emp.EmpPosition +
-                " Where (" + EMP_NUM +
-                "='" + emp.EmpNum + "')";
+                "' Where " + EMP_NUM + " = '" + emp.EmpNum + "'";
 
 
 
@@ -303,10 +301,17 @@ namespace PorkShopPOS
                 cmd.Dispose();
                 conn.Close();
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Exception.Message: {0}", ex.Message);
-            }
+
+          catch (InvalidOperationException exc)
+          {
+              MessageBox.Show(exc.ToString());
+          }
+
+          catch (Exception exception)
+          {
+              MessageBox.Show(exception.Message);
+          }
+
         }
        
     }

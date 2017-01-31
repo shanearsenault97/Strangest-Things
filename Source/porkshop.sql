@@ -70,14 +70,6 @@ CREATE TABLE `employee` (
 
 
 --
--- Dump test data for `employee`
---
-
-INSERT INTO employee (empNum, empFName, empLName, empAddress, empCity, empProv, empPostal, empPhone, empSIN, empStartDate, empStatus, empEndDAte, empPosition)
-VALUES ('1', 'Jerry', 'Lewis', '120 Hope St', 'Summerside', 'PE', 'C1N2G2', '902-555-5555', '223-232-234', '2017-01-01', 'active', '0000-00-00', 'dishwasher');
-
-
---
 -- 4). Table structure for table `food`
 --
 
@@ -114,11 +106,12 @@ CREATE TABLE `line` (
 --
 
 CREATE TABLE `salary` (
-  `empNum` varchar(6) NOT NULL,
+  `salaryNum` int(6) AUTO_INCREMENT NOT NULL,
+  `salaryEmpNum` varchar(6) NOT NULL,
   `salaryFrom` date NOT NULL,
-  `salaryTo` date NOT NULL,
-  `salaryAmount` decimal(5,2) NOT NULL,
-  PRIMARY KEY (`empNum`, `salaryFrom`)
+  `salaryTo` date DEFAULT NULL,
+  `salaryAmount` decimal(9,2) NOT NULL,
+  PRIMARY KEY (`salaryNum`)
  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -191,16 +184,14 @@ CREATE TABLE `userAccess` (
 --
 
 CREATE TABLE `payroll` (
-  `payrollCheckNumber` int(6) AUTO_INCREMENT NOT NULL,
-  `empNum` varchar(6) NOT NULL,
-  `payrollStartDate` date NOT NULL,
-  `payrollEndDate` date NOT NULL,
-  `salaryAmount` decimal(5,2) NOT NULL,
-  `empHours` decimal(4,2),
-  `payrollDeductions` decimal(4,2) NOT NULL,
-  PRIMARY KEY (`payrollCheckNumber`,`empNum`)
+  `payCheckNum` int(6) AUTO_INCREMENT NOT NULL,
+  `payEmpNum` varchar(6) NOT NULL,
+  `payFrom` date NOT NULL,
+  `payTo` date NOT NULL,
+  `payHours` decimal(4,2) NOT NULL,
+  `payAmount` decimal(9,2) NOT NULL,
+   PRIMARY KEY (payCheckNum)
   
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 
 
