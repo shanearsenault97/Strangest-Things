@@ -13,6 +13,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Form</title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="jQuery-Mask-Plugin-master/dist/jquery.mask.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.phone_us').mask('(000) 000-0000');
+        });
+    </script>
 </head>
 <body>
 <form action="submit.php" method="get">
@@ -89,7 +96,7 @@
     <input type="text" id="name" name="name" required/><br/>
 
     <label for="contactNumber">Contact Number:</label>
-    <input type="tel" id="contactNumber" name="contactNumber" required/><br/>
+    <input type="tel" id="contactNumber" name="contactNumber" class="phone_us" maxlength="14" required/><br/>
 
     <input type="submit"/>
 </form>
