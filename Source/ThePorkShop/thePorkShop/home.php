@@ -39,7 +39,7 @@
         <h3>Welcome to The Pork Shop!</h3>
 
 
-        <img src="Images\bluesPig.jpg" style="width:400px;">
+        <img src="Images/bluesPig.jpg" style="width:400px;">
 
 
         <div class="intro">
