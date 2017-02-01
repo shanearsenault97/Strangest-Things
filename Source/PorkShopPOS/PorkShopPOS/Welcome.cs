@@ -16,5 +16,15 @@ namespace PorkShopPOS
         {
             InitializeComponent();
         }
+
+        private void btnPOS_Click(object sender, EventArgs e) {
+            ThePorkShopPOS POS = new ThePorkShopPOS();
+            POS.Show();
+        }
+
+        private void btnBackOffice_Click(object sender, EventArgs e) {
+            BackOffice BO = new BackOffice();
+            BO.Show();
+        }
     }
 }

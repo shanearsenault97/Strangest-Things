@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Welcome));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnPOS = new System.Windows.Forms.Button();
+            this.btnBackOffice = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -48,23 +48,25 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // btnPOS
             // 
-            this.button1.Location = new System.Drawing.Point(106, 254);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 43);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "POS";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPOS.Location = new System.Drawing.Point(106, 254);
+            this.btnPOS.Name = "btnPOS";
+            this.btnPOS.Size = new System.Drawing.Size(89, 43);
+            this.btnPOS.TabIndex = 1;
+            this.btnPOS.Text = "POS";
+            this.btnPOS.UseVisualStyleBackColor = true;
+            this.btnPOS.Click += new System.EventHandler(this.btnPOS_Click);
             // 
-            // button2
+            // btnBackOffice
             // 
-            this.button2.Location = new System.Drawing.Point(223, 254);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 43);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Back Office";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnBackOffice.Location = new System.Drawing.Point(223, 254);
+            this.btnBackOffice.Name = "btnBackOffice";
+            this.btnBackOffice.Size = new System.Drawing.Size(89, 43);
+            this.btnBackOffice.TabIndex = 2;
+            this.btnBackOffice.Text = "Back Office";
+            this.btnBackOffice.UseVisualStyleBackColor = true;
+            this.btnBackOffice.Click += new System.EventHandler(this.btnBackOffice_Click);
             // 
             // label1
             // 
@@ -111,8 +113,8 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBackOffice);
+            this.Controls.Add(this.btnPOS);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Welcome";
@@ -127,8 +129,8 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnPOS;
+        private System.Windows.Forms.Button btnBackOffice;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;

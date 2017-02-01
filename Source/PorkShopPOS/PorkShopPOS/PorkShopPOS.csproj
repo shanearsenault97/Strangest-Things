@@ -79,6 +79,8 @@
     </Compile>
     <Compile Include="ShowAll.cs" />
     <Compile Include="ShowAllDAO.cs" />
+    <Compile Include="Tables.cs" />
+    <Compile Include="TablesDAO.cs" />
     <Compile Include="ThePorkShopPOS.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -142,6 +142,27 @@ namespace PorkShopPOS
 
         }
 
+        public List<string> LoadEmployees(Employee emp) {
+            List<string> employee = new List<string>();
+
+            String Str = BuildLoadEmployeesQuery(emp);
+            OpenConn();
+
+            MySqlCommand cmd = new MySqlCommand(Str, conn);
+
+            MySqlDataReader MySqlReader = cmd.ExecuteReader();
+
+            while (MySqlReader.Read()) {
+                employee.Add(MySqlReader.GetValue(1).ToString() + " " + MySqlReader.GetValue(2).ToString());
+            }
+
+            MySqlReader.Close();
+            cmd.Dispose();
+            CloseConn();
+
+            return employee;
+        }
+
         /* 
         Function Name:    CloseConn()
         Version:          1
@@ -312,6 +333,15 @@ namespace PorkShopPOS
               MessageBox.Show(exception.Message);
           }
 
+        }
+
+        private String BuildLoadEmployeesQuery(Employee emp) {
+            // create sql 
+            strTable = "Select * from " + thisTable + ";";
+
+            strTotal = strTable;
+
+            return strTotal;
         }
        
     }
