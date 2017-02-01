@@ -7,11 +7,11 @@
  * Purpose: Submit Page for form, prototype reservation
  */
 
-$tableNum = $_GET['tableNum'];
-$date = $_GET['date'];
-$time = $_GET['time'];
-$name = $_GET['name'];
-$contactNumber = $_GET['contactNumber'];
+$tableNum = $_POST['tableNum'];
+$date = $_POST['date'];
+$time = $_POST['time'];
+$name = $_POST['name'];
+$contactNumber = $_POST['contactNumber'];
 
 
 
@@ -24,6 +24,9 @@ echo "<div>Your submission is as follows:<br/>
 
 //opens up database
 @ $db = new mysqli('localhost', 'root', '', 'pork_shop');
+
+//adds security to fields
+$name = mysqli_real_escape_string($db, $name);
 
 //if the database does not connect, display custom-made error for security
 if (mysqli_connect_errno()) {
@@ -48,7 +51,8 @@ $result = $db->query($query);
 
 //printing out results, along to check whether a row exists from the query
 if (@$result->num_rows > 0) {
-    echo "Reservation is already set for this table at the specified date and time.</body></html>";
+    echo "Reservation is already set for this table at the specified date and time. Reservation was not added.
+    <br/><a href=\"form.php\">Go Back to Form</a></body></html>";
     die();
 }else {
 

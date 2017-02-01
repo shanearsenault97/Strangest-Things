@@ -17,12 +17,22 @@
     <script src="jQuery-Mask-Plugin-master/dist/jquery.mask.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            $('.phone_us').mask('(000) 000-0000');
+            $('.phone_us').mask('(000)000-0000');
+
         });
+
+        function test(){
+            var regex = "/[a-zA-Z]+$/";
+            var val = document.getElementById("name").value;
+            if(/[a-zA-Z]+$/.test(val)==false){
+                alert("Name must have only alphabetical characters.");
+            }
+
+        }
     </script>
 </head>
 <body>
-<form action="submit.php" method="get">
+<form action="submit.php" method="post">
     <label for="tableNum">Table Number:</label>
     <select name="tableNum" id="tableNum" required>
         <?php
@@ -93,10 +103,10 @@
     <input type="time" id="time" name="time" required/><br/>
 
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required/><br/>
+    <input type="text" id="name" name="name"  pattern="[a-zA-Z]+$" required title="Name can only be alphabetical characters."/><br/>
 
     <label for="contactNumber">Contact Number:</label>
-    <input type="tel" id="contactNumber" name="contactNumber" class="phone_us" maxlength="14" required/><br/>
+    <input type="tel" id="contactNumber" name="contactNumber" class="phone_us" maxlength="13" pattern=".{13,}" required title="13 characters minimum"/><br/>
 
     <input type="submit"/>
 </form>
