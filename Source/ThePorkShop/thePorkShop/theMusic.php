@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <!--Heather Watterson 7 October 2015 Small Business Assignment 2-->
 
 <head>
@@ -23,7 +23,7 @@
     We will also be bringing in the best from the regional and international blues scenes.</p></div>
 
     <h3>Josh Royse</h3>
-    <img src="Images\josh.png">
+    <img src="Images/josh.png">
 
     <p>Sunday afternoons are reserved for an Open Blues Jam starting at 2pm.  Everyone Welcome.</p>
 

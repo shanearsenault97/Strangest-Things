@@ -9,7 +9,7 @@
  */
 
 
-echo "<p> For more information contact <a href=\" mailto:thePorkShop@porkilicious.com\"/>thePorkShop@porkilicious.com </a></p>
+echo "<p> For more information contact <a href=\"mailto:thePorkShop@porkilicious.com\"/>thePorkShop@porkilicious.com </a></p>
 
 <!-- Date of last modification -->
 <p>Website by Strangest Things<br>
