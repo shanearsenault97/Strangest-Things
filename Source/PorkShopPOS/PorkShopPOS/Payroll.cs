@@ -9,7 +9,7 @@ namespace PorkShopPOS
     class Payroll
     {
         private int payNum;
-        private string payEmpNum;
+        private string empNum;
         private string fromDate;
         private string toDate;
         private decimal hours = 0m;
@@ -32,10 +32,10 @@ namespace PorkShopPOS
             set { this.payNum = value; }
         }
 
-        public string PayEmpNum
+        public string EmpNum
         {
-            get { return this.payEmpNum; }
-            set { this.payEmpNum = value; }
+            get { return this.empNum; }
+            set { this.empNum = value; }
         }
 
         public string FromDate

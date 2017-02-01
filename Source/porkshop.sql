@@ -107,7 +107,7 @@ CREATE TABLE `line` (
 
 CREATE TABLE `salary` (
   `salaryNum` int(6) AUTO_INCREMENT NOT NULL,
-  `salaryEmpNum` varchar(6) NOT NULL,
+  `empNum` varchar(6) NOT NULL,
   `salaryFrom` date NOT NULL,
   `salaryTo` date DEFAULT NULL,
   `salaryAmount` decimal(9,2) NOT NULL,
@@ -185,7 +185,7 @@ CREATE TABLE `userAccess` (
 
 CREATE TABLE `payroll` (
   `payCheckNum` int(6) AUTO_INCREMENT NOT NULL,
-  `payEmpNum` varchar(6) NOT NULL,
+  `empNum` varchar(6) NOT NULL,
   `payFrom` date NOT NULL,
   `payTo` date NOT NULL,
   `payHours` decimal(4,2) NOT NULL,

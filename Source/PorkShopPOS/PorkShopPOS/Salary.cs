@@ -31,7 +31,7 @@ namespace PorkShopPOS
             set { this.salNum = value; }
         }
 
-        public string SalEmpNum
+        public string EmpNum
         {
             get { return this.salEmpNum; }
             set { this.salEmpNum = value; }
