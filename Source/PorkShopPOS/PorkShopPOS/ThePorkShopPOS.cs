@@ -12,6 +12,11 @@ namespace PorkShopPOS
 {
     public partial class ThePorkShopPOS : Form
     {
+
+        //Declare variables
+        Employee Employee;
+        Tables Tables;
+
         public ThePorkShopPOS()
         {
             InitializeComponent();
@@ -50,6 +55,45 @@ namespace PorkShopPOS
         private void label13_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ThePorkShopPOS_Load(object sender, EventArgs e) {
+            //Create employee object
+            Employee = new Employee();
+
+            //Create list for employees
+            List<string> lPresEmployees = new List<string>();
+
+            try {
+                //Load the employees into the list
+                lPresEmployees = Employee.LoadEmployees();
+            } catch (Exception ex) {
+                //Display error message if something went wrong accessing the database
+                MessageBox.Show("Something went wrong: " + ex.GetBaseException());
+            }
+            //Add each employee to the combo box
+            for (int i = 0; i < lPresEmployees.Count; i++) {
+                cmbServer.Items.Add(lPresEmployees[i]);
+            }
+
+            //Create table object
+            Tables = new Tables();
+
+            //Create list for tables
+            List<string> lPresTables = new List<string>();
+
+            try {
+                //Load the tables into the list
+                lPresTables = Tables.LoadTables();
+            } catch (Exception ex) {
+                //Display error message if something went wrong accessing the database
+                MessageBox.Show("Something went wrong: " + ex.GetBaseException());
+            }
+            //Add each table to the combo box
+            for (int i = 0; i < lPresTables.Count; i++) {
+                cmbTableOr.Items.Add(lPresTables[i]);
+                cmbTableRes.Items.Add(lPresTables[i]);
+            }
         }
     }
 }

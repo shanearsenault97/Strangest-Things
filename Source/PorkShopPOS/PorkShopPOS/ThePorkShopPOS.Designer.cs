@@ -30,8 +30,8 @@
         {
             this.BackOfficeButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbServer = new System.Windows.Forms.ComboBox();
+            this.cmbTableOr = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -99,6 +99,8 @@
             this.button29 = new System.Windows.Forms.Button();
             this.button30 = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.button31 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -106,10 +108,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cmbTableRes = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -137,21 +137,21 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Server";
             // 
-            // comboBox1
+            // cmbServer
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(94, 16);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 2;
+            this.cmbServer.FormattingEnabled = true;
+            this.cmbServer.Location = new System.Drawing.Point(94, 16);
+            this.cmbServer.Name = "cmbServer";
+            this.cmbServer.Size = new System.Drawing.Size(121, 24);
+            this.cmbServer.TabIndex = 2;
             // 
-            // comboBox2
+            // cmbTableOr
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(94, 49);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 4;
+            this.cmbTableOr.FormattingEnabled = true;
+            this.cmbTableOr.Location = new System.Drawing.Point(94, 49);
+            this.cmbTableOr.Name = "cmbTableOr";
+            this.cmbTableOr.Size = new System.Drawing.Size(121, 24);
+            this.cmbTableOr.TabIndex = 4;
             // 
             // label2
             // 
@@ -862,7 +862,7 @@
             this.groupBox7.Controls.Add(this.label12);
             this.groupBox7.Controls.Add(this.label11);
             this.groupBox7.Controls.Add(this.dateTimePicker1);
-            this.groupBox7.Controls.Add(this.comboBox4);
+            this.groupBox7.Controls.Add(this.cmbTableRes);
             this.groupBox7.Controls.Add(this.label10);
             this.groupBox7.Location = new System.Drawing.Point(719, 4);
             this.groupBox7.Name = "groupBox7";
@@ -870,6 +870,24 @@
             this.groupBox7.TabIndex = 20;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Reservations";
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(64, 116);
+            this.maskedTextBox1.Mask = "(999) 000-0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 23);
+            this.maskedTextBox1.TabIndex = 15;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(14, 114);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(43, 16);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Phone";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // button31
             // 
@@ -928,13 +946,13 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
             this.dateTimePicker1.TabIndex = 7;
             // 
-            // comboBox4
+            // cmbTableRes
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(89, 53);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 24);
-            this.comboBox4.TabIndex = 6;
+            this.cmbTableRes.FormattingEnabled = true;
+            this.cmbTableRes.Location = new System.Drawing.Point(89, 53);
+            this.cmbTableRes.Name = "cmbTableRes";
+            this.cmbTableRes.Size = new System.Drawing.Size(121, 24);
+            this.cmbTableRes.TabIndex = 6;
             // 
             // label10
             // 
@@ -944,24 +962,6 @@
             this.label10.Size = new System.Drawing.Size(40, 16);
             this.label10.TabIndex = 5;
             this.label10.Text = "Table";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(14, 114);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(43, 16);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "Phone";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(64, 116);
-            this.maskedTextBox1.Mask = "(999) 000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 23);
-            this.maskedTextBox1.TabIndex = 15;
             // 
             // ThePorkShopPOS
             // 
@@ -983,15 +983,16 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cmbTableOr);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbServer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BackOfficeButton);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ThePorkShopPOS";
             this.Text = "Front of House";
+            this.Load += new System.EventHandler(this.ThePorkShopPOS_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1014,8 +1015,8 @@
 
         private System.Windows.Forms.Button BackOfficeButton;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbServer;
+        private System.Windows.Forms.ComboBox cmbTableOr;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
@@ -1090,7 +1091,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cmbTableRes;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;

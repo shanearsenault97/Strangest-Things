@@ -134,5 +134,13 @@ namespace PorkShopPOS
             empData.Search(this);
         }
 
+        public List<string> LoadEmployees() {
+            List<string> lEmployees = new List<string>();
+
+            lEmployees = empData.LoadEmployees(this);
+
+            return lEmployees;
+        }
+
     }
 }
