@@ -22,7 +22,7 @@ namespace PorkShopPOS
         // database table name and fields
         private const string thisTable = "payroll";
         private const string PAY_NUM = "payCheckNum";
-        private const string PAY_EMP_NUM = "payEmpNum";
+        private const string PAY_EMP_NUM = "empNum";
         private const string FROM_DATE = "payFrom";
         private const string TO_DATE = "payTo";
         private const string HOURS = "payHours";
@@ -176,7 +176,7 @@ namespace PorkShopPOS
                 "," + HOURS +
                 "," + AMOUNT +
                 ")";
-            strValues = " Values ( '" + pay.PayEmpNum +
+            strValues = " Values ( '" + pay.EmpNum +
                          "' , '" + pay.FromDate +
                          "' , '" + pay.ToDate +
                          "' , '" + pay.Hours +
@@ -216,7 +216,7 @@ namespace PorkShopPOS
         private String BuildUpdateQuery(Payroll pay)
         {
             strTable = "Update " + thisTable;
-            strFields = " Set " + PAY_EMP_NUM + " = '" + pay.PayEmpNum +
+            strFields = " Set " + PAY_EMP_NUM + " = '" + pay.EmpNum +
                 "' ," + FROM_DATE + " = '" + pay.FromDate +
                 "' ," + TO_DATE + " = '" + pay.ToDate +
                 "' ," + HOURS + " = '" + pay.Hours +
@@ -255,7 +255,7 @@ namespace PorkShopPOS
                 while (reader.Read())
                 {
                     pay.PayNum = reader.GetInt32(0);
-                    pay.PayEmpNum = reader.GetValue(1).ToString();
+                    pay.EmpNum = reader.GetValue(1).ToString();
                     pay.FromDate = reader.GetValue(2).ToString();
                     pay.ToDate = reader.GetValue(3).ToString();
                     pay.Hours = reader.GetDecimal(4);

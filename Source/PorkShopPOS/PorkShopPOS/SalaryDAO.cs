@@ -21,7 +21,7 @@ namespace PorkShopPOS
         // database table name and fields
         private const string thisTable = "salary";
         private const string SAL_NUM = "salaryNum";
-        private const string SAL_EMP_NUM = "salaryEmpNum";
+        private const string SAL_EMP_NUM = "empNum";
         private const string FROM_DATE = "salaryFrom";
         private const string TO_DATE= "salaryTo";
         private const string AMOUNT = "salaryAmount";
@@ -168,7 +168,7 @@ namespace PorkShopPOS
                 "," + FROM_DATE +
                 "," + AMOUNT +
                 ")";
-            strValues = " Values ( '" + sal.SalEmpNum +
+            strValues = " Values ( '" + sal.EmpNum +
                          "' , '" + sal.FromDate +
                          "' , '" + sal.ToDate +
                          "' , " + sal.Amount +
@@ -207,7 +207,7 @@ namespace PorkShopPOS
         private String BuildUpdateQuery(Salary sal)
         {
             strTable = "Update " + thisTable;
-            strFields = " Set " + SAL_EMP_NUM + " = '" + sal.SalEmpNum +
+            strFields = " Set " + SAL_EMP_NUM + " = '" + sal.EmpNum +
                 "' ," + FROM_DATE + " = '" + sal.FromDate +
                 "' ," + TO_DATE + " = '" + sal.ToDate +
                 "' ," + AMOUNT + " = '" + sal.Amount +
@@ -247,7 +247,7 @@ namespace PorkShopPOS
                 while (reader.Read())
                 {
                     sal.SalNum = reader.GetInt32(0);
-                    sal.SalEmpNum = reader.GetValue(1).ToString();
+                    sal.EmpNum = reader.GetValue(1).ToString();
                     sal.FromDate = reader.GetValue(2).ToString();
                     sal.ToDate = reader.GetValue(3).ToString();
                     sal.Amount = reader.GetDecimal(4);

@@ -68,6 +68,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.utilitiesTab = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.empShowAllB = new System.Windows.Forms.Button();
             this.clearB = new System.Windows.Forms.Button();
             this.empDeleteB = new System.Windows.Forms.Button();
             this.empEndDateMTB = new System.Windows.Forms.MaskedTextBox();
@@ -101,6 +102,7 @@
             this.empAddB = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.salShowAllB = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.salClearB = new System.Windows.Forms.Button();
             this.salDeleteB = new System.Windows.Forms.Button();
@@ -118,6 +120,7 @@
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.payShowAllB = new System.Windows.Forms.Button();
             this.reportsGB = new System.Windows.Forms.GroupBox();
             this.payClearB = new System.Windows.Forms.Button();
             this.payDeleteB = new System.Windows.Forms.Button();
@@ -540,6 +543,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.PowderBlue;
+            this.tabPage1.Controls.Add(this.empShowAllB);
             this.tabPage1.Controls.Add(this.clearB);
             this.tabPage1.Controls.Add(this.empDeleteB);
             this.tabPage1.Controls.Add(this.empEndDateMTB);
@@ -578,9 +582,19 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Employee";
             // 
+            // empShowAllB
+            // 
+            this.empShowAllB.Location = new System.Drawing.Point(206, 303);
+            this.empShowAllB.Name = "empShowAllB";
+            this.empShowAllB.Size = new System.Drawing.Size(96, 30);
+            this.empShowAllB.TabIndex = 119;
+            this.empShowAllB.Text = "Show All";
+            this.empShowAllB.UseVisualStyleBackColor = true;
+            this.empShowAllB.Click += new System.EventHandler(this.empShowAllB_Click);
+            // 
             // clearB
             // 
-            this.clearB.Location = new System.Drawing.Point(407, 300);
+            this.clearB.Location = new System.Drawing.Point(416, 255);
             this.clearB.Name = "clearB";
             this.clearB.Size = new System.Drawing.Size(75, 30);
             this.clearB.TabIndex = 118;
@@ -590,7 +604,7 @@
             // 
             // empDeleteB
             // 
-            this.empDeleteB.Location = new System.Drawing.Point(305, 300);
+            this.empDeleteB.Location = new System.Drawing.Point(314, 255);
             this.empDeleteB.Name = "empDeleteB";
             this.empDeleteB.Size = new System.Drawing.Size(75, 30);
             this.empDeleteB.TabIndex = 117;
@@ -600,15 +614,15 @@
             // 
             // empEndDateMTB
             // 
-            this.empEndDateMTB.Location = new System.Drawing.Point(361, 80);
+            this.empEndDateMTB.Location = new System.Drawing.Point(361, 113);
             this.empEndDateMTB.Mask = "0000/00/00";
             this.empEndDateMTB.Name = "empEndDateMTB";
-            this.empEndDateMTB.Size = new System.Drawing.Size(121, 27);
+            this.empEndDateMTB.Size = new System.Drawing.Size(105, 27);
             this.empEndDateMTB.TabIndex = 112;
             // 
             // empSearchB
             // 
-            this.empSearchB.Location = new System.Drawing.Point(206, 300);
+            this.empSearchB.Location = new System.Drawing.Point(215, 255);
             this.empSearchB.Name = "empSearchB";
             this.empSearchB.Size = new System.Drawing.Size(75, 30);
             this.empSearchB.TabIndex = 116;
@@ -618,16 +632,16 @@
             // 
             // empSinTB
             // 
-            this.empSinTB.Location = new System.Drawing.Point(108, 246);
+            this.empSinTB.Location = new System.Drawing.Point(361, 18);
             this.empSinTB.Mask = "000-000-000";
             this.empSinTB.Name = "empSinTB";
-            this.empSinTB.Size = new System.Drawing.Size(100, 27);
+            this.empSinTB.Size = new System.Drawing.Size(105, 27);
             this.empSinTB.TabIndex = 108;
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(13, 246);
+            this.label30.Location = new System.Drawing.Point(274, 18);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(36, 21);
             this.label30.TabIndex = 31;
@@ -645,7 +659,7 @@
             "Prep Cook",
             "Dishwasher",
             "Pit Boss"});
-            this.empPositionCB.Location = new System.Drawing.Point(361, 115);
+            this.empPositionCB.Location = new System.Drawing.Point(361, 148);
             this.empPositionCB.Name = "empPositionCB";
             this.empPositionCB.Size = new System.Drawing.Size(121, 27);
             this.empPositionCB.TabIndex = 113;
@@ -653,7 +667,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(274, 118);
+            this.label28.Location = new System.Drawing.Point(274, 151);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(68, 21);
             this.label28.TabIndex = 27;
@@ -764,7 +778,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(274, 84);
+            this.label21.Location = new System.Drawing.Point(274, 117);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(79, 21);
             this.label21.TabIndex = 12;
@@ -777,7 +791,7 @@
             "Active",
             "In-Active",
             "Leave of Absence"});
-            this.empStatusCB.Location = new System.Drawing.Point(361, 45);
+            this.empStatusCB.Location = new System.Drawing.Point(361, 78);
             this.empStatusCB.Name = "empStatusCB";
             this.empStatusCB.Size = new System.Drawing.Size(121, 27);
             this.empStatusCB.TabIndex = 110;
@@ -785,7 +799,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(274, 48);
+            this.label20.Location = new System.Drawing.Point(274, 81);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(57, 21);
             this.label20.TabIndex = 10;
@@ -794,7 +808,7 @@
             // empStartDateDTP
             // 
             this.empStartDateDTP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.empStartDateDTP.Location = new System.Drawing.Point(361, 15);
+            this.empStartDateDTP.Location = new System.Drawing.Point(361, 48);
             this.empStartDateDTP.MinDate = new System.DateTime(2017, 1, 12, 0, 0, 0, 0);
             this.empStartDateDTP.Name = "empStartDateDTP";
             this.empStartDateDTP.Size = new System.Drawing.Size(145, 27);
@@ -804,7 +818,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(274, 18);
+            this.label19.Location = new System.Drawing.Point(274, 51);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(87, 21);
             this.label19.TabIndex = 8;
@@ -839,7 +853,7 @@
             // 
             // empUpdateB
             // 
-            this.empUpdateB.Location = new System.Drawing.Point(108, 300);
+            this.empUpdateB.Location = new System.Drawing.Point(117, 255);
             this.empUpdateB.Name = "empUpdateB";
             this.empUpdateB.Size = new System.Drawing.Size(75, 30);
             this.empUpdateB.TabIndex = 115;
@@ -849,7 +863,7 @@
             // 
             // empAddB
             // 
-            this.empAddB.Location = new System.Drawing.Point(15, 300);
+            this.empAddB.Location = new System.Drawing.Point(24, 255);
             this.empAddB.Name = "empAddB";
             this.empAddB.Size = new System.Drawing.Size(75, 30);
             this.empAddB.TabIndex = 114;
@@ -870,6 +884,7 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.DarkCyan;
+            this.tabPage3.Controls.Add(this.salShowAllB);
             this.tabPage3.Controls.Add(this.groupBox5);
             this.tabPage3.Controls.Add(this.salClearB);
             this.tabPage3.Controls.Add(this.salDeleteB);
@@ -893,6 +908,16 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Salary";
             // 
+            // salShowAllB
+            // 
+            this.salShowAllB.Location = new System.Drawing.Point(203, 300);
+            this.salShowAllB.Name = "salShowAllB";
+            this.salShowAllB.Size = new System.Drawing.Size(100, 30);
+            this.salShowAllB.TabIndex = 141;
+            this.salShowAllB.Text = "Show All";
+            this.salShowAllB.UseVisualStyleBackColor = true;
+            this.salShowAllB.Click += new System.EventHandler(this.salShowAllB_Click);
+            // 
             // groupBox5
             // 
             this.groupBox5.Location = new System.Drawing.Point(270, 16);
@@ -904,7 +929,7 @@
             // 
             // salClearB
             // 
-            this.salClearB.Location = new System.Drawing.Point(427, 298);
+            this.salClearB.Location = new System.Drawing.Point(415, 249);
             this.salClearB.Name = "salClearB";
             this.salClearB.Size = new System.Drawing.Size(75, 30);
             this.salClearB.TabIndex = 140;
@@ -914,7 +939,7 @@
             // 
             // salDeleteB
             // 
-            this.salDeleteB.Location = new System.Drawing.Point(325, 298);
+            this.salDeleteB.Location = new System.Drawing.Point(313, 249);
             this.salDeleteB.Name = "salDeleteB";
             this.salDeleteB.Size = new System.Drawing.Size(75, 30);
             this.salDeleteB.TabIndex = 139;
@@ -924,7 +949,7 @@
             // 
             // salSearchB
             // 
-            this.salSearchB.Location = new System.Drawing.Point(226, 298);
+            this.salSearchB.Location = new System.Drawing.Point(214, 249);
             this.salSearchB.Name = "salSearchB";
             this.salSearchB.Size = new System.Drawing.Size(75, 30);
             this.salSearchB.TabIndex = 138;
@@ -934,7 +959,7 @@
             // 
             // salUpdateB
             // 
-            this.salUpdateB.Location = new System.Drawing.Point(128, 298);
+            this.salUpdateB.Location = new System.Drawing.Point(116, 249);
             this.salUpdateB.Name = "salUpdateB";
             this.salUpdateB.Size = new System.Drawing.Size(75, 30);
             this.salUpdateB.TabIndex = 137;
@@ -944,7 +969,7 @@
             // 
             // salAddB
             // 
-            this.salAddB.Location = new System.Drawing.Point(35, 298);
+            this.salAddB.Location = new System.Drawing.Point(23, 249);
             this.salAddB.Name = "salAddB";
             this.salAddB.Size = new System.Drawing.Size(75, 30);
             this.salAddB.TabIndex = 136;
@@ -1038,6 +1063,7 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.tabPage4.Controls.Add(this.payShowAllB);
             this.tabPage4.Controls.Add(this.reportsGB);
             this.tabPage4.Controls.Add(this.payClearB);
             this.tabPage4.Controls.Add(this.payDeleteB);
@@ -1063,6 +1089,16 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Payroll";
             // 
+            // payShowAllB
+            // 
+            this.payShowAllB.Location = new System.Drawing.Point(199, 303);
+            this.payShowAllB.Name = "payShowAllB";
+            this.payShowAllB.Size = new System.Drawing.Size(108, 30);
+            this.payShowAllB.TabIndex = 212;
+            this.payShowAllB.Text = "Show All";
+            this.payShowAllB.UseVisualStyleBackColor = true;
+            this.payShowAllB.Click += new System.EventHandler(this.payShowAllB_Click);
+            // 
             // reportsGB
             // 
             this.reportsGB.Location = new System.Drawing.Point(264, 18);
@@ -1074,7 +1110,7 @@
             // 
             // payClearB
             // 
-            this.payClearB.Location = new System.Drawing.Point(421, 300);
+            this.payClearB.Location = new System.Drawing.Point(414, 255);
             this.payClearB.Name = "payClearB";
             this.payClearB.Size = new System.Drawing.Size(75, 30);
             this.payClearB.TabIndex = 211;
@@ -1084,7 +1120,7 @@
             // 
             // payDeleteB
             // 
-            this.payDeleteB.Location = new System.Drawing.Point(319, 300);
+            this.payDeleteB.Location = new System.Drawing.Point(312, 255);
             this.payDeleteB.Name = "payDeleteB";
             this.payDeleteB.Size = new System.Drawing.Size(75, 30);
             this.payDeleteB.TabIndex = 210;
@@ -1094,7 +1130,7 @@
             // 
             // paySearchB
             // 
-            this.paySearchB.Location = new System.Drawing.Point(220, 300);
+            this.paySearchB.Location = new System.Drawing.Point(213, 255);
             this.paySearchB.Name = "paySearchB";
             this.paySearchB.Size = new System.Drawing.Size(75, 30);
             this.paySearchB.TabIndex = 209;
@@ -1104,7 +1140,7 @@
             // 
             // payUpdateB
             // 
-            this.payUpdateB.Location = new System.Drawing.Point(122, 300);
+            this.payUpdateB.Location = new System.Drawing.Point(115, 255);
             this.payUpdateB.Name = "payUpdateB";
             this.payUpdateB.Size = new System.Drawing.Size(75, 30);
             this.payUpdateB.TabIndex = 208;
@@ -1114,7 +1150,7 @@
             // 
             // payAddB
             // 
-            this.payAddB.Location = new System.Drawing.Point(29, 300);
+            this.payAddB.Location = new System.Drawing.Point(22, 255);
             this.payAddB.Name = "payAddB";
             this.payAddB.Size = new System.Drawing.Size(75, 30);
             this.payAddB.TabIndex = 207;
@@ -1657,5 +1693,8 @@
         private System.Windows.Forms.Button payUpdateB;
         private System.Windows.Forms.Button payAddB;
         private System.Windows.Forms.TextBox payAmountTB;
+        private System.Windows.Forms.Button empShowAllB;
+        private System.Windows.Forms.Button salShowAllB;
+        private System.Windows.Forms.Button payShowAllB;
     }
 }

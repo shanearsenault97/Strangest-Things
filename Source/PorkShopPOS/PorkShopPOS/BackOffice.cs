@@ -55,6 +55,8 @@ namespace PorkShopPOS
                 string empEndDate = empEndDateMTB.Text;
                 string empPosition = empPositionCB.Text;
 
+
+
                 // assign back office employee data to a new employee object
                 emp.EmpNum = empNum;
                 emp.EmpFName = empFName;
@@ -73,7 +75,6 @@ namespace PorkShopPOS
 
                 // call Employee add()
                 emp.Add();
-
                 MessageBox.Show(empFName + " " + empLName + " successfully added.");
             }
             catch (InvalidOperationException exc)
@@ -96,24 +97,29 @@ namespace PorkShopPOS
             try
             {
                 emp = new Employee();
-                
-                
-                emp.EmpNum = empNumTB.Text;
-                emp.EmpFName = empFNameTB.Text;
-                emp.EmpLName = empLNameTB.Text;
-                emp.EmpAddress = empAddressTB.Text;
-                emp.EmpCity = empCityTB.Text;
-                emp.EmpProvince = empProvinceTB.Text;
-                emp.EmpPostal = empPostalTB.Text;
-                emp.EmpPhone = empPhoneTB.Text;
-                emp.EmpSIN = empSinTB.Text;
-                emp.EmpStartDate = empStartDateDTP.Value.ToString();
-                emp.EmpStatus = empStatusCB.Text;
-                emp.EmpEndDate = empEndDateMTB.Text;
-                emp.EmpPosition = empPositionCB.Text;
 
-                emp.Update();
-                MessageBox.Show("Update successful.");
+                
+
+
+                    emp.EmpNum = empNumTB.Text;
+                    emp.EmpFName = empFNameTB.Text;
+                    emp.EmpLName = empLNameTB.Text;
+                    emp.EmpAddress = empAddressTB.Text;
+                    emp.EmpCity = empCityTB.Text;
+                    emp.EmpProvince = empProvinceTB.Text;
+                    emp.EmpPostal = empPostalTB.Text;
+                    emp.EmpPhone = empPhoneTB.Text;
+                    emp.EmpSIN = empSinTB.Text;
+                    emp.EmpStartDate = empStartDateDTP.Value.ToString();
+                    emp.EmpStatus = empStatusCB.Text;
+                    emp.EmpEndDate = empEndDateMTB.Text;
+                    emp.EmpPosition = empPositionCB.Text;
+
+
+
+                    emp.Update();
+                    MessageBox.Show("Update successful.");
+                
             }
             catch (InvalidOperationException exc)
             {
@@ -218,7 +224,12 @@ namespace PorkShopPOS
             empPositionCB.Text = String.Empty;
         }
 
-       
+        // display all employee data in a datagrid in a new form
+        private void empShowAllB_Click(object sender, EventArgs e)
+        {
+            EmployeeShowAllForm empShow = new EmployeeShowAllForm();
+            empShow.Show();            
+        }
 
         //*************************************************EMPLOYEE SECTION END****************************************************
 
@@ -245,7 +256,7 @@ namespace PorkShopPOS
               
 
                 // assign back office salary input data to a new salary object
-                sal.SalEmpNum = salEmpNumTB.Text;
+                sal.EmpNum = salEmpNumTB.Text;
                 sal.FromDate = salFromDateMTB.Text;
                 sal.ToDate = salToDateMTB.Text;
                 sal.Amount = decimal.Parse(salAmountTB.Text);           
@@ -253,7 +264,7 @@ namespace PorkShopPOS
                 // call Salary add()
                 sal.Add();
 
-                MessageBox.Show("New salary for employee " + sal.SalEmpNum + " successfully added.");
+                MessageBox.Show("New salary for employee " + sal.EmpNum + " successfully added.");
             }
             catch (InvalidOperationException exc)
             {
@@ -274,7 +285,7 @@ namespace PorkShopPOS
                 sal = new Salary();
 
                 sal.SalNum = int.Parse(salNumTB.Text);
-                sal.SalEmpNum = salEmpNumTB.Text;
+                sal.EmpNum = salEmpNumTB.Text;
                 sal.FromDate = salFromDateMTB.Text;
                 sal.ToDate = salToDateMTB.Text;
                 sal.Amount = decimal.Parse(salAmountTB.Text);
@@ -311,7 +322,7 @@ namespace PorkShopPOS
                 // display search results in the form text boxes
 
 
-                salEmpNumTB.Text = sal.SalEmpNum;
+                salEmpNumTB.Text = sal.EmpNum;
                 salFromDateMTB.Text = sal.FromDate;
                 salToDateMTB.Text = sal.ToDate;
                 salAmountTB.Text = sal.Amount.ToString();    
@@ -363,6 +374,13 @@ namespace PorkShopPOS
             salAmountTB.Text = String.Empty;            
         }
 
+
+        // display all salary data in a datagrid in a new form
+        private void salShowAllB_Click(object sender, EventArgs e)
+        {
+            SalaryShowAll salShow = new SalaryShowAll();
+            salShow.Show();
+        }
         //*************************************************SALARY SECTION END****************************************************
 
         //*************************************************PAYROLL SECTION START****************************************************
@@ -385,7 +403,7 @@ namespace PorkShopPOS
                 //decimal empCity = empCityTB.Text;   
 
                 // assign back office salary input data to a new payroll object
-                pay.PayEmpNum = payEmpNumTB.Text;
+                pay.EmpNum = payEmpNumTB.Text;
                 pay.FromDate = payStartDateMTB.Text;
                 pay.ToDate = payEndDateMTB.Text;
                 pay.Hours = decimal.Parse(payHoursTB.Text);
@@ -394,7 +412,7 @@ namespace PorkShopPOS
                 // call Salary add()
                 pay.Add();
 
-                MessageBox.Show("New payroll for employee " + pay.PayEmpNum + " successfully added.");
+                MessageBox.Show("New payroll for employee " + pay.EmpNum + " successfully added.");
             }
             catch (InvalidOperationException exc)
             {
@@ -415,7 +433,7 @@ namespace PorkShopPOS
                 pay = new Payroll();
 
                 pay.PayNum = int.Parse(payNumTB.Text);
-                pay.PayEmpNum = payEmpNumTB.Text;
+                pay.EmpNum = payEmpNumTB.Text;
                 pay.FromDate = payStartDateMTB.Text;
                 pay.ToDate = payEndDateMTB.Text;
                 pay.Hours = decimal.Parse(payHoursTB.Text);
@@ -452,7 +470,7 @@ namespace PorkShopPOS
 
                 // display search results in the form text boxes
 
-                payEmpNumTB.Text = pay.PayEmpNum;
+                payEmpNumTB.Text = pay.EmpNum;
                 payStartDateMTB.Text = pay.FromDate;
                 payEndDateMTB.Text = pay.ToDate;
                 payHoursTB.Text = pay.Hours.ToString();
@@ -506,6 +524,14 @@ namespace PorkShopPOS
                payAmountTB.Text = String.Empty; 
         }
 
+        // display all payroll data in a datagrid in a new form
+        private void payShowAllB_Click(object sender, EventArgs e)
+        {
+            
+            PayrollShowAll payShow = new PayrollShowAll();
+            payShow.Show();            
+        }
+    
         //*************************************************PAYROLL SECTION END****************************************************
 
         
