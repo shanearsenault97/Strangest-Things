@@ -124,13 +124,14 @@
             this.btnBackOffice.TabIndex = 0;
             this.btnBackOffice.Text = "Back Office";
             this.btnBackOffice.UseVisualStyleBackColor = true;
+            this.btnBackOffice.Click += new System.EventHandler(this.btnBackOffice_Click);
             // 
             // lblServer
             // 
             this.lblServer.AutoSize = true;
             this.lblServer.Location = new System.Drawing.Point(18, 24);
             this.lblServer.Name = "lblServer";
-            this.lblServer.Size = new System.Drawing.Size(46, 16);
+            this.lblServer.Size = new System.Drawing.Size(57, 21);
             this.lblServer.TabIndex = 1;
             this.lblServer.Text = "Server";
             // 
@@ -139,7 +140,7 @@
             this.cmbServer.FormattingEnabled = true;
             this.cmbServer.Location = new System.Drawing.Point(94, 16);
             this.cmbServer.Name = "cmbServer";
-            this.cmbServer.Size = new System.Drawing.Size(121, 24);
+            this.cmbServer.Size = new System.Drawing.Size(121, 27);
             this.cmbServer.TabIndex = 2;
             // 
             // cmbTableOr
@@ -147,7 +148,7 @@
             this.cmbTableOr.FormattingEnabled = true;
             this.cmbTableOr.Location = new System.Drawing.Point(94, 49);
             this.cmbTableOr.Name = "cmbTableOr";
-            this.cmbTableOr.Size = new System.Drawing.Size(121, 24);
+            this.cmbTableOr.Size = new System.Drawing.Size(121, 27);
             this.cmbTableOr.TabIndex = 4;
             // 
             // lblTableOr
@@ -155,7 +156,7 @@
             this.lblTableOr.AutoSize = true;
             this.lblTableOr.Location = new System.Drawing.Point(18, 57);
             this.lblTableOr.Name = "lblTableOr";
-            this.lblTableOr.Size = new System.Drawing.Size(40, 16);
+            this.lblTableOr.Size = new System.Drawing.Size(51, 21);
             this.lblTableOr.TabIndex = 3;
             this.lblTableOr.Text = "Table";
             this.lblTableOr.Click += new System.EventHandler(this.label2_Click);
@@ -165,7 +166,7 @@
             this.lblGuests.AutoSize = true;
             this.lblGuests.Location = new System.Drawing.Point(18, 89);
             this.lblGuests.Name = "lblGuests";
-            this.lblGuests.Size = new System.Drawing.Size(74, 16);
+            this.lblGuests.Size = new System.Drawing.Size(97, 21);
             this.lblGuests.TabIndex = 5;
             this.lblGuests.Text = "# of Guests";
             // 
@@ -173,7 +174,7 @@
             // 
             this.cmbGuests.Location = new System.Drawing.Point(94, 84);
             this.cmbGuests.Name = "cmbGuests";
-            this.cmbGuests.Size = new System.Drawing.Size(121, 23);
+            this.cmbGuests.Size = new System.Drawing.Size(121, 27);
             this.cmbGuests.TabIndex = 6;
             // 
             // grpBar
@@ -255,7 +256,7 @@
             this.lblCocktails.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCocktails.Location = new System.Drawing.Point(19, 346);
             this.lblCocktails.Name = "lblCocktails";
-            this.lblCocktails.Size = new System.Drawing.Size(65, 16);
+            this.lblCocktails.Size = new System.Drawing.Size(87, 21);
             this.lblCocktails.TabIndex = 23;
             this.lblCocktails.Text = "Cocktails";
             // 
@@ -273,7 +274,7 @@
             "Pineapple"});
             this.cmbMix.Location = new System.Drawing.Point(111, 316);
             this.cmbMix.Name = "cmbMix";
-            this.cmbMix.Size = new System.Drawing.Size(94, 24);
+            this.cmbMix.Size = new System.Drawing.Size(94, 27);
             this.cmbMix.TabIndex = 22;
             this.cmbMix.Text = "Choose Mix";
             // 
@@ -331,7 +332,7 @@
             this.lblHouseShots.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHouseShots.Location = new System.Drawing.Point(18, 237);
             this.lblHouseShots.Name = "lblHouseShots";
-            this.lblHouseShots.Size = new System.Drawing.Size(89, 16);
+            this.lblHouseShots.Size = new System.Drawing.Size(118, 21);
             this.lblHouseShots.TabIndex = 15;
             this.lblHouseShots.Text = "House Shots";
             this.lblHouseShots.Click += new System.EventHandler(this.label6_Click);
@@ -371,7 +372,7 @@
             this.lblImported.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblImported.Location = new System.Drawing.Point(15, 158);
             this.lblImported.Name = "lblImported";
-            this.lblImported.Size = new System.Drawing.Size(102, 16);
+            this.lblImported.Size = new System.Drawing.Size(135, 21);
             this.lblImported.TabIndex = 8;
             this.lblImported.Text = "Imported Beer";
             // 
@@ -439,7 +440,7 @@
             this.lblDomestic.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDomestic.Location = new System.Drawing.Point(14, 46);
             this.lblDomestic.Name = "lblDomestic";
-            this.lblDomestic.Size = new System.Drawing.Size(101, 16);
+            this.lblDomestic.Size = new System.Drawing.Size(134, 21);
             this.lblDomestic.TabIndex = 1;
             this.lblDomestic.Text = "Domestic Beer";
             // 
@@ -448,7 +449,7 @@
             this.chkHappyHr.AutoSize = true;
             this.chkHappyHr.Location = new System.Drawing.Point(7, 23);
             this.chkHappyHr.Name = "chkHappyHr";
-            this.chkHappyHr.Size = new System.Drawing.Size(93, 20);
+            this.chkHappyHr.Size = new System.Drawing.Size(118, 25);
             this.chkHappyHr.TabIndex = 0;
             this.chkHappyHr.Text = "Happy Hour";
             this.chkHappyHr.UseVisualStyleBackColor = true;
@@ -475,7 +476,7 @@
             this.chkChipotle.AutoSize = true;
             this.chkChipotle.Location = new System.Drawing.Point(296, 109);
             this.chkChipotle.Name = "chkChipotle";
-            this.chkChipotle.Size = new System.Drawing.Size(107, 20);
+            this.chkChipotle.Size = new System.Drawing.Size(136, 25);
             this.chkChipotle.TabIndex = 9;
             this.chkChipotle.Text = "Chipotle Mayo";
             this.chkChipotle.UseVisualStyleBackColor = true;
@@ -485,7 +486,7 @@
             this.chkBiscuit.AutoSize = true;
             this.chkBiscuit.Location = new System.Drawing.Point(220, 108);
             this.chkBiscuit.Name = "chkBiscuit";
-            this.chkBiscuit.Size = new System.Drawing.Size(63, 20);
+            this.chkBiscuit.Size = new System.Drawing.Size(81, 25);
             this.chkBiscuit.TabIndex = 8;
             this.chkBiscuit.Text = "Biscuit";
             this.chkBiscuit.UseVisualStyleBackColor = true;
@@ -495,7 +496,7 @@
             this.chkCornbread.AutoSize = true;
             this.chkCornbread.Location = new System.Drawing.Point(121, 109);
             this.chkCornbread.Name = "chkCornbread";
-            this.chkCornbread.Size = new System.Drawing.Size(87, 20);
+            this.chkCornbread.Size = new System.Drawing.Size(108, 25);
             this.chkCornbread.TabIndex = 7;
             this.chkCornbread.Text = "Cornbread";
             this.chkCornbread.UseVisualStyleBackColor = true;
@@ -505,7 +506,7 @@
             this.chkRoll.AutoSize = true;
             this.chkRoll.Location = new System.Drawing.Point(18, 109);
             this.chkRoll.Name = "chkRoll";
-            this.chkRoll.Size = new System.Drawing.Size(88, 20);
+            this.chkRoll.Size = new System.Drawing.Size(112, 25);
             this.chkRoll.TabIndex = 6;
             this.chkRoll.Text = "Crusty Roll";
             this.chkRoll.UseVisualStyleBackColor = true;
@@ -571,7 +572,7 @@
             this.chkMashed3.AutoSize = true;
             this.chkMashed3.Location = new System.Drawing.Point(8, 98);
             this.chkMashed3.Name = "chkMashed3";
-            this.chkMashed3.Size = new System.Drawing.Size(124, 20);
+            this.chkMashed3.Size = new System.Drawing.Size(159, 25);
             this.chkMashed3.TabIndex = 3;
             this.chkMashed3.Text = "Mashed Potatoes";
             this.chkMashed3.UseVisualStyleBackColor = true;
@@ -581,7 +582,7 @@
             this.chkHomeFries3.AutoSize = true;
             this.chkHomeFries3.Location = new System.Drawing.Point(8, 72);
             this.chkHomeFries3.Name = "chkHomeFries3";
-            this.chkHomeFries3.Size = new System.Drawing.Size(92, 20);
+            this.chkHomeFries3.Size = new System.Drawing.Size(116, 25);
             this.chkHomeFries3.TabIndex = 2;
             this.chkHomeFries3.Text = "Home Fries";
             this.chkHomeFries3.UseVisualStyleBackColor = true;
@@ -591,7 +592,7 @@
             this.chkMacNCheese3.AutoSize = true;
             this.chkMacNCheese3.Location = new System.Drawing.Point(8, 46);
             this.chkMacNCheese3.Name = "chkMacNCheese3";
-            this.chkMacNCheese3.Size = new System.Drawing.Size(107, 20);
+            this.chkMacNCheese3.Size = new System.Drawing.Size(135, 25);
             this.chkMacNCheese3.TabIndex = 1;
             this.chkMacNCheese3.Text = "Mac n Cheese";
             this.chkMacNCheese3.UseVisualStyleBackColor = true;
@@ -601,7 +602,7 @@
             this.chkOnRings3.AutoSize = true;
             this.chkOnRings3.Location = new System.Drawing.Point(7, 23);
             this.chkOnRings3.Name = "chkOnRings3";
-            this.chkOnRings3.Size = new System.Drawing.Size(95, 20);
+            this.chkOnRings3.Size = new System.Drawing.Size(121, 25);
             this.chkOnRings3.TabIndex = 0;
             this.chkOnRings3.Text = "Onion Rings";
             this.chkOnRings3.UseVisualStyleBackColor = true;
@@ -624,7 +625,7 @@
             this.chkMashed2.AutoSize = true;
             this.chkMashed2.Location = new System.Drawing.Point(8, 98);
             this.chkMashed2.Name = "chkMashed2";
-            this.chkMashed2.Size = new System.Drawing.Size(124, 20);
+            this.chkMashed2.Size = new System.Drawing.Size(159, 25);
             this.chkMashed2.TabIndex = 3;
             this.chkMashed2.Text = "Mashed Potatoes";
             this.chkMashed2.UseVisualStyleBackColor = true;
@@ -634,7 +635,7 @@
             this.chkHomeFries2.AutoSize = true;
             this.chkHomeFries2.Location = new System.Drawing.Point(8, 72);
             this.chkHomeFries2.Name = "chkHomeFries2";
-            this.chkHomeFries2.Size = new System.Drawing.Size(92, 20);
+            this.chkHomeFries2.Size = new System.Drawing.Size(116, 25);
             this.chkHomeFries2.TabIndex = 2;
             this.chkHomeFries2.Text = "Home Fries";
             this.chkHomeFries2.UseVisualStyleBackColor = true;
@@ -644,7 +645,7 @@
             this.chkMacNCheese2.AutoSize = true;
             this.chkMacNCheese2.Location = new System.Drawing.Point(8, 46);
             this.chkMacNCheese2.Name = "chkMacNCheese2";
-            this.chkMacNCheese2.Size = new System.Drawing.Size(107, 20);
+            this.chkMacNCheese2.Size = new System.Drawing.Size(135, 25);
             this.chkMacNCheese2.TabIndex = 1;
             this.chkMacNCheese2.Text = "Mac n Cheese";
             this.chkMacNCheese2.UseVisualStyleBackColor = true;
@@ -654,7 +655,7 @@
             this.chkOnRings2.AutoSize = true;
             this.chkOnRings2.Location = new System.Drawing.Point(7, 23);
             this.chkOnRings2.Name = "chkOnRings2";
-            this.chkOnRings2.Size = new System.Drawing.Size(95, 20);
+            this.chkOnRings2.Size = new System.Drawing.Size(121, 25);
             this.chkOnRings2.TabIndex = 0;
             this.chkOnRings2.Text = "Onion Rings";
             this.chkOnRings2.UseVisualStyleBackColor = true;
@@ -677,7 +678,7 @@
             this.chkMashed1.AutoSize = true;
             this.chkMashed1.Location = new System.Drawing.Point(8, 98);
             this.chkMashed1.Name = "chkMashed1";
-            this.chkMashed1.Size = new System.Drawing.Size(124, 20);
+            this.chkMashed1.Size = new System.Drawing.Size(159, 25);
             this.chkMashed1.TabIndex = 3;
             this.chkMashed1.Text = "Mashed Potatoes";
             this.chkMashed1.UseVisualStyleBackColor = true;
@@ -687,7 +688,7 @@
             this.chkHomeFries1.AutoSize = true;
             this.chkHomeFries1.Location = new System.Drawing.Point(8, 72);
             this.chkHomeFries1.Name = "chkHomeFries1";
-            this.chkHomeFries1.Size = new System.Drawing.Size(92, 20);
+            this.chkHomeFries1.Size = new System.Drawing.Size(116, 25);
             this.chkHomeFries1.TabIndex = 2;
             this.chkHomeFries1.Text = "Home Fries";
             this.chkHomeFries1.UseVisualStyleBackColor = true;
@@ -697,7 +698,7 @@
             this.chkMacNCheese1.AutoSize = true;
             this.chkMacNCheese1.Location = new System.Drawing.Point(8, 46);
             this.chkMacNCheese1.Name = "chkMacNCheese1";
-            this.chkMacNCheese1.Size = new System.Drawing.Size(107, 20);
+            this.chkMacNCheese1.Size = new System.Drawing.Size(135, 25);
             this.chkMacNCheese1.TabIndex = 1;
             this.chkMacNCheese1.Text = "Mac n Cheese";
             this.chkMacNCheese1.UseVisualStyleBackColor = true;
@@ -707,7 +708,7 @@
             this.chkOnRings1.AutoSize = true;
             this.chkOnRings1.Location = new System.Drawing.Point(7, 23);
             this.chkOnRings1.Name = "chkOnRings1";
-            this.chkOnRings1.Size = new System.Drawing.Size(95, 20);
+            this.chkOnRings1.Size = new System.Drawing.Size(121, 25);
             this.chkOnRings1.TabIndex = 0;
             this.chkOnRings1.Text = "Onion Rings";
             this.chkOnRings1.UseVisualStyleBackColor = true;
@@ -745,7 +746,7 @@
             this.lblDisplayOrder.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDisplayOrder.Location = new System.Drawing.Point(718, 226);
             this.lblDisplayOrder.Name = "lblDisplayOrder";
-            this.lblDisplayOrder.Size = new System.Drawing.Size(95, 16);
+            this.lblDisplayOrder.Size = new System.Drawing.Size(126, 21);
             this.lblDisplayOrder.TabIndex = 11;
             this.lblDisplayOrder.Text = "Display Order";
             // 
@@ -773,7 +774,7 @@
             this.lblTitle.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(363, 16);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(212, 25);
+            this.lblTitle.Size = new System.Drawing.Size(276, 33);
             this.lblTitle.TabIndex = 15;
             this.lblTitle.Text = "The Pork Shop POS";
             // 
@@ -789,10 +790,10 @@
             // listOrder
             // 
             this.listOrder.FormattingEnabled = true;
-            this.listOrder.ItemHeight = 16;
+            this.listOrder.ItemHeight = 19;
             this.listOrder.Location = new System.Drawing.Point(718, 246);
             this.listOrder.Name = "listOrder";
-            this.listOrder.Size = new System.Drawing.Size(224, 324);
+            this.listOrder.Size = new System.Drawing.Size(224, 308);
             this.listOrder.TabIndex = 17;
             // 
             // btnDeleteItem
@@ -814,6 +815,7 @@
             this.btnLogout.TabIndex = 19;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // grpReservations
             // 
@@ -840,7 +842,7 @@
             this.txtPhone.Location = new System.Drawing.Point(64, 116);
             this.txtPhone.Mask = "(999) 000-0000";
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(100, 23);
+            this.txtPhone.Size = new System.Drawing.Size(100, 27);
             this.txtPhone.TabIndex = 15;
             // 
             // lblPhone
@@ -848,7 +850,7 @@
             this.lblPhone.AutoSize = true;
             this.lblPhone.Location = new System.Drawing.Point(14, 114);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(43, 16);
+            this.lblPhone.Size = new System.Drawing.Size(55, 21);
             this.lblPhone.TabIndex = 14;
             this.lblPhone.Text = "Phone";
             this.lblPhone.Click += new System.EventHandler(this.label13_Click);
@@ -875,14 +877,14 @@
             // 
             this.txtNumGuests.Location = new System.Drawing.Point(91, 145);
             this.txtNumGuests.Name = "txtNumGuests";
-            this.txtNumGuests.Size = new System.Drawing.Size(39, 23);
+            this.txtNumGuests.Size = new System.Drawing.Size(39, 27);
             this.txtNumGuests.TabIndex = 11;
             // 
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(61, 86);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(149, 23);
+            this.txtName.Size = new System.Drawing.Size(149, 27);
             this.txtName.TabIndex = 10;
             // 
             // lblName
@@ -890,7 +892,7 @@
             this.lblName.AutoSize = true;
             this.lblName.Location = new System.Drawing.Point(13, 86);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(41, 16);
+            this.lblName.Size = new System.Drawing.Size(53, 21);
             this.lblName.TabIndex = 9;
             this.lblName.Text = "Name";
             // 
@@ -899,7 +901,7 @@
             this.lblNumGuests.AutoSize = true;
             this.lblNumGuests.Location = new System.Drawing.Point(12, 143);
             this.lblNumGuests.Name = "lblNumGuests";
-            this.lblNumGuests.Size = new System.Drawing.Size(76, 16);
+            this.lblNumGuests.Size = new System.Drawing.Size(100, 21);
             this.lblNumGuests.TabIndex = 8;
             this.lblNumGuests.Text = "Num Guests";
             // 
@@ -907,7 +909,7 @@
             // 
             this.dateReservations.Location = new System.Drawing.Point(11, 22);
             this.dateReservations.Name = "dateReservations";
-            this.dateReservations.Size = new System.Drawing.Size(200, 23);
+            this.dateReservations.Size = new System.Drawing.Size(200, 27);
             this.dateReservations.TabIndex = 7;
             // 
             // cmbTableRes
@@ -915,7 +917,7 @@
             this.cmbTableRes.FormattingEnabled = true;
             this.cmbTableRes.Location = new System.Drawing.Point(89, 53);
             this.cmbTableRes.Name = "cmbTableRes";
-            this.cmbTableRes.Size = new System.Drawing.Size(121, 24);
+            this.cmbTableRes.Size = new System.Drawing.Size(121, 27);
             this.cmbTableRes.TabIndex = 6;
             // 
             // lblTableRes
@@ -923,13 +925,13 @@
             this.lblTableRes.AutoSize = true;
             this.lblTableRes.Location = new System.Drawing.Point(13, 61);
             this.lblTableRes.Name = "lblTableRes";
-            this.lblTableRes.Size = new System.Drawing.Size(40, 16);
+            this.lblTableRes.Size = new System.Drawing.Size(51, 21);
             this.lblTableRes.TabIndex = 5;
             this.lblTableRes.Text = "Table";
             // 
             // ThePorkShopPOS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(965, 633);

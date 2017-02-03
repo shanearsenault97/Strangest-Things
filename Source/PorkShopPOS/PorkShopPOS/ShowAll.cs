@@ -35,5 +35,10 @@ namespace PorkShopPOS
         {
             showAllData.showAllPayrolls(dgv);
         }
+
+        public void showAllMenuItems(DataGridView dgv)
+        {
+            showAllData.showAllMenuItems(dgv);
+        }
     }
 }

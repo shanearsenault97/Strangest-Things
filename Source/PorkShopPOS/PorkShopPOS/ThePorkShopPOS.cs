@@ -95,5 +95,22 @@ namespace PorkShopPOS
                 cmbTableRes.Items.Add(lPresTables[i]);
             }
         }
+
+
+        // close the pos UI and load the back office UI
+        private void btnBackOffice_Click(object sender, EventArgs e)
+        {        
+            this.Close();
+            BackOffice officeUI = new BackOffice();
+            officeUI.Show();                       
+        }
+
+        // close the pos UI and load the login UI
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Welcome welcomeUI = new Welcome();
+            welcomeUI.Show(); 
+        }    
     }
 }

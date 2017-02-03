@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.FrontHouseButton = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -139,17 +139,13 @@
             this.label41 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.button15 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button16 = new System.Windows.Forms.Button();
+            this.updateMenuTab = new System.Windows.Forms.TabPage();
             this.label49 = new System.Windows.Forms.Label();
-            this.button17 = new System.Windows.Forms.Button();
             this.label48 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.menuPriceTB = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.menuNameTB = new System.Windows.Forms.TextBox();
+            this.menuTypeLB = new System.Windows.Forms.ComboBox();
             this.label46 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -165,6 +161,13 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label31 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.menuShowAllB = new System.Windows.Forms.Button();
+            this.menuClearB = new System.Windows.Forms.Button();
+            this.menuDeleteB = new System.Windows.Forms.Button();
+            this.menuSearchB = new System.Windows.Forms.Button();
+            this.menuUpdateB = new System.Windows.Forms.Button();
+            this.menuAddB = new System.Windows.Forms.Button();
+            this.menuNumTB = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -172,7 +175,7 @@
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.tabPage9.SuspendLayout();
+            this.updateMenuTab.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage8.SuspendLayout();
@@ -186,16 +189,18 @@
             this.FrontHouseButton.TabIndex = 1;
             this.FrontHouseButton.Text = "Front of House";
             this.FrontHouseButton.UseVisualStyleBackColor = true;
+            this.FrontHouseButton.Click += new System.EventHandler(this.FrontHouseButton_Click);
             // 
-            // button30
+            // btnLogout
             // 
-            this.button30.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button30.Location = new System.Drawing.Point(156, 635);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(75, 23);
-            this.button30.TabIndex = 20;
-            this.button30.Text = "Logout";
-            this.button30.UseVisualStyleBackColor = true;
+            this.btnLogout.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(156, 635);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 20;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // groupBox1
             // 
@@ -533,7 +538,7 @@
             this.utilitiesTab.Controls.Add(this.tabPage2);
             this.utilitiesTab.Controls.Add(this.tabPage3);
             this.utilitiesTab.Controls.Add(this.tabPage4);
-            this.utilitiesTab.Controls.Add(this.tabPage9);
+            this.utilitiesTab.Controls.Add(this.updateMenuTab);
             this.utilitiesTab.Location = new System.Drawing.Point(15, 30);
             this.utilitiesTab.Name = "utilitiesTab";
             this.utilitiesTab.SelectedIndex = 0;
@@ -1257,107 +1262,75 @@
             this.label29.TabIndex = 14;
             this.label29.Text = "Check No.";
             // 
-            // tabPage9
+            // updateMenuTab
             // 
-            this.tabPage9.BackColor = System.Drawing.Color.Tomato;
-            this.tabPage9.Controls.Add(this.button15);
-            this.tabPage9.Controls.Add(this.comboBox2);
-            this.tabPage9.Controls.Add(this.button16);
-            this.tabPage9.Controls.Add(this.label49);
-            this.tabPage9.Controls.Add(this.button17);
-            this.tabPage9.Controls.Add(this.label48);
-            this.tabPage9.Controls.Add(this.textBox18);
-            this.tabPage9.Controls.Add(this.label47);
-            this.tabPage9.Controls.Add(this.textBox21);
-            this.tabPage9.Controls.Add(this.comboBox1);
-            this.tabPage9.Controls.Add(this.label46);
-            this.tabPage9.Location = new System.Drawing.Point(4, 28);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(519, 345);
-            this.tabPage9.TabIndex = 4;
-            this.tabPage9.Text = "Update Menu";
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(377, 211);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(103, 54);
-            this.button15.TabIndex = 35;
-            this.button15.Text = "Delete";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(141, 48);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 27);
-            this.comboBox2.TabIndex = 26;
-            // 
-            // button16
-            // 
-            this.button16.Location = new System.Drawing.Point(201, 211);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(103, 54);
-            this.button16.TabIndex = 34;
-            this.button16.Text = "Update";
-            this.button16.UseVisualStyleBackColor = true;
+            this.updateMenuTab.BackColor = System.Drawing.Color.Tomato;
+            this.updateMenuTab.Controls.Add(this.menuNumTB);
+            this.updateMenuTab.Controls.Add(this.menuShowAllB);
+            this.updateMenuTab.Controls.Add(this.menuClearB);
+            this.updateMenuTab.Controls.Add(this.menuDeleteB);
+            this.updateMenuTab.Controls.Add(this.menuSearchB);
+            this.updateMenuTab.Controls.Add(this.menuUpdateB);
+            this.updateMenuTab.Controls.Add(this.menuAddB);
+            this.updateMenuTab.Controls.Add(this.label49);
+            this.updateMenuTab.Controls.Add(this.label48);
+            this.updateMenuTab.Controls.Add(this.menuPriceTB);
+            this.updateMenuTab.Controls.Add(this.label47);
+            this.updateMenuTab.Controls.Add(this.menuNameTB);
+            this.updateMenuTab.Controls.Add(this.menuTypeLB);
+            this.updateMenuTab.Controls.Add(this.label46);
+            this.updateMenuTab.Location = new System.Drawing.Point(4, 28);
+            this.updateMenuTab.Name = "updateMenuTab";
+            this.updateMenuTab.Padding = new System.Windows.Forms.Padding(3);
+            this.updateMenuTab.Size = new System.Drawing.Size(519, 345);
+            this.updateMenuTab.TabIndex = 4;
+            this.updateMenuTab.Text = "Update Menu";
             // 
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(32, 56);
+            this.label49.Location = new System.Drawing.Point(18, 24);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(132, 21);
             this.label49.TabIndex = 25;
             this.label49.Text = "Menu Item Code";
             // 
-            // button17
-            // 
-            this.button17.Location = new System.Drawing.Point(35, 211);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(103, 54);
-            this.button17.TabIndex = 33;
-            this.button17.Text = "Add";
-            this.button17.UseVisualStyleBackColor = true;
-            // 
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(32, 105);
+            this.label48.Location = new System.Drawing.Point(19, 60);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(138, 21);
             this.label48.TabIndex = 27;
             this.label48.Text = "Menu Item Name";
             // 
-            // textBox18
+            // menuPriceTB
             // 
-            this.textBox18.Location = new System.Drawing.Point(145, 153);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(117, 27);
-            this.textBox18.TabIndex = 32;
+            this.menuPriceTB.Location = new System.Drawing.Point(156, 134);
+            this.menuPriceTB.Name = "menuPriceTB";
+            this.menuPriceTB.Size = new System.Drawing.Size(121, 27);
+            this.menuPriceTB.TabIndex = 103;
             // 
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(283, 54);
+            this.label47.Location = new System.Drawing.Point(18, 97);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(76, 21);
             this.label47.TabIndex = 29;
             this.label47.Text = "Category";
             // 
-            // textBox21
+            // menuNameTB
             // 
-            this.textBox21.Location = new System.Drawing.Point(145, 100);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(117, 27);
-            this.textBox21.TabIndex = 28;
+            this.menuNameTB.Location = new System.Drawing.Point(156, 60);
+            this.menuNameTB.Name = "menuNameTB";
+            this.menuNameTB.Size = new System.Drawing.Size(121, 27);
+            this.menuNameTB.TabIndex = 102;
             // 
-            // comboBox1
+            // menuTypeLB
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.menuTypeLB.FormattingEnabled = true;
+            this.menuTypeLB.Items.AddRange(new object[] {
             "Starter",
             "Main",
             "Side",
@@ -1367,15 +1340,15 @@
             "Liquor",
             "Mix",
             "Cocktail"});
-            this.comboBox1.Location = new System.Drawing.Point(350, 47);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 27);
-            this.comboBox1.TabIndex = 30;
+            this.menuTypeLB.Location = new System.Drawing.Point(156, 97);
+            this.menuTypeLB.Name = "menuTypeLB";
+            this.menuTypeLB.Size = new System.Drawing.Size(121, 27);
+            this.menuTypeLB.TabIndex = 104;
             // 
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(32, 158);
+            this.label46.Location = new System.Drawing.Point(19, 130);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(131, 21);
             this.label46.TabIndex = 31;
@@ -1518,6 +1491,73 @@
             this.dateTimePicker3.Size = new System.Drawing.Size(229, 27);
             this.dateTimePicker3.TabIndex = 0;
             // 
+            // menuShowAllB
+            // 
+            this.menuShowAllB.Location = new System.Drawing.Point(200, 297);
+            this.menuShowAllB.Name = "menuShowAllB";
+            this.menuShowAllB.Size = new System.Drawing.Size(108, 30);
+            this.menuShowAllB.TabIndex = 110;
+            this.menuShowAllB.Text = "Show All";
+            this.menuShowAllB.UseVisualStyleBackColor = true;
+            this.menuShowAllB.Click += new System.EventHandler(this.menuShowAllB_Click);
+            // 
+            // menuClearB
+            // 
+            this.menuClearB.Location = new System.Drawing.Point(415, 249);
+            this.menuClearB.Name = "menuClearB";
+            this.menuClearB.Size = new System.Drawing.Size(75, 30);
+            this.menuClearB.TabIndex = 109;
+            this.menuClearB.Text = "Clear";
+            this.menuClearB.UseVisualStyleBackColor = true;
+            this.menuClearB.Click += new System.EventHandler(this.menuClearB_Click);
+            // 
+            // menuDeleteB
+            // 
+            this.menuDeleteB.Location = new System.Drawing.Point(313, 249);
+            this.menuDeleteB.Name = "menuDeleteB";
+            this.menuDeleteB.Size = new System.Drawing.Size(75, 30);
+            this.menuDeleteB.TabIndex = 108;
+            this.menuDeleteB.Text = "Delete";
+            this.menuDeleteB.UseVisualStyleBackColor = true;
+            this.menuDeleteB.Click += new System.EventHandler(this.menuDeleteB_Click);
+            // 
+            // menuSearchB
+            // 
+            this.menuSearchB.Location = new System.Drawing.Point(214, 249);
+            this.menuSearchB.Name = "menuSearchB";
+            this.menuSearchB.Size = new System.Drawing.Size(75, 30);
+            this.menuSearchB.TabIndex = 107;
+            this.menuSearchB.Text = "Search";
+            this.menuSearchB.UseVisualStyleBackColor = true;
+            this.menuSearchB.Click += new System.EventHandler(this.menuSearchB_Click);
+            // 
+            // menuUpdateB
+            // 
+            this.menuUpdateB.Location = new System.Drawing.Point(116, 249);
+            this.menuUpdateB.Name = "menuUpdateB";
+            this.menuUpdateB.Size = new System.Drawing.Size(75, 30);
+            this.menuUpdateB.TabIndex = 106;
+            this.menuUpdateB.Text = "Update";
+            this.menuUpdateB.UseVisualStyleBackColor = true;
+            this.menuUpdateB.Click += new System.EventHandler(this.menuUpdateB_Click);
+            // 
+            // menuAddB
+            // 
+            this.menuAddB.Location = new System.Drawing.Point(23, 249);
+            this.menuAddB.Name = "menuAddB";
+            this.menuAddB.Size = new System.Drawing.Size(75, 30);
+            this.menuAddB.TabIndex = 105;
+            this.menuAddB.Text = "Add";
+            this.menuAddB.UseVisualStyleBackColor = true;
+            this.menuAddB.Click += new System.EventHandler(this.menuAddB_Click);
+            // 
+            // menuNumTB
+            // 
+            this.menuNumTB.Location = new System.Drawing.Point(156, 21);
+            this.menuNumTB.Name = "menuNumTB";
+            this.menuNumTB.Size = new System.Drawing.Size(121, 27);
+            this.menuNumTB.TabIndex = 101;
+            // 
             // BackOffice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1528,7 +1568,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button30);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.FrontHouseButton);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1547,8 +1587,8 @@
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            this.tabPage9.ResumeLayout(false);
-            this.tabPage9.PerformLayout();
+            this.updateMenuTab.ResumeLayout(false);
+            this.updateMenuTab.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
@@ -1560,7 +1600,7 @@
         #endregion
 
         private System.Windows.Forms.Button FrontHouseButton;
-        private System.Windows.Forms.Button button30;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button2;
@@ -1658,17 +1698,13 @@
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TabPage tabPage9;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.TabPage updateMenuTab;
         private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox menuPriceTB;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox menuNameTB;
+        private System.Windows.Forms.ComboBox menuTypeLB;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button salClearB;
@@ -1696,5 +1732,12 @@
         private System.Windows.Forms.Button empShowAllB;
         private System.Windows.Forms.Button salShowAllB;
         private System.Windows.Forms.Button payShowAllB;
+        private System.Windows.Forms.Button menuShowAllB;
+        private System.Windows.Forms.Button menuClearB;
+        private System.Windows.Forms.Button menuDeleteB;
+        private System.Windows.Forms.Button menuSearchB;
+        private System.Windows.Forms.Button menuUpdateB;
+        private System.Windows.Forms.Button menuAddB;
+        private System.Windows.Forms.TextBox menuNumTB;
     }
 }

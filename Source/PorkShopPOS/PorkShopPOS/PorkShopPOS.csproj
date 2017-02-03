@@ -61,6 +61,14 @@
     <Compile Include="EmployeeShowAll.Designer.cs">
       <DependentUpon>EmployeeShowAll.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuItemsShowAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuItemsShowAll.Designer.cs">
+      <DependentUpon>MenuItemsShowAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUpdate.cs" />
+    <Compile Include="MenuUpdateDAO.cs" />
     <Compile Include="Payroll.cs" />
     <Compile Include="PayrollDAO.cs" />
     <Compile Include="PayrollShowAll.cs">
@@ -89,6 +97,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserAccesscs.cs" />
+    <Compile Include="UserAccessDAO.cs" />
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeShowAll.resx">
       <DependentUpon>EmployeeShowAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuItemsShowAll.resx">
+      <DependentUpon>MenuItemsShowAll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PayrollShowAll.resx">
       <DependentUpon>PayrollShowAll.cs</DependentUpon>

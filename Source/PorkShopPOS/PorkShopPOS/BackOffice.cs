@@ -18,6 +18,22 @@ namespace PorkShopPOS
             InitializeComponent();
         }
 
+        // closes back office UI and opens POS UI
+        private void FrontHouseButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ThePorkShopPOS posUI = new ThePorkShopPOS();
+            posUI.Show();
+        }
+
+        // close the pos UI and load the back office UI
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Welcome welcomeUI = new Welcome();
+            welcomeUI.Show(); 
+        }
+
         // functionality required when the Back Office interface loads
          private void BackOffice_Load(object sender, EventArgs e)
         {
@@ -527,17 +543,157 @@ namespace PorkShopPOS
         // display all payroll data in a datagrid in a new form
         private void payShowAllB_Click(object sender, EventArgs e)
         {
-            
             PayrollShowAll payShow = new PayrollShowAll();
             payShow.Show();            
         }
-    
-        //*************************************************PAYROLL SECTION END****************************************************
 
         
+        //*************************************************PAYROLL SECTION END****************************************************
+        //*************************************************MENU_UPDATE SECTION START****************************************************
 
-     
+        // instantiate a new menu object
+        MenuUpdate menu;
 
-  
+        // add a new menu item to the database
+        private void menuAddB_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                menu = new MenuUpdate();
+
+                // these fields will be used to validate the form data
+                //int salNum = salNumTB.Text; 
+                //string salEmpNum = 
+                //string salFromDate = 
+                //string salToDate = 
+                //decimal empCity = empCityTB.Text;    
+
+                // assign back office menu input data to a new menu object
+                menu.FoodNum = menuNumTB.Text;
+                menu.FoodName = menuNameTB.Text;
+                menu.FoodType = menuTypeLB.Text;
+                menu.FoodPrice = decimal.Parse(menuPriceTB.Text);
+
+                // call Salary add()
+                menu.Add();
+
+                MessageBox.Show("New menu item successfully added.");
+            }
+            catch (InvalidOperationException exc)
+            {
+                MessageBox.Show(exc.ToString());
+            }
+
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+        // update an existing menu item in the database
+        private void menuUpdateB_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                menu = new MenuUpdate();
+
+                menu.FoodNum = menuNumTB.Text;
+                menu.FoodName = menuNameTB.Text;
+                menu.FoodType = menuTypeLB.Text;
+                menu.FoodPrice = decimal.Parse(menuPriceTB.Text);
+
+
+                menu.Update();
+                MessageBox.Show("Update successful.");
+            }
+            catch (InvalidOperationException exc)
+            {
+                MessageBox.Show(exc.ToString());
+            }
+
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }            
+                    
+        }
+
+        // search for a menu item in the database
+        private void menuSearchB_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                menu = new MenuUpdate();
+
+
+                // search by empNum
+                menu.FoodNum = menuNumTB.Text;
+
+                // call the search method in the business layer
+                menu.Search();
+
+                // display search results in the form text boxes
+
+                menuNumTB.Text = menu.FoodNum;
+                menuNameTB.Text = menu.FoodName;
+                menuTypeLB.Text = menu.FoodType;
+                menuPriceTB.Text = menu.FoodPrice.ToString();
+            }
+            catch (InvalidOperationException exc)
+            {
+                MessageBox.Show(exc.ToString());
+            }
+
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+        // delete a menu item in the database
+        private void menuDeleteB_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                menu = new MenuUpdate();
+
+                // delete employee from database based on empNumber
+                menu.FoodNum = menuNumTB.Text;
+
+                // delete employee
+                menu.Delete();
+
+                MessageBox.Show("Menu item successfully deleted.");
+            }
+            catch (InvalidOperationException exc)
+            {
+                MessageBox.Show(exc.ToString());
+            }
+
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+        // clear all fields in the update menu tab
+        private void menuClearB_Click(object sender, EventArgs e)
+        {
+            menuNumTB.Text = String.Empty;
+            menuNameTB.Text = String.Empty;
+            menuTypeLB.Text = String.Empty;
+            menuPriceTB.Text = String.Empty;          
+        }
+
+        // display all menu items in a data grid
+        private void menuShowAllB_Click(object sender, EventArgs e)
+        {
+            MenuItemsShowAll menuShow = new MenuItemsShowAll();
+            menuShow.Show();
+        }
+
+
+        //*************************************************MENU_UPDATE SECTION END****************************************************
     }
 }
