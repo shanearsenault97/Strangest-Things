@@ -74,11 +74,11 @@ CREATE TABLE `employee` (
 --
 
 CREATE TABLE `food` (
-  `foodId` varchar(4) NOT NULL,
+  `foodNum` varchar(3) NOT NULL,
   `foodDescription` varchar(50) NOT NULL,
   `foodType` varchar(6) NOT NULL,
   `foodPrice` decimal(4,2) NOT NULL,
-  PRIMARY KEY (`foodId`)
+  PRIMARY KEY (`foodNum`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
@@ -193,5 +193,6 @@ CREATE TABLE `payroll` (
    PRIMARY KEY (payCheckNum)
   
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 
 
