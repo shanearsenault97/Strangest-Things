@@ -35,11 +35,12 @@ namespace PorkShopPOS
                 {
                         UserAccess login = new UserAccess();
                         login.Emp_Num = empNumTextBox.Text.ToString();
-                        
+                        login.Login();
+
                         //compare the password in the database to the password that was input
                         if (login.Emp_Num.Equals(empNumTextBox.Text.ToString()) && login.password.Equals(passwordTextBox.Text.ToString()))
                         {
-                            login.Login();
+                            
                             accessLevel = login.User_Type_Code;
                             ThePorkShopPOS pos = new ThePorkShopPOS();
                             pos.Show();
