@@ -19,9 +19,9 @@ flush privileges;
 
 
 CREATE TABLE `bar` (
-  `barId` varchar(4) NOT NULL,
+  `barId` int(4) NOT NULL AUTO_INCREMENT,
   `barDescription` varchar(50) NOT NULL,
-  `barType` varchar(6) NOT NULL,
+  `barType` varchar(8) NOT NULL,
   `barPrice` decimal(4,2) NOT NULL,
   `barQOH` int(4) NOT NULL,
   PRIMARY KEY (`barId`)
@@ -34,7 +34,7 @@ CREATE TABLE `bar` (
 --
 
 CREATE TABLE `customerOrders` (
-  `orderNum` int(6) AUTO_INCREMENT NOT NULL,
+  `orderNum` int(6) NOT NULL AUTO_INCREMENT,
   `empNum` varchar(6) NOT NULL,
   `tableNum` varchar(6) NOT NULL,
   `orderDate` date NOT NULL,
@@ -74,9 +74,9 @@ CREATE TABLE `employee` (
 --
 
 CREATE TABLE `food` (
-  `foodNum` varchar(3) NOT NULL,
+  `foodNum` int(3) NOT NULL AUTO_INCREMENT,
   `foodDescription` varchar(50) NOT NULL,
-  `foodType` varchar(6) NOT NULL,
+  `foodType` varchar(8) NOT NULL,
   `foodPrice` decimal(4,2) NOT NULL,
   PRIMARY KEY (`foodNum`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -106,7 +106,7 @@ CREATE TABLE `line` (
 --
 
 CREATE TABLE `salary` (
-  `salaryNum` int(6) AUTO_INCREMENT NOT NULL,
+  `salaryNum` int(6) NOT NULL AUTO_INCREMENT,
   `empNum` varchar(6) NOT NULL,
   `salaryFrom` date NOT NULL,
   `salaryTo` date DEFAULT NULL,
@@ -136,7 +136,7 @@ CREATE TABLE `tables` (
 --
 
 CREATE TABLE `reservation`(
-`reservationID` int(6) AUTO_INCREMENT NOT NULL,
+`reservationID` int(6) NOT NULL AUTO_INCREMENT,
 `tableNum` varchar(6) NOT NULL,
 `reservationDate` date NOT NULL,
 `reservationTime` time(5) NOT NULL,
@@ -184,7 +184,7 @@ CREATE TABLE `userAccess` (
 --
 
 CREATE TABLE `payroll` (
-  `payCheckNum` int(6) AUTO_INCREMENT NOT NULL,
+  `payCheckNum` int(6) NOT NULL AUTO_INCREMENT,
   `empNum` varchar(6) NOT NULL,
   `payFrom` date NOT NULL,
   `payTo` date NOT NULL,
@@ -194,5 +194,71 @@ CREATE TABLE `payroll` (
   
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+INSERT INTO food (foodNum, foodDescription, foodType, foodPrice) VALUES
+(NULL, 'Roasted Garlic Soup', 'Starter', 5);
 
+INSERT INTO food (foodNum, foodDescription, foodType, foodPrice) VALUES
+(NULL, 'Mac n Cheese Balls', 'Starter', 8);
 
+INSERT INTO food (foodNum, foodDescription, foodType, foodPrice) VALUES
+(NULL, 'Pulled Pork Nachos', 'Starter', 12);
+
+INSERT INTO food (foodNum, foodDescription, foodType, foodPrice) VALUES
+(NULL, 'Porkzilla', 'Main', 15);
+
+INSERT INTO food (foodNum, foodDescription, foodType, foodPrice) VALUES
+(NULL, 'Bacon Wrapped Meatloaf', 'Main', 15);
+
+INSERT INTO food (foodNum, foodDescription, foodType, foodPrice) VALUES
+(NULL, 'Smoked Flap Steak', 'Main', 20);
+
+INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
+(NULL, 'Molson Canadian', 'Domestic', 5, 100);
+
+INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
+(NULL, 'Budweiser', 'Domestic', 5, 100);
+
+INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
+(NULL, 'Alexander Keiths Red Amber Ale', 'Domestic', 5, 100);
+
+INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
+(NULL, 'Alpine', 'Domestic', 5, 100);
+
+INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
+(NULL, 'Moosehead Light', 'Domestic', 5, 100);
+
+INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
+(NULL, 'Guinness', 'Imported', 6.5, 100);
+
+INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
+(NULL, 'Corona', 'Imported', 6.5, 100);
+
+INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
+(NULL, 'Miller Genuine Draft', 'Imported', 6.5, 100);
+
+INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
+(NULL, 'Scotch', 'House', 5, 100);
+
+INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
+(NULL, 'Rye', 'House', 5, 100);
+
+INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
+(NULL, 'Vodka', 'House', 5, 100);
+
+INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
+(NULL, 'Rum', 'House', 5, 100);
+
+INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
+(NULL, 'Gin', 'House', 5, 100);
+
+INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
+(NULL, 'Margerita', 'Cocktail', 7.5, 100);
+
+INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
+(NULL, 'Pina Colada', 'Cocktail', 7.5, 100);
+
+INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
+(NULL, 'Long Island Iced Tea', 'Cocktail', 7.5, 100);
+
+INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
+(NULL, 'Alabama Slammer', 'Cocktail', 7.5, 100);

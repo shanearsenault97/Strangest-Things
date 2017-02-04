@@ -67,3 +67,4 @@ E:\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\Po
 E:\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.csproj.GenerateResource.Cache
 C:\Users\Jon\Documents\CIS\Final Project\GIT\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.MenuItemsShowAll.resources
 C:\Users\Jon\Documents\CIS\Final Project\GIT\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.csprojResolveAssemblyReference.cache
+E:\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.MenuItemsShowAll.resources

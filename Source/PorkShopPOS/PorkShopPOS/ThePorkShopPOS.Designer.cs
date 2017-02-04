@@ -34,10 +34,9 @@
             this.cmbTableOr = new System.Windows.Forms.ComboBox();
             this.lblTableOr = new System.Windows.Forms.Label();
             this.lblGuests = new System.Windows.Forms.Label();
-            this.cmbGuests = new System.Windows.Forms.TextBox();
             this.grpBar = new System.Windows.Forms.GroupBox();
             this.btnPinaColada = new System.Windows.Forms.Button();
-            this.btnIceTea = new System.Windows.Forms.Button();
+            this.btnIcedTea = new System.Windows.Forms.Button();
             this.btnALSlammer = new System.Windows.Forms.Button();
             this.btnMargerita = new System.Windows.Forms.Button();
             this.lblCocktails = new System.Windows.Forms.Label();
@@ -61,29 +60,23 @@
             this.lblDomestic = new System.Windows.Forms.Label();
             this.chkHappyHr = new System.Windows.Forms.CheckBox();
             this.grpStarters = new System.Windows.Forms.GroupBox();
-            this.chkChipotle = new System.Windows.Forms.CheckBox();
-            this.chkBiscuit = new System.Windows.Forms.CheckBox();
-            this.chkCornbread = new System.Windows.Forms.CheckBox();
-            this.chkRoll = new System.Windows.Forms.CheckBox();
+            this.btnSeparateStarter = new System.Windows.Forms.Button();
+            this.rdbNoStarters = new System.Windows.Forms.RadioButton();
+            this.rdbChipotle = new System.Windows.Forms.RadioButton();
             this.btnNachos = new System.Windows.Forms.Button();
+            this.rdbBiscuit = new System.Windows.Forms.RadioButton();
             this.btnMacBalls = new System.Windows.Forms.Button();
+            this.rdbCornbread = new System.Windows.Forms.RadioButton();
             this.btnGarlicSoup = new System.Windows.Forms.Button();
+            this.rdbRoll = new System.Windows.Forms.RadioButton();
             this.grpMainCourse = new System.Windows.Forms.GroupBox();
-            this.grpSides3 = new System.Windows.Forms.GroupBox();
-            this.chkMashed3 = new System.Windows.Forms.CheckBox();
-            this.chkHomeFries3 = new System.Windows.Forms.CheckBox();
-            this.chkMacNCheese3 = new System.Windows.Forms.CheckBox();
-            this.chkOnRings3 = new System.Windows.Forms.CheckBox();
-            this.grpSides2 = new System.Windows.Forms.GroupBox();
-            this.chkMashed2 = new System.Windows.Forms.CheckBox();
-            this.chkHomeFries2 = new System.Windows.Forms.CheckBox();
-            this.chkMacNCheese2 = new System.Windows.Forms.CheckBox();
-            this.chkOnRings2 = new System.Windows.Forms.CheckBox();
             this.grpSides1 = new System.Windows.Forms.GroupBox();
-            this.chkMashed1 = new System.Windows.Forms.CheckBox();
-            this.chkHomeFries1 = new System.Windows.Forms.CheckBox();
-            this.chkMacNCheese1 = new System.Windows.Forms.CheckBox();
-            this.chkOnRings1 = new System.Windows.Forms.CheckBox();
+            this.btnSeparateSide = new System.Windows.Forms.Button();
+            this.rdbNoSides = new System.Windows.Forms.RadioButton();
+            this.rdbOnRings = new System.Windows.Forms.RadioButton();
+            this.rdbMashed = new System.Windows.Forms.RadioButton();
+            this.rdbHomeFries = new System.Windows.Forms.RadioButton();
+            this.rdbMacNCheese = new System.Windows.Forms.RadioButton();
             this.btnSteak = new System.Windows.Forms.Button();
             this.btnMeatloaf = new System.Windows.Forms.Button();
             this.btnPorkzilla = new System.Windows.Forms.Button();
@@ -100,18 +93,17 @@
             this.lblPhone = new System.Windows.Forms.Label();
             this.btnShowRes = new System.Windows.Forms.Button();
             this.btnReserve = new System.Windows.Forms.Button();
-            this.txtNumGuests = new System.Windows.Forms.TextBox();
+            this.txtNumGuestsRes = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lblNumGuests = new System.Windows.Forms.Label();
             this.dateReservations = new System.Windows.Forms.DateTimePicker();
             this.cmbTableRes = new System.Windows.Forms.ComboBox();
             this.lblTableRes = new System.Windows.Forms.Label();
+            this.txtNumGuestsOr = new System.Windows.Forms.TextBox();
             this.grpBar.SuspendLayout();
             this.grpStarters.SuspendLayout();
             this.grpMainCourse.SuspendLayout();
-            this.grpSides3.SuspendLayout();
-            this.grpSides2.SuspendLayout();
             this.grpSides1.SuspendLayout();
             this.grpReservations.SuspendLayout();
             this.SuspendLayout();
@@ -131,24 +123,26 @@
             this.lblServer.AutoSize = true;
             this.lblServer.Location = new System.Drawing.Point(18, 24);
             this.lblServer.Name = "lblServer";
-            this.lblServer.Size = new System.Drawing.Size(57, 21);
+            this.lblServer.Size = new System.Drawing.Size(46, 16);
             this.lblServer.TabIndex = 1;
             this.lblServer.Text = "Server";
             // 
             // cmbServer
             // 
+            this.cmbServer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbServer.FormattingEnabled = true;
             this.cmbServer.Location = new System.Drawing.Point(94, 16);
             this.cmbServer.Name = "cmbServer";
-            this.cmbServer.Size = new System.Drawing.Size(121, 27);
+            this.cmbServer.Size = new System.Drawing.Size(121, 24);
             this.cmbServer.TabIndex = 2;
             // 
             // cmbTableOr
             // 
+            this.cmbTableOr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTableOr.FormattingEnabled = true;
             this.cmbTableOr.Location = new System.Drawing.Point(94, 49);
             this.cmbTableOr.Name = "cmbTableOr";
-            this.cmbTableOr.Size = new System.Drawing.Size(121, 27);
+            this.cmbTableOr.Size = new System.Drawing.Size(121, 24);
             this.cmbTableOr.TabIndex = 4;
             // 
             // lblTableOr
@@ -156,32 +150,24 @@
             this.lblTableOr.AutoSize = true;
             this.lblTableOr.Location = new System.Drawing.Point(18, 57);
             this.lblTableOr.Name = "lblTableOr";
-            this.lblTableOr.Size = new System.Drawing.Size(51, 21);
+            this.lblTableOr.Size = new System.Drawing.Size(40, 16);
             this.lblTableOr.TabIndex = 3;
             this.lblTableOr.Text = "Table";
-            this.lblTableOr.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblGuests
             // 
             this.lblGuests.AutoSize = true;
             this.lblGuests.Location = new System.Drawing.Point(18, 89);
             this.lblGuests.Name = "lblGuests";
-            this.lblGuests.Size = new System.Drawing.Size(97, 21);
+            this.lblGuests.Size = new System.Drawing.Size(74, 16);
             this.lblGuests.TabIndex = 5;
             this.lblGuests.Text = "# of Guests";
-            // 
-            // cmbGuests
-            // 
-            this.cmbGuests.Location = new System.Drawing.Point(94, 84);
-            this.cmbGuests.Name = "cmbGuests";
-            this.cmbGuests.Size = new System.Drawing.Size(121, 27);
-            this.cmbGuests.TabIndex = 6;
             // 
             // grpBar
             // 
             this.grpBar.BackColor = System.Drawing.Color.SkyBlue;
             this.grpBar.Controls.Add(this.btnPinaColada);
-            this.grpBar.Controls.Add(this.btnIceTea);
+            this.grpBar.Controls.Add(this.btnIcedTea);
             this.grpBar.Controls.Add(this.btnALSlammer);
             this.grpBar.Controls.Add(this.btnMargerita);
             this.grpBar.Controls.Add(this.lblCocktails);
@@ -220,16 +206,18 @@
             this.btnPinaColada.TabIndex = 29;
             this.btnPinaColada.Text = "Pina Colada";
             this.btnPinaColada.UseVisualStyleBackColor = true;
+            this.btnPinaColada.Click += new System.EventHandler(this.btnPinaColada_Click);
             // 
-            // btnIceTea
+            // btnIcedTea
             // 
-            this.btnIceTea.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIceTea.Location = new System.Drawing.Point(22, 395);
-            this.btnIceTea.Name = "btnIceTea";
-            this.btnIceTea.Size = new System.Drawing.Size(75, 36);
-            this.btnIceTea.TabIndex = 28;
-            this.btnIceTea.Text = "Long Island\r\n Ice Tea";
-            this.btnIceTea.UseVisualStyleBackColor = true;
+            this.btnIcedTea.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIcedTea.Location = new System.Drawing.Point(22, 395);
+            this.btnIcedTea.Name = "btnIcedTea";
+            this.btnIcedTea.Size = new System.Drawing.Size(75, 36);
+            this.btnIcedTea.TabIndex = 28;
+            this.btnIcedTea.Text = "Long Island\r\n Iced Tea";
+            this.btnIcedTea.UseVisualStyleBackColor = true;
+            this.btnIcedTea.Click += new System.EventHandler(this.btnIcedTea_Click);
             // 
             // btnALSlammer
             // 
@@ -240,6 +228,7 @@
             this.btnALSlammer.TabIndex = 27;
             this.btnALSlammer.Text = "Alabama\r\n Slammer";
             this.btnALSlammer.UseVisualStyleBackColor = true;
+            this.btnALSlammer.Click += new System.EventHandler(this.btnALSlammer_Click);
             // 
             // btnMargerita
             // 
@@ -249,6 +238,7 @@
             this.btnMargerita.TabIndex = 24;
             this.btnMargerita.Text = "Margerita";
             this.btnMargerita.UseVisualStyleBackColor = true;
+            this.btnMargerita.Click += new System.EventHandler(this.btnMargerita_Click);
             // 
             // lblCocktails
             // 
@@ -256,12 +246,13 @@
             this.lblCocktails.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCocktails.Location = new System.Drawing.Point(19, 346);
             this.lblCocktails.Name = "lblCocktails";
-            this.lblCocktails.Size = new System.Drawing.Size(87, 21);
+            this.lblCocktails.Size = new System.Drawing.Size(65, 16);
             this.lblCocktails.TabIndex = 23;
             this.lblCocktails.Text = "Cocktails";
             // 
             // cmbMix
             // 
+            this.cmbMix.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMix.FormattingEnabled = true;
             this.cmbMix.Items.AddRange(new object[] {
             "None",
@@ -274,9 +265,8 @@
             "Pineapple"});
             this.cmbMix.Location = new System.Drawing.Point(111, 316);
             this.cmbMix.Name = "cmbMix";
-            this.cmbMix.Size = new System.Drawing.Size(94, 27);
+            this.cmbMix.Size = new System.Drawing.Size(94, 24);
             this.cmbMix.TabIndex = 22;
-            this.cmbMix.Text = "Choose Mix";
             // 
             // btnScotch
             // 
@@ -286,6 +276,7 @@
             this.btnScotch.TabIndex = 21;
             this.btnScotch.Text = "Scotch";
             this.btnScotch.UseVisualStyleBackColor = true;
+            this.btnScotch.Click += new System.EventHandler(this.btnScotch_Click);
             // 
             // btnVodka
             // 
@@ -296,7 +287,7 @@
             this.btnVodka.TabIndex = 20;
             this.btnVodka.Text = "Vodka";
             this.btnVodka.UseVisualStyleBackColor = true;
-            this.btnVodka.Click += new System.EventHandler(this.button10_Click);
+            this.btnVodka.Click += new System.EventHandler(this.btnVodka_Click);
             // 
             // btnRum
             // 
@@ -307,6 +298,7 @@
             this.btnRum.TabIndex = 19;
             this.btnRum.Text = "Rum";
             this.btnRum.UseVisualStyleBackColor = true;
+            this.btnRum.Click += new System.EventHandler(this.btnRum_Click);
             // 
             // btnGin
             // 
@@ -316,6 +308,7 @@
             this.btnGin.TabIndex = 18;
             this.btnGin.Text = "Gin";
             this.btnGin.UseVisualStyleBackColor = true;
+            this.btnGin.Click += new System.EventHandler(this.btnGin_Click);
             // 
             // btnRye
             // 
@@ -325,6 +318,7 @@
             this.btnRye.TabIndex = 16;
             this.btnRye.Text = "Rye";
             this.btnRye.UseVisualStyleBackColor = true;
+            this.btnRye.Click += new System.EventHandler(this.btnRye_Click);
             // 
             // lblHouseShots
             // 
@@ -332,10 +326,9 @@
             this.lblHouseShots.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHouseShots.Location = new System.Drawing.Point(18, 237);
             this.lblHouseShots.Name = "lblHouseShots";
-            this.lblHouseShots.Size = new System.Drawing.Size(118, 21);
+            this.lblHouseShots.Size = new System.Drawing.Size(89, 16);
             this.lblHouseShots.TabIndex = 15;
             this.lblHouseShots.Text = "House Shots";
-            this.lblHouseShots.Click += new System.EventHandler(this.label6_Click);
             // 
             // btnCorona
             // 
@@ -345,7 +338,7 @@
             this.btnCorona.TabIndex = 14;
             this.btnCorona.Text = "Corona";
             this.btnCorona.UseVisualStyleBackColor = true;
-            this.btnCorona.Click += new System.EventHandler(this.button7_Click);
+            this.btnCorona.Click += new System.EventHandler(this.btnCorona_Click);
             // 
             // btnMGD
             // 
@@ -356,6 +349,7 @@
             this.btnMGD.TabIndex = 13;
             this.btnMGD.Text = "MGD";
             this.btnMGD.UseVisualStyleBackColor = true;
+            this.btnMGD.Click += new System.EventHandler(this.btnMGD_Click);
             // 
             // btnGuinness
             // 
@@ -365,6 +359,7 @@
             this.btnGuinness.TabIndex = 9;
             this.btnGuinness.Text = "Guinness";
             this.btnGuinness.UseVisualStyleBackColor = true;
+            this.btnGuinness.Click += new System.EventHandler(this.btnGuinness_Click);
             // 
             // lblImported
             // 
@@ -372,7 +367,7 @@
             this.lblImported.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblImported.Location = new System.Drawing.Point(15, 158);
             this.lblImported.Name = "lblImported";
-            this.lblImported.Size = new System.Drawing.Size(135, 21);
+            this.lblImported.Size = new System.Drawing.Size(102, 16);
             this.lblImported.TabIndex = 8;
             this.lblImported.Text = "Imported Beer";
             // 
@@ -384,6 +379,7 @@
             this.btnBudweiser.TabIndex = 7;
             this.btnBudweiser.Text = "Budweiser";
             this.btnBudweiser.UseVisualStyleBackColor = true;
+            this.btnBudweiser.Click += new System.EventHandler(this.btnBudweiser_Click);
             // 
             // btnKeiths
             // 
@@ -394,6 +390,7 @@
             this.btnKeiths.TabIndex = 6;
             this.btnKeiths.Text = "Keiths Red";
             this.btnKeiths.UseVisualStyleBackColor = true;
+            this.btnKeiths.Click += new System.EventHandler(this.btnKeiths_Click);
             // 
             // btnMoose
             // 
@@ -404,6 +401,7 @@
             this.btnMoose.TabIndex = 5;
             this.btnMoose.Text = "Moose Light";
             this.btnMoose.UseVisualStyleBackColor = true;
+            this.btnMoose.Click += new System.EventHandler(this.btnMoose_Click);
             // 
             // btnAlpine
             // 
@@ -413,6 +411,7 @@
             this.btnAlpine.TabIndex = 4;
             this.btnAlpine.Text = "Alpine";
             this.btnAlpine.UseVisualStyleBackColor = true;
+            this.btnAlpine.Click += new System.EventHandler(this.btnAlpine_Click);
             // 
             // btnCoors
             // 
@@ -423,7 +422,7 @@
             this.btnCoors.TabIndex = 3;
             this.btnCoors.Text = "Coors Light";
             this.btnCoors.UseVisualStyleBackColor = true;
-            this.btnCoors.Click += new System.EventHandler(this.button2_Click);
+            this.btnCoors.Click += new System.EventHandler(this.btnCoors_Click);
             // 
             // btnCanadian
             // 
@@ -433,6 +432,7 @@
             this.btnCanadian.TabIndex = 2;
             this.btnCanadian.Text = "Canadian";
             this.btnCanadian.UseVisualStyleBackColor = true;
+            this.btnCanadian.Click += new System.EventHandler(this.btnCanadian_Click);
             // 
             // lblDomestic
             // 
@@ -440,7 +440,7 @@
             this.lblDomestic.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDomestic.Location = new System.Drawing.Point(14, 46);
             this.lblDomestic.Name = "lblDomestic";
-            this.lblDomestic.Size = new System.Drawing.Size(134, 21);
+            this.lblDomestic.Size = new System.Drawing.Size(101, 16);
             this.lblDomestic.TabIndex = 1;
             this.lblDomestic.Text = "Domestic Beer";
             // 
@@ -449,7 +449,7 @@
             this.chkHappyHr.AutoSize = true;
             this.chkHappyHr.Location = new System.Drawing.Point(7, 23);
             this.chkHappyHr.Name = "chkHappyHr";
-            this.chkHappyHr.Size = new System.Drawing.Size(118, 25);
+            this.chkHappyHr.Size = new System.Drawing.Size(93, 20);
             this.chkHappyHr.TabIndex = 0;
             this.chkHappyHr.Text = "Happy Hour";
             this.chkHappyHr.UseVisualStyleBackColor = true;
@@ -457,59 +457,53 @@
             // grpStarters
             // 
             this.grpStarters.BackColor = System.Drawing.Color.LightBlue;
-            this.grpStarters.Controls.Add(this.chkChipotle);
-            this.grpStarters.Controls.Add(this.chkBiscuit);
-            this.grpStarters.Controls.Add(this.chkCornbread);
-            this.grpStarters.Controls.Add(this.chkRoll);
+            this.grpStarters.Controls.Add(this.btnSeparateStarter);
+            this.grpStarters.Controls.Add(this.rdbNoStarters);
+            this.grpStarters.Controls.Add(this.rdbChipotle);
             this.grpStarters.Controls.Add(this.btnNachos);
+            this.grpStarters.Controls.Add(this.rdbBiscuit);
             this.grpStarters.Controls.Add(this.btnMacBalls);
+            this.grpStarters.Controls.Add(this.rdbCornbread);
             this.grpStarters.Controls.Add(this.btnGarlicSoup);
+            this.grpStarters.Controls.Add(this.rdbRoll);
             this.grpStarters.Location = new System.Drawing.Point(247, 113);
             this.grpStarters.Name = "grpStarters";
-            this.grpStarters.Size = new System.Drawing.Size(454, 156);
+            this.grpStarters.Size = new System.Drawing.Size(454, 174);
             this.grpStarters.TabIndex = 8;
             this.grpStarters.TabStop = false;
             this.grpStarters.Text = "Starters";
             // 
-            // chkChipotle
+            // btnSeparateStarter
             // 
-            this.chkChipotle.AutoSize = true;
-            this.chkChipotle.Location = new System.Drawing.Point(296, 109);
-            this.chkChipotle.Name = "chkChipotle";
-            this.chkChipotle.Size = new System.Drawing.Size(136, 25);
-            this.chkChipotle.TabIndex = 9;
-            this.chkChipotle.Text = "Chipotle Mayo";
-            this.chkChipotle.UseVisualStyleBackColor = true;
+            this.btnSeparateStarter.Location = new System.Drawing.Point(176, 140);
+            this.btnSeparateStarter.Name = "btnSeparateStarter";
+            this.btnSeparateStarter.Size = new System.Drawing.Size(107, 23);
+            this.btnSeparateStarter.TabIndex = 26;
+            this.btnSeparateStarter.Text = "Order Separate";
+            this.btnSeparateStarter.UseVisualStyleBackColor = true;
+            this.btnSeparateStarter.Click += new System.EventHandler(this.btnSeparateStarter_Click);
             // 
-            // chkBiscuit
+            // rdbNoStarters
             // 
-            this.chkBiscuit.AutoSize = true;
-            this.chkBiscuit.Location = new System.Drawing.Point(220, 108);
-            this.chkBiscuit.Name = "chkBiscuit";
-            this.chkBiscuit.Size = new System.Drawing.Size(81, 25);
-            this.chkBiscuit.TabIndex = 8;
-            this.chkBiscuit.Text = "Biscuit";
-            this.chkBiscuit.UseVisualStyleBackColor = true;
+            this.rdbNoStarters.AutoSize = true;
+            this.rdbNoStarters.Checked = true;
+            this.rdbNoStarters.Location = new System.Drawing.Point(383, 111);
+            this.rdbNoStarters.Name = "rdbNoStarters";
+            this.rdbNoStarters.Size = new System.Drawing.Size(55, 20);
+            this.rdbNoStarters.TabIndex = 25;
+            this.rdbNoStarters.TabStop = true;
+            this.rdbNoStarters.Text = "None";
+            this.rdbNoStarters.UseVisualStyleBackColor = true;
             // 
-            // chkCornbread
+            // rdbChipotle
             // 
-            this.chkCornbread.AutoSize = true;
-            this.chkCornbread.Location = new System.Drawing.Point(121, 109);
-            this.chkCornbread.Name = "chkCornbread";
-            this.chkCornbread.Size = new System.Drawing.Size(108, 25);
-            this.chkCornbread.TabIndex = 7;
-            this.chkCornbread.Text = "Cornbread";
-            this.chkCornbread.UseVisualStyleBackColor = true;
-            // 
-            // chkRoll
-            // 
-            this.chkRoll.AutoSize = true;
-            this.chkRoll.Location = new System.Drawing.Point(18, 109);
-            this.chkRoll.Name = "chkRoll";
-            this.chkRoll.Size = new System.Drawing.Size(112, 25);
-            this.chkRoll.TabIndex = 6;
-            this.chkRoll.Text = "Crusty Roll";
-            this.chkRoll.UseVisualStyleBackColor = true;
+            this.rdbChipotle.AutoSize = true;
+            this.rdbChipotle.Location = new System.Drawing.Point(271, 111);
+            this.rdbChipotle.Name = "rdbChipotle";
+            this.rdbChipotle.Size = new System.Drawing.Size(106, 20);
+            this.rdbChipotle.TabIndex = 24;
+            this.rdbChipotle.Text = "Chipotle Mayo";
+            this.rdbChipotle.UseVisualStyleBackColor = true;
             // 
             // btnNachos
             // 
@@ -519,6 +513,17 @@
             this.btnNachos.TabIndex = 2;
             this.btnNachos.Text = "Pulled Pork Nachos";
             this.btnNachos.UseVisualStyleBackColor = true;
+            this.btnNachos.Click += new System.EventHandler(this.btnNachos_Click);
+            // 
+            // rdbBiscuit
+            // 
+            this.rdbBiscuit.AutoSize = true;
+            this.rdbBiscuit.Location = new System.Drawing.Point(203, 111);
+            this.rdbBiscuit.Name = "rdbBiscuit";
+            this.rdbBiscuit.Size = new System.Drawing.Size(62, 20);
+            this.rdbBiscuit.TabIndex = 23;
+            this.rdbBiscuit.Text = "Biscuit";
+            this.rdbBiscuit.UseVisualStyleBackColor = true;
             // 
             // btnMacBalls
             // 
@@ -526,8 +531,19 @@
             this.btnMacBalls.Name = "btnMacBalls";
             this.btnMacBalls.Size = new System.Drawing.Size(107, 54);
             this.btnMacBalls.TabIndex = 1;
-            this.btnMacBalls.Text = "Mac N Cheese Balls";
+            this.btnMacBalls.Text = "Mac n Cheese Balls";
             this.btnMacBalls.UseVisualStyleBackColor = true;
+            this.btnMacBalls.Click += new System.EventHandler(this.btnMacBalls_Click);
+            // 
+            // rdbCornbread
+            // 
+            this.rdbCornbread.AutoSize = true;
+            this.rdbCornbread.Location = new System.Drawing.Point(111, 111);
+            this.rdbCornbread.Name = "rdbCornbread";
+            this.rdbCornbread.Size = new System.Drawing.Size(86, 20);
+            this.rdbCornbread.TabIndex = 22;
+            this.rdbCornbread.Text = "Cornbread";
+            this.rdbCornbread.UseVisualStyleBackColor = true;
             // 
             // btnGarlicSoup
             // 
@@ -537,181 +553,108 @@
             this.btnGarlicSoup.TabIndex = 0;
             this.btnGarlicSoup.Text = "Roasted Garlic Soup";
             this.btnGarlicSoup.UseVisualStyleBackColor = true;
+            this.btnGarlicSoup.Click += new System.EventHandler(this.btnGarlicSoup_Click);
+            // 
+            // rdbRoll
+            // 
+            this.rdbRoll.AutoSize = true;
+            this.rdbRoll.Location = new System.Drawing.Point(18, 111);
+            this.rdbRoll.Name = "rdbRoll";
+            this.rdbRoll.Size = new System.Drawing.Size(87, 20);
+            this.rdbRoll.TabIndex = 21;
+            this.rdbRoll.Text = "Crusty Roll";
+            this.rdbRoll.UseVisualStyleBackColor = true;
             // 
             // grpMainCourse
             // 
             this.grpMainCourse.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.grpMainCourse.Controls.Add(this.grpSides3);
-            this.grpMainCourse.Controls.Add(this.grpSides2);
             this.grpMainCourse.Controls.Add(this.grpSides1);
             this.grpMainCourse.Controls.Add(this.btnSteak);
             this.grpMainCourse.Controls.Add(this.btnMeatloaf);
             this.grpMainCourse.Controls.Add(this.btnPorkzilla);
-            this.grpMainCourse.Location = new System.Drawing.Point(247, 307);
+            this.grpMainCourse.Location = new System.Drawing.Point(247, 341);
             this.grpMainCourse.Name = "grpMainCourse";
-            this.grpMainCourse.Size = new System.Drawing.Size(454, 255);
+            this.grpMainCourse.Size = new System.Drawing.Size(454, 213);
             this.grpMainCourse.TabIndex = 9;
             this.grpMainCourse.TabStop = false;
             this.grpMainCourse.Text = "Main Course";
             // 
-            // grpSides3
-            // 
-            this.grpSides3.Controls.Add(this.chkMashed3);
-            this.grpSides3.Controls.Add(this.chkHomeFries3);
-            this.grpSides3.Controls.Add(this.chkMacNCheese3);
-            this.grpSides3.Controls.Add(this.chkOnRings3);
-            this.grpSides3.Location = new System.Drawing.Point(302, 105);
-            this.grpSides3.Name = "grpSides3";
-            this.grpSides3.Size = new System.Drawing.Size(140, 129);
-            this.grpSides3.TabIndex = 5;
-            this.grpSides3.TabStop = false;
-            this.grpSides3.Text = "Sides";
-            // 
-            // chkMashed3
-            // 
-            this.chkMashed3.AutoSize = true;
-            this.chkMashed3.Location = new System.Drawing.Point(8, 98);
-            this.chkMashed3.Name = "chkMashed3";
-            this.chkMashed3.Size = new System.Drawing.Size(159, 25);
-            this.chkMashed3.TabIndex = 3;
-            this.chkMashed3.Text = "Mashed Potatoes";
-            this.chkMashed3.UseVisualStyleBackColor = true;
-            // 
-            // chkHomeFries3
-            // 
-            this.chkHomeFries3.AutoSize = true;
-            this.chkHomeFries3.Location = new System.Drawing.Point(8, 72);
-            this.chkHomeFries3.Name = "chkHomeFries3";
-            this.chkHomeFries3.Size = new System.Drawing.Size(116, 25);
-            this.chkHomeFries3.TabIndex = 2;
-            this.chkHomeFries3.Text = "Home Fries";
-            this.chkHomeFries3.UseVisualStyleBackColor = true;
-            // 
-            // chkMacNCheese3
-            // 
-            this.chkMacNCheese3.AutoSize = true;
-            this.chkMacNCheese3.Location = new System.Drawing.Point(8, 46);
-            this.chkMacNCheese3.Name = "chkMacNCheese3";
-            this.chkMacNCheese3.Size = new System.Drawing.Size(135, 25);
-            this.chkMacNCheese3.TabIndex = 1;
-            this.chkMacNCheese3.Text = "Mac n Cheese";
-            this.chkMacNCheese3.UseVisualStyleBackColor = true;
-            // 
-            // chkOnRings3
-            // 
-            this.chkOnRings3.AutoSize = true;
-            this.chkOnRings3.Location = new System.Drawing.Point(7, 23);
-            this.chkOnRings3.Name = "chkOnRings3";
-            this.chkOnRings3.Size = new System.Drawing.Size(121, 25);
-            this.chkOnRings3.TabIndex = 0;
-            this.chkOnRings3.Text = "Onion Rings";
-            this.chkOnRings3.UseVisualStyleBackColor = true;
-            // 
-            // grpSides2
-            // 
-            this.grpSides2.Controls.Add(this.chkMashed2);
-            this.grpSides2.Controls.Add(this.chkHomeFries2);
-            this.grpSides2.Controls.Add(this.chkMacNCheese2);
-            this.grpSides2.Controls.Add(this.chkOnRings2);
-            this.grpSides2.Location = new System.Drawing.Point(156, 105);
-            this.grpSides2.Name = "grpSides2";
-            this.grpSides2.Size = new System.Drawing.Size(140, 129);
-            this.grpSides2.TabIndex = 4;
-            this.grpSides2.TabStop = false;
-            this.grpSides2.Text = "Sides";
-            // 
-            // chkMashed2
-            // 
-            this.chkMashed2.AutoSize = true;
-            this.chkMashed2.Location = new System.Drawing.Point(8, 98);
-            this.chkMashed2.Name = "chkMashed2";
-            this.chkMashed2.Size = new System.Drawing.Size(159, 25);
-            this.chkMashed2.TabIndex = 3;
-            this.chkMashed2.Text = "Mashed Potatoes";
-            this.chkMashed2.UseVisualStyleBackColor = true;
-            // 
-            // chkHomeFries2
-            // 
-            this.chkHomeFries2.AutoSize = true;
-            this.chkHomeFries2.Location = new System.Drawing.Point(8, 72);
-            this.chkHomeFries2.Name = "chkHomeFries2";
-            this.chkHomeFries2.Size = new System.Drawing.Size(116, 25);
-            this.chkHomeFries2.TabIndex = 2;
-            this.chkHomeFries2.Text = "Home Fries";
-            this.chkHomeFries2.UseVisualStyleBackColor = true;
-            // 
-            // chkMacNCheese2
-            // 
-            this.chkMacNCheese2.AutoSize = true;
-            this.chkMacNCheese2.Location = new System.Drawing.Point(8, 46);
-            this.chkMacNCheese2.Name = "chkMacNCheese2";
-            this.chkMacNCheese2.Size = new System.Drawing.Size(135, 25);
-            this.chkMacNCheese2.TabIndex = 1;
-            this.chkMacNCheese2.Text = "Mac n Cheese";
-            this.chkMacNCheese2.UseVisualStyleBackColor = true;
-            // 
-            // chkOnRings2
-            // 
-            this.chkOnRings2.AutoSize = true;
-            this.chkOnRings2.Location = new System.Drawing.Point(7, 23);
-            this.chkOnRings2.Name = "chkOnRings2";
-            this.chkOnRings2.Size = new System.Drawing.Size(121, 25);
-            this.chkOnRings2.TabIndex = 0;
-            this.chkOnRings2.Text = "Onion Rings";
-            this.chkOnRings2.UseVisualStyleBackColor = true;
-            // 
             // grpSides1
             // 
-            this.grpSides1.Controls.Add(this.chkMashed1);
-            this.grpSides1.Controls.Add(this.chkHomeFries1);
-            this.grpSides1.Controls.Add(this.chkMacNCheese1);
-            this.grpSides1.Controls.Add(this.chkOnRings1);
-            this.grpSides1.Location = new System.Drawing.Point(10, 105);
+            this.grpSides1.Controls.Add(this.btnSeparateSide);
+            this.grpSides1.Controls.Add(this.rdbNoSides);
+            this.grpSides1.Controls.Add(this.rdbOnRings);
+            this.grpSides1.Controls.Add(this.rdbMashed);
+            this.grpSides1.Controls.Add(this.rdbHomeFries);
+            this.grpSides1.Controls.Add(this.rdbMacNCheese);
+            this.grpSides1.Location = new System.Drawing.Point(6, 105);
             this.grpSides1.Name = "grpSides1";
-            this.grpSides1.Size = new System.Drawing.Size(140, 129);
+            this.grpSides1.Size = new System.Drawing.Size(442, 98);
             this.grpSides1.TabIndex = 3;
             this.grpSides1.TabStop = false;
             this.grpSides1.Text = "Sides";
             // 
-            // chkMashed1
+            // btnSeparateSide
             // 
-            this.chkMashed1.AutoSize = true;
-            this.chkMashed1.Location = new System.Drawing.Point(8, 98);
-            this.chkMashed1.Name = "chkMashed1";
-            this.chkMashed1.Size = new System.Drawing.Size(159, 25);
-            this.chkMashed1.TabIndex = 3;
-            this.chkMashed1.Text = "Mashed Potatoes";
-            this.chkMashed1.UseVisualStyleBackColor = true;
+            this.btnSeparateSide.Location = new System.Drawing.Point(170, 69);
+            this.btnSeparateSide.Name = "btnSeparateSide";
+            this.btnSeparateSide.Size = new System.Drawing.Size(107, 23);
+            this.btnSeparateSide.TabIndex = 27;
+            this.btnSeparateSide.Text = "Order Separate";
+            this.btnSeparateSide.UseVisualStyleBackColor = true;
+            this.btnSeparateSide.Click += new System.EventHandler(this.btnSeparateSide_Click);
             // 
-            // chkHomeFries1
+            // rdbNoSides
             // 
-            this.chkHomeFries1.AutoSize = true;
-            this.chkHomeFries1.Location = new System.Drawing.Point(8, 72);
-            this.chkHomeFries1.Name = "chkHomeFries1";
-            this.chkHomeFries1.Size = new System.Drawing.Size(116, 25);
-            this.chkHomeFries1.TabIndex = 2;
-            this.chkHomeFries1.Text = "Home Fries";
-            this.chkHomeFries1.UseVisualStyleBackColor = true;
+            this.rdbNoSides.AutoSize = true;
+            this.rdbNoSides.Checked = true;
+            this.rdbNoSides.Location = new System.Drawing.Point(263, 46);
+            this.rdbNoSides.Name = "rdbNoSides";
+            this.rdbNoSides.Size = new System.Drawing.Size(55, 20);
+            this.rdbNoSides.TabIndex = 30;
+            this.rdbNoSides.TabStop = true;
+            this.rdbNoSides.Text = "None";
+            this.rdbNoSides.UseVisualStyleBackColor = true;
             // 
-            // chkMacNCheese1
+            // rdbOnRings
             // 
-            this.chkMacNCheese1.AutoSize = true;
-            this.chkMacNCheese1.Location = new System.Drawing.Point(8, 46);
-            this.chkMacNCheese1.Name = "chkMacNCheese1";
-            this.chkMacNCheese1.Size = new System.Drawing.Size(135, 25);
-            this.chkMacNCheese1.TabIndex = 1;
-            this.chkMacNCheese1.Text = "Mac n Cheese";
-            this.chkMacNCheese1.UseVisualStyleBackColor = true;
+            this.rdbOnRings.AutoSize = true;
+            this.rdbOnRings.Location = new System.Drawing.Point(54, 22);
+            this.rdbOnRings.Name = "rdbOnRings";
+            this.rdbOnRings.Size = new System.Drawing.Size(94, 20);
+            this.rdbOnRings.TabIndex = 26;
+            this.rdbOnRings.Text = "Onion Rings";
+            this.rdbOnRings.UseVisualStyleBackColor = true;
             // 
-            // chkOnRings1
+            // rdbMashed
             // 
-            this.chkOnRings1.AutoSize = true;
-            this.chkOnRings1.Location = new System.Drawing.Point(7, 23);
-            this.chkOnRings1.Name = "chkOnRings1";
-            this.chkOnRings1.Size = new System.Drawing.Size(121, 25);
-            this.chkOnRings1.TabIndex = 0;
-            this.chkOnRings1.Text = "Onion Rings";
-            this.chkOnRings1.UseVisualStyleBackColor = true;
+            this.rdbMashed.AutoSize = true;
+            this.rdbMashed.Location = new System.Drawing.Point(134, 46);
+            this.rdbMashed.Name = "rdbMashed";
+            this.rdbMashed.Size = new System.Drawing.Size(123, 20);
+            this.rdbMashed.TabIndex = 29;
+            this.rdbMashed.Text = "Mashed Potatoes";
+            this.rdbMashed.UseVisualStyleBackColor = true;
+            // 
+            // rdbHomeFries
+            // 
+            this.rdbHomeFries.AutoSize = true;
+            this.rdbHomeFries.Location = new System.Drawing.Point(154, 22);
+            this.rdbHomeFries.Name = "rdbHomeFries";
+            this.rdbHomeFries.Size = new System.Drawing.Size(91, 20);
+            this.rdbHomeFries.TabIndex = 28;
+            this.rdbHomeFries.Text = "Home Fries";
+            this.rdbHomeFries.UseVisualStyleBackColor = true;
+            // 
+            // rdbMacNCheese
+            // 
+            this.rdbMacNCheese.AutoSize = true;
+            this.rdbMacNCheese.Location = new System.Drawing.Point(251, 22);
+            this.rdbMacNCheese.Name = "rdbMacNCheese";
+            this.rdbMacNCheese.Size = new System.Drawing.Size(106, 20);
+            this.rdbMacNCheese.TabIndex = 27;
+            this.rdbMacNCheese.Text = "Mac n Cheese";
+            this.rdbMacNCheese.UseVisualStyleBackColor = true;
             // 
             // btnSteak
             // 
@@ -721,6 +664,7 @@
             this.btnSteak.TabIndex = 2;
             this.btnSteak.Text = "Smoked Flap Steak";
             this.btnSteak.UseVisualStyleBackColor = true;
+            this.btnSteak.Click += new System.EventHandler(this.btnSteak_Click);
             // 
             // btnMeatloaf
             // 
@@ -730,6 +674,7 @@
             this.btnMeatloaf.TabIndex = 1;
             this.btnMeatloaf.Text = "Bacon Wrapped Meatloaf";
             this.btnMeatloaf.UseVisualStyleBackColor = true;
+            this.btnMeatloaf.Click += new System.EventHandler(this.btnMeatloaf_Click);
             // 
             // btnPorkzilla
             // 
@@ -739,6 +684,7 @@
             this.btnPorkzilla.TabIndex = 0;
             this.btnPorkzilla.Text = "Porkzilla";
             this.btnPorkzilla.UseVisualStyleBackColor = true;
+            this.btnPorkzilla.Click += new System.EventHandler(this.btnPorkzilla_Click);
             // 
             // lblDisplayOrder
             // 
@@ -746,7 +692,7 @@
             this.lblDisplayOrder.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDisplayOrder.Location = new System.Drawing.Point(718, 226);
             this.lblDisplayOrder.Name = "lblDisplayOrder";
-            this.lblDisplayOrder.Size = new System.Drawing.Size(126, 21);
+            this.lblDisplayOrder.Size = new System.Drawing.Size(95, 16);
             this.lblDisplayOrder.TabIndex = 11;
             this.lblDisplayOrder.Text = "Display Order";
             // 
@@ -758,6 +704,7 @@
             this.btnSubmitOrder.TabIndex = 12;
             this.btnSubmitOrder.Text = "Submit Order";
             this.btnSubmitOrder.UseVisualStyleBackColor = true;
+            this.btnSubmitOrder.Click += new System.EventHandler(this.btnSubmitOrder_Click);
             // 
             // btnPrintBill
             // 
@@ -774,7 +721,7 @@
             this.lblTitle.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(363, 16);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(276, 33);
+            this.lblTitle.Size = new System.Drawing.Size(212, 25);
             this.lblTitle.TabIndex = 15;
             this.lblTitle.Text = "The Pork Shop POS";
             // 
@@ -790,7 +737,10 @@
             // listOrder
             // 
             this.listOrder.FormattingEnabled = true;
-            this.listOrder.ItemHeight = 19;
+            this.listOrder.ItemHeight = 16;
+            this.listOrder.Items.AddRange(new object[] {
+            "-Food-",
+            "-Drinks-"});
             this.listOrder.Location = new System.Drawing.Point(718, 246);
             this.listOrder.Name = "listOrder";
             this.listOrder.Size = new System.Drawing.Size(224, 308);
@@ -805,6 +755,7 @@
             this.btnDeleteItem.TabIndex = 18;
             this.btnDeleteItem.Text = "Delete Item";
             this.btnDeleteItem.UseVisualStyleBackColor = true;
+            this.btnDeleteItem.Click += new System.EventHandler(this.btnDeleteItem_Click);
             // 
             // btnLogout
             // 
@@ -823,7 +774,7 @@
             this.grpReservations.Controls.Add(this.lblPhone);
             this.grpReservations.Controls.Add(this.btnShowRes);
             this.grpReservations.Controls.Add(this.btnReserve);
-            this.grpReservations.Controls.Add(this.txtNumGuests);
+            this.grpReservations.Controls.Add(this.txtNumGuestsRes);
             this.grpReservations.Controls.Add(this.txtName);
             this.grpReservations.Controls.Add(this.lblName);
             this.grpReservations.Controls.Add(this.lblNumGuests);
@@ -842,7 +793,7 @@
             this.txtPhone.Location = new System.Drawing.Point(64, 116);
             this.txtPhone.Mask = "(999) 000-0000";
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(100, 27);
+            this.txtPhone.Size = new System.Drawing.Size(100, 23);
             this.txtPhone.TabIndex = 15;
             // 
             // lblPhone
@@ -850,10 +801,9 @@
             this.lblPhone.AutoSize = true;
             this.lblPhone.Location = new System.Drawing.Point(14, 114);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(55, 21);
+            this.lblPhone.Size = new System.Drawing.Size(43, 16);
             this.lblPhone.TabIndex = 14;
             this.lblPhone.Text = "Phone";
-            this.lblPhone.Click += new System.EventHandler(this.label13_Click);
             // 
             // btnShowRes
             // 
@@ -873,18 +823,18 @@
             this.btnReserve.Text = "Reserve";
             this.btnReserve.UseVisualStyleBackColor = true;
             // 
-            // txtNumGuests
+            // txtNumGuestsRes
             // 
-            this.txtNumGuests.Location = new System.Drawing.Point(91, 145);
-            this.txtNumGuests.Name = "txtNumGuests";
-            this.txtNumGuests.Size = new System.Drawing.Size(39, 27);
-            this.txtNumGuests.TabIndex = 11;
+            this.txtNumGuestsRes.Location = new System.Drawing.Point(91, 145);
+            this.txtNumGuestsRes.Name = "txtNumGuestsRes";
+            this.txtNumGuestsRes.Size = new System.Drawing.Size(39, 23);
+            this.txtNumGuestsRes.TabIndex = 11;
             // 
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(61, 86);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(149, 27);
+            this.txtName.Size = new System.Drawing.Size(149, 23);
             this.txtName.TabIndex = 10;
             // 
             // lblName
@@ -892,7 +842,7 @@
             this.lblName.AutoSize = true;
             this.lblName.Location = new System.Drawing.Point(13, 86);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(53, 21);
+            this.lblName.Size = new System.Drawing.Size(41, 16);
             this.lblName.TabIndex = 9;
             this.lblName.Text = "Name";
             // 
@@ -901,7 +851,7 @@
             this.lblNumGuests.AutoSize = true;
             this.lblNumGuests.Location = new System.Drawing.Point(12, 143);
             this.lblNumGuests.Name = "lblNumGuests";
-            this.lblNumGuests.Size = new System.Drawing.Size(100, 21);
+            this.lblNumGuests.Size = new System.Drawing.Size(76, 16);
             this.lblNumGuests.TabIndex = 8;
             this.lblNumGuests.Text = "Num Guests";
             // 
@@ -909,15 +859,16 @@
             // 
             this.dateReservations.Location = new System.Drawing.Point(11, 22);
             this.dateReservations.Name = "dateReservations";
-            this.dateReservations.Size = new System.Drawing.Size(200, 27);
+            this.dateReservations.Size = new System.Drawing.Size(200, 23);
             this.dateReservations.TabIndex = 7;
             // 
             // cmbTableRes
             // 
+            this.cmbTableRes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTableRes.FormattingEnabled = true;
             this.cmbTableRes.Location = new System.Drawing.Point(89, 53);
             this.cmbTableRes.Name = "cmbTableRes";
-            this.cmbTableRes.Size = new System.Drawing.Size(121, 27);
+            this.cmbTableRes.Size = new System.Drawing.Size(121, 24);
             this.cmbTableRes.TabIndex = 6;
             // 
             // lblTableRes
@@ -925,16 +876,24 @@
             this.lblTableRes.AutoSize = true;
             this.lblTableRes.Location = new System.Drawing.Point(13, 61);
             this.lblTableRes.Name = "lblTableRes";
-            this.lblTableRes.Size = new System.Drawing.Size(51, 21);
+            this.lblTableRes.Size = new System.Drawing.Size(40, 16);
             this.lblTableRes.TabIndex = 5;
             this.lblTableRes.Text = "Table";
             // 
+            // txtNumGuestsOr
+            // 
+            this.txtNumGuestsOr.Location = new System.Drawing.Point(94, 86);
+            this.txtNumGuestsOr.Name = "txtNumGuestsOr";
+            this.txtNumGuestsOr.Size = new System.Drawing.Size(121, 23);
+            this.txtNumGuestsOr.TabIndex = 16;
+            // 
             // ThePorkShopPOS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(965, 633);
+            this.Controls.Add(this.txtNumGuestsOr);
             this.Controls.Add(this.grpReservations);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnDeleteItem);
@@ -947,7 +906,6 @@
             this.Controls.Add(this.grpMainCourse);
             this.Controls.Add(this.grpStarters);
             this.Controls.Add(this.grpBar);
-            this.Controls.Add(this.cmbGuests);
             this.Controls.Add(this.lblGuests);
             this.Controls.Add(this.cmbTableOr);
             this.Controls.Add(this.lblTableOr);
@@ -964,10 +922,6 @@
             this.grpStarters.ResumeLayout(false);
             this.grpStarters.PerformLayout();
             this.grpMainCourse.ResumeLayout(false);
-            this.grpSides3.ResumeLayout(false);
-            this.grpSides3.PerformLayout();
-            this.grpSides2.ResumeLayout(false);
-            this.grpSides2.PerformLayout();
             this.grpSides1.ResumeLayout(false);
             this.grpSides1.PerformLayout();
             this.grpReservations.ResumeLayout(false);
@@ -985,7 +939,6 @@
         private System.Windows.Forms.ComboBox cmbTableOr;
         private System.Windows.Forms.Label lblTableOr;
         private System.Windows.Forms.Label lblGuests;
-        private System.Windows.Forms.TextBox cmbGuests;
         private System.Windows.Forms.GroupBox grpBar;
         private System.Windows.Forms.Label lblDomestic;
         private System.Windows.Forms.CheckBox chkHappyHr;
@@ -1006,35 +959,17 @@
         private System.Windows.Forms.Button btnRye;
         private System.Windows.Forms.Label lblHouseShots;
         private System.Windows.Forms.Button btnPinaColada;
-        private System.Windows.Forms.Button btnIceTea;
+        private System.Windows.Forms.Button btnIcedTea;
         private System.Windows.Forms.Button btnALSlammer;
         private System.Windows.Forms.Button btnMargerita;
         private System.Windows.Forms.Label lblCocktails;
         private System.Windows.Forms.ComboBox cmbMix;
         private System.Windows.Forms.GroupBox grpStarters;
-        private System.Windows.Forms.CheckBox chkChipotle;
-        private System.Windows.Forms.CheckBox chkBiscuit;
-        private System.Windows.Forms.CheckBox chkCornbread;
-        private System.Windows.Forms.CheckBox chkRoll;
         private System.Windows.Forms.Button btnNachos;
         private System.Windows.Forms.Button btnMacBalls;
         private System.Windows.Forms.Button btnGarlicSoup;
         private System.Windows.Forms.GroupBox grpMainCourse;
-        private System.Windows.Forms.GroupBox grpSides3;
-        private System.Windows.Forms.CheckBox chkMashed3;
-        private System.Windows.Forms.CheckBox chkHomeFries3;
-        private System.Windows.Forms.CheckBox chkMacNCheese3;
-        private System.Windows.Forms.CheckBox chkOnRings3;
-        private System.Windows.Forms.GroupBox grpSides2;
-        private System.Windows.Forms.CheckBox chkMashed2;
-        private System.Windows.Forms.CheckBox chkHomeFries2;
-        private System.Windows.Forms.CheckBox chkMacNCheese2;
-        private System.Windows.Forms.CheckBox chkOnRings2;
         private System.Windows.Forms.GroupBox grpSides1;
-        private System.Windows.Forms.CheckBox chkMashed1;
-        private System.Windows.Forms.CheckBox chkHomeFries1;
-        private System.Windows.Forms.CheckBox chkMacNCheese1;
-        private System.Windows.Forms.CheckBox chkOnRings1;
         private System.Windows.Forms.Button btnSteak;
         private System.Windows.Forms.Button btnMeatloaf;
         private System.Windows.Forms.Button btnPorkzilla;
@@ -1049,7 +984,7 @@
         private System.Windows.Forms.GroupBox grpReservations;
         private System.Windows.Forms.Button btnShowRes;
         private System.Windows.Forms.Button btnReserve;
-        private System.Windows.Forms.TextBox txtNumGuests;
+        private System.Windows.Forms.TextBox txtNumGuestsRes;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblNumGuests;
@@ -1058,6 +993,19 @@
         private System.Windows.Forms.Label lblTableRes;
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.MaskedTextBox txtPhone;
+        private System.Windows.Forms.RadioButton rdbNoSides;
+        private System.Windows.Forms.RadioButton rdbMashed;
+        private System.Windows.Forms.RadioButton rdbNoStarters;
+        private System.Windows.Forms.RadioButton rdbChipotle;
+        private System.Windows.Forms.RadioButton rdbBiscuit;
+        private System.Windows.Forms.RadioButton rdbCornbread;
+        private System.Windows.Forms.RadioButton rdbRoll;
+        private System.Windows.Forms.RadioButton rdbOnRings;
+        private System.Windows.Forms.RadioButton rdbMacNCheese;
+        private System.Windows.Forms.RadioButton rdbHomeFries;
+        private System.Windows.Forms.Button btnSeparateStarter;
+        private System.Windows.Forms.Button btnSeparateSide;
+        private System.Windows.Forms.TextBox txtNumGuestsOr;
     }
 }
 
