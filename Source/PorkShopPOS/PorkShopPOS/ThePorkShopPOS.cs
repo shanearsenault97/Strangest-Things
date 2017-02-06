@@ -322,21 +322,32 @@ namespace PorkShopPOS
 
         private void btnReserve_Click(object sender, EventArgs e)
         {
-            Reservation reservation = new Reservation();
-            reservation.TableNum = cmbTableRes.Text;
-            string format = "yyyy-MM-dd";
-            reservation.ReservationDate = dateReservations.Text;
-            reservation.ReservationTime = txtTime.Text;
-            reservation.ReservationName = txtName.Text;
-            reservation.ReservationContact = txtPhone.Text;
+            if (cmbTableRes.Text == "" || dateReservations.Text == "" || dateTime.Text == "" || txtName.Text == "" || txtPhone.Text == "")
+            {
+                MessageBox.Show("All form elements are required to reserve a table.");
+            }
+            else
+            {
+                Reservation reservation = new Reservation();
+                reservation.TableNum = cmbTableRes.Text;
+                reservation.ReservationDate = dateReservations.Text;
+                reservation.ReservationTime = dateTime.Text;
+                reservation.ReservationName = txtName.Text;
+                reservation.ReservationContact = txtPhone.Text;
 
-            reservation.Add();
+                reservation.Add();
+            }
         }
 
         private void btnShowRes_Click(object sender, EventArgs e)
         {
             ReservationShowAll resShowAll = new ReservationShowAll();
             resShowAll.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }    
     }
 }

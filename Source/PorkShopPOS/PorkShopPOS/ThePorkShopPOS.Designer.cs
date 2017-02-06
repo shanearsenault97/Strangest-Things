@@ -89,6 +89,9 @@
             this.btnDeleteItem = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.grpReservations = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTime = new System.Windows.Forms.DateTimePicker();
+            this.lblTime = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.MaskedTextBox();
             this.lblPhone = new System.Windows.Forms.Label();
             this.btnShowRes = new System.Windows.Forms.Button();
@@ -99,8 +102,6 @@
             this.cmbTableRes = new System.Windows.Forms.ComboBox();
             this.lblTableRes = new System.Windows.Forms.Label();
             this.txtNumGuestsOr = new System.Windows.Forms.TextBox();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.txtTime = new System.Windows.Forms.MaskedTextBox();
             this.grpBar.SuspendLayout();
             this.grpStarters.SuspendLayout();
             this.grpMainCourse.SuspendLayout();
@@ -770,7 +771,8 @@
             // 
             // grpReservations
             // 
-            this.grpReservations.Controls.Add(this.txtTime);
+            this.grpReservations.Controls.Add(this.label1);
+            this.grpReservations.Controls.Add(this.dateTime);
             this.grpReservations.Controls.Add(this.lblTime);
             this.grpReservations.Controls.Add(this.txtPhone);
             this.grpReservations.Controls.Add(this.lblPhone);
@@ -787,6 +789,34 @@
             this.grpReservations.TabIndex = 20;
             this.grpReservations.TabStop = false;
             this.grpReservations.Text = "Reservations";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(34, 16);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Date";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // dateTime
+            // 
+            this.dateTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTime.Location = new System.Drawing.Point(61, 140);
+            this.dateTime.Name = "dateTime";
+            this.dateTime.Size = new System.Drawing.Size(150, 23);
+            this.dateTime.TabIndex = 17;
+            this.dateTime.Value = new System.DateTime(2017, 2, 6, 0, 0, 0, 0);
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Location = new System.Drawing.Point(13, 144);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(37, 16);
+            this.lblTime.TabIndex = 16;
+            this.lblTime.Text = "Time";
             // 
             // txtPhone
             // 
@@ -843,10 +873,13 @@
             // 
             // dateReservations
             // 
-            this.dateReservations.Location = new System.Drawing.Point(11, 22);
+            this.dateReservations.CustomFormat = "yyyy-MM-dd";
+            this.dateReservations.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateReservations.Location = new System.Drawing.Point(61, 24);
             this.dateReservations.Name = "dateReservations";
-            this.dateReservations.Size = new System.Drawing.Size(212, 23);
+            this.dateReservations.Size = new System.Drawing.Size(150, 23);
             this.dateReservations.TabIndex = 7;
+            this.dateReservations.Value = new System.DateTime(2017, 2, 6, 0, 0, 0, 0);
             // 
             // cmbTableRes
             // 
@@ -872,24 +905,6 @@
             this.txtNumGuestsOr.Name = "txtNumGuestsOr";
             this.txtNumGuestsOr.Size = new System.Drawing.Size(121, 23);
             this.txtNumGuestsOr.TabIndex = 16;
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(13, 144);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(37, 16);
-            this.lblTime.TabIndex = 16;
-            this.lblTime.Text = "Time";
-            // 
-            // txtTime
-            // 
-            this.txtTime.Location = new System.Drawing.Point(60, 137);
-            this.txtTime.Mask = "90:00";
-            this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(100, 23);
-            this.txtTime.TabIndex = 17;
-            this.txtTime.ValidatingType = typeof(System.DateTime);
             // 
             // ThePorkShopPOS
             // 
@@ -1009,7 +1024,8 @@
         private System.Windows.Forms.Button btnSeparateSide;
         private System.Windows.Forms.TextBox txtNumGuestsOr;
         private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.MaskedTextBox txtTime;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTime;
     }
 }
 
