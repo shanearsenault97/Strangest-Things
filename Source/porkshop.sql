@@ -38,7 +38,6 @@ CREATE TABLE `customerOrders` (
   `empNum` varchar(6) NOT NULL,
   `tableNum` varchar(6) NOT NULL,
   `orderDate` date NOT NULL,
-  `orderTime` time NOT NULL,
   `numGuests` int(3) NOT NULL,
   `orderTotal` decimal(6,2),
   `orderGratuity` decimal(5,2),
@@ -212,30 +211,6 @@ INSERT INTO food (foodNum, foodDescription, foodType, foodPrice) VALUES
 
 INSERT INTO food (foodNum, foodDescription, foodType, foodPrice) VALUES
 (NULL, 'Smoked Flap Steak', 'Main', 20);
-
-INSERT INTO food (foodNum, foodDescription, foodType, foodPrice) VALUES
-(NULL, 'Crusty Roll', 'Side', 0.99);
-
-INSERT INTO food (foodNum, foodDescription, foodType, foodPrice) VALUES
-(NULL, 'Cornbread', 'Side', 0.99);
-
-INSERT INTO food (foodNum, foodDescription, foodType, foodPrice) VALUES
-(NULL, 'Biscuit', 'Side', 0.99);
-
-INSERT INTO food (foodNum, foodDescription, foodType, foodPrice) VALUES
-(NULL, 'Chipotle Mayo', 'Side', 0.99);
-
-INSERT INTO food (foodNum, foodDescription, foodType, foodPrice) VALUES
-(NULL, 'Onion Rings', 'Side', 2.99);
-
-INSERT INTO food (foodNum, foodDescription, foodType, foodPrice) VALUES
-(NULL, 'Home Fries', 'Side', 2.99);
-
-INSERT INTO food (foodNum, foodDescription, foodType, foodPrice) VALUES
-(NULL, 'Mac n Cheese', 'Side', 2.99);
-
-INSERT INTO food (foodNum, foodDescription, foodType, foodPrice) VALUES
-(NULL, 'Mashed Potatoes', 'Side', 2.99);
 
 INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
 (NULL, 'Molson Canadian', 'Domestic', 5, 100);

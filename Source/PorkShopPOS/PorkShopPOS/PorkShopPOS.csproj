@@ -53,8 +53,6 @@
     <Compile Include="BackOffice.Designer.cs">
       <DependentUpon>BackOffice.cs</DependentUpon>
     </Compile>
-    <Compile Include="Bar.cs" />
-    <Compile Include="BarDAO.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="EmployeeDAO.cs" />
     <Compile Include="EmployeeShowAll.cs">
@@ -63,8 +61,6 @@
     <Compile Include="EmployeeShowAll.Designer.cs">
       <DependentUpon>EmployeeShowAll.cs</DependentUpon>
     </Compile>
-    <Compile Include="Food.cs" />
-    <Compile Include="FoodDAO.cs" />
     <Compile Include="MenuItemsShowAll.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,8 +69,6 @@
     </Compile>
     <Compile Include="MenuUpdate.cs" />
     <Compile Include="MenuUpdateDAO.cs" />
-    <Compile Include="Order.cs" />
-    <Compile Include="OrderDAO.cs" />
     <Compile Include="Payroll.cs" />
     <Compile Include="PayrollDAO.cs" />
     <Compile Include="PayrollShowAll.cs">
