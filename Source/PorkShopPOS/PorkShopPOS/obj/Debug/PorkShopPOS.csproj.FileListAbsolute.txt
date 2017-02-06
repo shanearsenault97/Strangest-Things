@@ -68,3 +68,19 @@ E:\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\Po
 C:\Users\Jon\Documents\CIS\Final Project\GIT\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.MenuItemsShowAll.resources
 C:\Users\Jon\Documents\CIS\Final Project\GIT\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.csprojResolveAssemblyReference.cache
 E:\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.MenuItemsShowAll.resources
+C:\Users\ngallant112507\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\bin\Debug\PorkShopPOS.exe.config
+C:\Users\ngallant112507\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.exe
+C:\Users\ngallant112507\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.pdb
+C:\Users\ngallant112507\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\bin\Debug\PorkShopPOS.exe
+C:\Users\ngallant112507\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\bin\Debug\PorkShopPOS.pdb
+C:\Users\ngallant112507\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\bin\Debug\MySql.Data.dll
+C:\Users\ngallant112507\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.csprojResolveAssemblyReference.cache
+C:\Users\ngallant112507\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.BackOffice.resources
+C:\Users\ngallant112507\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.EmployeeShowAllForm.resources
+C:\Users\ngallant112507\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.MenuItemsShowAll.resources
+C:\Users\ngallant112507\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.PayrollShowAll.resources
+C:\Users\ngallant112507\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.SalaryShowAll.resources
+C:\Users\ngallant112507\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.ThePorkShopPOS.resources
+C:\Users\ngallant112507\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.Properties.Resources.resources
+C:\Users\ngallant112507\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.Welcome.resources
+C:\Users\ngallant112507\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.csproj.GenerateResource.Cache
