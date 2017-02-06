@@ -101,3 +101,6 @@ C:\Users\ngallant112507\Documents\Github\Strangest-Things\Source\PorkShopPOS\Por
 C:\Users\ngallant112507\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.Properties.Resources.resources
 C:\Users\ngallant112507\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.Welcome.resources
 C:\Users\ngallant112507\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.csproj.GenerateResource.Cache
+E:\Documents\repositories\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\bin\Debug\PorkShopPOS.exe.config
+E:\Documents\repositories\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.exe
+E:\Documents\repositories\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.pdb
