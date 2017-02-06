@@ -77,6 +77,14 @@
     <Compile Include="PayrollShowAll.Designer.cs">
       <DependentUpon>PayrollShowAll.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reservation.cs" />
+    <Compile Include="ReservationDAO.cs" />
+    <Compile Include="ReservationShowAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReservationShowAll.Designer.cs">
+      <DependentUpon>ReservationShowAll.cs</DependentUpon>
+    </Compile>
     <Compile Include="Salary.cs" />
     <Compile Include="SalaryDAO.cs" />
     <Compile Include="SalaryShowAll.cs">
@@ -116,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PayrollShowAll.resx">
       <DependentUpon>PayrollShowAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReservationShowAll.resx">
+      <DependentUpon>ReservationShowAll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SalaryShowAll.resx">
       <DependentUpon>SalaryShowAll.cs</DependentUpon>

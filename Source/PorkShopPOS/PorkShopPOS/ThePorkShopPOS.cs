@@ -26,6 +26,8 @@ namespace PorkShopPOS
 
         private void ThePorkShopPOS_Load(object sender, EventArgs e) {
 
+            
+
             cmbMix.Text = "None";
             //Create employee object
             Employee = new Employee();
@@ -299,6 +301,25 @@ namespace PorkShopPOS
             } else if (txtNumGuestsOr.Text.Equals("") || !guestTest) {
                 MessageBox.Show("Please enter a valid number of guests.", "Error");
             }
+        }
+
+        private void btnReserve_Click(object sender, EventArgs e)
+        {
+            Reservation reservation = new Reservation();
+            reservation.TableNum = cmbTableRes.Text;
+            string format = "yyyy-MM-dd";
+            reservation.ReservationDate = dateReservations.Text;
+            reservation.ReservationTime = txtTime.Text;
+            reservation.ReservationName = txtName.Text;
+            reservation.ReservationContact = txtPhone.Text;
+
+            reservation.Add();
+        }
+
+        private void btnShowRes_Click(object sender, EventArgs e)
+        {
+            ReservationShowAll resShowAll = new ReservationShowAll();
+            resShowAll.Show();
         }    
     }
 }

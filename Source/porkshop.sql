@@ -262,3 +262,22 @@ INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
 
 INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
 (NULL, 'Alabama Slammer', 'Cocktail', 7.5, 100);
+
+INSERT into `userAccess` (empNum, password, userTypeCode) VALUES("M00001", "boss", "3");
+
+INSERT into `tables` (tableNum, tableSeats) VALUES("TBL001", "4"),
+("TBL002", "4"),
+("TBL003", "4"),
+("TBL004", "4"),
+("TBL005", "4"),
+("TBL006", "10"),
+("TBL007", "4"),
+("TBL008", "4"),
+("TBL009", "4"),
+("TBL010", "4"),
+("BTH001", "6"),
+("BTH002", "6"),
+("BTH003", "6"),
+("BTH004", "6"),
+("BTH005", "6"),
+("BTH006", "6");

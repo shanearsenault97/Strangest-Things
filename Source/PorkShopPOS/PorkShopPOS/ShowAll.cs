@@ -40,5 +40,10 @@ namespace PorkShopPOS
         {
             showAllData.showAllMenuItems(dgv);
         }
+
+        public void showAllReservations(DataGridView dgv)
+        {
+            showAllData.showAllReservations(dgv);
+        }
     }
 }

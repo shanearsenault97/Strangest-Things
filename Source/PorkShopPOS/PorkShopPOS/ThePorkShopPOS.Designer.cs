@@ -93,14 +93,14 @@
             this.lblPhone = new System.Windows.Forms.Label();
             this.btnShowRes = new System.Windows.Forms.Button();
             this.btnReserve = new System.Windows.Forms.Button();
-            this.txtNumGuestsRes = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.lblNumGuests = new System.Windows.Forms.Label();
             this.dateReservations = new System.Windows.Forms.DateTimePicker();
             this.cmbTableRes = new System.Windows.Forms.ComboBox();
             this.lblTableRes = new System.Windows.Forms.Label();
             this.txtNumGuestsOr = new System.Windows.Forms.TextBox();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.txtTime = new System.Windows.Forms.MaskedTextBox();
             this.grpBar.SuspendLayout();
             this.grpStarters.SuspendLayout();
             this.grpMainCourse.SuspendLayout();
@@ -770,14 +770,14 @@
             // 
             // grpReservations
             // 
+            this.grpReservations.Controls.Add(this.txtTime);
+            this.grpReservations.Controls.Add(this.lblTime);
             this.grpReservations.Controls.Add(this.txtPhone);
             this.grpReservations.Controls.Add(this.lblPhone);
             this.grpReservations.Controls.Add(this.btnShowRes);
             this.grpReservations.Controls.Add(this.btnReserve);
-            this.grpReservations.Controls.Add(this.txtNumGuestsRes);
             this.grpReservations.Controls.Add(this.txtName);
             this.grpReservations.Controls.Add(this.lblName);
-            this.grpReservations.Controls.Add(this.lblNumGuests);
             this.grpReservations.Controls.Add(this.dateReservations);
             this.grpReservations.Controls.Add(this.cmbTableRes);
             this.grpReservations.Controls.Add(this.lblTableRes);
@@ -790,7 +790,7 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(64, 116);
+            this.txtPhone.Location = new System.Drawing.Point(61, 111);
             this.txtPhone.Mask = "(999) 000-0000";
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(100, 23);
@@ -799,7 +799,7 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(14, 114);
+            this.lblPhone.Location = new System.Drawing.Point(13, 114);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(43, 16);
             this.lblPhone.TabIndex = 14;
@@ -807,32 +807,27 @@
             // 
             // btnShowRes
             // 
-            this.btnShowRes.Location = new System.Drawing.Point(48, 169);
+            this.btnShowRes.Location = new System.Drawing.Point(86, 168);
             this.btnShowRes.Name = "btnShowRes";
             this.btnShowRes.Size = new System.Drawing.Size(142, 36);
             this.btnShowRes.TabIndex = 13;
             this.btnShowRes.Text = "Show Reservations";
             this.btnShowRes.UseVisualStyleBackColor = true;
+            this.btnShowRes.Click += new System.EventHandler(this.btnShowRes_Click);
             // 
             // btnReserve
             // 
-            this.btnReserve.Location = new System.Drawing.Point(138, 145);
+            this.btnReserve.Location = new System.Drawing.Point(6, 168);
             this.btnReserve.Name = "btnReserve";
-            this.btnReserve.Size = new System.Drawing.Size(75, 23);
+            this.btnReserve.Size = new System.Drawing.Size(75, 37);
             this.btnReserve.TabIndex = 12;
             this.btnReserve.Text = "Reserve";
             this.btnReserve.UseVisualStyleBackColor = true;
-            // 
-            // txtNumGuestsRes
-            // 
-            this.txtNumGuestsRes.Location = new System.Drawing.Point(91, 145);
-            this.txtNumGuestsRes.Name = "txtNumGuestsRes";
-            this.txtNumGuestsRes.Size = new System.Drawing.Size(39, 23);
-            this.txtNumGuestsRes.TabIndex = 11;
+            this.btnReserve.Click += new System.EventHandler(this.btnReserve_Click);
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(61, 86);
+            this.txtName.Location = new System.Drawing.Point(60, 82);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(149, 23);
             this.txtName.TabIndex = 10;
@@ -840,41 +835,32 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(13, 86);
+            this.lblName.Location = new System.Drawing.Point(13, 85);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(41, 16);
             this.lblName.TabIndex = 9;
             this.lblName.Text = "Name";
             // 
-            // lblNumGuests
-            // 
-            this.lblNumGuests.AutoSize = true;
-            this.lblNumGuests.Location = new System.Drawing.Point(12, 143);
-            this.lblNumGuests.Name = "lblNumGuests";
-            this.lblNumGuests.Size = new System.Drawing.Size(76, 16);
-            this.lblNumGuests.TabIndex = 8;
-            this.lblNumGuests.Text = "Num Guests";
-            // 
             // dateReservations
             // 
             this.dateReservations.Location = new System.Drawing.Point(11, 22);
             this.dateReservations.Name = "dateReservations";
-            this.dateReservations.Size = new System.Drawing.Size(200, 23);
+            this.dateReservations.Size = new System.Drawing.Size(212, 23);
             this.dateReservations.TabIndex = 7;
             // 
             // cmbTableRes
             // 
             this.cmbTableRes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTableRes.FormattingEnabled = true;
-            this.cmbTableRes.Location = new System.Drawing.Point(89, 53);
+            this.cmbTableRes.Location = new System.Drawing.Point(60, 53);
             this.cmbTableRes.Name = "cmbTableRes";
-            this.cmbTableRes.Size = new System.Drawing.Size(121, 24);
+            this.cmbTableRes.Size = new System.Drawing.Size(151, 24);
             this.cmbTableRes.TabIndex = 6;
             // 
             // lblTableRes
             // 
             this.lblTableRes.AutoSize = true;
-            this.lblTableRes.Location = new System.Drawing.Point(13, 61);
+            this.lblTableRes.Location = new System.Drawing.Point(13, 56);
             this.lblTableRes.Name = "lblTableRes";
             this.lblTableRes.Size = new System.Drawing.Size(40, 16);
             this.lblTableRes.TabIndex = 5;
@@ -886,6 +872,24 @@
             this.txtNumGuestsOr.Name = "txtNumGuestsOr";
             this.txtNumGuestsOr.Size = new System.Drawing.Size(121, 23);
             this.txtNumGuestsOr.TabIndex = 16;
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Location = new System.Drawing.Point(13, 144);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(37, 16);
+            this.lblTime.TabIndex = 16;
+            this.lblTime.Text = "Time";
+            // 
+            // txtTime
+            // 
+            this.txtTime.Location = new System.Drawing.Point(60, 137);
+            this.txtTime.Mask = "90:00";
+            this.txtTime.Name = "txtTime";
+            this.txtTime.Size = new System.Drawing.Size(100, 23);
+            this.txtTime.TabIndex = 17;
+            this.txtTime.ValidatingType = typeof(System.DateTime);
             // 
             // ThePorkShopPOS
             // 
@@ -984,10 +988,8 @@
         private System.Windows.Forms.GroupBox grpReservations;
         private System.Windows.Forms.Button btnShowRes;
         private System.Windows.Forms.Button btnReserve;
-        private System.Windows.Forms.TextBox txtNumGuestsRes;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblNumGuests;
         private System.Windows.Forms.DateTimePicker dateReservations;
         private System.Windows.Forms.ComboBox cmbTableRes;
         private System.Windows.Forms.Label lblTableRes;
@@ -1006,6 +1008,8 @@
         private System.Windows.Forms.Button btnSeparateStarter;
         private System.Windows.Forms.Button btnSeparateSide;
         private System.Windows.Forms.TextBox txtNumGuestsOr;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.MaskedTextBox txtTime;
     }
 }
 

@@ -25,6 +25,7 @@ namespace PorkShopPOS
         string salQuery = "SELECT * FROM salary;";
         string payQuery = "SELECT * FROM payroll;";
         string menuQuery = "SELECT * FROM food;";
+        string reservationQuery = "SELECT * FROM reservation;";
 
         // code borrowed from http://stackoverflow.com/questions/14020038/filling-a-datatable-in-c-sharp-using-mysql
         public void showAll(string query, DataGridView dgv)
@@ -78,6 +79,11 @@ namespace PorkShopPOS
         public void showAllMenuItems(DataGridView dgv)
         {
             showAll(menuQuery, dgv);
+        }
+
+        public void showAllReservations(DataGridView dgv)
+        {
+            showAll(reservationQuery, dgv);
         }
     }
 }
