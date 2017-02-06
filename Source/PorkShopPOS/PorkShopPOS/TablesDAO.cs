@@ -50,7 +50,7 @@ namespace PorkShopPOS {
             MySqlDataReader MySqlReader = cmd.ExecuteReader();
 
             while (MySqlReader.Read()) {
-                tables.Add(MySqlReader.GetValue(1).ToString());
+                tables.Add(MySqlReader.GetValue(0).ToString());
             }
 
             MySqlReader.Close();
