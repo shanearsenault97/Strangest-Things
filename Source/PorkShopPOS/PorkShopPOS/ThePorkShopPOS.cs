@@ -300,6 +300,23 @@ namespace PorkShopPOS
                 MessageBox.Show("Please select a table.", "Error");
             } else if (txtNumGuestsOr.Text.Equals("") || !guestTest) {
                 MessageBox.Show("Please enter a valid number of guests.", "Error");
+            } else if (listOrder.Items.Count <= 2) {
+                MessageBox.Show("You must add something to the order list to submit.", "Error");
+            } else {
+                bool drinks = false;
+                foreach (string listItem in listOrder.Items) {
+                    if (listItem.Equals("-Food-") || listItem.Equals("-Drinks-")) {
+                        if (listItem.Equals("-Drinks-")) {
+                            drinks = true;
+                        }
+                    } else {
+                        if (drinks) {
+
+                        } else {
+
+                        }
+                    }
+                }
             }
         }
 
