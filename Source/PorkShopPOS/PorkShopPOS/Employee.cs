@@ -134,6 +134,10 @@ namespace PorkShopPOS
             empData.Search(this);
         }
 
+        public void SearchByName() {
+            empData.SearchByName(this);
+        }
+
         public List<string> LoadEmployees() {
             List<string> lEmployees = new List<string>();
 

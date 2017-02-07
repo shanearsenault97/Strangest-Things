@@ -335,11 +335,46 @@ namespace PorkShopPOS
 
         }
 
+        //Search the salespeople in the database with the salesperson name
+        public void SearchByName(Employee emp) {
+            String Str = BuildSearchByNameQuery(emp);
+
+            //Try catch for database connection error validation
+            try {
+                OpenConn();
+
+                MySqlCommand cmd = new MySqlCommand(Str, conn);
+
+                MySqlDataReader MySqlReader = cmd.ExecuteReader();
+
+                while (MySqlReader.Read()) {
+                    emp.EmpNum = MySqlReader.GetValue(0).ToString();
+                }
+
+                MySqlReader.Close();
+                cmd.Dispose();
+                CloseConn();
+            } catch {
+                //Display error message if DB connection fails
+                MessageBox.Show("Connection to the database has failed.", "Database Connection Error");
+            }
+        }
+
         private String BuildLoadEmployeesQuery(Employee emp) {
             // create sql 
             strTable = "Select * from " + thisTable + ";";
 
             strTotal = strTable;
+
+            return strTotal;
+        }
+
+        //Builds the query for the SearchByName method
+        private String BuildSearchByNameQuery(Employee emp) {
+            strTable = "Select * from " + thisTable;
+            strFields = " where " + EMP_F_NAME + " = '" + emp.EmpFName + "' AND " + EMP_L_NAME + " = '" + emp.EmpLName + "'";
+
+            strTotal = strTable + strFields;
 
             return strTotal;
         }

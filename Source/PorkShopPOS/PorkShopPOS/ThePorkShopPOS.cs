@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace PorkShopPOS
 {
@@ -18,6 +19,20 @@ namespace PorkShopPOS
         Tables Tables;
         int numGuests;
         string item = "";
+        List<string> foodIds = new List<string>();
+        List<string> foodDescriptions = new List<string>();
+        List<string> foodPrices = new List<string>();
+        List<string> barIds = new List<string>();
+        List<string> barDescriptions = new List<string>();
+        List<string> barPrices = new List<string>();
+        string[] individualItems;
+        char itemDelim = '+';
+        char nameDelim = ' ';
+        decimal total = 0;
+        string[] empNames;
+        string date;
+        bool orderSubmitted = false;
+        bool billPrinted = false;
 
         public ThePorkShopPOS()
         {
@@ -29,6 +44,7 @@ namespace PorkShopPOS
             
 
             cmbMix.Text = "None";
+            cmbMix.SelectedIndex = cmbMix.FindString("None");
             //Create employee object
             Employee = new Employee();
 
@@ -311,12 +327,89 @@ namespace PorkShopPOS
                         }
                     } else {
                         if (drinks) {
-
+                            individualItems = listItem.Split(itemDelim);
+                            Bar bar = new Bar();
+                            bar.BarDescription = individualItems[0];
+                            bar.Search();
+                            barIds.Add(bar.BarId);
+                            barDescriptions.Add(bar.BarDescription);
+                            barPrices.Add(bar.BarPrice);
+                            total += decimal.Parse(bar.BarPrice);
                         } else {
-
+                            individualItems = listItem.Split(itemDelim);
+                            Food food = new Food();
+                            food.FoodDescription = individualItems[0];
+                            food.Search();
+                            foodIds.Add(food.FoodNum);
+                            foodDescriptions.Add(food.FoodDescription);
+                            foodPrices.Add(food.FoodPrice);
+                            total += decimal.Parse(food.FoodPrice);
+                            if (individualItems.Count() == 2) {
+                                food.FoodDescription = individualItems[1];
+                                food.Search();
+                                foodIds.Add(food.FoodNum);
+                                foodDescriptions.Add(food.FoodDescription);
+                                foodPrices.Add("0");
+                            }
                         }
                     }
                 }
+                empNames = cmbServer.SelectedItem.ToString().Split(nameDelim);
+                Employee emp = new Employee();
+                emp.EmpFName = empNames[0];
+                emp.EmpLName = empNames[1];
+                emp.SearchByName();
+                Order order = new Order();
+                order.EmpNum = emp.EmpNum;
+                order.TableNum = cmbTableOr.SelectedItem.ToString();
+                DateTime today = DateTime.Today;
+                date = today.ToString("d");
+                date.Replace("/", "-");
+                order.OrderDate = date;
+                order.OrderTime = DateTime.Now.ToString("HH:mm:ss");
+                order.NumGuests = txtNumGuestsOr.Text;
+                order.OrderTotal = total.ToString();
+                order.Add();
+                int lineNum = 1;
+                var groups = foodDescriptions.GroupBy(v => v);
+                foreach(var group in groups) {
+                    decimal linePrice = 0;
+                    Line line = new Line();
+                    for (int i = 0; i < foodIds.Count(); i++) {
+                        if (foodDescriptions[i].Equals(group.Key)) {
+                            linePrice += decimal.Parse(foodPrices[i]);
+                            line.FoodId = "'" + foodIds[i] + "'";
+                        }
+                    }
+                    line.LineQty = group.Count().ToString();
+                    line.LineNum = lineNum.ToString();
+                    line.BarId = "NULL";
+                    line.LinePrice = linePrice.ToString();
+                    order.Search();
+                    line.OrderNum = order.OrderNum;
+                    line.Add();
+                    lineNum++;
+                }
+                groups = barDescriptions.GroupBy(v => v);
+                foreach (var group in groups) {
+                    decimal linePrice = 0;
+                    Line line = new Line();
+                    for (int i = 0; i < barIds.Count(); i++) {
+                        if (barDescriptions[i].Equals(group.Key)) {
+                            linePrice += decimal.Parse(barPrices[i]);
+                            line.BarId = "'" + barIds[i] + "'";
+                        }
+                    }
+                    line.LineQty = group.Count().ToString();
+                    line.LineNum = lineNum.ToString();
+                    line.OrderNum = order.OrderNum;
+                    line.FoodId = "NULL";
+                    line.LinePrice = linePrice.ToString();
+                    line.Add();
+                    lineNum++;
+                }
+                orderSubmitted = true;
+                MessageBox.Show("Order successfully submitted!", "Order Confirmation");
             }
         }
 
@@ -345,9 +438,39 @@ namespace PorkShopPOS
             resShowAll.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+        private void btnPrintBill_Click(object sender, EventArgs e) {
+            if (orderSubmitted) {
+                billPrinted = true;
+            }
+        }
 
-        }    
+        private void btnPayBill_Click(object sender, EventArgs e) {
+            if (billPrinted) {
+                Employee = null;
+                Tables = null;
+                numGuests = 0;
+                item = "";
+                foodIds = null;
+                foodDescriptions = null;
+                foodPrices = null;
+                barIds = null;
+                barDescriptions = null;
+                barPrices = null;
+                individualItems = null;
+                total = 0;
+                empNames = null;
+                date = null;
+                orderSubmitted = false;
+                billPrinted = false;
+                listOrder.Items.Clear();
+                listOrder.Items.Add("-Food-");
+                listOrder.Items.Add("-Drinks-");
+                rdbNoSides.Select();
+                rdbNoStarters.Select();
+                cmbMix.SelectedIndex = cmbMix.FindString("None");
+                txtNumGuestsOr.Text = "";
+            }
+        }
+
     }
 }

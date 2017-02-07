@@ -102,6 +102,7 @@
             this.cmbTableRes = new System.Windows.Forms.ComboBox();
             this.lblTableRes = new System.Windows.Forms.Label();
             this.txtNumGuestsOr = new System.Windows.Forms.TextBox();
+            this.reportDocument1 = new CrystalDecisions.CrystalReports.Engine.ReportDocument();
             this.grpBar.SuspendLayout();
             this.grpStarters.SuspendLayout();
             this.grpMainCourse.SuspendLayout();
@@ -715,6 +716,7 @@
             this.btnPrintBill.TabIndex = 13;
             this.btnPrintBill.Text = "Print Bill";
             this.btnPrintBill.UseVisualStyleBackColor = true;
+            this.btnPrintBill.Click += new System.EventHandler(this.btnPrintBill_Click);
             // 
             // lblTitle
             // 
@@ -734,6 +736,7 @@
             this.btnPayBill.TabIndex = 16;
             this.btnPayBill.Text = "Pay Bill";
             this.btnPayBill.UseVisualStyleBackColor = true;
+            this.btnPayBill.Click += new System.EventHandler(this.btnPayBill_Click);
             // 
             // listOrder
             // 
@@ -798,7 +801,6 @@
             this.label1.Size = new System.Drawing.Size(34, 16);
             this.label1.TabIndex = 18;
             this.label1.Text = "Date";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dateTime
             // 
@@ -1026,6 +1028,7 @@
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTime;
+        private CrystalDecisions.CrystalReports.Engine.ReportDocument reportDocument1;
     }
 }
 

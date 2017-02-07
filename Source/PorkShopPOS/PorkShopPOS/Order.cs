@@ -60,5 +60,13 @@ namespace PorkShopPOS {
         public Order() {
             orderData = new OrderDAO();
         }
+
+        public void Add() {
+            orderData.Add(this);
+        }
+
+        public void Search() {
+            orderData.Search(this);
+        }
     }
 }

@@ -44,5 +44,79 @@ namespace PorkShopPOS {
                 Console.WriteLine("Exception.Message: {0}", ex.Message);
             }
         }
+
+        public void Add(Order order) {
+            try {
+                // get sql query to add an order 
+                String Str = BuildAddQuery(order);
+                OpenConn();
+
+                MySqlCommand cmd = new MySqlCommand(Str, conn);
+
+                cmd.ExecuteNonQuery();
+
+                CloseConn();
+            } catch (Exception ex) {
+                Console.WriteLine("Exception.Message: {0}", ex.Message);
+            }
+
+        }
+
+        public void Search(Order order) {
+            String Str = BuildSearchQuery(order);
+
+            //Try catch for database connection error validation
+            try {
+                OpenConn();
+
+                MySqlCommand cmd = new MySqlCommand(Str, conn);
+
+                MySqlDataReader MySqlReader = cmd.ExecuteReader();
+
+                while (MySqlReader.Read()) {
+                    order.OrderNum = MySqlReader.GetValue(0).ToString();
+                }
+
+                MySqlReader.Close();
+                cmd.Dispose();
+                CloseConn();
+            } catch {
+                //Display error message if DB connection fails
+                MessageBox.Show("Connection to the database has failed.", "Database Connection Error");
+            }
+        }
+
+        private String BuildAddQuery(Order order) {
+            strTable = "Insert into " + thisTable;
+            strFields = " (" + ORDER_NUM +
+                "," + EMP_NUM +
+                "," + TABLE_NUM +
+                "," + ORDER_DATE +
+                "," + ORDER_TIME +
+                "," + NUM_GUESTS +
+                "," + ORDER_TOTAL +
+                ")";
+            strValues = " Values ( " + "NULL" +
+                         " , '" + order.EmpNum +
+                         "' , '" + order.TableNum +
+                         "' , '" + order.OrderDate +
+                         "' , '" + order.OrderTime +
+                         "' , '" + order.NumGuests +
+                         "' , '" + order.OrderTotal +
+                         "' )";
+
+            strTotal = strTable + strFields + strValues;
+
+            return strTotal;
+        }
+
+        private String BuildSearchQuery(Order order) {
+            strTable = "Select * from " + thisTable;
+            strFields = " where " + ORDER_DATE + " = '" + order.OrderDate + "' AND " + ORDER_TIME + " = '" + order.OrderTime + "' AND " + ORDER_TOTAL + " = '" + order.OrderTotal + "'";
+
+            strTotal = strTable + strFields;
+
+            return strTotal;
+        }
     }
 }
