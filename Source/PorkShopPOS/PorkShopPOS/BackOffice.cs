@@ -695,7 +695,7 @@ namespace PorkShopPOS
 
         private void btnShowReservations_Click(object sender, EventArgs e)
         {
-            ReservationShowAll resShow = new ReservationShowAll();
+            frmReservationShowAll resShow = new frmReservationShowAll();
             resShow.Show();
         }
 

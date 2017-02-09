@@ -19,10 +19,9 @@
 
 #secondary {
     height: 50px;
-    width: 800px;
     align-content: center;
     text-align: center;
-    margin-left: 10em;
+    margin: auto;
 }
 
 .intro {

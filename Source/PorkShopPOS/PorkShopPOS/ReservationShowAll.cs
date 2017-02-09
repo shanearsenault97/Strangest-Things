@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PorkShopPOS
 {
-    public partial class ReservationShowAll : Form
+    public partial class frmReservationShowAll : Form
     {
-        public ReservationShowAll()
+        public frmReservationShowAll()
         {
             InitializeComponent();
         }

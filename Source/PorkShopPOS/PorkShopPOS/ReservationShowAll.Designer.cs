@@ -1,6 +1,6 @@
 ﻿namespace PorkShopPOS
 {
-    partial class ReservationShowAll
+    partial class frmReservationShowAll
     {
         /// <summary>
         /// Required designer variable.
@@ -62,7 +62,7 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // ReservationShowAll
+            // frmReservationShowAll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -70,8 +70,8 @@
             this.Controls.Add(this.reservationDGV);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
-            this.Name = "ReservationShowAll";
-            this.Text = "ReservationShowAll";
+            this.Name = "frmReservationShowAll";
+            this.Text = "Show Reservations";
             this.Load += new System.EventHandler(this.ReservationShowAll_Load);
             ((System.ComponentModel.ISupportInitialize)(this.reservationDGV)).EndInit();
             this.ResumeLayout(false);
