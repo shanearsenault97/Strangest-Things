@@ -111,10 +111,10 @@ E:\Documents\repositories\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\De
 E:\Documents\repositories\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.EmployeeShowAllForm.resources
 E:\Documents\repositories\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.MenuItemsShowAll.resources
 E:\Documents\repositories\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.PayrollShowAll.resources
-E:\Documents\repositories\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.ReservationShowAll.resources
 E:\Documents\repositories\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.SalaryShowAll.resources
 E:\Documents\repositories\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.ThePorkShopPOS.resources
 E:\Documents\repositories\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.Properties.Resources.resources
 E:\Documents\repositories\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.Welcome.resources
 E:\Documents\repositories\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.csproj.GenerateResource.Cache
 E:\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.ReservationShowAll.resources
+E:\Documents\repositories\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.frmReservationShowAll.resources

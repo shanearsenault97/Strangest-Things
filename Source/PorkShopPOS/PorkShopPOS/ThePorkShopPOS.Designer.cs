@@ -823,7 +823,7 @@
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(61, 111);
-            this.txtPhone.Mask = "(999) 000-0000";
+            this.txtPhone.Mask = "(999)000-0000";
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(100, 23);
             this.txtPhone.TabIndex = 15;
