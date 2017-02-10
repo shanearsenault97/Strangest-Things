@@ -14,7 +14,7 @@
 @$contactNumber = $_POST['contactNumber'];
 
 //opens up database
-@ $db = new mysqli('localhost', 'root', '', 'pork_shop');
+@ $db = new mysqli('sarsenau.hccis.info', 'sarsenau_admin', '5tr&ng3rTh!ng$', 'sarsenau_pork_shop');
 
 //adds security to fields
 $name = mysqli_real_escape_string($db, $name);

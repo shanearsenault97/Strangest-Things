@@ -31,7 +31,7 @@
     <select name="tableNum" id="tableNum" required>
         <?php
         //opens up database
-        @ $db = new mysqli('localhost', 'root', '', 'pork_shop');
+         @$db = new mysqli('sarsenau.hccis.info', 'sarsenau_admin', '5tr&ng3rTh!ng$', 'sarsenau_pork_shop');
 
         //if the database does not connect, display custom-made error for security
         if (mysqli_connect_errno()) {
