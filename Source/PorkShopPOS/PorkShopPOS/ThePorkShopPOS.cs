@@ -87,7 +87,7 @@ namespace PorkShopPOS
         // close the pos UI and load the back office UI
         private void btnBackOffice_Click(object sender, EventArgs e)
         {        
-            this.Close();
+            //this.Close();
             BackOffice officeUI = new BackOffice();
             officeUI.Show();                       
         }

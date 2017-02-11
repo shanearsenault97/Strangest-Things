@@ -37,6 +37,8 @@
     <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data">
       <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Installer for Windows\MySql.Data.dll</HintPath>
     </Reference>
@@ -62,6 +64,18 @@
     </Compile>
     <Compile Include="Bar.cs" />
     <Compile Include="BarDAO.cs" />
+    <Compile Include="PayStub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayStub.Designer.cs">
+      <DependentUpon>PayStub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalaryHistoryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalaryHistoryReport.Designer.cs">
+      <DependentUpon>SalaryHistoryReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee.cs" />
     <Compile Include="EmployeeDAO.cs" />
     <Compile Include="EmployeeShowAll.cs">
@@ -130,6 +144,12 @@
     </Compile>
     <EmbeddedResource Include="BackOffice.resx">
       <DependentUpon>BackOffice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayStub.resx">
+      <DependentUpon>PayStub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalaryHistoryReport.resx">
+      <DependentUpon>SalaryHistoryReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeShowAll.resx">
       <DependentUpon>EmployeeShowAll.cs</DependentUpon>

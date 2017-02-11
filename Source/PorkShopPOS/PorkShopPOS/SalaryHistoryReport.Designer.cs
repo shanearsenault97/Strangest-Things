@@ -1,6 +1,6 @@
 ﻿namespace PorkShopPOS
 {
-    partial class MenuItemsShowAll
+    partial class SalaryHistoryReport
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuShowDGV = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.menuShowDGV)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuShowDGV
-            // 
-            this.menuShowDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.menuShowDGV.Location = new System.Drawing.Point(13, 13);
-            this.menuShowDGV.Name = "menuShowDGV";
-            this.menuShowDGV.RowTemplate.Height = 24;
-            this.menuShowDGV.Size = new System.Drawing.Size(543, 696);
-            this.menuShowDGV.TabIndex = 0;
-            // 
-            // MenuItemsShowAll
+            // SalaryHistoryReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 721);
-            this.Controls.Add(this.menuShowDGV);
-            this.Name = "MenuItemsShowAll";
-            this.Text = "Menu Items";
-            this.Load += new System.EventHandler(this.MenuItemsShowAll_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.menuShowDGV)).EndInit();
+            this.ClientSize = new System.Drawing.Size(774, 551);
+            this.Name = "SalaryHistoryReport";
+            this.Text = "Salary History Report";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView menuShowDGV;
     }
 }

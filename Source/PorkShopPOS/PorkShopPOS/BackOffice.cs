@@ -397,6 +397,53 @@ namespace PorkShopPOS
             SalaryShowAll salShow = new SalaryShowAll();
             salShow.Show();
         }
+
+        // display all salary data in a datagrid in a new form
+        private void salaryReportB_Click(object sender, EventArgs e)
+        {
+
+            //SalaryListReport salaryList = new SalaryListReport();
+           // salaryList.Show();
+
+
+
+            // below code taken from https://dev.mysql.com/doc/connector-net/en/connector-net-programming-crystal-source.html
+
+            DataSet myData = new DataSet();
+            MySql.Data.MySqlClient.MySqlConnection conn;
+            MySql.Data.MySqlClient.MySqlCommand cmd;
+            MySql.Data.MySqlClient.MySqlDataAdapter myAdapter;
+
+            conn = new MySql.Data.MySqlClient.MySqlConnection();
+            cmd = new MySql.Data.MySqlClient.MySqlCommand();
+            myAdapter = new MySql.Data.MySqlClient.MySqlDataAdapter();
+
+            conn.ConnectionString = "server=localhost; database=pork_shop; user=pork_shop_admin; password=5tr&ng3rTh!ng$; Convert Zero Datetime=True; Allow Zero Datetime=True;";
+
+
+            try
+            {
+                cmd.CommandText = "SELECT employee.empLName AS EmployeeLastName, employee.empFName as EmployeeFirstName, " +
+                " salary.empNum AS EmployeeNumber, salary.salaryAmount AS RateOfPay " +
+                " FROM salary, employee " +
+                " WHERE salary.salaryTo = '0000-00-00' AND employee.empNum = salary.empNum " +
+                " ORDER BY salary.empNum";
+                cmd.Connection = conn;
+
+                myAdapter.SelectCommand = cmd;
+                myAdapter.Fill(myData);
+
+                myData.WriteXml(@"C:\temp\dataset.xml", XmlWriteMode.WriteSchema);
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Report could not be created",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            // for more information on using hyperlinks in crystal reports see:   http://www.dummies.com/software/other-software/crystal-reports-10-adding-a-hyperlink-to-a-report/
+        }
+
         //*************************************************SALARY SECTION END****************************************************
 
         //*************************************************PAYROLL SECTION START****************************************************
@@ -548,6 +595,7 @@ namespace PorkShopPOS
         }
 
         
+
         //*************************************************PAYROLL SECTION END****************************************************
         //*************************************************MENU_UPDATE SECTION START****************************************************
 
@@ -693,13 +741,23 @@ namespace PorkShopPOS
             menuShow.Show();
         }
 
+
+        //*************************************************MENU_UPDATE SECTION END****************************************************
+        //*************************************************RESERVATION SECTION START****************************************************
+
         private void btnShowReservations_Click(object sender, EventArgs e)
         {
             frmReservationShowAll resShow = new frmReservationShowAll();
             resShow.Show();
         }
 
+        //*************************************************RESERVATION SECTION END****************************************************
 
-        //*************************************************MENU_UPDATE SECTION END****************************************************
+       
+
+       
+
+
+        
     }
 }

@@ -118,3 +118,5 @@ E:\Documents\repositories\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\De
 E:\Documents\repositories\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.csproj.GenerateResource.Cache
 E:\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.ReservationShowAll.resources
 E:\Documents\repositories\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.frmReservationShowAll.resources
+C:\Users\Jon\Documents\CIS\Final Project\GIT\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.frmReservationShowAll.resources
+C:\Users\Jon\Documents\CIS\Final Project\GIT\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.SalaryListReport.resources
