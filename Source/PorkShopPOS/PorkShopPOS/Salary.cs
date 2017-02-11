@@ -79,5 +79,10 @@ namespace PorkShopPOS
             salData.Search(this);
         }
 
+        // calls the getMostCurrentSal() method from the data object layer
+        public void getMostCurrentSal()
+        {
+            salData.getMostCurrentSal(this);
+        }
     }
 }

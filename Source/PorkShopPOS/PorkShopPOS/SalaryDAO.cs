@@ -233,7 +233,7 @@ namespace PorkShopPOS
             try
             {
                 // create sql 
-                string sql = "Select * from " + thisTable + " Where salaryNum = " + sal.SalNum;
+                string sql = "Select * from " + thisTable + " Where salaryNum = " + sal.SalNum + "' ;";
 
                 // connect to database
 
@@ -270,6 +270,60 @@ namespace PorkShopPOS
             }
 
         }
+
+
+        /* 
+        Function Name:    getMostCurrentSal(Salary sal)
+        Version:          1
+        Author:           Jonathan Deschene
+        Description:      Searches the database for an entry based on empNum and toDate
+        Change History:   2017.30.01 Original version by JED 
+        */
+        public void getMostCurrentSal(Salary sal)
+        {
+
+            try
+            {
+                // create sql 
+                string sql = "Select * from " + thisTable + " Where " + SAL_EMP_NUM + " = '" + sal.EmpNum +
+                 "' AND " + TO_DATE + " = '" + sal.ToDate + "' ;"; 
+
+                // connect to database
+
+                MySqlConnection conn = new MySqlConnection(connectionStr);
+                conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    sal.SalNum = reader.GetInt32(0);
+                    sal.EmpNum = reader.GetValue(1).ToString();
+                    sal.FromDate = reader.GetValue(2).ToString();
+                    sal.ToDate = reader.GetValue(3).ToString();
+                    sal.Amount = reader.GetDecimal(4);
+                }
+
+
+                reader.Close();
+                cmd.Dispose();
+                conn.Close();
+            }
+
+            catch (InvalidOperationException exc)
+            {
+                MessageBox.Show(exc.ToString());
+            }
+
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+
+        }
+
 
     }
 }

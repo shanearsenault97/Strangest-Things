@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PayStub));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lNameLab = new System.Windows.Forms.Label();
+            this.fNameLab = new System.Windows.Forms.Label();
+            this.empNumLab = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,35 +44,32 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Deductions = new System.Windows.Forms.GroupBox();
+            this.federalTaxLab = new System.Windows.Forms.Label();
+            this.eiLab = new System.Windows.Forms.Label();
+            this.cppLab = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.vacPayLab = new System.Windows.Forms.Label();
+            this.grossPayCurrentLab = new System.Windows.Forms.Label();
+            this.rateLab = new System.Windows.Forms.Label();
+            this.hoursLab = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.netPayLab = new System.Windows.Forms.Label();
+            this.periodEndingLab = new System.Windows.Forms.Label();
+            this.payNumLab = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.empNumLab = new System.Windows.Forms.Label();
-            this.fNameLab = new System.Windows.Forms.Label();
-            this.lNameLab = new System.Windows.Forms.Label();
-            this.payNumLab = new System.Windows.Forms.Label();
-            this.periodEndingLab = new System.Windows.Forms.Label();
-            this.cppLab = new System.Windows.Forms.Label();
-            this.eiLab = new System.Windows.Forms.Label();
-            this.netPayLab = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.hoursLab = new System.Windows.Forms.Label();
-            this.rateLab = new System.Windows.Forms.Label();
-            this.grossPayCurrentLab = new System.Windows.Forms.Label();
-            this.vacPayCurrentLab = new System.Windows.Forms.Label();
-            this.federalTaxLab = new System.Windows.Forms.Label();
             this.printPayStub = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -93,6 +93,36 @@
             this.groupBox1.Size = new System.Drawing.Size(684, 113);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // lNameLab
+            // 
+            this.lNameLab.AutoSize = true;
+            this.lNameLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lNameLab.Location = new System.Drawing.Point(493, 71);
+            this.lNameLab.Name = "lNameLab";
+            this.lNameLab.Size = new System.Drawing.Size(154, 27);
+            this.lNameLab.TabIndex = 8;
+            this.lNameLab.Text = "                            ";
+            // 
+            // fNameLab
+            // 
+            this.fNameLab.AutoSize = true;
+            this.fNameLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.fNameLab.Location = new System.Drawing.Point(245, 71);
+            this.fNameLab.Name = "fNameLab";
+            this.fNameLab.Size = new System.Drawing.Size(164, 27);
+            this.fNameLab.TabIndex = 7;
+            this.fNameLab.Text = "                              ";
+            // 
+            // empNumLab
+            // 
+            this.empNumLab.AutoSize = true;
+            this.empNumLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.empNumLab.Location = new System.Drawing.Point(8, 71);
+            this.empNumLab.Name = "empNumLab";
+            this.empNumLab.Size = new System.Drawing.Size(129, 27);
+            this.empNumLab.TabIndex = 6;
+            this.empNumLab.Text = "                       ";
             // 
             // label4
             // 
@@ -154,21 +184,21 @@
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(109, 24);
             this.printToolStripMenuItem.Text = "Print";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(109, 24);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(109, 24);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -182,13 +212,73 @@
             this.Deductions.Controls.Add(this.label8);
             this.Deductions.Location = new System.Drawing.Point(39, 481);
             this.Deductions.Name = "Deductions";
-            this.Deductions.Size = new System.Drawing.Size(230, 243);
+            this.Deductions.Size = new System.Drawing.Size(247, 243);
             this.Deductions.TabIndex = 4;
             this.Deductions.TabStop = false;
             // 
+            // federalTaxLab
+            // 
+            this.federalTaxLab.AutoSize = true;
+            this.federalTaxLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.federalTaxLab.Location = new System.Drawing.Point(170, 142);
+            this.federalTaxLab.Name = "federalTaxLab";
+            this.federalTaxLab.Size = new System.Drawing.Size(64, 27);
+            this.federalTaxLab.TabIndex = 12;
+            this.federalTaxLab.Text = "          ";
+            // 
+            // eiLab
+            // 
+            this.eiLab.AutoSize = true;
+            this.eiLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.eiLab.Location = new System.Drawing.Point(170, 94);
+            this.eiLab.Name = "eiLab";
+            this.eiLab.Size = new System.Drawing.Size(54, 27);
+            this.eiLab.TabIndex = 11;
+            this.eiLab.Text = "        ";
+            // 
+            // cppLab
+            // 
+            this.cppLab.AutoSize = true;
+            this.cppLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.cppLab.Location = new System.Drawing.Point(170, 41);
+            this.cppLab.Name = "cppLab";
+            this.cppLab.Size = new System.Drawing.Size(54, 27);
+            this.cppLab.TabIndex = 10;
+            this.cppLab.Text = "        ";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label10.Location = new System.Drawing.Point(8, 142);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(97, 20);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Federal Tax";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label9.Location = new System.Drawing.Point(8, 94);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(24, 20);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "EI";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label8.Location = new System.Drawing.Point(8, 43);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 20);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "CPP";
+            // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.vacPayCurrentLab);
+            this.groupBox4.Controls.Add(this.vacPayLab);
             this.groupBox4.Controls.Add(this.grossPayCurrentLab);
             this.groupBox4.Controls.Add(this.rateLab);
             this.groupBox4.Controls.Add(this.hoursLab);
@@ -203,6 +293,102 @@
             this.groupBox4.Size = new System.Drawing.Size(421, 243);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
+            // 
+            // vacPayLab
+            // 
+            this.vacPayLab.AutoSize = true;
+            this.vacPayLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.vacPayLab.Location = new System.Drawing.Point(337, 118);
+            this.vacPayLab.Name = "vacPayLab";
+            this.vacPayLab.Size = new System.Drawing.Size(74, 27);
+            this.vacPayLab.TabIndex = 18;
+            this.vacPayLab.Text = "            ";
+            // 
+            // grossPayCurrentLab
+            // 
+            this.grossPayCurrentLab.AutoSize = true;
+            this.grossPayCurrentLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.grossPayCurrentLab.Location = new System.Drawing.Point(337, 73);
+            this.grossPayCurrentLab.Name = "grossPayCurrentLab";
+            this.grossPayCurrentLab.Size = new System.Drawing.Size(74, 27);
+            this.grossPayCurrentLab.TabIndex = 17;
+            this.grossPayCurrentLab.Text = "            ";
+            // 
+            // rateLab
+            // 
+            this.rateLab.AutoSize = true;
+            this.rateLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.rateLab.Location = new System.Drawing.Point(250, 77);
+            this.rateLab.Name = "rateLab";
+            this.rateLab.Size = new System.Drawing.Size(54, 27);
+            this.rateLab.TabIndex = 16;
+            this.rateLab.Text = "        ";
+            // 
+            // hoursLab
+            // 
+            this.hoursLab.AutoSize = true;
+            this.hoursLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.hoursLab.Location = new System.Drawing.Point(152, 77);
+            this.hoursLab.Name = "hoursLab";
+            this.hoursLab.Size = new System.Drawing.Size(54, 27);
+            this.hoursLab.TabIndex = 13;
+            this.hoursLab.Text = "        ";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label28.Location = new System.Drawing.Point(6, 122);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(71, 20);
+            this.label28.TabIndex = 15;
+            this.label28.Text = "Vac Pay";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label27.Location = new System.Drawing.Point(6, 77);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(72, 20);
+            this.label27.TabIndex = 14;
+            this.label27.Text = "Reg Pay";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(332, 26);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(77, 25);
+            this.label23.TabIndex = 13;
+            this.label23.Text = "Current";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(245, 26);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(52, 25);
+            this.label22.TabIndex = 12;
+            this.label22.Text = "Rate";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(147, 26);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(64, 25);
+            this.label21.TabIndex = 11;
+            this.label21.Text = "Hours";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 26);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(109, 25);
+            this.label16.TabIndex = 10;
+            this.label16.Text = "Description";
             // 
             // groupBox2
             // 
@@ -219,6 +405,36 @@
             this.groupBox2.Size = new System.Drawing.Size(684, 113);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
+            // 
+            // netPayLab
+            // 
+            this.netPayLab.AutoSize = true;
+            this.netPayLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.netPayLab.Location = new System.Drawing.Point(493, 66);
+            this.netPayLab.Name = "netPayLab";
+            this.netPayLab.Size = new System.Drawing.Size(154, 27);
+            this.netPayLab.TabIndex = 9;
+            this.netPayLab.Text = "                            ";
+            // 
+            // periodEndingLab
+            // 
+            this.periodEndingLab.AutoSize = true;
+            this.periodEndingLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.periodEndingLab.Location = new System.Drawing.Point(245, 66);
+            this.periodEndingLab.Name = "periodEndingLab";
+            this.periodEndingLab.Size = new System.Drawing.Size(164, 27);
+            this.periodEndingLab.TabIndex = 9;
+            this.periodEndingLab.Text = "                              ";
+            // 
+            // payNumLab
+            // 
+            this.payNumLab.AutoSize = true;
+            this.payNumLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.payNumLab.Location = new System.Drawing.Point(8, 66);
+            this.payNumLab.Name = "payNumLab";
+            this.payNumLab.Size = new System.Drawing.Size(129, 27);
+            this.payNumLab.TabIndex = 9;
+            this.payNumLab.Text = "                       ";
             // 
             // label5
             // 
@@ -247,149 +463,6 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Pay No.";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 43);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 25);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "CPP";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(8, 94);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(30, 25);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "EI";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(8, 142);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(117, 25);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Federal Tax";
-            // 
-            // empNumLab
-            // 
-            this.empNumLab.AutoSize = true;
-            this.empNumLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.empNumLab.Location = new System.Drawing.Point(8, 71);
-            this.empNumLab.Name = "empNumLab";
-            this.empNumLab.Size = new System.Drawing.Size(129, 27);
-            this.empNumLab.TabIndex = 6;
-            this.empNumLab.Text = "                       ";
-            // 
-            // fNameLab
-            // 
-            this.fNameLab.AutoSize = true;
-            this.fNameLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.fNameLab.Location = new System.Drawing.Point(245, 71);
-            this.fNameLab.Name = "fNameLab";
-            this.fNameLab.Size = new System.Drawing.Size(164, 27);
-            this.fNameLab.TabIndex = 7;
-            this.fNameLab.Text = "                              ";
-            // 
-            // lNameLab
-            // 
-            this.lNameLab.AutoSize = true;
-            this.lNameLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lNameLab.Location = new System.Drawing.Point(493, 71);
-            this.lNameLab.Name = "lNameLab";
-            this.lNameLab.Size = new System.Drawing.Size(154, 27);
-            this.lNameLab.TabIndex = 8;
-            this.lNameLab.Text = "                            ";
-            // 
-            // payNumLab
-            // 
-            this.payNumLab.AutoSize = true;
-            this.payNumLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.payNumLab.Location = new System.Drawing.Point(8, 66);
-            this.payNumLab.Name = "payNumLab";
-            this.payNumLab.Size = new System.Drawing.Size(129, 27);
-            this.payNumLab.TabIndex = 9;
-            this.payNumLab.Text = "                       ";
-            // 
-            // periodEndingLab
-            // 
-            this.periodEndingLab.AutoSize = true;
-            this.periodEndingLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.periodEndingLab.Location = new System.Drawing.Point(245, 66);
-            this.periodEndingLab.Name = "periodEndingLab";
-            this.periodEndingLab.Size = new System.Drawing.Size(164, 27);
-            this.periodEndingLab.TabIndex = 9;
-            this.periodEndingLab.Text = "                              ";
-            // 
-            // cppLab
-            // 
-            this.cppLab.AutoSize = true;
-            this.cppLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.cppLab.Location = new System.Drawing.Point(170, 41);
-            this.cppLab.Name = "cppLab";
-            this.cppLab.Size = new System.Drawing.Size(54, 27);
-            this.cppLab.TabIndex = 10;
-            this.cppLab.Text = "        ";
-            // 
-            // eiLab
-            // 
-            this.eiLab.AutoSize = true;
-            this.eiLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.eiLab.Location = new System.Drawing.Point(170, 94);
-            this.eiLab.Name = "eiLab";
-            this.eiLab.Size = new System.Drawing.Size(54, 27);
-            this.eiLab.TabIndex = 11;
-            this.eiLab.Text = "        ";
-            // 
-            // netPayLab
-            // 
-            this.netPayLab.AutoSize = true;
-            this.netPayLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.netPayLab.Location = new System.Drawing.Point(493, 66);
-            this.netPayLab.Name = "netPayLab";
-            this.netPayLab.Size = new System.Drawing.Size(154, 27);
-            this.netPayLab.TabIndex = 9;
-            this.netPayLab.Text = "                            ";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 26);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(109, 25);
-            this.label16.TabIndex = 10;
-            this.label16.Text = "Description";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(147, 26);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(64, 25);
-            this.label21.TabIndex = 11;
-            this.label21.Text = "Hours";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(245, 26);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(52, 25);
-            this.label22.TabIndex = 12;
-            this.label22.Text = "Rate";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(332, 26);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(77, 25);
-            this.label23.TabIndex = 13;
-            this.label23.Text = "Current";
-            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -407,76 +480,6 @@
             this.label25.Size = new System.Drawing.Size(89, 25);
             this.label25.TabIndex = 14;
             this.label25.Text = "Earnings";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label27.Location = new System.Drawing.Point(6, 77);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(72, 20);
-            this.label27.TabIndex = 14;
-            this.label27.Text = "Reg Pay";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label28.Location = new System.Drawing.Point(6, 122);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(71, 20);
-            this.label28.TabIndex = 15;
-            this.label28.Text = "Vac Pay";
-            // 
-            // hoursLab
-            // 
-            this.hoursLab.AutoSize = true;
-            this.hoursLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.hoursLab.Location = new System.Drawing.Point(152, 77);
-            this.hoursLab.Name = "hoursLab";
-            this.hoursLab.Size = new System.Drawing.Size(54, 27);
-            this.hoursLab.TabIndex = 13;
-            this.hoursLab.Text = "        ";
-            // 
-            // rateLab
-            // 
-            this.rateLab.AutoSize = true;
-            this.rateLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.rateLab.Location = new System.Drawing.Point(250, 77);
-            this.rateLab.Name = "rateLab";
-            this.rateLab.Size = new System.Drawing.Size(54, 27);
-            this.rateLab.TabIndex = 16;
-            this.rateLab.Text = "        ";
-            // 
-            // grossPayCurrentLab
-            // 
-            this.grossPayCurrentLab.AutoSize = true;
-            this.grossPayCurrentLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.grossPayCurrentLab.Location = new System.Drawing.Point(337, 73);
-            this.grossPayCurrentLab.Name = "grossPayCurrentLab";
-            this.grossPayCurrentLab.Size = new System.Drawing.Size(74, 27);
-            this.grossPayCurrentLab.TabIndex = 17;
-            this.grossPayCurrentLab.Text = "            ";
-            // 
-            // vacPayCurrentLab
-            // 
-            this.vacPayCurrentLab.AutoSize = true;
-            this.vacPayCurrentLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.vacPayCurrentLab.Location = new System.Drawing.Point(337, 118);
-            this.vacPayCurrentLab.Name = "vacPayCurrentLab";
-            this.vacPayCurrentLab.Size = new System.Drawing.Size(74, 27);
-            this.vacPayCurrentLab.TabIndex = 18;
-            this.vacPayCurrentLab.Text = "            ";
-            // 
-            // federalTaxLab
-            // 
-            this.federalTaxLab.AutoSize = true;
-            this.federalTaxLab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.federalTaxLab.Location = new System.Drawing.Point(170, 142);
-            this.federalTaxLab.Name = "federalTaxLab";
-            this.federalTaxLab.Size = new System.Drawing.Size(54, 27);
-            this.federalTaxLab.TabIndex = 12;
-            this.federalTaxLab.Text = "        ";
             // 
             // printPayStub
             // 
@@ -546,7 +549,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label vacPayCurrentLab;
+        private System.Windows.Forms.Label vacPayLab;
         private System.Windows.Forms.Label grossPayCurrentLab;
         private System.Windows.Forms.Label rateLab;
         private System.Windows.Forms.Label hoursLab;

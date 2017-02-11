@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PorkShopPOS
 {
@@ -14,6 +15,17 @@ namespace PorkShopPOS
         private string toDate;
         private decimal hours = 0m;
         private decimal amount = 0m;
+        private const decimal CPP_RATE = 0.0495m; // correct rate for 2017
+        private const decimal EI_RATE = 0.0163m; // correct rate for 2017
+        private const decimal FEDERAL_TAX_RATE = 0.25m; // using a made up rate
+        private const decimal VACATION_PAY_RATE = 0.04m; // using a made up rate
+        private decimal cppDeduction = 0.0m;
+        private decimal eiDeduction = 0.0m;
+        private decimal federalTaxDeduction = 0.0m;
+        private decimal vacationPay = 0.0m;
+        private decimal netPay = 0.0m;
+        private Salary aSalary;
+        private decimal salaryRate = 0.0m;
 
 
         // instantiate a corresponding Payroll data access object
@@ -25,7 +37,53 @@ namespace PorkShopPOS
             payData = new PayrollDAO();
         }
 
-        // 6 getter and setter methods are included below to return and set object fields
+        // calculate deductions, vacation pay and net pay
+        public void calcPayDetails() 
+        {
+            try
+            {
+                //calculate cpp deduction
+                this.cppDeduction = this.amount * CPP_RATE;
+
+                //calculate EI deduction
+                this.eiDeduction = this.amount * EI_RATE;
+
+                //calculate federal tax deduction
+                this.federalTaxDeduction = this.amount * FEDERAL_TAX_RATE;
+
+                //calculate vacation pay
+                this.vacationPay = this.amount * VACATION_PAY_RATE;
+
+                //calculate net pay
+                this.netPay = (((this.amount - this.cppDeduction) - this.eiDeduction) - this.federalTaxDeduction) + this.vacationPay;
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+            
+        }
+
+        // get most current salary that shares the Payroll empNum
+        public void getSalary()
+        {
+            try
+            {
+                aSalary = new Salary();
+                aSalary.EmpNum = this.empNum;
+                aSalary.ToDate = "0000-00-00";
+
+                aSalary.getMostCurrentSal();
+                salaryRate = aSalary.Amount;
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+                
+        }
+
+        // 12 getter and setter methods are included below to return and set object fields
         public int PayNum
         {
             get { return this.payNum; }
@@ -60,6 +118,40 @@ namespace PorkShopPOS
         {
             get { return this.amount; }
             set { this.amount = value; }
+        }
+
+        public decimal CppDeduction
+        {
+            get { return this.cppDeduction; }
+            set { this.amount = value; }
+        }
+        public decimal EiDeduction
+        {
+            get { return this.eiDeduction; }
+            set { this.eiDeduction = value; }
+        }
+        public decimal FederalTaxDeduction
+        {
+            get { return this.federalTaxDeduction; }
+            set { this.federalTaxDeduction = value; }
+        }
+
+        public decimal VacationPay
+        {
+            get { return this.vacationPay; }
+            set { this.vacationPay = value; }
+        }
+
+        public decimal NetPay
+        {
+            get { return this.netPay; }
+            set { this.netPay = value; }
+        }
+
+        public decimal SalaryRate
+        {
+            get { return this.salaryRate; }
+            set { this.salaryRate = value; }
         }
 
         // calls the add method from the data object layer

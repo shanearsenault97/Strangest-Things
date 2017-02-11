@@ -13,7 +13,7 @@ namespace PorkShopPOS
     {
         // set up connection data
         private MySqlConnection conn;
-        private const string connectionStr = "server=localhost; database=pork_shop; user=pork_shop_admin; password=5tr&ng3rTh!ng$; Convert Zero Datetime=True; Allow Zero Datetime=True;";
+        private const string connectionStr = "server=localhost; database=pork_shop; user=pork_shop_admin; password=5tr&ng3rTh!ng$; Allow Zero Datetime=True;";
         private string strTable = "";
         private string strFields = "";
         private string strValues = "";
@@ -310,6 +310,8 @@ namespace PorkShopPOS
                     pay.EmpNum = reader.GetValue(1).ToString();
                     pay.FromDate = reader.GetValue(2).ToString();
                     pay.ToDate = reader.GetValue(3).ToString();
+                    pay.Hours = reader.GetDecimal(4);
+                    pay.Amount = reader.GetDecimal(5);
                 }
 
                 reader.Close();

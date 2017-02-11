@@ -120,3 +120,4 @@ E:\Documents\repositories\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\De
 C:\Users\Jon\Documents\CIS\Final Project\GIT\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.frmReservationShowAll.resources
 C:\Users\Jon\Documents\CIS\Final Project\GIT\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.PayStub.resources
 C:\Users\Jon\Documents\CIS\Final Project\GIT\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.SalaryHistoryReport.resources
+C:\Users\Jon\Documents\CIS\Final Project\GIT\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.csprojResolveAssemblyReference.cache

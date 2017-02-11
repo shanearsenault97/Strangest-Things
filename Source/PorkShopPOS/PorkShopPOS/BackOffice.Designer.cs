@@ -1309,7 +1309,7 @@
             // 
             // menuShowAllB
             // 
-            this.menuShowAllB.Location = new System.Drawing.Point(200, 297);
+            this.menuShowAllB.Location = new System.Drawing.Point(197, 274);
             this.menuShowAllB.Name = "menuShowAllB";
             this.menuShowAllB.Size = new System.Drawing.Size(108, 30);
             this.menuShowAllB.TabIndex = 110;
@@ -1319,7 +1319,7 @@
             // 
             // menuClearB
             // 
-            this.menuClearB.Location = new System.Drawing.Point(415, 249);
+            this.menuClearB.Location = new System.Drawing.Point(413, 214);
             this.menuClearB.Name = "menuClearB";
             this.menuClearB.Size = new System.Drawing.Size(75, 30);
             this.menuClearB.TabIndex = 109;
@@ -1329,7 +1329,7 @@
             // 
             // menuDeleteB
             // 
-            this.menuDeleteB.Location = new System.Drawing.Point(313, 249);
+            this.menuDeleteB.Location = new System.Drawing.Point(311, 214);
             this.menuDeleteB.Name = "menuDeleteB";
             this.menuDeleteB.Size = new System.Drawing.Size(75, 30);
             this.menuDeleteB.TabIndex = 108;
@@ -1339,7 +1339,7 @@
             // 
             // menuSearchB
             // 
-            this.menuSearchB.Location = new System.Drawing.Point(214, 249);
+            this.menuSearchB.Location = new System.Drawing.Point(212, 214);
             this.menuSearchB.Name = "menuSearchB";
             this.menuSearchB.Size = new System.Drawing.Size(75, 30);
             this.menuSearchB.TabIndex = 107;
@@ -1349,7 +1349,7 @@
             // 
             // menuUpdateB
             // 
-            this.menuUpdateB.Location = new System.Drawing.Point(116, 249);
+            this.menuUpdateB.Location = new System.Drawing.Point(114, 214);
             this.menuUpdateB.Name = "menuUpdateB";
             this.menuUpdateB.Size = new System.Drawing.Size(75, 30);
             this.menuUpdateB.TabIndex = 106;
@@ -1359,7 +1359,7 @@
             // 
             // menuAddB
             // 
-            this.menuAddB.Location = new System.Drawing.Point(23, 249);
+            this.menuAddB.Location = new System.Drawing.Point(21, 214);
             this.menuAddB.Name = "menuAddB";
             this.menuAddB.Size = new System.Drawing.Size(75, 30);
             this.menuAddB.TabIndex = 105;
