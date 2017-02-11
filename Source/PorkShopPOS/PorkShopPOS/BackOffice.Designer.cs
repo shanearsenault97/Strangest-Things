@@ -1116,6 +1116,7 @@
             this.payStubB.TabIndex = 212;
             this.payStubB.Text = "Pay Stub";
             this.payStubB.UseVisualStyleBackColor = true;
+            this.payStubB.Click += new System.EventHandler(this.payStubB_Click);
             // 
             // payrollSummaryB
             // 

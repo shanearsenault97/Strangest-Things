@@ -278,5 +278,55 @@ namespace PorkShopPOS
             }
 
         }
+
+        /* 
+        Function Name:    searchForPayStub(Payroll pay)
+        Version:          1
+        Author:           Jonathan Deschene
+        Description:      Searches the database for an entry based on a payroll number
+        Change History:   2017.30.01 Original version by JED 
+        */
+        public void searchForPayStub(Payroll pay)
+        {
+
+            try
+            {
+                // create sql 
+                string sql = "Select * from " + thisTable + " Where " + PAY_EMP_NUM + " = '" + pay.EmpNum +
+                    "' AND " + TO_DATE + " = '" + pay.ToDate + "';";
+
+                // connect to database
+
+                MySqlConnection conn = new MySqlConnection(connectionStr);
+                conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    pay.PayNum = reader.GetInt32(0);
+                    pay.EmpNum = reader.GetValue(1).ToString();
+                    pay.FromDate = reader.GetValue(2).ToString();
+                    pay.ToDate = reader.GetValue(3).ToString();
+                }
+
+                reader.Close();
+                cmd.Dispose();
+                conn.Close();
+            }
+
+            catch (InvalidOperationException exc)
+            {
+                MessageBox.Show(exc.ToString());
+            }
+
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+
+        }
     }
 }

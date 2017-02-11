@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PayStub));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -68,8 +69,8 @@
             this.rateLab = new System.Windows.Forms.Label();
             this.grossPayCurrentLab = new System.Windows.Forms.Label();
             this.vacPayCurrentLab = new System.Windows.Forms.Label();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.federalTaxLab = new System.Windows.Forms.Label();
+            this.printPayStub = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.Deductions.SuspendLayout();
@@ -467,16 +468,6 @@
             this.vacPayCurrentLab.TabIndex = 18;
             this.vacPayCurrentLab.Text = "            ";
             // 
-            // printPreviewDialog1
-            // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
-            // 
             // federalTaxLab
             // 
             this.federalTaxLab.AutoSize = true;
@@ -486,6 +477,14 @@
             this.federalTaxLab.Size = new System.Drawing.Size(54, 27);
             this.federalTaxLab.TabIndex = 12;
             this.federalTaxLab.Text = "        ";
+            // 
+            // printPayStub
+            // 
+            this.printPayStub.DocumentName = "document";
+            this.printPayStub.Form = this;
+            this.printPayStub.PrintAction = System.Drawing.Printing.PrintAction.PrintToPrinter;
+            this.printPayStub.PrinterSettings = ((System.Drawing.Printing.PrinterSettings)(resources.GetObject("printPayStub.PrinterSettings")));
+            this.printPayStub.PrintFileName = null;
             // 
             // PayStub
             // 
@@ -505,6 +504,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "PayStub";
             this.Text = "Pay Stub";
+            this.Load += new System.EventHandler(this.PayStub_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -562,6 +562,6 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label federalTaxLab;
-        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private Microsoft.VisualBasic.PowerPacks.Printing.PrintForm printPayStub;
     }
 }

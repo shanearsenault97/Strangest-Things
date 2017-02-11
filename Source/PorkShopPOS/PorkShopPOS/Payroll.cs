@@ -85,5 +85,11 @@ namespace PorkShopPOS
         {
             payData.Search(this);
         }
+
+        // calls searchForPayStub() method from the data object layer
+        public void searchForPayStub()
+        {
+            payData.searchForPayStub(this);
+        }
     }
 }

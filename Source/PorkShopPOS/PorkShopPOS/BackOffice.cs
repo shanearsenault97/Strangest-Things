@@ -751,6 +751,27 @@ namespace PorkShopPOS
             resShow.Show();
         }
 
+
+        // variables used in the Pay Stub Report form and the method below
+        public static string empNum;
+        public static string endDate;
+
+        // create the Pay Stub Report form
+        private void payStubB_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(payEmpNumTB.Text) | String.IsNullOrEmpty(payEndDateMTB.Text))
+            {
+                MessageBox.Show("Please ensure that employee number and pay period end date are entered correctly.");
+            }
+            else 
+            {
+                empNum = payEmpNumTB.Text;
+                endDate = payEndDateMTB.Text;
+                PayStub paystub = new PayStub();
+                paystub.Show(); 
+            }
+        }
+
         //*************************************************RESERVATION SECTION END****************************************************
 
        

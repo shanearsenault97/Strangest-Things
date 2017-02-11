@@ -155,12 +155,13 @@ CREATE TABLE `reservation`(
 --
 
 CREATE TABLE `timeClock` (
+  `timeClockNum` int(6) NOT NULL AUTO_INCREMENT,
   `empNum` varchar(6) NOT NULL,
   `shiftDate` date NOT NULL,
   `clockIn` time(5) NOT NULL,
   `clockOut` time(5) NOT NULL,
   `empHours` decimal(4,2),
-  PRIMARY KEY (`empNum`, `shiftDate`)
+  PRIMARY KEY (`timeClockNum`)
  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -189,11 +190,15 @@ CREATE TABLE `payroll` (
   `empNum` varchar(6) NOT NULL,
   `payFrom` date NOT NULL,
   `payTo` date NOT NULL,
-  `payHours` decimal(4,2) NOT NULL,
-  `payAmount` decimal(9,2) NOT NULL,
-   PRIMARY KEY (payCheckNum)
-  
+  `hours` decimal NOT NULL,
+  `amount` decimal NOT NULL,
+   PRIMARY KEY (payCheckNum)  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+--
+-- Dump data into tables
+--
 
 INSERT INTO food (foodNum, foodDescription, foodType, foodPrice) VALUES
 (NULL, 'Roasted Garlic Soup', 'Starter', 5);
@@ -306,3 +311,53 @@ INSERT into `tables` (tableNum, tableSeats) VALUES("TBL001", "4"),
 ("BTH004", "6"),
 ("BTH005", "6"),
 ("BTH006", "6");
+
+INSERT INTO employee
+VALUES ("B0002", "Bryan", "MacFarlane", "222 Street", "Bedeque", "PE", "c1n3d2", "9024445555", "111222333", "2017-01-01", "Active", "1111-11-11", "Bartender"),
+("M0001", "Heather", "Watterson", "222 Street", "Summerside", "PE", "c1n3d2", "9024445555", "111222333", "2017-01-01", "Active", "1111-11-11", "Owner"),
+("W0003", "Jonathan", "Deschene", "222 Street", "Summerside", "PE", "c1n3d2", "9024445555", "111222333", "2017-01-01", "Active", "1111-11-11", "Waiter"),
+("C0004", "Noah", "Gallant", "222 Street", "Summerside", "PE", "c1n3d2", "9024445555", "111222333", "2017-01-01", "Active", "1111-11-11", "Cook"),
+("W0005", "Shane", "Arsenault", "222 Street", "Summerside", "PE", "c1n3d2", "9024445555", "111222333", "2017-01-01", "Active", "1111-11-11", "Pit Boss");
+
+INSERT INTO `timeClock`
+Values (1, "M0001","2017-01-01", "2:00", "11:50", 8.50), 
+(2, "B0002","2017-01-01", "2:00", "11:50", 8.50), 
+(3, "W0003","2017-01-01", "2:00", "11:50", 8.50), 
+(4, "C0004","2017-01-01", "2:00", "11:50", 8.50), 
+(5, "W0005","2017-01-01", "2:00", "11:50", 8.50), 
+(6, "M0001","2017-02-01", "2:00", "11:50", 8.50), 
+(7, "B0002","2017-02-01", "2:00", "11:50", 8.50), 
+(8, "W0003","2017-02-01", "2:00", "11:50", 8.50), 
+(9, "C0004","2017-02-01", "2:00", "11:50", 8.50), 
+(10, "W0005","2017-02-01", "2:00", "11:50", 8.50), 
+(11, "M0001","2017-03-01", "2:00", "11:50", 8.50), 
+(12, "B0002","2017-03-01", "2:00", "11:50", 8.50), 
+(13, "W0003","2017-03-01", "2:00", "11:50", 8.50), 
+(14, "C0004","2017-03-01", "2:00", "11:50", 8.50), 
+(15, "W0005","2017-03-01", "2:00", "11:50", 8.50), 
+(16, "M0001","2017-04-01", "2:00", "11:50", 8.50), 
+(17, "B0002","2017-04-01", "2:00", "11:50", 8.50), 
+(18, "W0003","2017-04-01", "2:00", "11:50", 8.50), 
+(19, "C0004","2017-04-01", "2:00", "11:50", 8.50), 
+(20, "W0005","2017-04-01", "2:00", "11:50", 8.50);
+
+
+INSERT INTO salary
+Values(1, "M0001", "2017-01-01", "2017-01-27", 20.00),
+(2, "B0002", "2017-01-01", "2017-01-15", 15.00),
+(3, "W0003", "2017-01-01", "2017-01-20", 10.00),
+(4, "C0004", "2017-01-01", "2017-02-10", 25.00),
+(5, "W0005", "2017-01-01", "2017-02-11", 10.00),
+(6, "M0001", "2017-01-27", "0000-00-00", 25.00),
+(7, "B0002", "2017-01-15", "0000-00-00", 20.00),
+(8, "W0003", "2017-01-20", "0000-00-00", 11.50),
+(9, "C0004", "2017-02-10", "0000-00-00", 20.00),
+(10, "W0005", "2017-02-11", "0000-00-00", 12.00);
+
+
+INSERT INTO payroll
+Values(1, "M0001", "2017-01-01", "2017-14-01", 100, 2000),
+(2, "B0002", "2017-01-01", "2017-14-01", 78, 1400),
+(3, "W0003", "2017-01-01", "2017-14-01", 89, 1670.22),
+(4, "C0004", "2017-01-01", "2017-14-01", 69, 1234.10),
+(5, "W0005", "2017-01-01", "2017-14-01", 120, 2345.23);
