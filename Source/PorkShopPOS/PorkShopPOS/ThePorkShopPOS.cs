@@ -11,10 +11,8 @@ using System.Text.RegularExpressions;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
 
-namespace PorkShopPOS
-{
-    public partial class ThePorkShopPOS : Form
-    {
+namespace PorkShopPOS {
+    public partial class ThePorkShopPOS : Form {
 
         //Declare variables
         Employee Employee;
@@ -44,14 +42,13 @@ namespace PorkShopPOS
         float taxAmount;
         float totalAfterTax;
 
-        public ThePorkShopPOS()
-        {
+        public ThePorkShopPOS() {
             InitializeComponent();
         }
 
         private void ThePorkShopPOS_Load(object sender, EventArgs e) {
 
-            
+
 
             cmbMix.Text = "None";
             cmbMix.SelectedIndex = cmbMix.FindString("None");
@@ -95,19 +92,17 @@ namespace PorkShopPOS
 
 
         // close the pos UI and load the back office UI
-        private void btnBackOffice_Click(object sender, EventArgs e)
-        {        
+        private void btnBackOffice_Click(object sender, EventArgs e) {
             //this.Close();
             BackOffice officeUI = new BackOffice();
-            officeUI.Show();                       
+            officeUI.Show();
         }
 
         // close the pos UI and load the login UI
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
+        private void btnLogout_Click(object sender, EventArgs e) {
             this.Close();
             Welcome welcomeUI = new Welcome();
-            welcomeUI.Show(); 
+            welcomeUI.Show();
         }
 
         private void btnGarlicSoup_Click(object sender, EventArgs e) {
@@ -319,142 +314,146 @@ namespace PorkShopPOS
         }
 
         private void btnSubmitOrder_Click(object sender, EventArgs e) {
-            bool guestTest = int.TryParse(txtNumGuestsOr.Text, out numGuests);
-            if (cmbServer.SelectedItem == null) {
-                MessageBox.Show("Please select a server.", "Error");
-            } else if (cmbTableOr.SelectedItem == null) {
-                MessageBox.Show("Please select a table.", "Error");
-            } else if (txtNumGuestsOr.Text.Equals("") || !guestTest) {
-                MessageBox.Show("Please enter a valid number of guests.", "Error");
-            } else if (listOrder.Items.Count <= 2) {
-                MessageBox.Show("You must add something to the order list to submit.", "Error");
+            if (orderSubmitted) {
+                MessageBox.Show("You cannot submit another order until the previous order's bill is payed.", "Error");
             } else {
-                bool drinks = false;
-                foreach (string listItem in listOrder.Items) {
-                    if (listItem.Equals("-Food-") || listItem.Equals("-Drinks-")) {
-                        if (listItem.Equals("-Drinks-")) {
-                            drinks = true;
-                        }
-                    } else {
-                        if (drinks) {
-                            individualItems = listItem.Split(itemDelim);
-                            Bar bar = new Bar();
-                            bar.BarDescription = individualItems[0];
-                            bar.Search();
-                            barIds.Add(bar.BarId);
-                            barDescriptions.Add(bar.BarDescription);
-                            barCompleteDesc.Add(listItem);
-                            barPrices.Add(bar.BarPrice);
-                            total += decimal.Parse(bar.BarPrice);
+                bool guestTest = int.TryParse(txtNumGuestsOr.Text, out numGuests);
+                if (cmbServer.SelectedItem == null) {
+                    MessageBox.Show("Please select a server.", "Error");
+                } else if (cmbTableOr.SelectedItem == null) {
+                    MessageBox.Show("Please select a table.", "Error");
+                } else if (txtNumGuestsOr.Text.Equals("") || !guestTest) {
+                    MessageBox.Show("Please enter a valid number of guests.", "Error");
+                } else if (listOrder.Items.Count <= 2) {
+                    MessageBox.Show("You must add something to the order list to submit.", "Error");
+                } else {
+                    bool drinks = false;
+                    foreach (string listItem in listOrder.Items) {
+                        if (listItem.Equals("-Food-") || listItem.Equals("-Drinks-")) {
+                            if (listItem.Equals("-Drinks-")) {
+                                drinks = true;
+                            }
                         } else {
-                            individualItems = listItem.Split(itemDelim);
-                            Food food = new Food();
-                            food.FoodDescription = individualItems[0];
-                            food.Search();
-                            foodIds.Add(food.FoodNum);
-                            foodDescriptions.Add(food.FoodDescription);
-                            foodCompleteDesc.Add(listItem);
-                            foodPrices.Add(food.FoodPrice);
-                            foodCompletePrices.Add(food.FoodPrice);
-                            total += decimal.Parse(food.FoodPrice);
-                            if (individualItems.Count() == 2) {
-                                food.FoodDescription = individualItems[1];
+                            if (drinks) {
+                                individualItems = listItem.Split(itemDelim);
+                                Bar bar = new Bar();
+                                bar.BarDescription = individualItems[0];
+                                bar.Search();
+                                barIds.Add(bar.BarId);
+                                barDescriptions.Add(bar.BarDescription);
+                                barCompleteDesc.Add(listItem);
+                                if (!chkHappyHr.Checked) {
+                                    barPrices.Add(bar.BarPrice);
+                                    total += decimal.Parse(bar.BarPrice);
+                                } else {
+                                    barPrices.Add((float.Parse(bar.BarPrice) - float.Parse(bar.BarPrice) * 0.15).ToString());
+                                    total += decimal.Parse((float.Parse(bar.BarPrice) - float.Parse(bar.BarPrice) * 0.15).ToString());
+                                }
+                            } else {
+                                individualItems = listItem.Split(itemDelim);
+                                Food food = new Food();
+                                food.FoodDescription = individualItems[0];
                                 food.Search();
                                 foodIds.Add(food.FoodNum);
                                 foodDescriptions.Add(food.FoodDescription);
-                                foodPrices.Add("0");
+                                foodCompleteDesc.Add(listItem);
+                                foodPrices.Add(food.FoodPrice);
+                                foodCompletePrices.Add(food.FoodPrice);
+                                total += decimal.Parse(food.FoodPrice);
+                                if (individualItems.Count() == 2) {
+                                    food.FoodDescription = individualItems[1];
+                                    food.Search();
+                                    foodIds.Add(food.FoodNum);
+                                    foodDescriptions.Add(food.FoodDescription);
+                                    foodPrices.Add("0");
+                                }
                             }
                         }
                     }
-                }
-                empNames = cmbServer.SelectedItem.ToString().Split(nameDelim);
-                Employee emp = new Employee();
-                emp.EmpFName = empNames[0];
-                emp.EmpLName = empNames[1];
-                emp.SearchByName();
-                Order order = new Order();
-                order.EmpNum = emp.EmpNum;
-                order.TableNum = cmbTableOr.SelectedItem.ToString();
-                DateTime today = DateTime.Today;
-                date = today.ToString("d");
-                date.Replace("/", "-");
-                order.OrderDate = date;
-                order.OrderTime = DateTime.Now.ToString("HH:mm:ss");
-                order.NumGuests = txtNumGuestsOr.Text;
-                order.OrderTotal = total.ToString();
-                taxAmount = (float)total * (float)0.15;
-                totalAfterTax = (float)total + taxAmount;
-                order.Add();
-                int lineNum = 1;
-                var groups = foodDescriptions.GroupBy(v => v);
-                foreach(var group in groups) {
-                    decimal linePrice = 0;
-                    Line line = new Line();
-                    for (int i = 0; i < foodIds.Count(); i++) {
-                        if (foodDescriptions[i].Equals(group.Key)) {
+                    empNames = cmbServer.SelectedItem.ToString().Split(nameDelim);
+                    Employee emp = new Employee();
+                    emp.EmpFName = empNames[0];
+                    emp.EmpLName = empNames[1];
+                    emp.SearchByName();
+                    Order order = new Order();
+                    order.EmpNum = emp.EmpNum;
+                    order.TableNum = cmbTableOr.SelectedItem.ToString();
+                    DateTime today = DateTime.Today;
+                    date = today.ToString("d");
+                    date.Replace("/", "-");
+                    order.OrderDate = date;
+                    order.OrderTime = DateTime.Now.ToString("HH:mm:ss");
+                    order.NumGuests = txtNumGuestsOr.Text;
+                    order.OrderTotal = total.ToString();
+                    taxAmount = (float)total * (float)0.15;
+                    totalAfterTax = (float)total + taxAmount;
+                    order.Add();
+                    int lineNum = 1;
+                    var groups = foodDescriptions.GroupBy(v => v);
+                    foreach (var group in groups) {
+                        decimal linePrice = 0;
+                        Line line = new Line();
+                        for (int i = 0; i < foodIds.Count(); i++) {
+                            if (foodDescriptions[i].Equals(group.Key)) {
+                                linePrice += decimal.Parse(foodPrices[i]);
+                                line.FoodId = "'" + foodIds[i] + "'";
+                            }
+                        }
+                        line.LineQty = group.Count().ToString();
+                        line.LineNum = lineNum.ToString();
+                        line.BarId = "NULL";
+                        line.LinePrice = linePrice.ToString();
+                        order.Search();
+                        line.OrderNum = order.OrderNum;
+                        line.Add();
+                        lineNum++;
+                    }
+                    if (groups.Count() == 0) {
+                        decimal linePrice = 0;
+                        Line line = new Line();
+                        for (int i = 0; i < foodIds.Count(); i++) {
                             linePrice += decimal.Parse(foodPrices[i]);
                             line.FoodId = "'" + foodIds[i] + "'";
                         }
+                        line.LineQty = foodDescriptions.Count().ToString();
+                        line.LineNum = lineNum.ToString();
+                        line.BarId = "NULL";
+                        line.LinePrice = linePrice.ToString();
+                        order.Search();
+                        line.OrderNum = order.OrderNum;
+                        line.Add();
+                        lineNum++;
                     }
-                    line.LineQty = group.Count().ToString();
-                    line.LineNum = lineNum.ToString();
-                    line.BarId = "NULL";
-                    line.LinePrice = linePrice.ToString();
-                    order.Search();
-                    line.OrderNum = order.OrderNum;
-                    line.Add();
-                    lineNum++;
-                }
-                if (groups.Count() == 0) {
-                    decimal linePrice = 0;
-                    Line line = new Line();
-                    for (int i = 0; i < foodIds.Count(); i++) {
-                            linePrice += decimal.Parse(foodPrices[i]);
-                            line.FoodId = "'" + foodIds[i] + "'";
-                    }
-                    line.LineQty = foodDescriptions.Count().ToString();
-                    line.LineNum = lineNum.ToString();
-                    line.BarId = "NULL";
-                    line.LinePrice = linePrice.ToString();
-                    order.Search();
-                    line.OrderNum = order.OrderNum;
-                    line.Add();
-                    lineNum++;
-                }
-                groups = barDescriptions.GroupBy(v => v);
-                foreach (var group in groups) {
-                    decimal linePrice = 0;
-                    Line line = new Line();
-                    for (int i = 0; i < barIds.Count(); i++) {
-                        if (barDescriptions[i].Equals(group.Key)) {
-                            linePrice += decimal.Parse(barPrices[i]);
-                            line.BarId = "'" + barIds[i] + "'";
+                    groups = barDescriptions.GroupBy(v => v);
+                    foreach (var group in groups) {
+                        decimal linePrice = 0;
+                        Line line = new Line();
+                        for (int i = 0; i < barIds.Count(); i++) {
+                            if (barDescriptions[i].Equals(group.Key)) {
+                                linePrice += decimal.Parse(barPrices[i]);
+                                line.BarId = "'" + barIds[i] + "'";
+                            }
                         }
+                        line.LineQty = group.Count().ToString();
+                        line.LineNum = lineNum.ToString();
+                        line.OrderNum = order.OrderNum;
+                        line.FoodId = "NULL";
+                        line.LinePrice = linePrice.ToString();
+                        line.Add();
+                        lineNum++;
                     }
-                    line.LineQty = group.Count().ToString();
-                    line.LineNum = lineNum.ToString();
-                    line.OrderNum = order.OrderNum;
-                    line.FoodId = "NULL";
-                    line.LinePrice = linePrice.ToString();
-                    line.Add();
-                    lineNum++;
+                    Order = order;
+                    orderSubmitted = true;
+                    MessageBox.Show("Order successfully submitted!", "Order Confirmation");
                 }
-                Order = order;
-                orderSubmitted = true;
-                MessageBox.Show("Order successfully submitted!", "Order Confirmation");
             }
         }
 
-        private void btnReserve_Click(object sender, EventArgs e)
-        {
-            if (cmbTableRes.Text == "" || dateReservations.Text == "" || dateTime.Text == "" || txtName.Text == "" || txtPhone.Text.Contains('_'))
-            {
+        private void btnReserve_Click(object sender, EventArgs e) {
+            if (cmbTableRes.Text == "" || dateReservations.Text == "" || dateTime.Text == "" || txtName.Text == "" || txtPhone.Text.Contains('_')) {
                 MessageBox.Show("All form elements are required to reserve a table.");
-            }
-            else
-            {
-                if (MessageBox.Show("Confirmation", "Are you sure you want to add this?", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
-                {
+            } else {
+                if (MessageBox.Show("Confirmation", "Are you sure you want to add this?", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes) {
                     Reservation reservation = new Reservation();
                     reservation.TableNum = cmbTableRes.Text;
                     reservation.ReservationDate = dateReservations.Text;
@@ -467,8 +466,7 @@ namespace PorkShopPOS
             }
         }
 
-        private void btnShowRes_Click(object sender, EventArgs e)
-        {
+        private void btnShowRes_Click(object sender, EventArgs e) {
             frmReservationShowAll resShowAll = new frmReservationShowAll();
             resShowAll.Show();
         }
@@ -480,13 +478,13 @@ namespace PorkShopPOS
                     descriptions.Add(food);
                 }
                 foreach (string price in foodCompletePrices) {
-                    prices.Add(price);
+                    prices.Add(float.Parse(price).ToString("C"));
                 }
                 foreach (string bar in barCompleteDesc) {
                     descriptions.Add(bar);
                 }
                 foreach (string price in barPrices) {
-                    prices.Add(price);
+                    prices.Add(float.Parse(price).ToString("C"));
                 }
                 Bill bill = new Bill();
                 bill.SetParameterValue("EmpFName", Employee.EmpFName.ToString());
@@ -514,19 +512,27 @@ namespace PorkShopPOS
                 item = "";
                 foodIds = null;
                 foodDescriptions = null;
+                foodCompleteDesc = null;
                 foodPrices = null;
+                foodCompletePrices = null;
                 barIds = null;
                 barDescriptions = null;
+                barCompleteDesc = null;
                 barPrices = null;
+                descriptions = null;
+                prices = null;
                 individualItems = null;
                 total = 0;
                 empNames = null;
                 date = null;
                 orderSubmitted = false;
                 billPrinted = false;
+                taxAmount = 0;
+                totalAfterTax = 0;
                 listOrder.Items.Clear();
                 listOrder.Items.Add("-Food-");
                 listOrder.Items.Add("-Drinks-");
+
                 rdbNoSides.Select();
                 rdbNoStarters.Select();
                 cmbMix.SelectedIndex = cmbMix.FindString("None");
