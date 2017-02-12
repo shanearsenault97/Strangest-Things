@@ -64,6 +64,18 @@
     </Compile>
     <Compile Include="Bar.cs" />
     <Compile Include="BarDAO.cs" />
+    <Compile Include="Bill.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bill.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BillReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillReport.Designer.cs">
+      <DependentUpon>BillReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="PayStub.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +156,13 @@
     </Compile>
     <EmbeddedResource Include="BackOffice.resx">
       <DependentUpon>BackOffice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bill.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Bill.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillReport.resx">
+      <DependentUpon>BillReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PayStub.resx">
       <DependentUpon>PayStub.cs</DependentUpon>
