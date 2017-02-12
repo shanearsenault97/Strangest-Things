@@ -153,6 +153,7 @@ namespace PorkShopPOS
             MySqlDataReader MySqlReader = cmd.ExecuteReader();
 
             while (MySqlReader.Read()) {
+                emp.EmpFName = MySqlReader.GetValue(1).ToString();
                 employee.Add(MySqlReader.GetValue(1).ToString() + " " + MySqlReader.GetValue(2).ToString());
             }
 

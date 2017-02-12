@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
 
 namespace PorkShopPOS
 {
@@ -17,14 +19,20 @@ namespace PorkShopPOS
         //Declare variables
         Employee Employee;
         Tables Tables;
+        Order Order;
         int numGuests;
         string item = "";
         List<string> foodIds = new List<string>();
         List<string> foodDescriptions = new List<string>();
+        List<string> foodCompleteDesc = new List<string>();
         List<string> foodPrices = new List<string>();
+        List<string> foodCompletePrices = new List<string>();
         List<string> barIds = new List<string>();
         List<string> barDescriptions = new List<string>();
+        List<string> barCompleteDesc = new List<string>();
         List<string> barPrices = new List<string>();
+        List<string> descriptions = new List<string>();
+        List<string> prices = new List<string>();
         string[] individualItems;
         char itemDelim = '+';
         char nameDelim = ' ';
@@ -33,6 +41,8 @@ namespace PorkShopPOS
         string date;
         bool orderSubmitted = false;
         bool billPrinted = false;
+        float taxAmount;
+        float totalAfterTax;
 
         public ThePorkShopPOS()
         {
@@ -333,6 +343,7 @@ namespace PorkShopPOS
                             bar.Search();
                             barIds.Add(bar.BarId);
                             barDescriptions.Add(bar.BarDescription);
+                            barCompleteDesc.Add(listItem);
                             barPrices.Add(bar.BarPrice);
                             total += decimal.Parse(bar.BarPrice);
                         } else {
@@ -342,7 +353,9 @@ namespace PorkShopPOS
                             food.Search();
                             foodIds.Add(food.FoodNum);
                             foodDescriptions.Add(food.FoodDescription);
+                            foodCompleteDesc.Add(listItem);
                             foodPrices.Add(food.FoodPrice);
+                            foodCompletePrices.Add(food.FoodPrice);
                             total += decimal.Parse(food.FoodPrice);
                             if (individualItems.Count() == 2) {
                                 food.FoodDescription = individualItems[1];
@@ -369,6 +382,8 @@ namespace PorkShopPOS
                 order.OrderTime = DateTime.Now.ToString("HH:mm:ss");
                 order.NumGuests = txtNumGuestsOr.Text;
                 order.OrderTotal = total.ToString();
+                taxAmount = (float)total * (float)0.15;
+                totalAfterTax = (float)total + taxAmount;
                 order.Add();
                 int lineNum = 1;
                 var groups = foodDescriptions.GroupBy(v => v);
@@ -382,6 +397,22 @@ namespace PorkShopPOS
                         }
                     }
                     line.LineQty = group.Count().ToString();
+                    line.LineNum = lineNum.ToString();
+                    line.BarId = "NULL";
+                    line.LinePrice = linePrice.ToString();
+                    order.Search();
+                    line.OrderNum = order.OrderNum;
+                    line.Add();
+                    lineNum++;
+                }
+                if (groups.Count() == 0) {
+                    decimal linePrice = 0;
+                    Line line = new Line();
+                    for (int i = 0; i < foodIds.Count(); i++) {
+                            linePrice += decimal.Parse(foodPrices[i]);
+                            line.FoodId = "'" + foodIds[i] + "'";
+                    }
+                    line.LineQty = foodDescriptions.Count().ToString();
                     line.LineNum = lineNum.ToString();
                     line.BarId = "NULL";
                     line.LinePrice = linePrice.ToString();
@@ -408,6 +439,7 @@ namespace PorkShopPOS
                     line.Add();
                     lineNum++;
                 }
+                Order = order;
                 orderSubmitted = true;
                 MessageBox.Show("Order successfully submitted!", "Order Confirmation");
             }
@@ -444,6 +476,33 @@ namespace PorkShopPOS
         private void btnPrintBill_Click(object sender, EventArgs e) {
             if (orderSubmitted) {
                 billPrinted = true;
+                foreach (string food in foodCompleteDesc) {
+                    descriptions.Add(food);
+                }
+                foreach (string price in foodCompletePrices) {
+                    prices.Add(price);
+                }
+                foreach (string bar in barCompleteDesc) {
+                    descriptions.Add(bar);
+                }
+                foreach (string price in barPrices) {
+                    prices.Add(price);
+                }
+                Bill bill = new Bill();
+                bill.SetParameterValue("EmpFName", Employee.EmpFName.ToString());
+                bill.SetParameterValue("OrderDate", Order.OrderDate.ToString());
+                bill.SetParameterValue("OrderTime", Order.OrderTime.ToString());
+                bill.SetParameterValue("OrderNum", Order.OrderNum.ToString());
+                bill.SetParameterValue("TableNum", Order.TableNum.ToString());
+                bill.SetParameterValue("NumGuests", Order.NumGuests.ToString());
+                bill.SetParameterValue("OrderTotal", "$" + Order.OrderTotal.ToString());
+                bill.SetParameterValue("TaxAmount", taxAmount.ToString("C"));
+                bill.SetParameterValue("TotalAfterTax", totalAfterTax.ToString("C"));
+                bill.SetParameterValue("@Desc", descriptions.ToArray());
+                bill.SetParameterValue("@Prices", prices.ToArray());
+                BillReport billReport = new BillReport();
+                billReport.reportDocument = bill;
+                billReport.Show();
             }
         }
 

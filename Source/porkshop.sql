@@ -258,6 +258,9 @@ INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
 (NULL, 'Moosehead Light', 'Domestic', 5, 100);
 
 INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
+(NULL, 'Coors Light', 'Domestic', 5, 100);
+
+INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
 (NULL, 'Guinness', 'Imported', 6.5, 100);
 
 INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES

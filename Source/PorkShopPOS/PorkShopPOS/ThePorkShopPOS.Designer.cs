@@ -102,7 +102,6 @@
             this.cmbTableRes = new System.Windows.Forms.ComboBox();
             this.lblTableRes = new System.Windows.Forms.Label();
             this.txtNumGuestsOr = new System.Windows.Forms.TextBox();
-            this.reportDocument1 = new CrystalDecisions.CrystalReports.Engine.ReportDocument();
             this.grpBar.SuspendLayout();
             this.grpStarters.SuspendLayout();
             this.grpMainCourse.SuspendLayout();
@@ -1028,7 +1027,6 @@
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTime;
-        private CrystalDecisions.CrystalReports.Engine.ReportDocument reportDocument1;
     }
 }
 
