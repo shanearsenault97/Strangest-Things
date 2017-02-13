@@ -76,6 +76,18 @@
     <Compile Include="BillReport.Designer.cs">
       <DependentUpon>BillReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="SalaryHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalaryHistory.Designer.cs">
+      <DependentUpon>SalaryHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalaryList.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalaryList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="PayStub.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +140,12 @@
     </Compile>
     <Compile Include="Salary.cs" />
     <Compile Include="SalaryDAO.cs" />
+    <Compile Include="SalaryListReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalaryListReport.Designer.cs">
+      <DependentUpon>SalaryListReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="SalaryShowAll.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +164,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimeClock.cs" />
+    <Compile Include="TimeClockDAO.cs" />
     <Compile Include="UserAccess.cs" />
     <Compile Include="UserAccessDAO.cs" />
     <Compile Include="Welcome.cs">
@@ -164,6 +184,13 @@
     <EmbeddedResource Include="BillReport.resx">
       <DependentUpon>BillReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SalaryHistory.resx">
+      <DependentUpon>SalaryHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalaryList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalaryList.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="PayStub.resx">
       <DependentUpon>PayStub.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReservationShowAll.resx">
       <DependentUpon>ReservationShowAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalaryListReport.resx">
+      <DependentUpon>SalaryListReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SalaryShowAll.resx">
       <DependentUpon>SalaryShowAll.cs</DependentUpon>
