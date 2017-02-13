@@ -31,9 +31,9 @@
             this.FrontHouseButton = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.timeClockOutB = new System.Windows.Forms.Button();
+            this.timeClockInB = new System.Windows.Forms.Button();
+            this.timeEmpNumTB = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -101,6 +101,22 @@
             this.empUpdateB = new System.Windows.Forms.Button();
             this.empAddB = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.schShiftDateMTB = new System.Windows.Forms.MaskedTextBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.schTimeClockNumTB = new System.Windows.Forms.TextBox();
+            this.schUpdateB = new System.Windows.Forms.Button();
+            this.schClearB = new System.Windows.Forms.Button();
+            this.schAddB = new System.Windows.Forms.Button();
+            this.label44 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.schDeleteB = new System.Windows.Forms.Button();
+            this.schSearchB = new System.Windows.Forms.Button();
+            this.schToDateMTB = new System.Windows.Forms.MaskedTextBox();
+            this.schFromDateMTB = new System.Windows.Forms.MaskedTextBox();
+            this.schEmpNumTB = new System.Windows.Forms.TextBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.salaryReportB = new System.Windows.Forms.Button();
@@ -170,11 +186,15 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label31 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.salaryHistoryB = new System.Windows.Forms.Button();
+            this.shiftHistoryB = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.utilitiesTab.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.payrollTabPage.SuspendLayout();
@@ -208,9 +228,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox15);
+            this.groupBox1.Controls.Add(this.timeClockOutB);
+            this.groupBox1.Controls.Add(this.timeClockInB);
+            this.groupBox1.Controls.Add(this.timeEmpNumTB);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Location = new System.Drawing.Point(22, 24);
             this.groupBox1.Name = "groupBox1";
@@ -219,30 +239,32 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Time Clock";
             // 
-            // button3
+            // timeClockOutB
             // 
-            this.button3.Location = new System.Drawing.Point(131, 70);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Clock Out";
-            this.button3.UseVisualStyleBackColor = true;
+            this.timeClockOutB.Location = new System.Drawing.Point(131, 70);
+            this.timeClockOutB.Name = "timeClockOutB";
+            this.timeClockOutB.Size = new System.Drawing.Size(75, 23);
+            this.timeClockOutB.TabIndex = 3;
+            this.timeClockOutB.Text = "Clock Out";
+            this.timeClockOutB.UseVisualStyleBackColor = true;
+            this.timeClockOutB.Click += new System.EventHandler(this.timeClockOutB_Click);
             // 
-            // button1
+            // timeClockInB
             // 
-            this.button1.Location = new System.Drawing.Point(13, 70);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Clock In";
-            this.button1.UseVisualStyleBackColor = true;
+            this.timeClockInB.Location = new System.Drawing.Point(13, 70);
+            this.timeClockInB.Name = "timeClockInB";
+            this.timeClockInB.Size = new System.Drawing.Size(75, 23);
+            this.timeClockInB.TabIndex = 2;
+            this.timeClockInB.Text = "Clock In";
+            this.timeClockInB.UseVisualStyleBackColor = true;
+            this.timeClockInB.Click += new System.EventHandler(this.timeClockInB_Click);
             // 
-            // textBox15
+            // timeEmpNumTB
             // 
-            this.textBox15.Location = new System.Drawing.Point(63, 40);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(100, 27);
-            this.textBox15.TabIndex = 1;
+            this.timeEmpNumTB.Location = new System.Drawing.Point(63, 40);
+            this.timeEmpNumTB.Name = "timeEmpNumTB";
+            this.timeEmpNumTB.Size = new System.Drawing.Size(100, 27);
+            this.timeEmpNumTB.TabIndex = 1;
             // 
             // label15
             // 
@@ -883,12 +905,171 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.tabPage2.Controls.Add(this.schShiftDateMTB);
+            this.tabPage2.Controls.Add(this.label50);
+            this.tabPage2.Controls.Add(this.label27);
+            this.tabPage2.Controls.Add(this.schTimeClockNumTB);
+            this.tabPage2.Controls.Add(this.schUpdateB);
+            this.tabPage2.Controls.Add(this.schClearB);
+            this.tabPage2.Controls.Add(this.schAddB);
+            this.tabPage2.Controls.Add(this.label44);
+            this.tabPage2.Controls.Add(this.groupBox6);
+            this.tabPage2.Controls.Add(this.schDeleteB);
+            this.tabPage2.Controls.Add(this.schSearchB);
+            this.tabPage2.Controls.Add(this.schToDateMTB);
+            this.tabPage2.Controls.Add(this.schFromDateMTB);
+            this.tabPage2.Controls.Add(this.schEmpNumTB);
+            this.tabPage2.Controls.Add(this.label38);
+            this.tabPage2.Controls.Add(this.label39);
             this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(519, 345);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Schedule";
+            // 
+            // schShiftDateMTB
+            // 
+            this.schShiftDateMTB.Location = new System.Drawing.Point(118, 111);
+            this.schShiftDateMTB.Mask = "0000-00-00";
+            this.schShiftDateMTB.Name = "schShiftDateMTB";
+            this.schShiftDateMTB.Size = new System.Drawing.Size(90, 27);
+            this.schShiftDateMTB.TabIndex = 172;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(21, 117);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(84, 21);
+            this.label50.TabIndex = 173;
+            this.label50.Text = "Shift Date";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(21, 37);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(73, 21);
+            this.label27.TabIndex = 171;
+            this.label27.Text = "Shift No.";
+            // 
+            // schTimeClockNumTB
+            // 
+            this.schTimeClockNumTB.Location = new System.Drawing.Point(118, 31);
+            this.schTimeClockNumTB.Name = "schTimeClockNumTB";
+            this.schTimeClockNumTB.Size = new System.Drawing.Size(90, 27);
+            this.schTimeClockNumTB.TabIndex = 170;
+            // 
+            // schUpdateB
+            // 
+            this.schUpdateB.Location = new System.Drawing.Point(118, 255);
+            this.schUpdateB.Name = "schUpdateB";
+            this.schUpdateB.Size = new System.Drawing.Size(75, 30);
+            this.schUpdateB.TabIndex = 176;
+            this.schUpdateB.Text = "Update";
+            this.schUpdateB.UseVisualStyleBackColor = true;
+            this.schUpdateB.Click += new System.EventHandler(this.schUpdateB_Click);
+            // 
+            // schClearB
+            // 
+            this.schClearB.Location = new System.Drawing.Point(416, 255);
+            this.schClearB.Name = "schClearB";
+            this.schClearB.Size = new System.Drawing.Size(75, 30);
+            this.schClearB.TabIndex = 179;
+            this.schClearB.Text = "Clear";
+            this.schClearB.UseVisualStyleBackColor = true;
+            this.schClearB.Click += new System.EventHandler(this.schClearB_Click);
+            // 
+            // schAddB
+            // 
+            this.schAddB.Location = new System.Drawing.Point(25, 255);
+            this.schAddB.Name = "schAddB";
+            this.schAddB.Size = new System.Drawing.Size(74, 30);
+            this.schAddB.TabIndex = 175;
+            this.schAddB.Text = "Add";
+            this.schAddB.UseVisualStyleBackColor = true;
+            this.schAddB.Click += new System.EventHandler(this.schAddB_Click);
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(21, 192);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(29, 21);
+            this.label44.TabIndex = 168;
+            this.label44.Text = "To";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.shiftHistoryB);
+            this.groupBox6.Location = new System.Drawing.Point(275, 24);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(200, 136);
+            this.groupBox6.TabIndex = 167;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Reports";
+            // 
+            // schDeleteB
+            // 
+            this.schDeleteB.Location = new System.Drawing.Point(315, 255);
+            this.schDeleteB.Name = "schDeleteB";
+            this.schDeleteB.Size = new System.Drawing.Size(75, 30);
+            this.schDeleteB.TabIndex = 178;
+            this.schDeleteB.Text = "Delete";
+            this.schDeleteB.UseVisualStyleBackColor = true;
+            this.schDeleteB.Click += new System.EventHandler(this.schDeleteB_Click);
+            // 
+            // schSearchB
+            // 
+            this.schSearchB.Location = new System.Drawing.Point(215, 255);
+            this.schSearchB.Name = "schSearchB";
+            this.schSearchB.Size = new System.Drawing.Size(75, 30);
+            this.schSearchB.TabIndex = 177;
+            this.schSearchB.Text = "Search";
+            this.schSearchB.UseVisualStyleBackColor = true;
+            this.schSearchB.Click += new System.EventHandler(this.schSearchB_Click);
+            // 
+            // schToDateMTB
+            // 
+            this.schToDateMTB.Location = new System.Drawing.Point(118, 189);
+            this.schToDateMTB.Mask = "90:00:00";
+            this.schToDateMTB.Name = "schToDateMTB";
+            this.schToDateMTB.Size = new System.Drawing.Size(75, 27);
+            this.schToDateMTB.TabIndex = 174;
+            // 
+            // schFromDateMTB
+            // 
+            this.schFromDateMTB.Location = new System.Drawing.Point(118, 149);
+            this.schFromDateMTB.Mask = "90:00:00";
+            this.schFromDateMTB.Name = "schFromDateMTB";
+            this.schFromDateMTB.Size = new System.Drawing.Size(75, 27);
+            this.schFromDateMTB.TabIndex = 173;
+            // 
+            // schEmpNumTB
+            // 
+            this.schEmpNumTB.Location = new System.Drawing.Point(118, 71);
+            this.schEmpNumTB.Name = "schEmpNumTB";
+            this.schEmpNumTB.Size = new System.Drawing.Size(90, 27);
+            this.schEmpNumTB.TabIndex = 171;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(21, 155);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(48, 21);
+            this.label38.TabIndex = 160;
+            this.label38.Text = "From";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(21, 77);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(78, 21);
+            this.label39.TabIndex = 159;
+            this.label39.Text = "Emp. No.";
             // 
             // tabPage3
             // 
@@ -918,13 +1099,14 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.salaryHistoryB);
             this.groupBox5.Controls.Add(this.salaryReportB);
             this.groupBox5.Location = new System.Drawing.Point(270, 16);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(200, 103);
+            this.groupBox5.Size = new System.Drawing.Size(200, 168);
             this.groupBox5.TabIndex = 142;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Salary List/History ";
+            this.groupBox5.Text = "Salary Reports";
             // 
             // salaryReportB
             // 
@@ -932,7 +1114,7 @@
             this.salaryReportB.Name = "salaryReportB";
             this.salaryReportB.Size = new System.Drawing.Size(147, 30);
             this.salaryReportB.TabIndex = 141;
-            this.salaryReportB.Text = "Click for Report";
+            this.salaryReportB.Text = "Salary List";
             this.salaryReportB.UseVisualStyleBackColor = true;
             this.salaryReportB.Click += new System.EventHandler(this.salaryReportB_Click);
             // 
@@ -1591,6 +1773,26 @@
             this.dateTimePicker3.TabIndex = 0;
             this.dateTimePicker3.Visible = false;
             // 
+            // salaryHistoryB
+            // 
+            this.salaryHistoryB.Location = new System.Drawing.Point(16, 95);
+            this.salaryHistoryB.Name = "salaryHistoryB";
+            this.salaryHistoryB.Size = new System.Drawing.Size(147, 30);
+            this.salaryHistoryB.TabIndex = 142;
+            this.salaryHistoryB.Text = "Salary History";
+            this.salaryHistoryB.UseVisualStyleBackColor = true;
+            this.salaryHistoryB.Click += new System.EventHandler(this.salaryHistoryB_Click);
+            // 
+            // shiftHistoryB
+            // 
+            this.shiftHistoryB.Location = new System.Drawing.Point(19, 53);
+            this.shiftHistoryB.Name = "shiftHistoryB";
+            this.shiftHistoryB.Size = new System.Drawing.Size(147, 30);
+            this.shiftHistoryB.TabIndex = 142;
+            this.shiftHistoryB.Text = "Shift History";
+            this.shiftHistoryB.UseVisualStyleBackColor = true;
+            this.shiftHistoryB.Click += new System.EventHandler(this.shiftHistoryB_Click);
+            // 
             // BackOffice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1616,6 +1818,9 @@
             this.utilitiesTab.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -1668,9 +1873,9 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.Button timeClockOutB;
+        private System.Windows.Forms.Button timeClockInB;
+        private System.Windows.Forms.TextBox timeEmpNumTB;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TabControl tabControl2;
@@ -1776,5 +1981,23 @@
         private System.Windows.Forms.Button salaryReportB;
         private System.Windows.Forms.Button payStubB;
         private System.Windows.Forms.Button payrollSummaryB;
+        private System.Windows.Forms.Button schUpdateB;
+        private System.Windows.Forms.Button schClearB;
+        private System.Windows.Forms.Button schAddB;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button schDeleteB;
+        private System.Windows.Forms.Button schSearchB;
+        private System.Windows.Forms.MaskedTextBox schToDateMTB;
+        private System.Windows.Forms.MaskedTextBox schFromDateMTB;
+        private System.Windows.Forms.TextBox schEmpNumTB;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox schTimeClockNumTB;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.MaskedTextBox schShiftDateMTB;
+        private System.Windows.Forms.Button salaryHistoryB;
+        private System.Windows.Forms.Button shiftHistoryB;
     }
 }

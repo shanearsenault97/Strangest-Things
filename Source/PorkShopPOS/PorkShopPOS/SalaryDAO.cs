@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using System.Data;
 
 namespace PorkShopPOS
 {
@@ -211,9 +212,7 @@ namespace PorkShopPOS
                 "' ," + FROM_DATE + " = '" + sal.FromDate +
                 "' ," + TO_DATE + " = '" + sal.ToDate +
                 "' ," + AMOUNT + " = '" + sal.Amount +
-                "' Where " + SAL_NUM + " = " + sal.SalNum + "";
-
-
+                "' Where " + SAL_NUM + " = '" + sal.SalNum + "'";
 
             strTotal = strTable + strFields;
 
@@ -233,7 +232,7 @@ namespace PorkShopPOS
             try
             {
                 // create sql 
-                string sql = "Select * from " + thisTable + " Where salaryNum = " + sal.SalNum + "' ;";
+                string sql = "Select * from " + thisTable + " Where salaryNum = '" + sal.SalNum + "' ;";
 
                 // connect to database
 
@@ -324,6 +323,48 @@ namespace PorkShopPOS
 
         }
 
+        // create the Salary History Report
+        public void salaryHistory()
+        { 
+            
+        }
 
+        // create the Salary List Report
+        public void salaryList() 
+        {
+            // below code taken from https://dev.mysql.com/doc/connector-net/en/connector-net-programming-crystal-source.html
+
+            DataSet myData = new DataSet();
+            MySql.Data.MySqlClient.MySqlConnection conn;
+            MySql.Data.MySqlClient.MySqlCommand cmd;
+            MySql.Data.MySqlClient.MySqlDataAdapter myAdapter;
+
+            conn = new MySql.Data.MySqlClient.MySqlConnection();
+            cmd = new MySql.Data.MySqlClient.MySqlCommand();
+            myAdapter = new MySql.Data.MySqlClient.MySqlDataAdapter();
+
+            conn.ConnectionString = "server=localhost; database=pork_shop; user=pork_shop_admin; password=5tr&ng3rTh!ng$; Convert Zero Datetime=True; Allow Zero Datetime=True;";
+
+
+            try
+            {
+                cmd.CommandText = "SELECT employee.empLName AS EmployeeLastName, employee.empFName as EmployeeFirstName, " +
+                " salary.empNum AS EmployeeNumber, salary.salaryAmount AS RateOfPay " +
+                " FROM salary, employee " +
+                " WHERE salary.salaryTo = '0000-00-00' AND employee.empNum = salary.empNum " +
+                " ORDER BY salary.empNum";
+                cmd.Connection = conn;
+
+                myAdapter.SelectCommand = cmd;
+                myAdapter.Fill(myData);
+
+                myData.WriteXml(@"C:\temp\dataset.xml", XmlWriteMode.WriteSchema);
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Report could not be created",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

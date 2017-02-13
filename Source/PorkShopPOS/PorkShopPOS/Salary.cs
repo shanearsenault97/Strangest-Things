@@ -84,5 +84,11 @@ namespace PorkShopPOS
         {
             salData.getMostCurrentSal(this);
         }
+
+        // calls the salary list report
+        public void salaryList()
+        { 
+            salData.salaryList();
+        }
     }
 }
