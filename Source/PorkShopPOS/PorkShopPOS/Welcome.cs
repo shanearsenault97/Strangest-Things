@@ -34,19 +34,19 @@ namespace PorkShopPOS
                 else 
                 {
                         UserAccess login = new UserAccess();
-                        login.Emp_Num = empNumTextBox.Text.ToString();
+                        login.EmpNum = empNumTextBox.Text.ToString();
                         login.Login();
 
                         //compare the password in the database to the password that was input
-                        if (login.Emp_Num.Equals(empNumTextBox.Text.ToString()) && login.password.Equals(passwordTextBox.Text.ToString()))
+                        if (login.EmpNum.Equals(empNumTextBox.Text.ToString()) && login.Password.Equals(passwordTextBox.Text.ToString()))
                         {
                             
-                            accessLevel = login.User_Type_Code;
+                            accessLevel = login.Type;
                             ThePorkShopPOS pos = new ThePorkShopPOS();
                             pos.Show();
                         }
                         else
-                        {if (login.password != passwordTextBox.Text.ToString())
+                        {if (login.Password != passwordTextBox.Text.ToString())
                             {
                                 MessageBox.Show("Your username or password is incorrect.  Please try again.");
                             }
@@ -64,6 +64,8 @@ namespace PorkShopPOS
             }
         }
 
+        // used to hold the user permission type which can then be accessed from the BackOffice 
+        public static int userPermissionType;
 
         //validate a user using employee number and password from the database and allow them to access the Back Office screen
         private void porkShopOfficeButton_Click(object sender, EventArgs e)
@@ -78,19 +80,21 @@ namespace PorkShopPOS
                 {
                     UserAccess login = new UserAccess();
 
-                    login.Emp_Num = empNumTextBox.Text.ToString();
+                    login.EmpNum = empNumTextBox.Text.ToString();
                     login.Login();
 
+                    
                     //compare the password in the database to the password that was input
-                    if (login.Emp_Num.Equals(empNumTextBox.Text) && login.password.Equals(passwordTextBox.Text))
+                    if (login.EmpNum.Equals(empNumTextBox.Text) && login.Password.Equals(passwordTextBox.Text))
                     {
-                        accessLevel = login.User_Type_Code;
+                        accessLevel = login.Type;
+                        userPermissionType = 1;
                         BackOffice office = new BackOffice();
                         office.Show();
                     }
                     else
                     {
-                        if (login.password != passwordTextBox.Text.ToString())
+                        if (login.Password != passwordTextBox.Text.ToString())
                         {
                             MessageBox.Show("Your username or password is incorrect.  Please try again.");
                         }
@@ -112,9 +116,15 @@ namespace PorkShopPOS
         private void newUserButton_Click(object sender, EventArgs e)
         {
             UserAccess login = new UserAccess();
-            login.Emp_Num = empNumTextBox.Text;
-            login.password = passwordTextBox.Text;
+            login.EmpNum = empNumTextBox.Text;
+            login.Password = passwordTextBox.Text;
             login.Add();
+        }
+
+        // closes the Welcome page
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
       
     }

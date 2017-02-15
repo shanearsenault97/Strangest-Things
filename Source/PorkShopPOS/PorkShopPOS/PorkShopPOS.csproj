@@ -94,12 +94,6 @@
     <Compile Include="PayStub.Designer.cs">
       <DependentUpon>PayStub.cs</DependentUpon>
     </Compile>
-    <Compile Include="SalaryHistoryReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SalaryHistoryReport.Designer.cs">
-      <DependentUpon>SalaryHistoryReport.cs</DependentUpon>
-    </Compile>
     <Compile Include="Employee.cs" />
     <Compile Include="EmployeeDAO.cs" />
     <Compile Include="EmployeeShowAll.cs">
@@ -181,9 +175,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PayStub.resx">
       <DependentUpon>PayStub.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SalaryHistoryReport.resx">
-      <DependentUpon>SalaryHistoryReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeShowAll.resx">
       <DependentUpon>EmployeeShowAll.cs</DependentUpon>

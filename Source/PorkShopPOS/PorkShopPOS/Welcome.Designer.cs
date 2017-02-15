@@ -36,7 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.empNumTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.newUserButton = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,22 +52,22 @@
             // 
             // porkShopPOSButton
             // 
-            this.porkShopPOSButton.Location = new System.Drawing.Point(204, 313);
+            this.porkShopPOSButton.Location = new System.Drawing.Point(49, 313);
             this.porkShopPOSButton.Margin = new System.Windows.Forms.Padding(4);
             this.porkShopPOSButton.Name = "porkShopPOSButton";
             this.porkShopPOSButton.Size = new System.Drawing.Size(119, 53);
-            this.porkShopPOSButton.TabIndex = 4;
+            this.porkShopPOSButton.TabIndex = 3;
             this.porkShopPOSButton.Text = "POS";
             this.porkShopPOSButton.UseVisualStyleBackColor = true;
             this.porkShopPOSButton.Click += new System.EventHandler(this.porkShopPOSButton_Click_1);
             // 
             // porkShopOfficeButton
             // 
-            this.porkShopOfficeButton.Location = new System.Drawing.Point(361, 313);
+            this.porkShopOfficeButton.Location = new System.Drawing.Point(204, 313);
             this.porkShopOfficeButton.Margin = new System.Windows.Forms.Padding(4);
             this.porkShopOfficeButton.Name = "porkShopOfficeButton";
             this.porkShopOfficeButton.Size = new System.Drawing.Size(119, 53);
-            this.porkShopOfficeButton.TabIndex = 5;
+            this.porkShopOfficeButton.TabIndex = 4;
             this.porkShopOfficeButton.Text = "Back Office";
             this.porkShopOfficeButton.UseVisualStyleBackColor = true;
             this.porkShopOfficeButton.Click += new System.EventHandler(this.porkShopOfficeButton_Click);
@@ -110,16 +110,16 @@
             this.passwordTextBox.Size = new System.Drawing.Size(132, 22);
             this.passwordTextBox.TabIndex = 2;
             // 
-            // newUserButton
+            // btnClose
             // 
-            this.newUserButton.Location = new System.Drawing.Point(37, 313);
-            this.newUserButton.Margin = new System.Windows.Forms.Padding(4);
-            this.newUserButton.Name = "newUserButton";
-            this.newUserButton.Size = new System.Drawing.Size(119, 53);
-            this.newUserButton.TabIndex = 3;
-            this.newUserButton.Text = "Add User";
-            this.newUserButton.UseVisualStyleBackColor = true;
-            this.newUserButton.Click += new System.EventHandler(this.newUserButton_Click);
+            this.btnClose.Location = new System.Drawing.Point(360, 313);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(119, 53);
+            this.btnClose.TabIndex = 5;
+            this.btnClose.Text = "Exit";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Welcome
             // 
@@ -127,7 +127,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(537, 398);
-            this.Controls.Add(this.newUserButton);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.empNumTextBox);
             this.Controls.Add(this.label2);
@@ -155,6 +155,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox empNumTextBox;
         private System.Windows.Forms.MaskedTextBox passwordTextBox;
-        private System.Windows.Forms.Button newUserButton;
+        private System.Windows.Forms.Button btnClose;
     }
 }

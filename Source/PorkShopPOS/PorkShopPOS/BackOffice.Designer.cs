@@ -66,10 +66,11 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.utilitiesTab = new System.Windows.Forms.TabControl();
+            this.accountsTab = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.empProvinceTB = new System.Windows.Forms.ComboBox();
             this.empShowAllB = new System.Windows.Forms.Button();
-            this.clearB = new System.Windows.Forms.Button();
+            this.empClearB = new System.Windows.Forms.Button();
             this.empDeleteB = new System.Windows.Forms.Button();
             this.empEndDateMTB = new System.Windows.Forms.MaskedTextBox();
             this.empSearchB = new System.Windows.Forms.Button();
@@ -187,11 +188,25 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label31 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.empProvinceTB = new System.Windows.Forms.ComboBox();
+            this.dfs = new System.Windows.Forms.TabPage();
+            this.acctIdTB = new System.Windows.Forms.TextBox();
+            this.acctShowAllB = new System.Windows.Forms.Button();
+            this.acctClearB = new System.Windows.Forms.Button();
+            this.acctDeleteB = new System.Windows.Forms.Button();
+            this.acctSearchB = new System.Windows.Forms.Button();
+            this.acctUpdateB = new System.Windows.Forms.Button();
+            this.acctAddB = new System.Windows.Forms.Button();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.acctPasswordTB = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.acctEmpNumTB = new System.Windows.Forms.TextBox();
+            this.acctTypeCB = new System.Windows.Forms.ComboBox();
+            this.label54 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.utilitiesTab.SuspendLayout();
+            this.accountsTab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -203,6 +218,7 @@
             this.groupBox4.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage8.SuspendLayout();
+            this.dfs.SuspendLayout();
             this.SuspendLayout();
             // 
             // FrontHouseButton
@@ -550,7 +566,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.utilitiesTab);
+            this.groupBox3.Controls.Add(this.accountsTab);
             this.groupBox3.Location = new System.Drawing.Point(287, 24);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(552, 437);
@@ -558,25 +574,27 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Utilities";
             // 
-            // utilitiesTab
+            // accountsTab
             // 
-            this.utilitiesTab.Controls.Add(this.tabPage1);
-            this.utilitiesTab.Controls.Add(this.tabPage2);
-            this.utilitiesTab.Controls.Add(this.tabPage3);
-            this.utilitiesTab.Controls.Add(this.payrollTabPage);
-            this.utilitiesTab.Controls.Add(this.updateMenuTab);
-            this.utilitiesTab.Location = new System.Drawing.Point(15, 30);
-            this.utilitiesTab.Name = "utilitiesTab";
-            this.utilitiesTab.SelectedIndex = 0;
-            this.utilitiesTab.Size = new System.Drawing.Size(527, 377);
-            this.utilitiesTab.TabIndex = 0;
+            this.accountsTab.Controls.Add(this.tabPage1);
+            this.accountsTab.Controls.Add(this.tabPage2);
+            this.accountsTab.Controls.Add(this.tabPage3);
+            this.accountsTab.Controls.Add(this.payrollTabPage);
+            this.accountsTab.Controls.Add(this.updateMenuTab);
+            this.accountsTab.Controls.Add(this.dfs);
+            this.accountsTab.Location = new System.Drawing.Point(19, 26);
+            this.accountsTab.Name = "accountsTab";
+            this.accountsTab.SelectedIndex = 0;
+            this.accountsTab.Size = new System.Drawing.Size(527, 377);
+            this.accountsTab.TabIndex = 0;
+            this.accountsTab.Tag = "";
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.PowderBlue;
             this.tabPage1.Controls.Add(this.empProvinceTB);
             this.tabPage1.Controls.Add(this.empShowAllB);
-            this.tabPage1.Controls.Add(this.clearB);
+            this.tabPage1.Controls.Add(this.empClearB);
             this.tabPage1.Controls.Add(this.empDeleteB);
             this.tabPage1.Controls.Add(this.empEndDateMTB);
             this.tabPage1.Controls.Add(this.empSearchB);
@@ -613,6 +631,28 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Employee";
             // 
+            // empProvinceTB
+            // 
+            this.empProvinceTB.FormattingEnabled = true;
+            this.empProvinceTB.Items.AddRange(new object[] {
+            "AB\t",
+            "BC",
+            "MB",
+            "NB",
+            "NL",
+            "NS",
+            "NT",
+            "NU",
+            "ON",
+            "PE",
+            "QC",
+            "SK",
+            "YT"});
+            this.empProvinceTB.Location = new System.Drawing.Point(108, 175);
+            this.empProvinceTB.Name = "empProvinceTB";
+            this.empProvinceTB.Size = new System.Drawing.Size(38, 27);
+            this.empProvinceTB.TabIndex = 105;
+            // 
             // empShowAllB
             // 
             this.empShowAllB.Location = new System.Drawing.Point(206, 303);
@@ -623,15 +663,15 @@
             this.empShowAllB.UseVisualStyleBackColor = true;
             this.empShowAllB.Click += new System.EventHandler(this.empShowAllB_Click);
             // 
-            // clearB
+            // empClearB
             // 
-            this.clearB.Location = new System.Drawing.Point(416, 255);
-            this.clearB.Name = "clearB";
-            this.clearB.Size = new System.Drawing.Size(75, 30);
-            this.clearB.TabIndex = 118;
-            this.clearB.Text = "Clear";
-            this.clearB.UseVisualStyleBackColor = true;
-            this.clearB.Click += new System.EventHandler(this.clearB_Click);
+            this.empClearB.Location = new System.Drawing.Point(416, 255);
+            this.empClearB.Name = "empClearB";
+            this.empClearB.Size = new System.Drawing.Size(75, 30);
+            this.empClearB.TabIndex = 118;
+            this.empClearB.Text = "Clear";
+            this.empClearB.UseVisualStyleBackColor = true;
+            this.empClearB.Click += new System.EventHandler(this.clearB_Click);
             // 
             // empDeleteB
             // 
@@ -1786,27 +1826,158 @@
             this.dateTimePicker3.TabIndex = 0;
             this.dateTimePicker3.Visible = false;
             // 
-            // empProvinceTB
+            // dfs
             // 
-            this.empProvinceTB.FormattingEnabled = true;
-            this.empProvinceTB.Items.AddRange(new object[] {
-            "AB\t",
-            "BC",
-            "MB",
-            "NB",
-            "NL",
-            "NS",
-            "NT",
-            "NU",
-            "ON",
-            "PE",
-            "QC",
-            "SK",
-            "YT"});
-            this.empProvinceTB.Location = new System.Drawing.Point(108, 175);
-            this.empProvinceTB.Name = "empProvinceTB";
-            this.empProvinceTB.Size = new System.Drawing.Size(38, 27);
-            this.empProvinceTB.TabIndex = 120;
+            this.dfs.Controls.Add(this.acctIdTB);
+            this.dfs.Controls.Add(this.acctShowAllB);
+            this.dfs.Controls.Add(this.acctClearB);
+            this.dfs.Controls.Add(this.acctDeleteB);
+            this.dfs.Controls.Add(this.acctSearchB);
+            this.dfs.Controls.Add(this.acctUpdateB);
+            this.dfs.Controls.Add(this.acctAddB);
+            this.dfs.Controls.Add(this.label51);
+            this.dfs.Controls.Add(this.label52);
+            this.dfs.Controls.Add(this.acctPasswordTB);
+            this.dfs.Controls.Add(this.label53);
+            this.dfs.Controls.Add(this.acctEmpNumTB);
+            this.dfs.Controls.Add(this.acctTypeCB);
+            this.dfs.Controls.Add(this.label54);
+            this.dfs.Location = new System.Drawing.Point(4, 28);
+            this.dfs.Name = "dfs";
+            this.dfs.Padding = new System.Windows.Forms.Padding(3);
+            this.dfs.Size = new System.Drawing.Size(519, 345);
+            this.dfs.TabIndex = 5;
+            this.dfs.Text = "Accounts";
+            this.dfs.UseVisualStyleBackColor = true;
+            // 
+            // acctIdTB
+            // 
+            this.acctIdTB.Location = new System.Drawing.Point(162, 31);
+            this.acctIdTB.Name = "acctIdTB";
+            this.acctIdTB.Size = new System.Drawing.Size(121, 27);
+            this.acctIdTB.TabIndex = 115;
+            // 
+            // acctShowAllB
+            // 
+            this.acctShowAllB.Location = new System.Drawing.Point(203, 284);
+            this.acctShowAllB.Name = "acctShowAllB";
+            this.acctShowAllB.Size = new System.Drawing.Size(108, 30);
+            this.acctShowAllB.TabIndex = 124;
+            this.acctShowAllB.Text = "Show All";
+            this.acctShowAllB.UseVisualStyleBackColor = true;
+            this.acctShowAllB.Click += new System.EventHandler(this.acctShowAllB_Click);
+            // 
+            // acctClearB
+            // 
+            this.acctClearB.Location = new System.Drawing.Point(419, 224);
+            this.acctClearB.Name = "acctClearB";
+            this.acctClearB.Size = new System.Drawing.Size(75, 30);
+            this.acctClearB.TabIndex = 123;
+            this.acctClearB.Text = "Clear";
+            this.acctClearB.UseVisualStyleBackColor = true;
+            this.acctClearB.Click += new System.EventHandler(this.acctClearB_Click);
+            // 
+            // acctDeleteB
+            // 
+            this.acctDeleteB.Location = new System.Drawing.Point(317, 224);
+            this.acctDeleteB.Name = "acctDeleteB";
+            this.acctDeleteB.Size = new System.Drawing.Size(75, 30);
+            this.acctDeleteB.TabIndex = 122;
+            this.acctDeleteB.Text = "Delete";
+            this.acctDeleteB.UseVisualStyleBackColor = true;
+            this.acctDeleteB.Click += new System.EventHandler(this.acctDeleteB_Click);
+            // 
+            // acctSearchB
+            // 
+            this.acctSearchB.Location = new System.Drawing.Point(218, 224);
+            this.acctSearchB.Name = "acctSearchB";
+            this.acctSearchB.Size = new System.Drawing.Size(75, 30);
+            this.acctSearchB.TabIndex = 121;
+            this.acctSearchB.Text = "Search";
+            this.acctSearchB.UseVisualStyleBackColor = true;
+            this.acctSearchB.Click += new System.EventHandler(this.acctSearchB_Click);
+            // 
+            // acctUpdateB
+            // 
+            this.acctUpdateB.Location = new System.Drawing.Point(120, 224);
+            this.acctUpdateB.Name = "acctUpdateB";
+            this.acctUpdateB.Size = new System.Drawing.Size(75, 30);
+            this.acctUpdateB.TabIndex = 120;
+            this.acctUpdateB.Text = "Update";
+            this.acctUpdateB.UseVisualStyleBackColor = true;
+            this.acctUpdateB.Click += new System.EventHandler(this.acctUpdateB_Click);
+            // 
+            // acctAddB
+            // 
+            this.acctAddB.Location = new System.Drawing.Point(27, 224);
+            this.acctAddB.Name = "acctAddB";
+            this.acctAddB.Size = new System.Drawing.Size(75, 30);
+            this.acctAddB.TabIndex = 119;
+            this.acctAddB.Text = "Add";
+            this.acctAddB.UseVisualStyleBackColor = true;
+            this.acctAddB.Click += new System.EventHandler(this.acctAddB_Click);
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(24, 34);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(95, 21);
+            this.label51.TabIndex = 111;
+            this.label51.Text = "Account Id.";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(25, 70);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(112, 21);
+            this.label52.TabIndex = 112;
+            this.label52.Text = "Employee No.";
+            // 
+            // acctPasswordTB
+            // 
+            this.acctPasswordTB.Location = new System.Drawing.Point(162, 109);
+            this.acctPasswordTB.Name = "acctPasswordTB";
+            this.acctPasswordTB.Size = new System.Drawing.Size(121, 27);
+            this.acctPasswordTB.TabIndex = 117;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(24, 107);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(81, 21);
+            this.label53.TabIndex = 113;
+            this.label53.Text = "Password";
+            // 
+            // acctEmpNumTB
+            // 
+            this.acctEmpNumTB.Location = new System.Drawing.Point(162, 70);
+            this.acctEmpNumTB.Name = "acctEmpNumTB";
+            this.acctEmpNumTB.Size = new System.Drawing.Size(121, 27);
+            this.acctEmpNumTB.TabIndex = 116;
+            // 
+            // acctTypeCB
+            // 
+            this.acctTypeCB.FormattingEnabled = true;
+            this.acctTypeCB.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.acctTypeCB.Location = new System.Drawing.Point(162, 143);
+            this.acctTypeCB.Name = "acctTypeCB";
+            this.acctTypeCB.Size = new System.Drawing.Size(121, 27);
+            this.acctTypeCB.TabIndex = 118;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(25, 140);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(111, 21);
+            this.label54.TabIndex = 114;
+            this.label54.Text = "Account Type";
             // 
             // BackOffice
             // 
@@ -1830,7 +2001,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            this.utilitiesTab.ResumeLayout(false);
+            this.accountsTab.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -1848,6 +2019,8 @@
             this.tabControl2.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
+            this.dfs.ResumeLayout(false);
+            this.dfs.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1906,9 +2079,9 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TabControl utilitiesTab;
+        private System.Windows.Forms.TabControl accountsTab;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button clearB;
+        private System.Windows.Forms.Button empClearB;
         private System.Windows.Forms.Button empDeleteB;
         private System.Windows.Forms.MaskedTextBox empEndDateMTB;
         private System.Windows.Forms.Button empSearchB;
@@ -2014,5 +2187,20 @@
         private System.Windows.Forms.Button shiftHistoryB;
         private System.Windows.Forms.TextBox salEmpNumTB;
         private System.Windows.Forms.ComboBox empProvinceTB;
+        private System.Windows.Forms.TabPage dfs;
+        private System.Windows.Forms.TextBox acctIdTB;
+        private System.Windows.Forms.Button acctShowAllB;
+        private System.Windows.Forms.Button acctClearB;
+        private System.Windows.Forms.Button acctDeleteB;
+        private System.Windows.Forms.Button acctSearchB;
+        private System.Windows.Forms.Button acctUpdateB;
+        private System.Windows.Forms.Button acctAddB;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.TextBox acctPasswordTB;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.TextBox acctEmpNumTB;
+        private System.Windows.Forms.ComboBox acctTypeCB;
+        private System.Windows.Forms.Label label54;
     }
 }

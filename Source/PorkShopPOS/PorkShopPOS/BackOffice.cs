@@ -58,6 +58,53 @@ namespace PorkShopPOS
         {
              // set the date time picker control in the employee tab (utilities) to the current date
              empStartDateDTP.Value = DateTime.Now;
+
+            // disable buttons depending on user authorization
+            int userPermission = Welcome.userPermissionType;
+            if (userPermission == 1)
+            {
+                // disable employee functionality in utilities tab
+                empAddB.Enabled = false;
+                empUpdateB.Enabled = false;
+                empSearchB.Enabled = false;
+                empDeleteB.Enabled = false;
+                empClearB.Enabled = false;
+                empShowAllB.Enabled = false;
+
+                // disable schedule functionality in utilities tab
+                empAddB.Enabled = false;
+                empUpdateB.Enabled = false;
+                empSearchB.Enabled = false;
+                empDeleteB.Enabled = false;
+                empClearB.Enabled = false;
+                empShowAllB.Enabled = false;
+
+                // disable salary functionality in utilities tab
+                empAddB.Enabled = false;
+                empUpdateB.Enabled = false;
+                empSearchB.Enabled = false;
+                empDeleteB.Enabled = false;
+                empClearB.Enabled = false;
+                empShowAllB.Enabled = false;
+
+                // disable payroll functionality in utilities tab
+                empAddB.Enabled = false;
+                empUpdateB.Enabled = false;
+                empSearchB.Enabled = false;
+                empDeleteB.Enabled = false;
+                empClearB.Enabled = false;
+                empShowAllB.Enabled = false;
+
+                // disable update menu functionality in utilities tab
+                empAddB.Enabled = false;
+                empUpdateB.Enabled = false;
+                empSearchB.Enabled = false;
+                empDeleteB.Enabled = false;
+                empClearB.Enabled = false;
+                empShowAllB.Enabled = false;
+
+                // disable accounts functionality in utilities tab
+            }
         }
 
 
@@ -641,10 +688,10 @@ namespace PorkShopPOS
             salaryList.Show();
        }
 
+
         // declare static variable for use in the below salaryHistory method
         public static string salEmpNum;
-
-
+        
         /* User: Jonathan Deschene
         * Date: 2017-01-20
         * Time: 2:45 PM
@@ -796,7 +843,7 @@ namespace PorkShopPOS
                     //validate to ensure that approprate length employee number is entered
                     else if (empNum.Length > 6 | empNum.Length < 6)
                     {
-                        MessageBox.Show("Employee number cannot be greater or less than than 6 characters."");
+                        MessageBox.Show("Employee number cannot be greater or less than than 6 characters.");
                     }
 
                     else
@@ -1431,6 +1478,287 @@ namespace PorkShopPOS
                     
 
         //*************************************************TIME_CLCOK SECTION END****************************************************
+
+        //*************************************************ACCOUNTS SECTION START****************************************************
+
+
+        // instantiate a payroll object to be used in the CRUD methods below
+        UserAccess access;
+
+        /* User: Jonathan Deschene
+        * Date: 2017-01-20
+        * Time: 2:45 PM
+        * Purpose: add a payroll object to the database
+        */
+        private void payAddB_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pay = new Payroll();
+
+                // variables delcared for validation directly below
+                decimal amnt;
+                decimal hrs;
+
+                //validate to ensure that values entered are numeric
+                if (Decimal.TryParse(payHoursTB.Text, out amnt) == false |
+                    Decimal.TryParse(payAmountTB.Text, out hrs) == false)
+                {
+                    MessageBox.Show("Please ensure that hours and amount fields are numeric.");
+                }
+                else
+                {
+                    // these fields will be used to validate the form data
+                    int payNum = int.Parse(payNumTB.Text);
+                    string empNum = payEmpNumTB.Text;
+                    string fromDate = payStartDateMTB.Text;
+                    string toDate = payEndDateMTB.Text;
+                    decimal hours = decimal.Parse(payHoursTB.Text);
+                    decimal amount = decimal.Parse(payAmountTB.Text);
+
+                    // validate to ensure that input fields are not left empty
+                    if (String.IsNullOrEmpty(empNum) | String.IsNullOrEmpty(fromDate) | String.IsNullOrEmpty(toDate))
+                    {
+                        MessageBox.Show("Please ensure that all fields are filled out.");
+                    }
+
+                    //validate to ensure that approprate length employee number is entered
+                    else if (empNum.Length > 6 | empNum.Length < 6)
+                    {
+                        MessageBox.Show("Employee number cannot be greater or less than than 6 characters.");
+                    }
+
+                    else
+                    {
+                        // assign back office salary input data to a new payroll object
+                        pay.EmpNum = empNum;
+                        pay.FromDate = fromDate;
+                        pay.ToDate = toDate;
+                        pay.Hours = hours;
+                        pay.Amount = amount;
+
+                        // call Pay add()
+                        pay.Add();
+
+                        MessageBox.Show("New payroll for employee " + pay.EmpNum + " successfully added.");
+                    }
+                }
+            }
+            catch (InvalidOperationException exc)
+            {
+                Console.WriteLine(exc.ToString());
+            }
+
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+            }
+        }
+
+        /* User: Jonathan Deschene
+       * Date: 2017-02-01
+       * Time: 11:30 AM
+       * Purpose: update an existing payroll's information
+       */
+        private void payUpdateB_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pay = new Payroll();
+
+                // variables delcared for validation directly below
+                decimal amnt;
+                decimal hrs;
+
+                //validate to ensure that values entered are numeric
+                if (Decimal.TryParse(payHoursTB.Text, out amnt) == false |
+                    Decimal.TryParse(payAmountTB.Text, out hrs) == false)
+                {
+                    MessageBox.Show("Please ensure that hours and amount fields are numeric.");
+                }
+                else
+                {
+                    // these fields will be used to validate the form data
+                    int payNum = int.Parse(payNumTB.Text);
+                    string empNum = payEmpNumTB.Text;
+                    string fromDate = payStartDateMTB.Text;
+                    string toDate = payEndDateMTB.Text;
+                    decimal hours = decimal.Parse(payHoursTB.Text);
+                    decimal amount = decimal.Parse(payAmountTB.Text);
+
+                    // validate to ensure that input fields are not left empty
+                    if (String.IsNullOrEmpty(empNum) | String.IsNullOrEmpty(fromDate) | String.IsNullOrEmpty(toDate))
+                    {
+                        MessageBox.Show("Please ensure that all fields are filled out.");
+                    }
+
+                    //validate to ensure that approprate length employee number is entered
+                    else if (empNum.Length > 6 | empNum.Length < 6)
+                    {
+                        MessageBox.Show("Employee number cannot be greater or less than than 6 characters.");
+                    }
+
+                    else
+                    {
+                        // update payroll information with new input
+                        pay.PayNum = payNum;
+                        pay.EmpNum = empNum;
+                        pay.FromDate = fromDate;
+                        pay.ToDate = toDate;
+                        pay.Hours = hours;
+                        pay.Amount = amount;
+
+                        pay.Update();
+                        MessageBox.Show("Update successful.");
+                    }
+                }
+            }
+            catch (InvalidOperationException exc)
+            {
+                Console.WriteLine(exc.ToString());
+            }
+
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+            }
+        }
+
+        /* User: Jonathan Deschene
+        * Date: 2017-02-01
+        * Time: 11:30 AM
+        * Purpose: search for a payroll object in the database
+        */
+        private void paySearchB_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pay = new Payroll();
+
+                int payNum;
+                //validate to ensure that pay num was entered
+                if (int.TryParse(payNumTB.Text, out payNum) == false)
+                {
+                    MessageBox.Show("Please enter a valid payroll number.");
+                }
+
+                else
+                {
+                    // search by empNum
+                    pay.PayNum = int.Parse(payNumTB.Text);
+
+                    // call the search method in the business layer
+                    pay.Search();
+
+                    // display search results in the form text boxes
+                    payEmpNumTB.Text = pay.EmpNum;
+                    payStartDateMTB.Text = pay.FromDate;
+                    payEndDateMTB.Text = pay.ToDate;
+                    payHoursTB.Text = pay.Hours.ToString();
+                    payAmountTB.Text = pay.Amount.ToString();
+                }
+            }
+            catch (InvalidOperationException exc)
+            {
+                Console.WriteLine(exc.ToString());
+            }
+
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+            }
+        }
+
+        /* User: Jonathan Deschene
+        * Date: 2017-02-01
+        * Time: 11:30 AM
+        * Purpose: delete a payroll object
+        */
+        private void payDeleteB_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+      
+
+       
+        
+
+        private void acctAddB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void acctUpdateB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void acctSearchB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /* User: Jonathan Deschene
+        * Date: 2017-02-14
+        * Time: 9:30 PM
+        * Purpose: deletes an account
+        */
+        private void acctDeleteB_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                access = new UserAccess();
+
+                int acctId;
+                //validate to ensure that account num was entered
+                if (int.TryParse(acctIdTB.Text, out acctId) == false)
+                {
+                    MessageBox.Show("Please enter a valid account ID.");
+                }
+
+                else
+                {
+                    // delete account from database based on account id
+                    access.AccountId = int.Parse(acctIdTB.Text);
+
+                    // delete employee
+                    access.Delete();
+
+                    MessageBox.Show("Account successfully deleted.");
+                }
+            }
+            catch (InvalidOperationException exc)
+            {
+                Console.WriteLine(exc.ToString());
+            }
+
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+            }
+        }
+
+        /* User: Jonathan Deschene
+        * Date: 2017-02-14
+        * Time: 9:30 PM
+        * Purpose: clears input controls in the account section of the utilitiesTab
+        */
+        private void acctClearB_Click(object sender, EventArgs e)
+        {
+            acctIdTB.Text = String.Empty;
+            acctEmpNumTB.Text = String.Empty;
+            acctPasswordTB.Text = String.Empty;
+            acctTypeCB.Text = String.Empty;
+        }
+
+      
+        private void acctShowAllB_Click(object sender, EventArgs e)
+        {            
+            
+        }
+
+        //*************************************************ACCOUNT SECTION END****************************************************
 
     }
 }

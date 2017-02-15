@@ -8,9 +8,10 @@ namespace PorkShopPOS
 {
     class UserAccess
     {
-        private string EmpNum;
-        private string Password;
-        private int UserTypeCode;
+        private int accountId;
+        private string empNum;
+        private string password;
+        private int type;
 
         // instantiate a corresponding UserAccess data access object
         UserAccessDAO loginData;
@@ -21,23 +22,27 @@ namespace PorkShopPOS
             loginData = new UserAccessDAO();
           
         }
- 
 
-        public string Emp_Num
+        public int AccountId
         {
-            get { return this.EmpNum; }
-            set { this.EmpNum = value; }
+            get { return this.accountId; }
+            set { this.accountId = value; }
         }
-        public string password
+        public string EmpNum
         {
-            get { return this.Password; }
-            set { this.Password = value; }
+            get { return this.empNum; }
+            set { this.empNum = value; }
+        }
+        public string Password
+        {
+            get { return this.password; }
+            set { this.password = value; }
         }
 
-        public int User_Type_Code
+        public int Type
         {
-            get { return this.UserTypeCode; }
-            set { this.UserTypeCode = value; }
+            get { return this.type; }
+            set { this.type = value; }
         }
 
         // calls the login method from the data object layer
@@ -50,6 +55,24 @@ namespace PorkShopPOS
         public void Add()
         {
             loginData.Add(this);
+        }
+
+        // calls the Update method from the data object layer
+        public void Update()
+        {
+            loginData.Update(this);
+        }
+
+        // calls the Search method from the data object layer
+        public void Search()
+        {
+            loginData.Search(this);
+        }
+
+        // calls the Delete method from the data object layer
+        public void Delete()
+        {
+            loginData.Delete(this);
         }
 
     }
