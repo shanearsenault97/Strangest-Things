@@ -1486,38 +1486,35 @@ namespace PorkShopPOS
         UserAccess access;
 
         /* User: Jonathan Deschene
-        * Date: 2017-01-20
-        * Time: 2:45 PM
-        * Purpose: add a payroll object to the database
+        * Date: 2017-02-01
+        * Time: 11:30 AM
+        * Purpose: create a new account object information
         */
-        private void payAddB_Click(object sender, EventArgs e)
+        private void acctAddB_Click(object sender, EventArgs e)
         {
             try
             {
-                pay = new Payroll();
+                access = new UserAccess();
 
                 // variables delcared for validation directly below
-                decimal amnt;
-                decimal hrs;
+                int account;
+                int userType;
 
                 //validate to ensure that values entered are numeric
-                if (Decimal.TryParse(payHoursTB.Text, out amnt) == false |
-                    Decimal.TryParse(payAmountTB.Text, out hrs) == false)
+                if (int.TryParse(acctIdTB.Text, out account) == false | int.TryParse(acctTypeCB.Text, out userType) == false)
                 {
-                    MessageBox.Show("Please ensure that hours and amount fields are numeric.");
+                    MessageBox.Show("Please ensure that the Account ID and Account Type fields are numeric.");
                 }
                 else
                 {
                     // these fields will be used to validate the form data
-                    int payNum = int.Parse(payNumTB.Text);
-                    string empNum = payEmpNumTB.Text;
-                    string fromDate = payStartDateMTB.Text;
-                    string toDate = payEndDateMTB.Text;
-                    decimal hours = decimal.Parse(payHoursTB.Text);
-                    decimal amount = decimal.Parse(payAmountTB.Text);
+                    int accntID = int.Parse(acctIdTB.Text);
+                    string empNum = acctEmpNumTB.Text;
+                    string password = acctPasswordTB.Text;
+                    int type = int.Parse(acctTypeCB.Text);
 
                     // validate to ensure that input fields are not left empty
-                    if (String.IsNullOrEmpty(empNum) | String.IsNullOrEmpty(fromDate) | String.IsNullOrEmpty(toDate))
+                    if (String.IsNullOrEmpty(empNum) | String.IsNullOrEmpty(password))
                     {
                         MessageBox.Show("Please ensure that all fields are filled out.");
                     }
@@ -1528,19 +1525,21 @@ namespace PorkShopPOS
                         MessageBox.Show("Employee number cannot be greater or less than than 6 characters.");
                     }
 
+                    //validate to ensure that account type is not greater than 3 or less than 1
+                    else if (type < 1 | type > 3)
+                    {
+                        MessageBox.Show("Account type number cannot be less than 1 or greater than 3.");
+                    }
                     else
                     {
-                        // assign back office salary input data to a new payroll object
-                        pay.EmpNum = empNum;
-                        pay.FromDate = fromDate;
-                        pay.ToDate = toDate;
-                        pay.Hours = hours;
-                        pay.Amount = amount;
+                        // add account information to new UserAccess object
+                        access.AccountId = accntID;
+                        access.EmpNum = empNum;
+                        access.Password = password;
+                        access.Type = type;
 
-                        // call Pay add()
-                        pay.Add();
-
-                        MessageBox.Show("New payroll for employee " + pay.EmpNum + " successfully added.");
+                        access.Add();
+                        MessageBox.Show("New User Access account successfully created.");
                     }
                 }
             }
@@ -1556,38 +1555,35 @@ namespace PorkShopPOS
         }
 
         /* User: Jonathan Deschene
-       * Date: 2017-02-01
-       * Time: 11:30 AM
-       * Purpose: update an existing payroll's information
-       */
-        private void payUpdateB_Click(object sender, EventArgs e)
+        * Date: 2017-02-01
+        * Time: 11:30 AM
+        * Purpose: update an existing account object's information
+        */
+        private void acctUpdateB_Click(object sender, EventArgs e)
         {
             try
             {
-                pay = new Payroll();
+                access = new UserAccess();
 
                 // variables delcared for validation directly below
-                decimal amnt;
-                decimal hrs;
+                int account;
+                int userType;
 
                 //validate to ensure that values entered are numeric
-                if (Decimal.TryParse(payHoursTB.Text, out amnt) == false |
-                    Decimal.TryParse(payAmountTB.Text, out hrs) == false)
+                if (int.TryParse(acctIdTB.Text, out account) == false | int.TryParse(acctTypeCB.Text, out userType) == false)
                 {
-                    MessageBox.Show("Please ensure that hours and amount fields are numeric.");
+                    MessageBox.Show("Please ensure that the Account ID and Account Type fields are numeric.");
                 }
                 else
                 {
                     // these fields will be used to validate the form data
-                    int payNum = int.Parse(payNumTB.Text);
-                    string empNum = payEmpNumTB.Text;
-                    string fromDate = payStartDateMTB.Text;
-                    string toDate = payEndDateMTB.Text;
-                    decimal hours = decimal.Parse(payHoursTB.Text);
-                    decimal amount = decimal.Parse(payAmountTB.Text);
+                    int accntID = int.Parse(acctIdTB.Text);
+                    string empNum = acctEmpNumTB.Text;
+                    string password = acctPasswordTB.Text;
+                    int type = int.Parse(acctTypeCB.Text);
 
                     // validate to ensure that input fields are not left empty
-                    if (String.IsNullOrEmpty(empNum) | String.IsNullOrEmpty(fromDate) | String.IsNullOrEmpty(toDate))
+                    if (String.IsNullOrEmpty(empNum) | String.IsNullOrEmpty(password))
                     {
                         MessageBox.Show("Please ensure that all fields are filled out.");
                     }
@@ -1598,17 +1594,20 @@ namespace PorkShopPOS
                         MessageBox.Show("Employee number cannot be greater or less than than 6 characters.");
                     }
 
+                    //validate to ensure that account type is not greater than 3 or less than 1
+                    else if (type < 1 | type > 3)
+                    {
+                        MessageBox.Show("Account type number cannot be less than 1 or greater than 3.");
+                    }
                     else
                     {
-                        // update payroll information with new input
-                        pay.PayNum = payNum;
-                        pay.EmpNum = empNum;
-                        pay.FromDate = fromDate;
-                        pay.ToDate = toDate;
-                        pay.Hours = hours;
-                        pay.Amount = amount;
+                        // update account information with new input
+                        access.AccountId = accntID;
+                        access.EmpNum = empNum;
+                        access.Password = password;
+                        access.Type = type;
 
-                        pay.Update();
+                        access.Update();
                         MessageBox.Show("Update successful.");
                     }
                 }
@@ -1624,38 +1623,37 @@ namespace PorkShopPOS
             }
         }
 
-        /* User: Jonathan Deschene
-        * Date: 2017-02-01
-        * Time: 11:30 AM
-        * Purpose: search for a payroll object in the database
-        */
-        private void paySearchB_Click(object sender, EventArgs e)
+       /* User: Jonathan Deschene
+       * Date: 2017-02-01
+       * Time: 11:30 AM
+       * Purpose: search for an account object in the database
+       */
+        private void acctSearchB_Click(object sender, EventArgs e)
         {
             try
             {
-                pay = new Payroll();
+                access = new UserAccess();
 
-                int payNum;
+                int acctId;
                 //validate to ensure that pay num was entered
-                if (int.TryParse(payNumTB.Text, out payNum) == false)
+                if (int.TryParse(acctIdTB.Text, out acctId) == false)
                 {
-                    MessageBox.Show("Please enter a valid payroll number.");
+                    MessageBox.Show("Please enter a valid Account ID.");
                 }
 
                 else
                 {
-                    // search by empNum
-                    pay.PayNum = int.Parse(payNumTB.Text);
+                    // search by account ID
+                    access.AccountId = int.Parse(acctIdTB.Text);
 
                     // call the search method in the business layer
-                    pay.Search();
+                    access.Search();
 
                     // display search results in the form text boxes
-                    payEmpNumTB.Text = pay.EmpNum;
-                    payStartDateMTB.Text = pay.FromDate;
-                    payEndDateMTB.Text = pay.ToDate;
-                    payHoursTB.Text = pay.Hours.ToString();
-                    payAmountTB.Text = pay.Amount.ToString();
+                    acctEmpNumTB.Text = access.EmpNum;
+                    acctPasswordTB.Text = access.Password;
+                    acctTypeCB.Text = access.Type.ToString();
+                    
                 }
             }
             catch (InvalidOperationException exc)
@@ -1667,36 +1665,6 @@ namespace PorkShopPOS
             {
                 Console.WriteLine(exception.Message);
             }
-        }
-
-        /* User: Jonathan Deschene
-        * Date: 2017-02-01
-        * Time: 11:30 AM
-        * Purpose: delete a payroll object
-        */
-        private void payDeleteB_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-      
-
-       
-        
-
-        private void acctAddB_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void acctUpdateB_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void acctSearchB_Click(object sender, EventArgs e)
-        {
-
         }
 
         /* User: Jonathan Deschene
