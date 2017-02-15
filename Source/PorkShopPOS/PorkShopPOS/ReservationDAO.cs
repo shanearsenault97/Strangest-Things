@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+ * User: Shane Arsenault
+ * Date: 2/15/2017
+ * Purpose: Facilitates data connections for the Reservation object
+ * **/
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

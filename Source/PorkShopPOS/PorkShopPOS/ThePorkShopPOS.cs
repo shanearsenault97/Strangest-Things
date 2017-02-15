@@ -451,9 +451,11 @@ namespace PorkShopPOS {
         }
 
         private void btnReserve_Click(object sender, EventArgs e) {
+            //validation
             if (cmbTableRes.Text == "" || dateReservations.Text == "" || dateTime.Text == "" || txtName.Text == "" || txtPhone.Text.Contains('_')) {
                 MessageBox.Show("All form elements are required to reserve a table.");
             } else {
+                //adds the reservation
                 if (MessageBox.Show("Confirmation", "Are you sure you want to add this?", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes) {
                     Reservation reservation = new Reservation();
                     reservation.TableNum = cmbTableRes.Text;
@@ -468,6 +470,7 @@ namespace PorkShopPOS {
         }
 
         private void btnShowRes_Click(object sender, EventArgs e) {
+            //shows all of the reservations
             frmReservationShowAll resShowAll = new frmReservationShowAll();
             resShowAll.Show();
         }

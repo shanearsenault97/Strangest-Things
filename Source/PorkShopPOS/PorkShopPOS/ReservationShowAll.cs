@@ -1,4 +1,10 @@
-﻿using System;
+﻿/**
+ * User: Shane Arsenault
+ * Date: 2/15/2017
+ * Purpose: This is a form designed to allow showing, updating, and deleting of reservations.
+ * **/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +25,7 @@ namespace PorkShopPOS
 
         private void ReservationShowAll_Load(object sender, EventArgs e)
         {
+            //loads datagridview's contents
             ShowAll showAll;
             showAll = new ShowAll();
             DataGridView dgv = reservationDGV;
@@ -27,6 +34,7 @@ namespace PorkShopPOS
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            //validation
             if (reservationDGV.SelectedCells.Count < 6)
             {
                 MessageBox.Show("Try selecting the entire row before updating.");
@@ -40,7 +48,7 @@ namespace PorkShopPOS
                         MessageBox.Show("All attributes of a reservation are required to update.");
                     }
                 }
-
+                //fills the object
                 Reservation reservation = new Reservation();
                 reservation.ReservationID = Int32.Parse(reservationDGV.SelectedCells[0].Value.ToString());
                 reservation.TableNum = reservationDGV.SelectedCells[1].Value.ToString();
@@ -50,6 +58,7 @@ namespace PorkShopPOS
                 reservation.ReservationContact = reservationDGV.SelectedCells[5].Value.ToString();
                 reservation.Update();
 
+                //refreshes the list
                 MessageBox.Show("Updated record. Refreshing reservation list.");
                 this.Refresh();
             }
@@ -57,6 +66,7 @@ namespace PorkShopPOS
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            //validation
             if (reservationDGV.SelectedCells.Count < 6)
             {
                 MessageBox.Show("Try selecting the entire row before deleting.");
@@ -67,6 +77,7 @@ namespace PorkShopPOS
             }
             else
             {
+                //fills the object
                 Reservation reservation = new Reservation();
                 reservation.ReservationID = Int32.Parse(reservationDGV.SelectedCells[0].Value.ToString());
                 reservation.TableNum = reservationDGV.SelectedCells[1].Value.ToString();
@@ -76,6 +87,7 @@ namespace PorkShopPOS
                 reservation.ReservationContact = reservationDGV.SelectedCells[5].Value.ToString();
                 reservation.Delete();
 
+                //refreshes the form
                 MessageBox.Show("Deleted record. Refreshing reservation list.");
                 this.Refresh();
             }

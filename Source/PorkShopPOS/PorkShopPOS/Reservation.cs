@@ -1,4 +1,10 @@
-﻿using System;
+﻿/**
+ * User: Shane Arsenault
+ * Date: 2/15/2017
+ * Purpose: Reservation object for use in the POS and Back Office System
+ * **/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
