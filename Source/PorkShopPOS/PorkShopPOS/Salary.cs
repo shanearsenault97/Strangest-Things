@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Drawing;
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace PorkShopPOS
 {
@@ -85,10 +89,16 @@ namespace PorkShopPOS
             salData.getMostCurrentSal(this);
         }
 
-        // calls the salary list report
+        // calls the salary list report from the data object layer
         public void salaryList()
         { 
             salData.salaryList();
+        }
+
+        // calls the salary history report from the data object layer
+        public void salaryHistory(string empNum, DataGridView dgv)
+        {
+            salData.salaryHistory(empNum, dgv);
         }
     }
 }

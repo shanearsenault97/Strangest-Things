@@ -53,6 +53,7 @@
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "SalaryListReport";
             this.Text = "Salary List";
+            this.Load += new System.EventHandler(this.SalaryListReport_Load);
             this.ResumeLayout(false);
 
         }

@@ -315,11 +315,11 @@ INSERT into `tables` (tableNum, tableSeats) VALUES("TBL001", "4"),
 ("BTH006", "6");
 
 INSERT INTO employee
-VALUES ("B0002", "Bryan", "MacFarlane", "222 Street", "Bedeque", "PE", "c1n3d2", "9024445555", "111222333", "2017-01-01", "Active", "1111-11-11", "Bartender"),
-("M0001", "Heather", "Watterson", "222 Street", "Summerside", "PE", "c1n3d2", "9024445555", "111222333", "2017-01-01", "Active", "1111-11-11", "Owner"),
-("W0003", "Jonathan", "Deschene", "222 Street", "Summerside", "PE", "c1n3d2", "9024445555", "111222333", "2017-01-01", "Active", "1111-11-11", "Waiter"),
-("C0004", "Noah", "Gallant", "222 Street", "Summerside", "PE", "c1n3d2", "9024445555", "111222333", "2017-01-01", "Active", "1111-11-11", "Cook"),
-("W0005", "Shane", "Arsenault", "222 Street", "Summerside", "PE", "c1n3d2", "9024445555", "111222333", "2017-01-01", "Active", "1111-11-11", "Pit Boss");
+VALUES ("B00002", "Bryan", "MacFarlane", "222 Street", "Bedeque", "PE", "c1n3d2", "9024445555", "111222333", "2017-01-01", "Active", "1111-11-11", "Bartender"),
+("M00001", "Heather", "Watterson", "222 Street", "Summerside", "PE", "c1n3d2", "9024445555", "111222333", "2017-01-01", "Active", "1111-11-11", "Owner"),
+("W00003", "Jonathan", "Deschene", "222 Street", "Summerside", "PE", "c1n3d2", "9024445555", "111222333", "2017-01-01", "Active", "1111-11-11", "Waiter"),
+("C00004", "Noah", "Gallant", "222 Street", "Summerside", "PE", "c1n3d2", "9024445555", "111222333", "2017-01-01", "Active", "1111-11-11", "Cook"),
+("W00005", "Shane", "Arsenault", "222 Street", "Summerside", "PE", "c1n3d2", "9024445555", "111222333", "2017-01-01", "Active", "1111-11-11", "Pit Boss");
 
 INSERT INTO `timeClock`
 Values (1, "M00001","2017-01-01", "2:00", "11:50"), 

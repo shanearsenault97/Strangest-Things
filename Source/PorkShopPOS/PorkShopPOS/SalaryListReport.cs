@@ -22,5 +22,11 @@ namespace PorkShopPOS
             Salary sal = new Salary();
             sal.salaryList();
         }
+
+        private void SalaryListReport_Load(object sender, EventArgs e)
+        {
+            Salary sal = new Salary();
+            sal.salaryList();
+        }
     }
 }

@@ -22,6 +22,15 @@ namespace PorkShopPOS
             try
             {
 
+                string salEmpNum = BackOffice.salEmpNum;
+                Employee emp = new Employee();
+                emp.EmpNum = salEmpNum;
+                emp.Search();
+                nameLab.Text = emp.EmpFName + " " + emp.EmpLName;
+
+                Salary sal = new Salary();             
+                DataGridView dgv = salHistoryDGV;
+                sal.salaryHistory(salEmpNum, dgv);
             }
             catch (InvalidOperationException exc)
             {

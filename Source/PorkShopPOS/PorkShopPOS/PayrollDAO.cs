@@ -26,8 +26,8 @@ namespace PorkShopPOS
         private const string PAY_EMP_NUM = "empNum";
         private const string FROM_DATE = "payFrom";
         private const string TO_DATE = "payTo";
-        private const string HOURS = "payHours";
-        private const string AMOUNT = "payAmount";
+        private const string HOURS = "hours";
+        private const string AMOUNT = "amount";
 
 
         /* 

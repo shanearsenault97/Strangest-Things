@@ -81,7 +81,6 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.empPostalTB = new System.Windows.Forms.TextBox();
-            this.empProvinceTB = new System.Windows.Forms.TextBox();
             this.empCityTB = new System.Windows.Forms.TextBox();
             this.empAddressTB = new System.Windows.Forms.TextBox();
             this.empLNameTB = new System.Windows.Forms.TextBox();
@@ -110,6 +109,7 @@
             this.schAddB = new System.Windows.Forms.Button();
             this.label44 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.shiftHistoryB = new System.Windows.Forms.Button();
             this.schDeleteB = new System.Windows.Forms.Button();
             this.schSearchB = new System.Windows.Forms.Button();
             this.schToDateMTB = new System.Windows.Forms.MaskedTextBox();
@@ -119,6 +119,7 @@
             this.label39 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.salaryHistoryB = new System.Windows.Forms.Button();
             this.salaryReportB = new System.Windows.Forms.Button();
             this.salClearB = new System.Windows.Forms.Button();
             this.salDeleteB = new System.Windows.Forms.Button();
@@ -186,8 +187,7 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label31 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.salaryHistoryB = new System.Windows.Forms.Button();
-            this.shiftHistoryB = new System.Windows.Forms.Button();
+            this.empProvinceTB = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -574,6 +574,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.PowderBlue;
+            this.tabPage1.Controls.Add(this.empProvinceTB);
             this.tabPage1.Controls.Add(this.empShowAllB);
             this.tabPage1.Controls.Add(this.clearB);
             this.tabPage1.Controls.Add(this.empDeleteB);
@@ -587,7 +588,6 @@
             this.tabPage1.Controls.Add(this.label26);
             this.tabPage1.Controls.Add(this.label25);
             this.tabPage1.Controls.Add(this.empPostalTB);
-            this.tabPage1.Controls.Add(this.empProvinceTB);
             this.tabPage1.Controls.Add(this.empCityTB);
             this.tabPage1.Controls.Add(this.empAddressTB);
             this.tabPage1.Controls.Add(this.empLNameTB);
@@ -724,7 +724,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(145, 178);
+            this.label25.Location = new System.Drawing.Point(152, 178);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(55, 21);
             this.label25.TabIndex = 22;
@@ -736,13 +736,6 @@
             this.empPostalTB.Name = "empPostalTB";
             this.empPostalTB.Size = new System.Drawing.Size(57, 27);
             this.empPostalTB.TabIndex = 106;
-            // 
-            // empProvinceTB
-            // 
-            this.empProvinceTB.Location = new System.Drawing.Point(108, 175);
-            this.empProvinceTB.Name = "empProvinceTB";
-            this.empProvinceTB.Size = new System.Drawing.Size(34, 27);
-            this.empProvinceTB.TabIndex = 105;
             // 
             // empCityTB
             // 
@@ -840,7 +833,7 @@
             // 
             this.empStartDateDTP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.empStartDateDTP.Location = new System.Drawing.Point(361, 48);
-            this.empStartDateDTP.MinDate = new System.DateTime(2017, 1, 12, 0, 0, 0, 0);
+            this.empStartDateDTP.MinDate = new System.DateTime(2016, 12, 25, 0, 0, 0, 0);
             this.empStartDateDTP.Name = "empStartDateDTP";
             this.empStartDateDTP.Size = new System.Drawing.Size(145, 27);
             this.empStartDateDTP.TabIndex = 109;
@@ -1010,6 +1003,16 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Reports";
             // 
+            // shiftHistoryB
+            // 
+            this.shiftHistoryB.Location = new System.Drawing.Point(19, 53);
+            this.shiftHistoryB.Name = "shiftHistoryB";
+            this.shiftHistoryB.Size = new System.Drawing.Size(147, 30);
+            this.shiftHistoryB.TabIndex = 142;
+            this.shiftHistoryB.Text = "Shift History";
+            this.shiftHistoryB.UseVisualStyleBackColor = true;
+            this.shiftHistoryB.Click += new System.EventHandler(this.shiftHistoryB_Click);
+            // 
             // schDeleteB
             // 
             this.schDeleteB.Location = new System.Drawing.Point(315, 255);
@@ -1107,6 +1110,16 @@
             this.groupBox5.TabIndex = 142;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Salary Reports";
+            // 
+            // salaryHistoryB
+            // 
+            this.salaryHistoryB.Location = new System.Drawing.Point(16, 95);
+            this.salaryHistoryB.Name = "salaryHistoryB";
+            this.salaryHistoryB.Size = new System.Drawing.Size(147, 30);
+            this.salaryHistoryB.TabIndex = 142;
+            this.salaryHistoryB.Text = "Salary History";
+            this.salaryHistoryB.UseVisualStyleBackColor = true;
+            this.salaryHistoryB.Click += new System.EventHandler(this.salaryHistoryB_Click);
             // 
             // salaryReportB
             // 
@@ -1773,25 +1786,27 @@
             this.dateTimePicker3.TabIndex = 0;
             this.dateTimePicker3.Visible = false;
             // 
-            // salaryHistoryB
+            // empProvinceTB
             // 
-            this.salaryHistoryB.Location = new System.Drawing.Point(16, 95);
-            this.salaryHistoryB.Name = "salaryHistoryB";
-            this.salaryHistoryB.Size = new System.Drawing.Size(147, 30);
-            this.salaryHistoryB.TabIndex = 142;
-            this.salaryHistoryB.Text = "Salary History";
-            this.salaryHistoryB.UseVisualStyleBackColor = true;
-            this.salaryHistoryB.Click += new System.EventHandler(this.salaryHistoryB_Click);
-            // 
-            // shiftHistoryB
-            // 
-            this.shiftHistoryB.Location = new System.Drawing.Point(19, 53);
-            this.shiftHistoryB.Name = "shiftHistoryB";
-            this.shiftHistoryB.Size = new System.Drawing.Size(147, 30);
-            this.shiftHistoryB.TabIndex = 142;
-            this.shiftHistoryB.Text = "Shift History";
-            this.shiftHistoryB.UseVisualStyleBackColor = true;
-            this.shiftHistoryB.Click += new System.EventHandler(this.shiftHistoryB_Click);
+            this.empProvinceTB.FormattingEnabled = true;
+            this.empProvinceTB.Items.AddRange(new object[] {
+            "AB\t",
+            "BC",
+            "MB",
+            "NB",
+            "NL",
+            "NS",
+            "NT",
+            "NU",
+            "ON",
+            "PE",
+            "QC",
+            "SK",
+            "YT"});
+            this.empProvinceTB.Location = new System.Drawing.Point(108, 175);
+            this.empProvinceTB.Name = "empProvinceTB";
+            this.empProvinceTB.Size = new System.Drawing.Size(38, 27);
+            this.empProvinceTB.TabIndex = 120;
             // 
             // BackOffice
             // 
@@ -1905,7 +1920,6 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox empPostalTB;
-        private System.Windows.Forms.TextBox empProvinceTB;
         private System.Windows.Forms.TextBox empCityTB;
         private System.Windows.Forms.TextBox empAddressTB;
         private System.Windows.Forms.TextBox empLNameTB;
@@ -1955,7 +1969,6 @@
         private System.Windows.Forms.MaskedTextBox salToDateMTB;
         private System.Windows.Forms.MaskedTextBox salFromDateMTB;
         private System.Windows.Forms.TextBox salAmountTB;
-        private System.Windows.Forms.TextBox salEmpNumTB;
         private System.Windows.Forms.TextBox salNumTB;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
@@ -1999,5 +2012,7 @@
         private System.Windows.Forms.MaskedTextBox schShiftDateMTB;
         private System.Windows.Forms.Button salaryHistoryB;
         private System.Windows.Forms.Button shiftHistoryB;
+        private System.Windows.Forms.TextBox salEmpNumTB;
+        private System.Windows.Forms.ComboBox empProvinceTB;
     }
 }

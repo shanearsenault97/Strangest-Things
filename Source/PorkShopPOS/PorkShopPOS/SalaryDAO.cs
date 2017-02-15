@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using System.Data;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace PorkShopPOS
 {
@@ -13,7 +18,7 @@ namespace PorkShopPOS
     {
         // set up connection data
         private MySqlConnection conn;
-        private const string connectionStr = "server=localhost; database=pork_shop; user=pork_shop_admin; password=5tr&ng3rTh!ng$; Convert Zero Datetime=True; Allow Zero Datetime=True;";
+        private const string connectionStr = "server=localhost; database=pork_shop; user=pork_shop_admin; password=5tr&ng3rTh!ng$; Allow Zero Datetime=True;";
         private string strTable = "";
         private string strFields = "";
         private string strValues = "";
@@ -323,11 +328,7 @@ namespace PorkShopPOS
 
         }
 
-        // create the Salary History Report
-        public void salaryHistory()
-        { 
-            
-        }
+       
 
         // create the Salary List Report
         public void salaryList() 
@@ -343,7 +344,7 @@ namespace PorkShopPOS
             cmd = new MySql.Data.MySqlClient.MySqlCommand();
             myAdapter = new MySql.Data.MySqlClient.MySqlDataAdapter();
 
-            conn.ConnectionString = "server=localhost; database=pork_shop; user=pork_shop_admin; password=5tr&ng3rTh!ng$; Convert Zero Datetime=True; Allow Zero Datetime=True;";
+            conn.ConnectionString = "server=localhost; database=pork_shop; user=pork_shop_admin; password=5tr&ng3rTh!ng$; Allow Zero Datetime=True;";
 
 
             try
@@ -358,12 +359,60 @@ namespace PorkShopPOS
                 myAdapter.SelectCommand = cmd;
                 myAdapter.Fill(myData);
 
-                myData.WriteXml(@"C:\temp\dataset.xml", XmlWriteMode.WriteSchema);
+                // create a folder
+
+                string pathString = @"c:\CIS2261_PorkShop_Xml";
+
+                System.IO.Directory.CreateDirectory(pathString);
+
+                myData.WriteXml(@"C:\CIS2261_PorkShop_Xml\dataset.xml", XmlWriteMode.WriteSchema);
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
                 MessageBox.Show(ex.Message, "Report could not be created",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        // code borrowed from http://stackoverflow.com/questions/14020038/filling-a-datatable-in-c-sharp-using-mysql
+        public void salaryHistory(string empNum, DataGridView dgv)
+        {
+
+            DataTable dataTable;
+            MySqlConnection conn;
+            MySqlCommand cmd;
+            MySqlDataAdapter da;
+            dataTable = new DataTable();
+            dataTable.Clear();
+
+            string query = "SELECT * FROM salary WHERE " + SAL_EMP_NUM + " = '" + empNum + "' ORDER BY salaryNum DESC;";
+
+            try
+            {
+                conn = new MySqlConnection(connectionStr);
+                conn.Open();
+                cmd = new MySqlCommand
+                {
+                    Connection = conn,
+                    CommandText = query
+                };
+                cmd.ExecuteNonQuery();
+
+                da = new MySqlDataAdapter(cmd);
+                da.Fill(dataTable);
+
+                MySqlCommandBuilder cb = new MySqlCommandBuilder(da);
+
+                dgv.DataSource = dataTable;
+                dgv.DataMember = dataTable.TableName;
+                dgv.AutoResizeColumns();
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
