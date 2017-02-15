@@ -1258,37 +1258,47 @@ namespace PorkShopPOS
 
         //*************************************************TIME_CLOCK SECTION START****************************************************
         
-        
+        //creating instance of the Timeclock class
         TimeClock timeC;
 
-        
+        /* User: Bryan MacFarlane
+      * Date: 2017-02-05
+      * Time: 12:30 AM
+      * Purpose: user enters empNum, clicks clock in. saves empNum and saves current time to database
+      */
         private void timeClockInB_Click(object sender, EventArgs e)
         {
             try
             {
                 //MessageBox.Show("Successfully clocked in.");
                 timeC = new TimeClock();
-                //create DateTime variable that displays the correct format for date
-                DateTime dateOnly = new DateTime();
-                dateOnly = DateTime.Now;
-                string date = dateOnly.ToString("d");
-                //create DateTime variable that displays the correct format for time
-                DateTime timeOnly = new DateTime();
-                timeOnly = DateTime.Now;
-                string time = timeOnly.ToString("HH:mm");
+                if (String.IsNullOrEmpty(timeEmpNumTB.Text) | timeEmpNumTB.Text.Length < 6 | timeEmpNumTB.Text.Length > 6)
+                {
+                    MessageBox.Show("Employee number cannot be greater or less than than 6 characters.");
+                }
+                else
+                {
+                    //create DateTime variable that displays the correct format for date
+                    DateTime dateOnly = new DateTime();
+                    dateOnly = DateTime.Now;
+                    string date = dateOnly.ToString("d");
+                    //create DateTime variable that displays the correct format for time
+                    DateTime timeOnly = new DateTime();
+                    timeOnly = DateTime.Now;
+                    string time = timeOnly.ToString("HH:mm");
 
-                // assign back office menu input data to a new menu object
-                timeC.EmpNum = timeEmpNumTB.Text;
-                timeC.ShiftDate = Convert.ToDateTime(date);
-                timeC.ClockIn = Convert.ToDateTime(time);
-                timeC.ClockOut = Convert.ToDateTime(time);
-                // timeC.EmpHours = 0.0m;
+                    // assign back office menu input data to a new menu object
+                    timeC.EmpNum = timeEmpNumTB.Text;
+                    timeC.ShiftDate = Convert.ToDateTime(date);
+                    timeC.ClockIn = Convert.ToDateTime(time);
+                    timeC.ClockOut = Convert.ToDateTime(time);
+                    // timeC.EmpHours = 0.0m;
 
-                // call TimeClock add()
-                timeC.Add();
+                    // call TimeClock add()
+                    timeC.Add();
 
-                MessageBox.Show("Employee: " + timeEmpNumTB.Text + " successfully clocked in at: " + time);
-
+                    MessageBox.Show("Employee: " + timeEmpNumTB.Text + " successfully clocked in at: " + time);
+                }
             }
             catch (InvalidOperationException exc)
             {
@@ -1301,6 +1311,11 @@ namespace PorkShopPOS
             }
         }
 
+        /* User: Bryan MacFarlane
+      * Date: 2017-02-05
+      * Time: 12:30 AM
+      * Purpose: allow the user to clock out, saves current time and clocks out empNum
+      */
         private void timeClockOutB_Click(object sender, EventArgs e)
         {
             try
@@ -1308,26 +1323,31 @@ namespace PorkShopPOS
 
                 timeC = new TimeClock();
                 //create DateTime variable that displays the correct format for date
+                if (String.IsNullOrEmpty(timeEmpNumTB.Text) | timeEmpNumTB.Text.Length < 6 | timeEmpNumTB.Text.Length > 6)
+                {
+                    MessageBox.Show("Employee number cannot be greater or less than than 6 characters.");
+                }
+                else
+                {
+                    //DateTime dateOnly = new DateTime();
+                    //dateOnly = DateTime.Now;
+                    //string date = dateOnly.ToString("d");
 
-                //DateTime dateOnly = new DateTime();
-                //dateOnly = DateTime.Now;
-                //string date = dateOnly.ToString("d");
+                    //create DateTime variable that displays the correct format for time
+                    DateTime timeOnly = new DateTime();
+                    timeOnly = DateTime.Now;
+                    string time = timeOnly.ToString("HH:mm");
 
-                //create DateTime variable that displays the correct format for time
-                DateTime timeOnly = new DateTime();
-                timeOnly = DateTime.Now;
-                string time = timeOnly.ToString("HH:mm");
+                    // assign back office menu input data to a new menu object
+                    timeC.EmpNum = timeEmpNumTB.Text;
+                    //timeC.ShiftDate = Convert.ToDateTime(date);
+                    timeC.ClockOut = Convert.ToDateTime(time);
 
-                // assign back office menu input data to a new menu object
-                timeC.EmpNum = timeEmpNumTB.Text;
-                //timeC.ShiftDate = Convert.ToDateTime(date);
-                timeC.ClockOut = Convert.ToDateTime(time);
-
-                // call TimeClock update()
-                timeC.Update();
-                timeC.UpdateEmpHours();
-                MessageBox.Show("Employee: " + timeEmpNumTB.Text + " successfully clocked out at: " + time);
-
+                    // call TimeClock update()
+                    timeC.Update();
+                    //timeC.UpdateEmpHours();
+                    MessageBox.Show("Employee: " + timeEmpNumTB.Text + " successfully clocked out at: " + time);
+                }
             }
             catch (InvalidOperationException exc)
             {
@@ -1340,9 +1360,13 @@ namespace PorkShopPOS
             }
         }
 
+        /* User: Bryan MacFarlane
+      * Date: 2017-02-05
+      * Time: 12:30 AM
+      * Purpose: add a new shift to the database 
+      */
         
-        // add a new shift to the database
-        private void schAddB_Click(object sender, EventArgs e)
+       private void schAddB_Click(object sender, EventArgs e)
         {
             try
             {
@@ -1372,7 +1396,12 @@ namespace PorkShopPOS
             }
         }
 
-        // update time clock/shift information
+        /* User: Bryan MacFarlane
+      * Date: 2017-02-05
+      * Time: 12:30 AM
+      * Purpose: update timeclock/shift information 
+      */
+        
         private void schUpdateB_Click(object sender, EventArgs e)
         {
             try
@@ -1398,12 +1427,19 @@ namespace PorkShopPOS
             }
         }
 
-        // search for a time clock/shift based on employee number and shift date
+        /* User: Bryan MacFarlane
+      * Date: 2017-02-05
+      * Time: 12:30 AM
+      * Purpose: search for a timeclock/shift based on employee number and shift date 
+       */
+       
         private void schSearchB_Click(object sender, EventArgs e)
         {
             try
             {
+                 
                 TimeClock timeC = new TimeClock();
+                 
                 Console.WriteLine("1: got this far");
                 // search by empNum and shiftDate
                 //timeC.EmpNum = schEmpNumTB.Text;
@@ -1421,6 +1457,7 @@ namespace PorkShopPOS
                 schFromDateMTB.Text = timeC.FromDate.ToString();
                 schToDateMTB.Text = timeC.ToDate.ToString();
                 Console.WriteLine("4: got this far");
+            
             }
             catch (InvalidOperationException exc)
             {
@@ -1433,7 +1470,11 @@ namespace PorkShopPOS
             }
         }
 
-        // delete a time/cock shift based on time clock number
+        /* User: Bryan MacFarlane
+      * Date: 2017-02-05
+      * Time: 12:30 AM
+      * Purpose: delete a timeclock shift based on timeclock number
+      */
         private void schDeleteB_Click(object sender, EventArgs e)
         {
             try
@@ -1459,7 +1500,11 @@ namespace PorkShopPOS
             }
         }
 
-        // clear text box fields
+        /* User: Bryan MacFarlane
+      * Date: 2017-02-05
+      * Time: 12:30 AM
+      * Purpose: clear all data from boxes
+      */
         private void schClearB_Click(object sender, EventArgs e)
         {
             schTimeClockNumTB.Text = String.Empty;
@@ -1468,11 +1513,47 @@ namespace PorkShopPOS
             schFromDateMTB.Text = String.Empty;
             schToDateMTB.Text = String.Empty;
         }
+        
+        
+        //variables created to use in shifthistory
+        public static DateTime historyFromDate;
+        public static DateTime historyToDate;
 
-        // display shift history report
+          /* User: Bryan MacFarlane
+        * Date: 2017-02-05
+        * Time: 12:30 AM
+        * Purpose: display shift history report
+        */
         private void shiftHistoryB_Click(object sender, EventArgs e)
         {
-           
+            try
+            {
+                //validate to ensure that an appropriate employee number was entered
+                if (String.IsNullOrEmpty(historyFromDateMTB.Text) | String.IsNullOrEmpty(historyToDateMTB.Text))
+                {
+                    MessageBox.Show("Employee number cannot be greater or less than than 6 characters.");
+                }
+                else
+                {
+                    historyToDate = Convert.ToDateTime(historyFromDateMTB.Text);
+                    historyFromDate = Convert.ToDateTime(historyToDateMTB.Text);
+
+
+                    // open the form which will display the salary history report
+                    ScheduleHistory schHistory = new ScheduleHistory();
+                    schHistory.Show();
+                   
+                }
+            }
+            catch (InvalidOperationException exc)
+            {
+                Console.WriteLine(exc.ToString());
+            }
+
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+            }
         }
 
                     
@@ -1724,6 +1805,16 @@ namespace PorkShopPOS
         private void acctShowAllB_Click(object sender, EventArgs e)
         {            
             
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label55_Click(object sender, EventArgs e)
+        {
+
         }
 
         //*************************************************ACCOUNT SECTION END****************************************************

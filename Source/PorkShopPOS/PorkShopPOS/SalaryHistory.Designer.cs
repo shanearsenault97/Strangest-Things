@@ -29,35 +29,39 @@
         private void InitializeComponent()
         {
             this.salHistoryDGV = new System.Windows.Forms.DataGridView();
-            this.nameLab = new System.Windows.Forms.Label();
+            this.fromtoL = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.salHistoryDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // salHistoryDGV
             // 
             this.salHistoryDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.salHistoryDGV.Location = new System.Drawing.Point(12, 76);
+            this.salHistoryDGV.Location = new System.Drawing.Point(9, 62);
+            this.salHistoryDGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.salHistoryDGV.Name = "salHistoryDGV";
             this.salHistoryDGV.RowTemplate.Height = 24;
-            this.salHistoryDGV.Size = new System.Drawing.Size(575, 476);
+            this.salHistoryDGV.Size = new System.Drawing.Size(431, 387);
             this.salHistoryDGV.TabIndex = 0;
+            this.salHistoryDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.salHistoryDGV_CellContentClick);
             // 
-            // nameLab
+            // fromtoL
             // 
-            this.nameLab.AutoSize = true;
-            this.nameLab.Location = new System.Drawing.Point(235, 31);
-            this.nameLab.Name = "nameLab";
-            this.nameLab.Size = new System.Drawing.Size(46, 17);
-            this.nameLab.TabIndex = 1;
-            this.nameLab.Text = "label1";
+            this.fromtoL.AutoSize = true;
+            this.fromtoL.Location = new System.Drawing.Point(176, 25);
+            this.fromtoL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.fromtoL.Name = "fromtoL";
+            this.fromtoL.Size = new System.Drawing.Size(35, 13);
+            this.fromtoL.TabIndex = 1;
+            this.fromtoL.Text = "label1";
             // 
             // SalaryHistory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 564);
-            this.Controls.Add(this.nameLab);
+            this.ClientSize = new System.Drawing.Size(445, 458);
+            this.Controls.Add(this.fromtoL);
             this.Controls.Add(this.salHistoryDGV);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SalaryHistory";
             this.Text = "Salary History";
             this.Load += new System.EventHandler(this.SalaryHistory_Load);
@@ -70,6 +74,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView salHistoryDGV;
-        private System.Windows.Forms.Label nameLab;
+        private System.Windows.Forms.Label fromtoL;
     }
 }

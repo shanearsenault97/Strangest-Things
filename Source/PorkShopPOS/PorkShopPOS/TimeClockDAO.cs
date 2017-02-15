@@ -81,9 +81,9 @@ namespace PorkShopPOS
         }
 
         /* 
-        Function Name:    Delete(Employee emp)
+        Function Name:    Delete(TimeClock time)
         Version:          1
-        Author:           Jonathan Deschene
+        Author:           Bryan MacFarlane
         Description:      Deletes an employee entry from the database.
         Change History:   2017.30.01 Original version by JED 
         */
@@ -142,7 +142,7 @@ namespace PorkShopPOS
 
         }
 
-        public void UpdateEmpHours(TimeClock time)
+       /* public void UpdateEmpHours(TimeClock time)
         {
             try
             {
@@ -163,6 +163,36 @@ namespace PorkShopPOS
             }
 
         }
+        */
+        /* 
+      Function Name:    SearchDate(TimeClock time, DataGridView dgv)
+      Version:          1
+      Author:           Bryan MacFarlane
+      Description:      Searches the database for an entry based on an employee number
+      Change History:   2017.30.01 Original version by JED 
+      */
+        public void SearchDate(TimeClock time, DataGridView dgv)
+        {
+            try
+            {
+                // get the sql query to update an employee
+                String Str = BuildSearchDateQuery(time);
+                OpenConn();
+
+                MySqlCommand cmd = new MySqlCommand(Str, conn);
+
+                cmd.ExecuteNonQuery();
+
+                CloseConn();
+            }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception.Message: {0}", ex.Message);
+            }
+
+        }
+
 
         public List<string> LoadTimeClock(TimeClock time)
         {
@@ -256,7 +286,7 @@ namespace PorkShopPOS
         Description:      Provides sql query for updating clock out time in the database
         Change History:   2017.30.01 Original version by JED 
         */
-        //Trying to update emp hours during update query
+        
         private String BuildUpdateQuery(TimeClock time)
         {
             strTable = "Update " + thisTable;
@@ -277,10 +307,26 @@ namespace PorkShopPOS
        Change History:   2017.30.01 Original version by JED 
        */
 
-        private String BuildUpdateEmpHoursQuery(TimeClock time)
+      //  private String BuildUpdateEmpHoursQuery(TimeClock time)
+        //{
+          //  strTable = "Update " + thisTable;
+            //strFields = " SET empHours = clockOut - clockIn WHERE " + EMP_NUM + " = '" + time.EmpNum + "'";
+            //strTotal = strTable + strFields;
+
+          //  return strTotal;
+       // }
+
+        /* 
+      Function Name:    SearchDate(Employee emp)
+      Version:          1
+      Author:           Bryan MacFarlane
+      Description:      Searches the database for an entry based on an employee number
+      Change History:   2017.30.01 Original version by JED 
+      */
+        private String BuildSearchDateQuery(TimeClock time)
         {
-            strTable = "Update " + thisTable;
-            strFields = " SET empHours = clockOut - clockIn WHERE " + EMP_NUM + " = '" + time.EmpNum + "'";
+            strTable = "Select " + thisTable;
+            strFields = "Where shiftDate BETWEEN" + "'" + time.FromDate + "' AND " + "'" + time.ToDate + "'";
             strTotal = strTable + strFields;
 
             return strTotal;
@@ -289,7 +335,7 @@ namespace PorkShopPOS
         /* 
         Function Name:    Search(Employee emp)
         Version:          1
-        Author:           Jonathan Deschene
+        Author:           Bryan MacFarlane
         Description:      Searches the database for an entry based on an employee number
         Change History:   2017.30.01 Original version by JED 
         */

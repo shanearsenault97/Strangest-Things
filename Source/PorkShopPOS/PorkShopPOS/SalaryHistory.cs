@@ -26,7 +26,7 @@ namespace PorkShopPOS
                 Employee emp = new Employee();
                 emp.EmpNum = salEmpNum;
                 emp.Search();
-                nameLab.Text = emp.EmpFName + " " + emp.EmpLName;
+                fromtoL.Text = emp.EmpFName + " " + emp.EmpLName;
 
                 Salary sal = new Salary();             
                 DataGridView dgv = salHistoryDGV;
@@ -41,6 +41,11 @@ namespace PorkShopPOS
             {
                 MessageBox.Show(exception.Message);
             }
+
+        }
+
+        private void salHistoryDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

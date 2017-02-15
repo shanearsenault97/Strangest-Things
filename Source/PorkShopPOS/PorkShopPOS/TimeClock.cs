@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PorkShopPOS
 {
@@ -13,8 +14,8 @@ namespace PorkShopPOS
         private DateTime shiftDate;
         private DateTime clockIn;
         private DateTime clockOut;
-        private string fromDate;
-        private string toDate;
+        private DateTime fromDate;
+        private DateTime toDate;
         private decimal empHours;
 
 
@@ -64,12 +65,12 @@ namespace PorkShopPOS
             set { this.empHours = value; }
         }
 
-        public string FromDate
+        public DateTime FromDate
         {
             get { return this.fromDate; }
             set { this.fromDate = value; }
         }
-        public string ToDate
+        public DateTime ToDate
         {
             get { return this.toDate; }
             set { this.toDate = value; }
@@ -96,16 +97,24 @@ namespace PorkShopPOS
         }
         
         // calls the update EmpHours method from the data object layer
-        public void UpdateEmpHours()
+       
+        /* public void UpdateEmpHours()
         {
             tcData.UpdateEmpHours(this);
         }
-        
+        */
+
         // calls the search method from the data object layer
         public void Search()
         {
           tcData.Search(this);
         }
+        
+        public void SearchDates(DataGridView dgv)
+        {
+            tcData.SearchDate(this, dgv);
+        }
+
 
         public List<string> LoadEmployees()
         {

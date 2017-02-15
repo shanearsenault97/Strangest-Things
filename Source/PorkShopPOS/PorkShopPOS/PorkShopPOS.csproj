@@ -134,6 +134,12 @@
     <Compile Include="SalaryListReport.Designer.cs">
       <DependentUpon>SalaryListReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="ScheduleHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScheduleHistory.Designer.cs">
+      <DependentUpon>ScheduleHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="ShowAll.cs" />
     <Compile Include="ShowAllDAO.cs" />
     <Compile Include="Tables.cs" />
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SalaryListReport.resx">
       <DependentUpon>SalaryListReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScheduleHistory.resx">
+      <DependentUpon>ScheduleHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThePorkShopPOS.resx">
       <DependentUpon>ThePorkShopPOS.cs</DependentUpon>
