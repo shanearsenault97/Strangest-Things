@@ -142,6 +142,13 @@ namespace PorkShopPOS
 
         }
 
+        /* 
+        Function Name:    loadEmployees(Employee emp)
+        Version:          1
+        Author:           Noah Gallant
+        Description:      Retrieves all employees' first and last names
+        Change History:   2017.01.02 Original version
+        */
         public List<string> LoadEmployees(Employee emp) {
             List<string> employee = new List<string>();
 
@@ -336,7 +343,13 @@ namespace PorkShopPOS
 
         }
 
-        //Search the salespeople in the database with the salesperson name
+        /* 
+        Function Name:    loadEmployees(Employee emp)
+        Version:          1
+        Author:           Noah Gallant
+        Description:      Get an employee ID based on first and last name
+        Change History:   2017.01.02 Original version
+        */
         public void SearchByName(Employee emp) {
             String Str = BuildSearchByNameQuery(emp);
 
@@ -360,7 +373,7 @@ namespace PorkShopPOS
                 MessageBox.Show("Connection to the database has failed.", "Database Connection Error");
             }
         }
-
+        //Builds the query for the LoadEmployees method
         private String BuildLoadEmployeesQuery(Employee emp) {
             // create sql 
             strTable = "Select * from " + thisTable + ";";
@@ -372,6 +385,7 @@ namespace PorkShopPOS
 
         //Builds the query for the SearchByName method
         private String BuildSearchByNameQuery(Employee emp) {
+            //create sql
             strTable = "Select * from " + thisTable;
             strFields = " where " + EMP_F_NAME + " = '" + emp.EmpFName + "' AND " + EMP_L_NAME + " = '" + emp.EmpLName + "'";
 
