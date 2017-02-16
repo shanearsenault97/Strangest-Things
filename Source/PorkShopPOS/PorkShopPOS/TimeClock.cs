@@ -19,22 +19,30 @@ namespace PorkShopPOS
         private decimal empHours;
 
 
-        // instantiate a corresponding BooksBusiness data access object
+        // instantiate a corresponding TimeClockDAO data access object
         TimeClockDAO tcData;
 
-        // this constructor ensures that a corresponding data access object is created for every BooksBusiness object
+        /* User: Bryan MacFarlane
+      * Date: 2017-02-05
+      * Time: 12:30 AM
+      * Purpose: TimeClock class
+        */
         public TimeClock()
         {
             tcData = new TimeClockDAO();
         }
 
-        // 6 getter and setter methods are included below to return and set object fields
+        /* User: Bryan MacFarlane
+      * Date: 2017-02-05
+      * Time: 12:30 AM
+      * Purpose: 8 getter and setter methods are included below to return and set object fields
+        */
         public int TimeClockNum
         {
             get { return this.timeClockNum; }
             set { this.timeClockNum = value; }
         }
-        
+
         public string EmpNum
         {
             get { return this.empNum; }
@@ -75,56 +83,64 @@ namespace PorkShopPOS
             get { return this.toDate; }
             set { this.toDate = value; }
         }
-       
 
+        /* User: Bryan MacFarlane
+      * Date: 2017-02-05
+      * Time: 12:30 AM
+      * Purpose: calls the add method from the data object layer
+        */
 
-        // calls the add method from the data object layer
         public void Add()
         {
             tcData.Add(this);
         }
-
-        // calls the delete method from the data object layer
+        /* User: Bryan MacFarlane
+      * Date: 2017-02-05
+      * Time: 12:30 AM
+      * Purpose: calls the delete method from the data object layer
+        */
         public void Delete()
         {
             tcData.Delete(this);
         }
+        /* User: Bryan MacFarlane
+      * Date: 2017-02-05
+      * Time: 12:30 AM
+      * Purpose: calls the update method from the data object layer
+      */
 
-        // calls the update method from the data object layer
         public void Update()
         {
             tcData.Update(this);
         }
-        
+
         // calls the update EmpHours method from the data object layer
-       
+
         /* public void UpdateEmpHours()
         {
             tcData.UpdateEmpHours(this);
         }
+         
         */
-
-        // calls the search method from the data object layer
+        /* User: Bryan MacFarlane
+      * Date: 2017-02-05
+      * Time: 12:30 AM
+      * Purpose: calls the search method from the data object layer
+      */
         public void Search()
         {
-          tcData.Search(this);
+            tcData.Search(this);
         }
-        
-        public void SearchDates(DataGridView dgv)
+        /* User: Bryan MacFarlane
+      * Date: 2017-02-05
+      * Time: 12:30 AM
+      * Purpose: calls the search dates method from the data object layer
+      */
+        public void SearchDateHistory(DateTime fromDate, DateTime toDate, DataGridView dgv)
         {
-            tcData.SearchDate(this, dgv);
+            tcData.SearchDateHistory(fromDate, toDate, dgv);
+
+
         }
-
-
-        public List<string> LoadEmployees()
-        {
-            List<string> lEmployees = new List<string>();
-
-            //  lEmployees = tcData.LoadEmployees(this);
-
-            return lEmployees;
-        }
-
     }
-    
 }

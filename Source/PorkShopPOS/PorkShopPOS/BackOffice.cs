@@ -1512,6 +1512,8 @@ namespace PorkShopPOS
             schShiftDateMTB.Text = String.Empty;
             schFromDateMTB.Text = String.Empty;
             schToDateMTB.Text = String.Empty;
+            historyFromDateMTB.Text = String.Empty;
+            historyToDateMTB.Text = String.Empty;
         }
         
         

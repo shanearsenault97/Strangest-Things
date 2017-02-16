@@ -101,6 +101,10 @@
             this.empUpdateB = new System.Windows.Forms.Button();
             this.empAddB = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label56 = new System.Windows.Forms.Label();
+            this.Date = new System.Windows.Forms.Label();
+            this.historyToDateMTB = new System.Windows.Forms.MaskedTextBox();
+            this.historyFromDateMTB = new System.Windows.Forms.MaskedTextBox();
             this.schShiftDateMTB = new System.Windows.Forms.MaskedTextBox();
             this.label50 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -203,10 +207,6 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label31 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.historyFromDateMTB = new System.Windows.Forms.MaskedTextBox();
-            this.historyToDateMTB = new System.Windows.Forms.MaskedTextBox();
-            this.Date = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -969,6 +969,41 @@
             this.tabPage2.Size = new System.Drawing.Size(519, 348);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Schedule";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(312, 203);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(53, 16);
+            this.label56.TabIndex = 183;
+            this.label56.Text = "To Date";
+            // 
+            // Date
+            // 
+            this.Date.AutoSize = true;
+            this.Date.Location = new System.Drawing.Point(301, 175);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(68, 16);
+            this.Date.TabIndex = 182;
+            this.Date.Text = "From Date";
+            this.Date.Click += new System.EventHandler(this.label55_Click);
+            // 
+            // historyToDateMTB
+            // 
+            this.historyToDateMTB.Location = new System.Drawing.Point(375, 170);
+            this.historyToDateMTB.Mask = "0000-00-00";
+            this.historyToDateMTB.Name = "historyToDateMTB";
+            this.historyToDateMTB.Size = new System.Drawing.Size(100, 23);
+            this.historyToDateMTB.TabIndex = 181;
+            // 
+            // historyFromDateMTB
+            // 
+            this.historyFromDateMTB.Location = new System.Drawing.Point(375, 198);
+            this.historyFromDateMTB.Mask = "0000-00-00";
+            this.historyFromDateMTB.Name = "historyFromDateMTB";
+            this.historyFromDateMTB.Size = new System.Drawing.Size(100, 23);
+            this.historyFromDateMTB.TabIndex = 180;
             // 
             // schShiftDateMTB
             // 
@@ -1987,41 +2022,6 @@
             this.dateTimePicker3.Size = new System.Drawing.Size(229, 23);
             this.dateTimePicker3.TabIndex = 0;
             this.dateTimePicker3.Visible = false;
-            // 
-            // historyFromDateMTB
-            // 
-            this.historyFromDateMTB.Location = new System.Drawing.Point(375, 164);
-            this.historyFromDateMTB.Mask = "0000-00-00";
-            this.historyFromDateMTB.Name = "historyFromDateMTB";
-            this.historyFromDateMTB.Size = new System.Drawing.Size(100, 23);
-            this.historyFromDateMTB.TabIndex = 180;
-            // 
-            // historyToDateMTB
-            // 
-            this.historyToDateMTB.Location = new System.Drawing.Point(375, 193);
-            this.historyToDateMTB.Mask = "0000-00-00";
-            this.historyToDateMTB.Name = "historyToDateMTB";
-            this.historyToDateMTB.Size = new System.Drawing.Size(100, 23);
-            this.historyToDateMTB.TabIndex = 181;
-            // 
-            // Date
-            // 
-            this.Date.AutoSize = true;
-            this.Date.Location = new System.Drawing.Point(301, 167);
-            this.Date.Name = "Date";
-            this.Date.Size = new System.Drawing.Size(68, 16);
-            this.Date.TabIndex = 182;
-            this.Date.Text = "From Date";
-            this.Date.Click += new System.EventHandler(this.label55_Click);
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(316, 196);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(53, 16);
-            this.label56.TabIndex = 183;
-            this.label56.Text = "To Date";
             // 
             // BackOffice
             // 

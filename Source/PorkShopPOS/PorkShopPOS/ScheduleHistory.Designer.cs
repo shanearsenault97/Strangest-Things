@@ -41,6 +41,7 @@
             this.schHistoryDGV.RowTemplate.Height = 24;
             this.schHistoryDGV.Size = new System.Drawing.Size(431, 387);
             this.schHistoryDGV.TabIndex = 1;
+            this.schHistoryDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.schHistoryDGV_CellContentClick);
             // 
             // ScheduleHistory
             // 
