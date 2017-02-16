@@ -1,4 +1,13 @@
-﻿using System;
+﻿/* User: Jonathan Deschene
+* Date: 2017-01-20
+* Time: 2:45 PM
+* Purpose: contains a method that sets up the database for this application
+*         the database requires phpMyAdmin running on an apache server
+ *        this functionality would be removed in the production version
+*/
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +19,13 @@ namespace PorkShopPOS
 {
     class DatabaseCreation
     {
+
+        /* User: Jonathan Deschene
+        * Date: 2017-01-20
+        * Time: 2:45 PM
+        * Purpose: method that sets up the database for this application, called in the Welcome UI
+        *        
+        */
         public void createDatabase() 
         {
         try

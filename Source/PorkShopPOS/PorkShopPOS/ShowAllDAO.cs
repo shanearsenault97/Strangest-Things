@@ -1,4 +1,10 @@
-﻿using System;
+﻿/* User: Jonathan Deschene
+* Date: 2017-01-20
+* Time: 2:45 PM
+* Purpose: Data layer class for ShowAll object
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,6 +31,12 @@ namespace PorkShopPOS
         string menuQuery = "SELECT * FROM food;";
         string reservationQuery = "SELECT * FROM reservation;";
 
+        /* User: Jonathan Deschene
+        * Date: 2017-01-20
+        * Time: 2:45 PM
+        * Purpose: the ShowAll basic method which provides access to the database, dumping the data into a datagrid 
+        */
+
         // code borrowed from http://stackoverflow.com/questions/14020038/filling-a-datatable-in-c-sharp-using-mysql
         public void showAll(string query, DataGridView dgv)
         {
@@ -42,6 +54,7 @@ namespace PorkShopPOS
                 };
                 cmd.ExecuteNonQuery();
 
+                // send data to datagrid
                 da = new MySqlDataAdapter(cmd);
                 da.Fill(dataTable);
 
@@ -59,26 +72,19 @@ namespace PorkShopPOS
             }
         }
 
+        // get all data from Employee table
         public void showAllEmployees(DataGridView dgv)
         {
             showAll(empQuery, dgv);
         }
 
-        public void showAllSalaries(DataGridView dgv)
-        {
-            showAll(salQuery, dgv);
-        }
-
-        public void showAllPayrolls(DataGridView dgv)
-        {
-            showAll(payQuery, dgv);
-        }
-
+        // get all data from MenuUpdate table
         public void showAllMenuItems(DataGridView dgv)
         {
             showAll(menuQuery, dgv);
         }
 
+        // get all data from Reservations table
         public void showAllReservations(DataGridView dgv)
         {
             showAll(reservationQuery, dgv);

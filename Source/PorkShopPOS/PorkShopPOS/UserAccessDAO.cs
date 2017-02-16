@@ -1,4 +1,10 @@
-﻿using MySql.Data.MySqlClient;
+﻿/* User: Heather Watterson, Jonathan Deschene
+* Date: 2017-01-20
+* Time: 2:45 PM
+* Purpose: Data layer for the UserAcess object
+*/
+
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -72,7 +78,6 @@ namespace PorkShopPOS
         Version:          1
         Author:           Heather Watterson
         Description:      Retrieves the entry from the database based on employee number
-        Change History:   2017.01.02 Original version by JED 
         */
         public void Login(UserAccess login)
         {
@@ -116,7 +121,11 @@ namespace PorkShopPOS
 
         }
 
-
+        /* User: Heather Watterson
+        * Date: 2017-01-20
+        * Time: 2:45 PM
+        * Purpose: Adds a UserAccess object to the database
+        */
         public void Add(UserAccess login)
         {
             try
@@ -140,11 +149,10 @@ namespace PorkShopPOS
         }
                
         /* 
-        Function Name:    Delete(Payroll pay)
+        Function Name:    Delete(UserAccess access)
         Version:          1
         Author:           Jonathan Deschene
-        Description:      Deletes a payroll entry from the database.
-        Change History:   2017.30.01 Original version by JED 
+        Description:      Deletes a UserAccess entry from the database.
         */
         public void Delete(UserAccess access)
         {
@@ -168,10 +176,10 @@ namespace PorkShopPOS
         }
 
         /* 
-        Function Name:    Update(Payroll pay)
+        Function Name:    Update(UserAccess access)
         Version:          1
         Author:           Jonathan Deschene
-        Description:      Updates a payroll entry in the database.
+        Description:      Updates a UserAccess entry in the database.
         Change History:   2017.30.01 Original version by JED 
         */
         public void Update(UserAccess access)
@@ -201,7 +209,7 @@ namespace PorkShopPOS
        Function Name:    BuildAddQuery(UserAccess login)
        Version:          1
        Author:           Jonathan Deschene
-       Description:      Provides sql query for adding an enployee to the database
+       Description:      Provides sql query for adding UserAccess object to the database
        Change History:   2017.30.01 Original version by JED 
        */
         private String BuildAddQuery(UserAccess login)
@@ -222,10 +230,10 @@ namespace PorkShopPOS
         }
 
         /* 
-        Function Name:    BuildDeleteQuery(Payroll pay)
+        Function Name:    BuildDeleteQuery(UserAccess access)
         Version:          1
         Author:           Jonathan Deschene
-        Description:      Provides sql query for deleting a payroll from the database
+        Description:      Provides sql query for deleting a UserAccess object from the database
         Change History:   2017.30.01  Original version by JED 
         */
         private String BuildDeleteQuery(UserAccess access)
@@ -240,10 +248,10 @@ namespace PorkShopPOS
         }
 
         /* 
-        Function Name:    BuildUpdateQuery(Payroll pay)
+        Function Name:    BuildUpdateQuery(UserAccess access)
         Version:          1
         Author:           Jonathan Deschene
-        Description:      Provides sql query for updating an payroll in the database
+        Description:      Provides sql query for updating a UserAccess object in the database
         Change History:   2017.30.01 Original version by JED 
         */
         private String BuildUpdateQuery(UserAccess access)
@@ -260,7 +268,7 @@ namespace PorkShopPOS
         }
 
         /* 
-        Function Name:    Search(Payroll pay)
+        Function Name:    Search(UserAccess access)
         Version:          1
         Author:           Jonathan Deschene
         Description:      Searches the database for an entry based on a payroll number
@@ -308,6 +316,11 @@ namespace PorkShopPOS
 
         }
 
+        /* User: Jonathan Deschene
+        * Date: 2017-01-20
+        * Time: 2:45 PM
+        * Purpose: Display all UserAccess data in a datagrid 
+        */
         // code borrowed from http://stackoverflow.com/questions/14020038/filling-a-datatable-in-c-sharp-using-mysql
         public void showAllUserAccess(DataGridView dgv)
         {

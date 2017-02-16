@@ -1,4 +1,10 @@
-﻿using System;
+﻿/* User: Jonathan Deschene
+* Date: 2017-01-20
+* Time: 2:45 PM
+* Purpose: Business layer class for Payroll object
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,7 +43,11 @@ namespace PorkShopPOS
             payData = new PayrollDAO();
         }
 
-        // calculate deductions, vacation pay and net pay
+        /* User: Jonathan Deschene
+        * Date: 2017-01-20
+        * Time: 2:45 PM
+        * Purpose: Calculate deductions, vacation pay and net pay
+        */
         public void calcPayDetails() 
         {
             try
@@ -64,13 +74,19 @@ namespace PorkShopPOS
             
         }
 
-        // get most current salary that shares the Payroll empNum
+        /* User: Jonathan Deschene
+        * Date: 2017-01-20
+        * Time: 2:45 PM
+        * Purpose: get the most current salary that shares the Payroll empNum
+        */
         public void getSalary()
         {
             try
             {
                 aSalary = new Salary();
                 aSalary.EmpNum = this.empNum;
+              
+                // a salary that has a toDate other than 0000-00-00 should not be current
                 aSalary.ToDate = "0000-00-00";
 
                 aSalary.getMostCurrentSal();

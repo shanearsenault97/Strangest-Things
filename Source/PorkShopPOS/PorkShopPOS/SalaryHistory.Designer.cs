@@ -42,7 +42,6 @@
             this.salHistoryDGV.RowTemplate.Height = 24;
             this.salHistoryDGV.Size = new System.Drawing.Size(431, 387);
             this.salHistoryDGV.TabIndex = 0;
-            this.salHistoryDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.salHistoryDGV_CellContentClick);
             // 
             // fromtoL
             // 

@@ -1,4 +1,10 @@
-﻿using System;
+﻿/* User: Heather Watterson, Jonathan Deschene
+* Date: 2017-01-20
+* Time: 2:45 PM
+* Purpose: User authentication/login page that grants access to the applicaton based on permission level linked to employee #
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,7 +28,11 @@ namespace PorkShopPOS
         // used to hold the user permission type which can then be accessed from the BackOffice 
         public static int accessLevel;
 
-        //validate a user using employee number and password from the database and allow them to access the POS screen
+        /* User: Heather Watterson, Jonathan Deschene
+        * Date: 2017-01-20
+        * Time: 2:45 PM
+        * Purpose: validate a user using employee number and password from the database and allow them to access the POS screen
+        */
         private void porkShopPOSButton_Click_1(object sender, EventArgs e)
         {
             try
@@ -66,9 +76,12 @@ namespace PorkShopPOS
             }
         }
 
-        
 
-        //validate a user using employee number and password from the database and allow them to access the Back Office screen
+        /* User: Heather Watterson, Jonathan Deschene
+       * Date: 2017-01-20
+       * Time: 2:45 PM
+       * Purpose: //validate a user using employee number and password from the database and allow them to access the Back Office screen
+       */
         private void porkShopOfficeButton_Click(object sender, EventArgs e)
         {
             try

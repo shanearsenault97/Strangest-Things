@@ -1,4 +1,10 @@
-﻿using System;
+﻿/* User: Heather Watterson and Jonathan Deschene
+* Date: 2017-01-20
+* Time: 2:45 PM
+* Purpose: Business layer class for UserAccess object
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

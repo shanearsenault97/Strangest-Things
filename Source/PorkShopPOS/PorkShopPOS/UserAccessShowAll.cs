@@ -1,4 +1,10 @@
-﻿using System;
+﻿/* User: Jonathan Deschene
+* Date: 2017-01-20
+* Time: 2:45 PM
+* Purpose: Form that displays all UserAccess data in a datagrid
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +23,11 @@ namespace PorkShopPOS
             InitializeComponent();
         }
 
+        /* User: Jonathan Deschene
+        * Date: 2017-01-20
+        * Time: 2:45 PM
+        * Purpose: display all UserAccess data in a datagrid
+        */
         private void UserAccessShowAll_Load(object sender, EventArgs e)
         {
             try
