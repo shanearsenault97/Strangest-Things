@@ -37,6 +37,7 @@
             this.empNumTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.MaskedTextBox();
             this.btnClose = new System.Windows.Forms.Button();
+            this.createDatabase = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -121,12 +122,25 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // createDatabase
+            // 
+            this.createDatabase.BackColor = System.Drawing.Color.Crimson;
+            this.createDatabase.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.createDatabase.Location = new System.Drawing.Point(450, 12);
+            this.createDatabase.Name = "createDatabase";
+            this.createDatabase.Size = new System.Drawing.Size(84, 60);
+            this.createDatabase.TabIndex = 6;
+            this.createDatabase.Text = "Click to Create Database";
+            this.createDatabase.UseVisualStyleBackColor = false;
+            this.createDatabase.Click += new System.EventHandler(this.createDatabase_Click);
+            // 
             // Welcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(537, 398);
+            this.Controls.Add(this.createDatabase);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.empNumTextBox);
@@ -156,5 +170,6 @@
         private System.Windows.Forms.TextBox empNumTextBox;
         private System.Windows.Forms.MaskedTextBox passwordTextBox;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button createDatabase;
     }
 }

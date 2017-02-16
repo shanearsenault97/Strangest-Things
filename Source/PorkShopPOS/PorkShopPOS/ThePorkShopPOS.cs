@@ -107,18 +107,24 @@ namespace PorkShopPOS {
         }
 
 
-        // close the pos UI and load the back office UI
+        /* User: Jonathan Deschene
+        * Date: 2017-01-20
+        * Time: 2:45 PM
+        * Purpose: open the back office UI close the POS  UI 
+        */
         private void btnBackOffice_Click(object sender, EventArgs e) {
             this.Close();
             BackOffice officeUI = new BackOffice();
             officeUI.Show();
         }
 
-        // close the pos UI and load the login UI
+        /* User: Jonathan Deschene
+        * Date: 2017-01-20
+        * Time: 2:45 PM
+        * Purpose: close the boack office UI 
+        */
         private void btnLogout_Click(object sender, EventArgs e) {
-            this.Close();
-            Welcome welcomeUI = new Welcome();
-            welcomeUI.Show();
+            this.Close();          
         }
 
         //handles garlic soup being ordered

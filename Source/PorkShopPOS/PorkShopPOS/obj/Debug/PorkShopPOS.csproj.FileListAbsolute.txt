@@ -133,3 +133,5 @@ C:\Bitbucket\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopP
 C:\Bitbucket\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.frmReservationShowAll.resources
 C:\Bitbucket\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.SalaryListReport.resources
 C:\Bitbucket\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.ScheduleHistory.resources
+C:\Users\Jon\Documents\CIS\Final Project\GIT\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.ScheduleHistory.resources
+C:\Users\Jon\Documents\CIS\Final Project\GIT\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.UserAccessShowAll.resources

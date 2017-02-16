@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
 
 namespace PorkShopPOS
 {
@@ -305,6 +306,46 @@ namespace PorkShopPOS
                 MessageBox.Show(exception.Message);
             }
 
+        }
+
+        // code borrowed from http://stackoverflow.com/questions/14020038/filling-a-datatable-in-c-sharp-using-mysql
+        public void showAllUserAccess(DataGridView dgv)
+        {
+
+            DataTable dataTable;
+            MySqlCommand cmd;
+            MySqlDataAdapter da;
+            dataTable = new DataTable();
+            dataTable.Clear();
+
+            string query = "SELECT * FROM " + thisTable + ";";
+
+            try
+            {
+                conn = new MySqlConnection(connectionStr);
+                conn.Open();
+                cmd = new MySqlCommand
+                {
+                    Connection = conn,
+                    CommandText = query
+                };
+                cmd.ExecuteNonQuery();
+
+                da = new MySqlDataAdapter(cmd);
+                da.Fill(dataTable);
+
+                MySqlCommandBuilder cb = new MySqlCommandBuilder(da);
+
+                dgv.DataSource = dataTable;
+                dgv.DataMember = dataTable.TableName;
+                dgv.AutoResizeColumns();
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
     }
