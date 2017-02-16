@@ -134,10 +134,12 @@ namespace PorkShopPOS
             empData.Search(this);
         }
 
+        //Calls the SearchByName method from the data object layer
         public void SearchByName() {
             empData.SearchByName(this);
         }
 
+        //Calls the LoadEmployees method from the data object layer
         public List<string> LoadEmployees() {
             List<string> lEmployees = new List<string>();
 

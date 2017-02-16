@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+ * User: Noah Gallant
+ * Date: 2/16/2017
+ * Time: 6:05 PM
+ * Purpose: The purpose of this class is to access the line table from the DB
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -43,6 +50,7 @@ namespace PorkShopPOS {
             }
         }
 
+        //Adds a line
         public void Add(Line line) {
             try {
                 // get sql query to add an order 
@@ -60,6 +68,7 @@ namespace PorkShopPOS {
 
         }
 
+        //Builds the query for the Add method
         private String BuildAddQuery(Line line) {
             strTable = "Insert into " + thisTable;
             strFields = " (" + ORDER_NUM +

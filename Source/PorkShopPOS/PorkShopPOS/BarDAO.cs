@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+ * User: Noah Gallant
+ * Date: 2/16/2017
+ * Time: 6:05 PM
+ * Purpose: The purpose of this class is to access the bar table from the DB
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -42,7 +49,7 @@ namespace PorkShopPOS {
             }
         }
 
-        //Search the salespeople in the database with the salesperson name
+        //Search for bar information
         public void Search(Bar bar) {
             String Str = BuildSearchQuery(bar);
 

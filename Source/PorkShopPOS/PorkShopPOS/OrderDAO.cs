@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+ * User: Noah Gallant
+ * Date: 2/16/2017
+ * Time: 6:05 PM
+ * Purpose: The purpose of this class is to access the order table from the DB
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -45,6 +52,7 @@ namespace PorkShopPOS {
             }
         }
 
+        //Adds an order
         public void Add(Order order) {
             try {
                 // get sql query to add an order 
@@ -62,6 +70,7 @@ namespace PorkShopPOS {
 
         }
 
+        //Searches for order information
         public void Search(Order order) {
             String Str = BuildSearchQuery(order);
 
@@ -86,6 +95,7 @@ namespace PorkShopPOS {
             }
         }
 
+        //Builds the query for the Add method
         private String BuildAddQuery(Order order) {
             strTable = "Insert into " + thisTable;
             strFields = " (" + ORDER_NUM +
@@ -110,6 +120,7 @@ namespace PorkShopPOS {
             return strTotal;
         }
 
+        //Builds the query for the Search method
         private String BuildSearchQuery(Order order) {
             strTable = "Select * from " + thisTable;
             strFields = " where " + ORDER_DATE + " = '" + order.OrderDate + "' AND " + ORDER_TIME + " = '" + order.OrderTime + "' AND " + ORDER_TOTAL + " = '" + order.OrderTotal + "'";

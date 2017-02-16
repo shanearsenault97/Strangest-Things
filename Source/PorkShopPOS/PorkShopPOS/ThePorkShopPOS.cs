@@ -55,13 +55,7 @@ namespace PorkShopPOS {
             InitializeComponent();
         }
 
-        /* 
-        Function Name:    ThePorkShopPOS_Load()
-        Version:          1
-        Author:           Noah Gallant
-        Description:      Prepopulates information when the window loads
-        Change History:   2017.01.02 Original version
-        */
+        //Prepopulates information when the form loads
         private void ThePorkShopPOS_Load(object sender, EventArgs e) {
             //Set mix combobox defaults
             cmbMix.Text = "None";
@@ -356,16 +350,7 @@ namespace PorkShopPOS {
             }
         }
 
-        /* 
-        Function Name:    btnSubmitOrder_Click()
-        Version:          1
-        Author:           Noah Gallant
-        Description:      Handles the submitting of an order
-        Change History:   2017.04.02 Original version
-                          2017.07.02 Mostly finished
-                          2017.12.02 Slightly modified for print bill functionality
-                          and added happy hour functionality
-        */
+        //Handles the submitting of an order
         private void btnSubmitOrder_Click(object sender, EventArgs e) {
             if (orderSubmitted) {
                 //Shows message if previous order's bill hasn't been payed
@@ -546,13 +531,7 @@ namespace PorkShopPOS {
             resShowAll.Show();
         }
 
-        /* 
-        Function Name:    btnPrintBill_Click()
-        Version:          1
-        Author:           Noah Gallant
-        Description:      Handles the printing of a customer's bill
-        Change History:   2017.12.02 Original version
-        */
+        //Handles the printing of a customer's bill
         private void btnPrintBill_Click(object sender, EventArgs e) {
             //Makes sure the order has already been submitted
             if (orderSubmitted) {
@@ -590,13 +569,8 @@ namespace PorkShopPOS {
                 billReport.Show();
             }
         }
-        /* 
-        Function Name:    btnSubmitOrder_Click()
-        Version:          1
-        Author:           Noah Gallant
-        Description:      Clears all controls and variables when clicked
-        Change History:   2017.12.02 Original version
-        */
+
+        //Clears all controls and variables when clicked
         private void btnPayBill_Click(object sender, EventArgs e) {
             if (billPrinted) {
                 Employee = null;

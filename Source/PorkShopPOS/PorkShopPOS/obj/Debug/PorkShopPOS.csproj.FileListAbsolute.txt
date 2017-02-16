@@ -45,8 +45,6 @@ E:\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\bin\Debug\Po
 E:\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.csprojResolveAssemblyReference.cache
 E:\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.BackOffice.resources
 E:\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.EmployeeShowAllForm.resources
-E:\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.PayrollShowAll.resources
-E:\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.SalaryShowAll.resources
 E:\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.ThePorkShopPOS.resources
 E:\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.Properties.Resources.resources
 E:\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.Welcome.resources
@@ -102,7 +100,6 @@ E:\Documents\repositories\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\De
 E:\Documents\repositories\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.csproj.GenerateResource.Cache
 E:\Documents\repositories\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.frmReservationShowAll.resources
 E:\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.PayStub.resources
-E:\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.SalaryHistoryReport.resources
 E:\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.frmReservationShowAll.resources
 E:\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.BillReport.resources
 C:\Users\Jon\Documents\CIS\Final Project\GIT\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.csprojResolveAssemblyReference.cache
@@ -133,3 +130,6 @@ C:\Bitbucket\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopP
 C:\Bitbucket\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.frmReservationShowAll.resources
 C:\Bitbucket\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.SalaryListReport.resources
 C:\Bitbucket\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.ScheduleHistory.resources
+E:\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.SalaryHistory.resources
+E:\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.SalaryListReport.resources
+E:\Documents\Github\Strangest-Things\Source\PorkShopPOS\PorkShopPOS\obj\Debug\PorkShopPOS.ScheduleHistory.resources

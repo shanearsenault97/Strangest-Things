@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+ * User: Noah Gallant
+ * Date: 2/16/2017
+ * Time: 6:05 PM
+ * Purpose: The purpose of this class is to store food information
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,6 +45,7 @@ namespace PorkShopPOS {
             foodData = new FoodDAO();
         }
 
+        //Calls the Search method from the data object layer
         public void Search() {
             foodData.Search(this);
         }

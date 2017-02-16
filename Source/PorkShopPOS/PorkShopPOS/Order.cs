@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+ * User: Noah Gallant
+ * Date: 2/16/2017
+ * Time: 6:05 PM
+ * Purpose: The purpose of this class is to store order information
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -61,10 +68,12 @@ namespace PorkShopPOS {
             orderData = new OrderDAO();
         }
 
+        //Calls the Add method from the data object layer
         public void Add() {
             orderData.Add(this);
         }
 
+        //Calls the Search method from the data object layer
         public void Search() {
             orderData.Search(this);
         }

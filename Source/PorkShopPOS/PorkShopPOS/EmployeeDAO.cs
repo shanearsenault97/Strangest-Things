@@ -142,13 +142,7 @@ namespace PorkShopPOS
 
         }
 
-        /* 
-        Function Name:    loadEmployees(Employee emp)
-        Version:          1
-        Author:           Noah Gallant
-        Description:      Retrieves all employees' first and last names
-        Change History:   2017.01.02 Original version
-        */
+        //Retrieves all employee first and last names
         public List<string> LoadEmployees(Employee emp) {
             List<string> employee = new List<string>();
 
@@ -343,13 +337,7 @@ namespace PorkShopPOS
 
         }
 
-        /* 
-        Function Name:    loadEmployees(Employee emp)
-        Version:          1
-        Author:           Noah Gallant
-        Description:      Get an employee ID based on first and last name
-        Change History:   2017.01.02 Original version
-        */
+        //Gets an employee's id based on first and last name
         public void SearchByName(Employee emp) {
             String Str = BuildSearchByNameQuery(emp);
 

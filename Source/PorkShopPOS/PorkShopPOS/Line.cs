@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+ * User: Noah Gallant
+ * Date: 2/16/2017
+ * Time: 6:05 PM
+ * Purpose: The purpose of this class is to store line information
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -49,6 +56,7 @@ namespace PorkShopPOS {
             lineData = new LineDAO();
         }
 
+        //Calls the Add method from the data object layer
         public void Add() {
             lineData.Add(this);
         }
