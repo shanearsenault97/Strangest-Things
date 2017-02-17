@@ -58,10 +58,10 @@ namespace PorkShopPOS
         }
 
         /* 
-        Function Name:    Add(BooksBusiness book)
+        Function Name:    Add(Reservation res)
         Version:          1
         Author:           Shane Arsenault
-        Description:      Adds a new employee entry to the database.
+        Description:      Adds a new reservation entry to the database.
         Change History:   2017.30.01  Original version by JED
          * *                 2017.06.02 Adapted by SMA
         */
@@ -69,7 +69,7 @@ namespace PorkShopPOS
         {
             try
             {
-                // get sql query to add an employee 
+                // get sql query to add a reservation 
                 String Str = BuildAddQuery(res);
                 OpenConn();
 
@@ -88,10 +88,10 @@ namespace PorkShopPOS
         }
 
         /* 
-        Function Name:    Delete(Employee emp)
+        Function Name:    Delete(Reservation res)
         Version:          1
         Author:           Shane Arsenault
-        Description:      Deletes an employee entry from the database.
+        Description:      Deletes a reservation entry from the database.
         Change History:   2017.30.01 Original version by JED 
          * *                 2017.06.02 Adapted by SMA
         */
@@ -99,7 +99,7 @@ namespace PorkShopPOS
         {
             try
             {
-                // get the sql query to delete an employee
+                // get the sql query to delete a reservation
                 String Str = BuildDeleteQuery(res);
                 OpenConn();
 
@@ -117,10 +117,10 @@ namespace PorkShopPOS
         }
 
         /* 
-        Function Name:    Update(Employee emp)
+        Function Name:    Update(Reservation res)
         Version:          1
         Author:           Shane Arsenault
-        Description:      Updates an employee entry in the database.
+        Description:      Updates a reservation entry in the database.
         Change History:   2017.30.01 Original version by JED 
          * *                 2017.06.02 Adapted by SMA
         */
@@ -128,7 +128,7 @@ namespace PorkShopPOS
         {
             try
             {
-                // get the sql query to update an employee
+                // get the sql query to update a reservation
                 String Str = BuildUpdateQuery(res);
                 OpenConn();
 
@@ -146,11 +146,20 @@ namespace PorkShopPOS
 
         }
 
+
+	/* 
+        Function Name:    LoadReservations(Reservation res)
+        Version:          1
+        Author:           Shane Arsenault
+        Description:      Loads reservation entries in the database.
+        Change History:   2017.30.01 Original version by JED 
+         * *                 2017.06.02 Adapted by SMA
+        */
         public List<string> LoadReservations(Reservation res)
         {
             List<string> employee = new List<string>();
 
-            String Str = BuildLoadEmployeesQuery(res);
+            String Str = BuildLoadReservationsQuery(res);
             OpenConn();
 
             MySqlCommand cmd = new MySqlCommand(Str, conn);
@@ -189,10 +198,10 @@ namespace PorkShopPOS
         }
 
         /* 
-        Function Name:    BuildAddQuery(Employee emp)
+        Function Name:    BuildAddQuery(Reservation res)
         Version:          1
         Author:           Shane Arsenault
-        Description:      Provides sql query for adding an enployee to the database
+        Description:      Provides sql query for adding a reservation to the database
         Change History:   2017.30.01 Original version by JED 
          * *                 2017.06.02 Adapted by SMA
         */
@@ -219,10 +228,10 @@ namespace PorkShopPOS
         }
 
         /* 
-        Function Name:    BuildDeleteQuery(Employee emp)
+        Function Name:    BuildDeleteQuery(Reservation res)
         Version:          1
         Author:           Shane Arsenault
-        Description:      Provides sql query for deleting an employee from the database
+        Description:      Provides sql query for deleting a reservation from the database
         Change History:   2017.30.01  Original version by JED 
          * *                 2017.06.02 Adapted by SMA
         */
@@ -238,10 +247,10 @@ namespace PorkShopPOS
         }
 
         /* 
-        Function Name:    BuildUpdateQuery(Employee empk)
+        Function Name:    BuildUpdateQuery(Reservation res)
         Version:          1
         Author:           Shane Arsenault
-        Description:      Provides sql query for updating an  in the database
+        Description:      Provides sql query for updating a reservation in the database
         Change History:   2017.30.01 Original version by JED 
          * *                 2017.06.02 Adapted by SMA
         */
@@ -264,10 +273,10 @@ namespace PorkShopPOS
         }
 
         /* 
-        Function Name:    Search(Employee emp)
+        Function Name:    Search(Reservation res)
         Version:          1
         Author:           Shane Arsenault
-        Description:      Searches the database for an entry based on an employee number
+        Description:      Searches the database for an entry based on a reservation number
         Change History:   2017.30.01 Original version by JED 
          * *                 2017.06.02 Adapted by SMA
         */
@@ -317,7 +326,16 @@ namespace PorkShopPOS
 
         }
 
-        private String BuildLoadEmployeesQuery(Reservation res)
+
+	/* 
+        Function Name:    BuildLoadReservationsQuery(Reservation res)
+        Version:          1
+        Author:           Shane Arsenault
+        Description:      Builds query to load reservation entries in the database.
+        Change History:   2017.30.01 Original version by JED 
+         * *                 2017.06.02 Adapted by SMA
+        */
+        private String BuildLoadReservationsQuery(Reservation res)
         {
             // create sql 
             strTable = "Select * from " + thisTable + ";";
