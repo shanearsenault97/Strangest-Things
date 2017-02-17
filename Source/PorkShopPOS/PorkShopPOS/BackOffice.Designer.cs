@@ -972,28 +972,28 @@
             // label56
             // 
             this.label56.AutoSize = true;
-<<<<<<< HEAD
+
             this.label56.Location = new System.Drawing.Point(312, 203);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(53, 16);
-=======
+
             this.label56.Location = new System.Drawing.Point(316, 196);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(70, 21);
->>>>>>> origin/UserAccessBranch
+
             this.label56.TabIndex = 183;
             this.label56.Text = "To Date";
             // 
             // Date
             // 
             this.Date.AutoSize = true;
-<<<<<<< HEAD
+
             this.Date.Location = new System.Drawing.Point(301, 175);
             this.Date.Name = "Date";
             this.Date.Size = new System.Drawing.Size(68, 16);
             this.Date.TabIndex = 182;
             this.Date.Text = "From Date";
-            this.Date.Click += new System.EventHandler(this.label55_Click);
+
             // 
             // historyToDateMTB
             // 
@@ -1001,8 +1001,7 @@
             this.historyToDateMTB.Mask = "0000-00-00";
             this.historyToDateMTB.Name = "historyToDateMTB";
             this.historyToDateMTB.Size = new System.Drawing.Size(100, 23);
-=======
-            this.Date.Location = new System.Drawing.Point(301, 167);
+           this.Date.Location = new System.Drawing.Point(301, 167);
             this.Date.Name = "Date";
             this.Date.Size = new System.Drawing.Size(89, 21);
             this.Date.TabIndex = 182;
@@ -1014,22 +1013,22 @@
             this.historyToDateMTB.Mask = "0000-00-00";
             this.historyToDateMTB.Name = "historyToDateMTB";
             this.historyToDateMTB.Size = new System.Drawing.Size(100, 27);
->>>>>>> origin/UserAccessBranch
+
             this.historyToDateMTB.TabIndex = 181;
             // 
             // historyFromDateMTB
             // 
-<<<<<<< HEAD
+
             this.historyFromDateMTB.Location = new System.Drawing.Point(375, 198);
             this.historyFromDateMTB.Mask = "0000-00-00";
             this.historyFromDateMTB.Name = "historyFromDateMTB";
             this.historyFromDateMTB.Size = new System.Drawing.Size(100, 23);
-=======
+
             this.historyFromDateMTB.Location = new System.Drawing.Point(375, 164);
             this.historyFromDateMTB.Mask = "0000-00-00";
             this.historyFromDateMTB.Name = "historyFromDateMTB";
             this.historyFromDateMTB.Size = new System.Drawing.Size(100, 27);
->>>>>>> origin/UserAccessBranch
+
             this.historyFromDateMTB.TabIndex = 180;
             // 
             // schShiftDateMTB

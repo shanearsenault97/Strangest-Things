@@ -132,12 +132,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-<<<<<<< HEAD
+
             this.ClientSize = new System.Drawing.Size(403, 323);
-=======
+
             this.ClientSize = new System.Drawing.Size(537, 398);
             this.Controls.Add(this.createDatabase);
->>>>>>> origin/UserAccessBranch
+
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.empNumTextBox);

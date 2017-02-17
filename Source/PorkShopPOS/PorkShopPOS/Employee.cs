@@ -140,20 +140,15 @@ namespace PorkShopPOS
             empData.Search(this);
         }
 
-<<<<<<< HEAD
-        //Calls the SearchByName method from the data object layer
-=======
         // calls the SearchbyName method from the data object layer
->>>>>>> origin/UserAccessBranch
+
         public void SearchByName() {
             empData.SearchByName(this);
         }
 
-<<<<<<< HEAD
-        //Calls the LoadEmployees method from the data object layer
-=======
+
         // calls the LoadEmployees method from the data object layer
->>>>>>> origin/UserAccessBranch
+
         public List<string> LoadEmployees() {
             List<string> lEmployees = new List<string>();
 
