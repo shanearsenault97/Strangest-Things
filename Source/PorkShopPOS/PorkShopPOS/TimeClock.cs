@@ -113,15 +113,17 @@ namespace PorkShopPOS
         {
             tcData.Update(this);
         }
+        /* User: Bryan MacFarlane
+      * Date: 2017-02-05
+      * Time: 12:30 AM
+      * Purpose: calls the update method from the data object layer
+      */
 
-        // calls the update EmpHours method from the data object layer
-
-        /* public void UpdateEmpHours()
+        public void ClockOutUpdate()
         {
-            tcData.UpdateEmpHours(this);
+            tcData.ClockOutUpdate(this);
         }
          
-        */
         /* User: Bryan MacFarlane
       * Date: 2017-02-05
       * Time: 12:30 AM

@@ -109,12 +109,45 @@ namespace PorkShopPOS
             }
 
         }
+        /* 
+        Function Name:    ClockOut(TimeClock time)
+        Version:          1
+        Author:           Bryan MacFarlane
+        Description:      Updates clock out time of employee in the database.
+        Change History:   2017.30.01 Original version by JED 
+        */
+        public void ClockOutUpdate(TimeClock time)
+        {
+            try
+            {
+                // get the sql query to update an employee
+                String Str = BuildClockOutQuery(time);
+                OpenConn();
 
+                MySqlCommand cmd = new MySqlCommand(Str, conn);
+
+                cmd.ExecuteNonQuery();
+
+                CloseConn();
+            }
+
+            catch (InvalidOperationException exc)
+            {
+                MessageBox.Show(exc.ToString());
+            }
+
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+
+        }
+        
         /* 
         Function Name:    Update(TimeClock time)
         Version:          1
         Author:           Bryan MacFarlane
-        Description:      Updates clock out time of employee in the database.
+        Description:      Updates clock in information of employee in the database.
         Change History:   2017.30.01 Original version by JED 
         */
         public void Update(TimeClock time)
@@ -253,6 +286,24 @@ namespace PorkShopPOS
                  "', " + CLOCK_OUT + " = '" + time.ClockOut +
                "', " + CLOCK_IN + " = '" + time.ClockIn +              
                 "' Where " + TIME_CLOCK_NUM + " = '" + time.TimeClockNum + "'";
+            strTotal = strTable + strFields;
+
+            return strTotal;
+        }
+        
+        /* 
+        Function Name:    BuildUpdateQuery(TimeClock time)
+        Version:          1
+        Author:           Bryan MacFarlane
+        Description:      Provides sql query for updating clock out time in the database
+        Change History:   2017.30.01 Original version by JED 
+        */
+
+        private String BuildClockOutQuery(TimeClock time)
+        {
+            strTable = "Update " + thisTable;
+            strFields = " Set " + CLOCK_OUT + " = '" + time.ClockOut +
+                "' Where " + EMP_NUM + " = '" + time.EmpNum + "' AND " + TIME_CLOCK_NUM + "= '" + time.TimeClockNum + "'";
             strTotal = strTable + strFields;
 
             return strTotal;
