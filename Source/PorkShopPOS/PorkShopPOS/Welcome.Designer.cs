@@ -44,17 +44,19 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(55, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(73, 30);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(276, 137);
+            this.pictureBox1.Size = new System.Drawing.Size(368, 169);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // porkShopPOSButton
             // 
-            this.porkShopPOSButton.Location = new System.Drawing.Point(37, 254);
+            this.porkShopPOSButton.Location = new System.Drawing.Point(49, 313);
+            this.porkShopPOSButton.Margin = new System.Windows.Forms.Padding(4);
             this.porkShopPOSButton.Name = "porkShopPOSButton";
-            this.porkShopPOSButton.Size = new System.Drawing.Size(89, 43);
+            this.porkShopPOSButton.Size = new System.Drawing.Size(119, 53);
             this.porkShopPOSButton.TabIndex = 3;
             this.porkShopPOSButton.Text = "POS";
             this.porkShopPOSButton.UseVisualStyleBackColor = true;
@@ -62,9 +64,10 @@
             // 
             // porkShopOfficeButton
             // 
-            this.porkShopOfficeButton.Location = new System.Drawing.Point(153, 254);
+            this.porkShopOfficeButton.Location = new System.Drawing.Point(204, 313);
+            this.porkShopOfficeButton.Margin = new System.Windows.Forms.Padding(4);
             this.porkShopOfficeButton.Name = "porkShopOfficeButton";
-            this.porkShopOfficeButton.Size = new System.Drawing.Size(89, 43);
+            this.porkShopOfficeButton.Size = new System.Drawing.Size(119, 53);
             this.porkShopOfficeButton.TabIndex = 4;
             this.porkShopOfficeButton.Text = "Back Office";
             this.porkShopOfficeButton.UseVisualStyleBackColor = true;
@@ -74,9 +77,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(93, 180);
+            this.label1.Location = new System.Drawing.Point(124, 222);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 16);
+            this.label1.Size = new System.Drawing.Size(106, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Employee #";
             // 
@@ -84,32 +88,36 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(93, 222);
+            this.label2.Location = new System.Drawing.Point(124, 273);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 16);
+            this.label2.Size = new System.Drawing.Size(91, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Password";
             // 
             // empNumTextBox
             // 
-            this.empNumTextBox.Location = new System.Drawing.Point(186, 180);
+            this.empNumTextBox.Location = new System.Drawing.Point(248, 222);
+            this.empNumTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.empNumTextBox.Name = "empNumTextBox";
-            this.empNumTextBox.Size = new System.Drawing.Size(100, 20);
+            this.empNumTextBox.Size = new System.Drawing.Size(132, 22);
             this.empNumTextBox.TabIndex = 1;
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(186, 222);
+            this.passwordTextBox.Location = new System.Drawing.Point(248, 273);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(100, 20);
+            this.passwordTextBox.Size = new System.Drawing.Size(132, 22);
             this.passwordTextBox.TabIndex = 2;
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(270, 254);
+            this.btnClose.Location = new System.Drawing.Point(360, 313);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(89, 43);
+            this.btnClose.Size = new System.Drawing.Size(119, 53);
             this.btnClose.TabIndex = 5;
             this.btnClose.Text = "Exit";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -119,9 +127,10 @@
             // 
             this.createDatabase.BackColor = System.Drawing.Color.Crimson;
             this.createDatabase.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.createDatabase.Location = new System.Drawing.Point(450, 12);
+            this.createDatabase.Location = new System.Drawing.Point(215, 403);
+            this.createDatabase.Margin = new System.Windows.Forms.Padding(4);
             this.createDatabase.Name = "createDatabase";
-            this.createDatabase.Size = new System.Drawing.Size(84, 60);
+            this.createDatabase.Size = new System.Drawing.Size(108, 74);
             this.createDatabase.TabIndex = 6;
             this.createDatabase.Text = "Click to Create Database";
             this.createDatabase.UseVisualStyleBackColor = false;
@@ -129,15 +138,11 @@
             // 
             // Welcome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-
-            this.ClientSize = new System.Drawing.Size(403, 323);
-
-            this.ClientSize = new System.Drawing.Size(537, 398);
+            this.ClientSize = new System.Drawing.Size(530, 490);
             this.Controls.Add(this.createDatabase);
-
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.empNumTextBox);
@@ -147,6 +152,7 @@
             this.Controls.Add(this.porkShopPOSButton);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Welcome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome to the Pork Shop";

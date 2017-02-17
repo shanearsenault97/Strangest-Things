@@ -332,12 +332,12 @@ namespace PorkShopPOS
 
           catch (InvalidOperationException exc)
           {
-              MessageBox.Show(exc.ToString());
+              Console.WriteLine(exc.ToString());
           }
 
           catch (Exception exception)
           {
-              MessageBox.Show(exception.Message);
+              Console.WriteLine(exception.Message);
           }
 
         }

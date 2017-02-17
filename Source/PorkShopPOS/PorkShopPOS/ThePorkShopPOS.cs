@@ -539,41 +539,60 @@ namespace PorkShopPOS {
 
         //Handles the printing of a customer's bill
         private void btnPrintBill_Click(object sender, EventArgs e) {
-            //Makes sure the order has already been submitted
-            if (orderSubmitted) {
-                //Sets the billPrinted bool to true
-                billPrinted = true;
-                //Loops through each item and adds it to a list
-                foreach (string food in foodCompleteDesc) {
-                    descriptions.Add(food);
+
+            try
+            {
+                //Makes sure the order has already been submitted
+                if (orderSubmitted)
+                {
+                    //Sets the billPrinted bool to true
+                    billPrinted = true;
+                    //Loops through each item and adds it to a list
+                    foreach (string food in foodCompleteDesc)
+                    {
+                        descriptions.Add(food);
+                    }
+                    foreach (string price in foodCompletePrices)
+                    {
+                        prices.Add(float.Parse(price).ToString("C"));
+                    }
+                    foreach (string bar in barCompleteDesc)
+                    {
+                        descriptions.Add(bar);
+                    }
+                    foreach (string price in barPrices)
+                    {
+                        prices.Add(float.Parse(price).ToString("C"));
+                    }
+                    //Uses all gathered order info to generate the bill using crystal reports
+                    Bill bill = new Bill();
+                    bill.SetParameterValue("EmpFName", Employee.EmpFName.ToString());
+                    bill.SetParameterValue("OrderDate", Order.OrderDate.ToString());
+                    bill.SetParameterValue("OrderTime", Order.OrderTime.ToString());
+                    bill.SetParameterValue("OrderNum", Order.OrderNum.ToString());
+                    bill.SetParameterValue("TableNum", Order.TableNum.ToString());
+                    bill.SetParameterValue("NumGuests", Order.NumGuests.ToString());
+                    bill.SetParameterValue("OrderTotal", "$" + Order.OrderTotal.ToString());
+                    bill.SetParameterValue("TaxAmount", taxAmount.ToString("C"));
+                    bill.SetParameterValue("TotalAfterTax", totalAfterTax.ToString("C"));
+                    bill.SetParameterValue("@Desc", descriptions.ToArray());
+                    bill.SetParameterValue("@Prices", prices.ToArray());
+                    BillReport billReport = new BillReport();
+                    billReport.reportDocument = bill;
+                    //Shows the bill
+                    billReport.Show();
                 }
-                foreach (string price in foodCompletePrices) {
-                    prices.Add(float.Parse(price).ToString("C"));
-                }
-                foreach (string bar in barCompleteDesc) {
-                    descriptions.Add(bar);
-                }
-                foreach (string price in barPrices) {
-                    prices.Add(float.Parse(price).ToString("C"));
-                }
-                //Uses all gathered order info to generate the bill using crystal reports
-                Bill bill = new Bill();
-                bill.SetParameterValue("EmpFName", Employee.EmpFName.ToString());
-                bill.SetParameterValue("OrderDate", Order.OrderDate.ToString());
-                bill.SetParameterValue("OrderTime", Order.OrderTime.ToString());
-                bill.SetParameterValue("OrderNum", Order.OrderNum.ToString());
-                bill.SetParameterValue("TableNum", Order.TableNum.ToString());
-                bill.SetParameterValue("NumGuests", Order.NumGuests.ToString());
-                bill.SetParameterValue("OrderTotal", "$" + Order.OrderTotal.ToString());
-                bill.SetParameterValue("TaxAmount", taxAmount.ToString("C"));
-                bill.SetParameterValue("TotalAfterTax", totalAfterTax.ToString("C"));
-                bill.SetParameterValue("@Desc", descriptions.ToArray());
-                bill.SetParameterValue("@Prices", prices.ToArray());
-                BillReport billReport = new BillReport();
-                billReport.reportDocument = bill;
-                //Shows the bill
-                billReport.Show();
             }
+            catch (InvalidOperationException exc)
+            {
+                MessageBox.Show(exc.ToString());
+            }
+
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+            
         }
 
         //Clears all controls and variables when clicked

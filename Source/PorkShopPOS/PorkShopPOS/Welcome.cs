@@ -134,7 +134,7 @@ namespace PorkShopPOS
             this.Close();
         }
        
-        /* User: Jonathan Deschene
+         /* User: Jonathan Deschene
         * Date: 2017-01-20
         * Time: 2:45 PM
         * Purpose: create database; this function would be removed in the production version
@@ -144,14 +144,15 @@ namespace PorkShopPOS
             try
             {
                 DatabaseCreation dbCreate = new DatabaseCreation();
-                dbCreate.createDatabase();
+                dbCreate.createDatabaseTables();
 
-                MessageBox.Show("The database 'pork_shop' has been created.");
+                
             }
             catch (Exception exception)
             {
                 Console.WriteLine(e.ToString());
             }
         }       
-    }
+        }
+     
     }
