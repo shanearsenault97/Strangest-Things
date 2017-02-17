@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using System.Globalization;
+using System.Data;
 
 namespace PorkShopPOS
 {
@@ -18,6 +19,7 @@ namespace PorkShopPOS
         private string strFields = "";
         private string strValues = "";
         private string strTotal = "";
+        private string sql = "";
 
         // database table name and fields
         private const string thisTable = "timeclock";
@@ -107,12 +109,45 @@ namespace PorkShopPOS
             }
 
         }
+        /* 
+        Function Name:    ClockOut(TimeClock time)
+        Version:          1
+        Author:           Bryan MacFarlane
+        Description:      Updates clock out time of employee in the database.
+        Change History:   2017.30.01 Original version by JED 
+        */
+        public void ClockOutUpdate(TimeClock time)
+        {
+            try
+            {
+                // get the sql query to update an employee
+                String Str = BuildClockOutQuery(time);
+                OpenConn();
 
+                MySqlCommand cmd = new MySqlCommand(Str, conn);
+
+                cmd.ExecuteNonQuery();
+
+                CloseConn();
+            }
+
+            catch (InvalidOperationException exc)
+            {
+                MessageBox.Show(exc.ToString());
+            }
+
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+
+        }
+        
         /* 
         Function Name:    Update(TimeClock time)
         Version:          1
         Author:           Bryan MacFarlane
-        Description:      Updates clock out time of employee in the database.
+        Description:      Updates clock in information of employee in the database.
         Change History:   2017.30.01 Original version by JED 
         */
         public void Update(TimeClock time)
@@ -141,58 +176,14 @@ namespace PorkShopPOS
             }
 
         }
-
-       /* public void UpdateEmpHours(TimeClock time)
-        {
-            try
-            {
-                // get the sql query to update an employee
-                String Str = BuildUpdateEmpHoursQuery(time);
-                OpenConn();
-
-                MySqlCommand cmd = new MySqlCommand(Str, conn);
-
-                cmd.ExecuteNonQuery();
-
-                CloseConn();
-            }
-
-            catch (Exception ex)
-            {
-                Console.WriteLine("Exception.Message: {0}", ex.Message);
-            }
-
-        }
-        */
+        
         /* 
-      Function Name:    SearchDate(TimeClock time, DataGridView dgv)
-      Version:          1
-      Author:           Bryan MacFarlane
-      Description:      Searches the database for an entry based on an employee number
-      Change History:   2017.30.01 Original version by JED 
-      */
-        public void SearchDate(TimeClock time, DataGridView dgv)
-        {
-            try
-            {
-                // get the sql query to update an employee
-                String Str = BuildSearchDateQuery(time);
-                OpenConn();
-
-                MySqlCommand cmd = new MySqlCommand(Str, conn);
-
-                cmd.ExecuteNonQuery();
-
-                CloseConn();
-            }
-
-            catch (Exception ex)
-            {
-                Console.WriteLine("Exception.Message: {0}", ex.Message);
-            }
-
-        }
-
+        Function Name:    LoadTimeClock(TimeClock time)
+        Version:          1
+        Author:           Bryan MacFarlane
+        Description:      Loads Timeclock from database
+        Change History:   2017.30.01 Original version by JED 
+        */
 
         public List<string> LoadTimeClock(TimeClock time)
         {
@@ -299,41 +290,75 @@ namespace PorkShopPOS
 
             return strTotal;
         }
+        
         /* 
-       Function Name:    BuildUpdateEmpHoursQuery(TimeClock time)
-       Version:          1
-       Author:           Bryan MacFarlane
-       Description:      Provides sql query for updating clock out time in the database
-       Change History:   2017.30.01 Original version by JED 
-       */
+        Function Name:    BuildUpdateQuery(TimeClock time)
+        Version:          1
+        Author:           Bryan MacFarlane
+        Description:      Provides sql query for updating clock out time in the database
+        Change History:   2017.30.01 Original version by JED 
+        */
 
-      //  private String BuildUpdateEmpHoursQuery(TimeClock time)
-        //{
-          //  strTable = "Update " + thisTable;
-            //strFields = " SET empHours = clockOut - clockIn WHERE " + EMP_NUM + " = '" + time.EmpNum + "'";
-            //strTotal = strTable + strFields;
-
-          //  return strTotal;
-       // }
-
-        /* 
-      Function Name:    SearchDate(Employee emp)
-      Version:          1
-      Author:           Bryan MacFarlane
-      Description:      Searches the database for an entry based on an employee number
-      Change History:   2017.30.01 Original version by JED 
-      */
-        private String BuildSearchDateQuery(TimeClock time)
+        private String BuildClockOutQuery(TimeClock time)
         {
-            strTable = "Select " + thisTable;
-            strFields = "Where shiftDate BETWEEN" + "'" + time.FromDate + "' AND " + "'" + time.ToDate + "'";
+            strTable = "Update " + thisTable;
+            strFields = " Set " + CLOCK_OUT + " = '" + time.ClockOut +
+                "' Where " + EMP_NUM + " = '" + time.EmpNum + "' AND " + TIME_CLOCK_NUM + "= '" + time.TimeClockNum + "'";
             strTotal = strTable + strFields;
 
             return strTotal;
         }
+        /* 
+      Function Name:    SearchDateHistory(DateTime toDate, DateTime FromDate, DataGridView dgv)
+      Version:          1
+      Author:           Bryan MacFarlane
+      Description:      Searches the database for an entry based on the from/to date inputed
+      Change History:   2017.30.01 Original version by JED 
+      */
+        public void SearchDateHistory(DateTime schFromDate, DateTime schToDate, DataGridView dgv)
+        {
+
+            DataTable dataTable;
+            MySqlConnection conn;
+            MySqlCommand cmd;
+            MySqlDataAdapter da;
+            dataTable = new DataTable();
+            dataTable.Clear();
+
+
+            sql = "Select * from timeclock where shiftDate BETWEEN" + "'" + schFromDate + "' AND '" + schToDate + "'";
+            
+
+            try
+            {
+                conn = new MySqlConnection(connectionStr);
+                conn.Open();
+                cmd = new MySqlCommand
+                {
+                    Connection = conn,
+                    CommandText = sql
+                };
+                cmd.ExecuteNonQuery();
+
+                da = new MySqlDataAdapter(cmd);
+                da.Fill(dataTable);
+
+                MySqlCommandBuilder cb = new MySqlCommandBuilder(da);
+
+                dgv.DataSource = dataTable;
+                dgv.DataMember = dataTable.TableName;
+                dgv.AutoResizeColumns();
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
         /* 
-        Function Name:    Search(Employee emp)
+        Function Name:    Search(TimeClock time)
         Version:          1
         Author:           Bryan MacFarlane
         Description:      Searches the database for an entry based on an employee number
@@ -384,7 +409,13 @@ namespace PorkShopPOS
             }
 
         }
-
+        /* 
+        Function Name:    BuildLoadTimeClockQuery(TimeClock time)
+        Version:          1
+        Author:           Bryan MacFarlane
+        Description:      Builds query for loading timeclock
+        Change History:   2017.30.01 Original version by JED 
+        */
         private String BuildLoadTimeClockQuery(TimeClock time)
         {
             // create sql 

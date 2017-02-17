@@ -1260,7 +1260,7 @@ namespace PorkShopPOS
         
         //creating instance of the Timeclock class
         TimeClock timeC;
-
+        public static int timeclockNumber = 28;
         /* User: Bryan MacFarlane
       * Date: 2017-02-05
       * Time: 12:30 AM
@@ -1296,6 +1296,7 @@ namespace PorkShopPOS
 
                     // call TimeClock add()
                     timeC.Add();
+                    timeclockNumber++;
 
                     MessageBox.Show("Employee: " + timeEmpNumTB.Text + " successfully clocked in at: " + time);
                 }
@@ -1310,6 +1311,8 @@ namespace PorkShopPOS
                 MessageBox.Show(exception.Message);
             }
         }
+
+         
 
         /* User: Bryan MacFarlane
       * Date: 2017-02-05
@@ -1329,9 +1332,9 @@ namespace PorkShopPOS
                 }
                 else
                 {
-                    //DateTime dateOnly = new DateTime();
-                    //dateOnly = DateTime.Now;
-                    //string date = dateOnly.ToString("d");
+                    DateTime dateOnly = new DateTime();
+                    dateOnly = DateTime.Now;
+                    string date = dateOnly.ToString("d");
 
                     //create DateTime variable that displays the correct format for time
                     DateTime timeOnly = new DateTime();
@@ -1340,11 +1343,12 @@ namespace PorkShopPOS
 
                     // assign back office menu input data to a new menu object
                     timeC.EmpNum = timeEmpNumTB.Text;
-                    //timeC.ShiftDate = Convert.ToDateTime(date);
+                    timeC.ShiftDate = Convert.ToDateTime(date);
                     timeC.ClockOut = Convert.ToDateTime(time);
+                    timeC.TimeClockNum = timeclockNumber;
 
-                    // call TimeClock update()
-                    timeC.Update();
+                    // call TimeClock ClockOutUpdate()
+                    timeC.ClockOutUpdate();
                     //timeC.UpdateEmpHours();
                     MessageBox.Show("Employee: " + timeEmpNumTB.Text + " successfully clocked out at: " + time);
                 }
@@ -1512,6 +1516,8 @@ namespace PorkShopPOS
             schShiftDateMTB.Text = String.Empty;
             schFromDateMTB.Text = String.Empty;
             schToDateMTB.Text = String.Empty;
+            historyFromDateMTB.Text = String.Empty;
+            historyToDateMTB.Text = String.Empty;
         }
         
         

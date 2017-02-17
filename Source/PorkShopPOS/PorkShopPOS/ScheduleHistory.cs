@@ -33,13 +33,13 @@ namespace PorkShopPOS
 
                 TimeClock timeC = new TimeClock();
 
-                timeC.FromDate = BackOffice.historyFromDate;
-                timeC.ToDate = BackOffice.historyFromDate;
+               timeC.FromDate = BackOffice.historyFromDate;
+                timeC.ToDate = BackOffice.historyToDate;
 
                 // fromtoL.text = timeC.FromDate + " " + timeC.ToDate;
 
                 DataGridView dgv = schHistoryDGV;
-                timeC.SearchDates(dgv);
+                timeC.SearchDateHistory( timeC.FromDate, timeC.ToDate, dgv);
             }
             catch (InvalidOperationException exc)
             {
@@ -50,6 +50,11 @@ namespace PorkShopPOS
             {
                 MessageBox.Show(exception.Message);
             }
+        }
+
+        private void schHistoryDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
