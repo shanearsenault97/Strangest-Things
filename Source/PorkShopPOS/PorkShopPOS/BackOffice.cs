@@ -40,19 +40,17 @@ namespace PorkShopPOS
         /* User: Jonathan Deschene
          * Date: 2017-01-20
          * Time: 2:45 PM
-         * Purpose: close the pos UI and load the back office UI
+         * Purpose: close the boack office UI 
          */
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Welcome welcomeUI = new Welcome();
-            welcomeUI.Show(); 
+            this.Close();            
         }
 
         /* User: Jonathan Deschene
          * Date: 2017-01-20
          * Time: 2:45 PM
-         * Purpose: functionality required when the Back Office interface loads
+         * Purpose: functionality required when the Back Office interface loads: datetime picker set to current date and user permissions set
          */
         private void BackOffice_Load(object sender, EventArgs e)
         {
@@ -60,51 +58,33 @@ namespace PorkShopPOS
              empStartDateDTP.Value = DateTime.Now;
 
             // disable buttons depending on user authorization
-            int userPermission = Welcome.userPermissionType;
-            if (userPermission == 1)
+             int userPermission = Welcome.accessLevel;
+            if (userPermission == 1 | userPermission == 2)
             {
-                // disable employee functionality in utilities tab
+                // disable employee functionality in utilities tab with the exception of the show all tab (for supervisors)
                 empAddB.Enabled = false;
                 empUpdateB.Enabled = false;
                 empSearchB.Enabled = false;
                 empDeleteB.Enabled = false;
                 empClearB.Enabled = false;
-                empShowAllB.Enabled = false;
+               
+                // disable schedule functionality in utilities tab: nethier supervisors, nor regular staff can have access to the functionality in the other tabs
+                utilitiesTab.Enabled = false;
 
-                // disable schedule functionality in utilities tab
-                empAddB.Enabled = false;
-                empUpdateB.Enabled = false;
-                empSearchB.Enabled = false;
-                empDeleteB.Enabled = false;
-                empClearB.Enabled = false;
-                empShowAllB.Enabled = false;
+                // disable bar update button
+                btnUpdateQuantity.Enabled = false;
+                
+                // create more restrictions for regular employees (staff with userPermission 1)
+                if (userPermission == 1)
+                {
+                    // disable employee 'show all' functionality
+                     empShowAllB.Enabled = false;
 
-                // disable salary functionality in utilities tab
-                empAddB.Enabled = false;
-                empUpdateB.Enabled = false;
-                empSearchB.Enabled = false;
-                empDeleteB.Enabled = false;
-                empClearB.Enabled = false;
-                empShowAllB.Enabled = false;
-
-                // disable payroll functionality in utilities tab
-                empAddB.Enabled = false;
-                empUpdateB.Enabled = false;
-                empSearchB.Enabled = false;
-                empDeleteB.Enabled = false;
-                empClearB.Enabled = false;
-                empShowAllB.Enabled = false;
-
-                // disable update menu functionality in utilities tab
-                empAddB.Enabled = false;
-                empUpdateB.Enabled = false;
-                empSearchB.Enabled = false;
-                empDeleteB.Enabled = false;
-                empClearB.Enabled = false;
-                empShowAllB.Enabled = false;
-
-                // disable accounts functionality in utilities tab
+                    // disable reports tab
+                    reportsTab.Enabled = false;   
+                }
             }
+         
         }
 
 
@@ -1584,13 +1564,13 @@ namespace PorkShopPOS
                 access = new UserAccess();
 
                 // variables delcared for validation directly below
-                int account;
+             
                 int userType;
 
                 //validate to ensure that values entered are numeric
-                if (int.TryParse(acctIdTB.Text, out account) == false | int.TryParse(acctTypeCB.Text, out userType) == false)
+                if (int.TryParse(acctTypeCB.Text, out userType) == false)
                 {
-                    MessageBox.Show("Please ensure that the Account ID and Account Type fields are numeric.");
+                    MessageBox.Show("Please ensure that the Account Type fields is numeric.");
                 }
                 else
                 {
@@ -1620,7 +1600,6 @@ namespace PorkShopPOS
                     else
                     {
                         // add account information to new UserAccess object
-                        access.AccountId = accntID;
                         access.EmpNum = empNum;
                         access.Password = password;
                         access.Type = type;
@@ -1653,13 +1632,12 @@ namespace PorkShopPOS
                 access = new UserAccess();
 
                 // variables delcared for validation directly below
-                int account;
                 int userType;
 
                 //validate to ensure that values entered are numeric
-                if (int.TryParse(acctIdTB.Text, out account) == false | int.TryParse(acctTypeCB.Text, out userType) == false)
+                if (int.TryParse(acctTypeCB.Text, out userType) == false)
                 {
-                    MessageBox.Show("Please ensure that the Account ID and Account Type fields are numeric.");
+                    MessageBox.Show("Please ensure that the Account Type fields is numeric.");
                 }
                 else
                 {
@@ -1807,21 +1785,17 @@ namespace PorkShopPOS
             acctTypeCB.Text = String.Empty;
         }
 
-      
+        /* User: Jonathan Deschene
+        * Date: 2017-02-14
+        * Time: 9:30 PM
+        * Purpose: opens a new form which displays all UserAccess data in a datagrid
+        */
         private void acctShowAllB_Click(object sender, EventArgs e)
-        {            
-            
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
         {
-
+            UserAccessShowAll accessSA = new UserAccessShowAll();
+            accessSA.Show();
         }
 
-        private void label55_Click(object sender, EventArgs e)
-        {
-
-        }
 
         //*************************************************ACCOUNT SECTION END****************************************************
 

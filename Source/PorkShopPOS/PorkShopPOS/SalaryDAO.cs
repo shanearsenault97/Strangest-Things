@@ -1,15 +1,18 @@
-﻿using System;
+﻿/* User: Jonathan Deschene
+* Date: 2017-01-20
+* Time: 2:45 PM
+* Purpose: Data layer class for Salary object
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using System.Data;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace PorkShopPOS
@@ -257,7 +260,6 @@ namespace PorkShopPOS
                     sal.Amount = reader.GetDecimal(4);
                 }
 
-
                 reader.Close();
                 cmd.Dispose();
                 conn.Close();
@@ -310,7 +312,6 @@ namespace PorkShopPOS
                     sal.Amount = reader.GetDecimal(4);
                 }
 
-
                 reader.Close();
                 cmd.Dispose();
                 conn.Close();
@@ -328,9 +329,11 @@ namespace PorkShopPOS
 
         }
 
-       
-
-        // create the Salary List Report
+        /* User: Jonathan Deschene
+        * Date: 2017-01-20
+        * Time: 2:45 PM
+        * Purpose: create the Salary List Report
+        */
         public void salaryList() 
         {
             // below code taken from https://dev.mysql.com/doc/connector-net/en/connector-net-programming-crystal-source.html
@@ -346,7 +349,7 @@ namespace PorkShopPOS
 
             conn.ConnectionString = "server=localhost; database=pork_shop; user=pork_shop_admin; password=5tr&ng3rTh!ng$; Allow Zero Datetime=True;";
 
-
+            // this query gets only the employees' most current salary as denoted by the salaryTo date of '0000-00-00'
             try
             {
                 cmd.CommandText = "SELECT employee.empLName AS EmployeeLastName, employee.empFName as EmployeeFirstName, " +
@@ -359,12 +362,12 @@ namespace PorkShopPOS
                 myAdapter.SelectCommand = cmd;
                 myAdapter.Fill(myData);
 
-                // create a folder
-
+                // create a folder to store the below XML file
                 string pathString = @"c:\CIS2261_PorkShop_Xml";
 
                 System.IO.Directory.CreateDirectory(pathString);
 
+                // create a file with the xml data from the above sql query and store it in this directory
                 myData.WriteXml(@"C:\CIS2261_PorkShop_Xml\dataset.xml", XmlWriteMode.WriteSchema);
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
@@ -374,18 +377,22 @@ namespace PorkShopPOS
             }
         }
 
-
-        // code borrowed from http://stackoverflow.com/questions/14020038/filling-a-datatable-in-c-sharp-using-mysql
+        /* User: Jonathan Deschene
+        * Date: 2017-01-20
+        * Time: 2:45 PM
+        * Purpose: get an Employee's Salary History 
+        * code borrowed from http://stackoverflow.com/questions/14020038/filling-a-datatable-in-c-sharp-using-mysql
+        */ 
         public void salaryHistory(string empNum, DataGridView dgv)
         {
 
             DataTable dataTable;
-            MySqlConnection conn;
             MySqlCommand cmd;
             MySqlDataAdapter da;
             dataTable = new DataTable();
             dataTable.Clear();
 
+            // this query pulls the all the data from the Salary table linked to a user specified employee number
             string query = "SELECT * FROM salary WHERE " + SAL_EMP_NUM + " = '" + empNum + "' ORDER BY salaryNum DESC;";
 
             try

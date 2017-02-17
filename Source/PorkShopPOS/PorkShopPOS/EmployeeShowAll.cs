@@ -1,4 +1,10 @@
-﻿using System;
+﻿/* User: Jonathan Deschene
+* Date: 2017-01-20
+* Time: 2:45 PM
+* Purpose: Form that displays all employee data in a datagrid
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,9 +24,14 @@ namespace PorkShopPOS
             InitializeComponent();
         }
 
+        // instantiate a ShowAll class to be used in the below method
+        ShowAll showAll;
 
-        ShowAll showAll; 
-
+        /* User: Jonathan Deschene
+        * Date: 2017-01-20
+        * Time: 2:45 PM
+        * Purpose: calls the showAll() method from ShowALL to display employee data in a datagrid
+        */
         private void EmployeeShowAllForm_Load(object sender, EventArgs e)
         {
             showAll = new ShowAll(); 

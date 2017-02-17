@@ -1,8 +1,17 @@
-﻿using System;
+﻿/* User: Heather Watterson and Jonathan Deschene
+* Date: 2017-01-20
+* Time: 2:45 PM
+* Purpose: Business layer class for UserAccess object
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace PorkShopPOS
 {
@@ -75,6 +84,11 @@ namespace PorkShopPOS
             loginData.Delete(this);
         }
 
+        // calls the showAllUserAccess from the data layer
+        public void showAllUserAccess(DataGridView dgv)
+        {
+            loginData.showAllUserAccess(dgv);
+        }
     }
 }
 

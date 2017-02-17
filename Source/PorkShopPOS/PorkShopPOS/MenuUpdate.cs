@@ -1,4 +1,9 @@
-﻿using System;
+﻿/* User: Jonathan Deschene
+* Date: 2017-01-20
+* Time: 2:45 PM
+* Purpose: Business layer class for MenuUpdate object
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +22,7 @@ namespace PorkShopPOS
         // instantiate a corresponding MenuItem data access object
         MenuUpdateDAO menuData;
 
-        // this constructor ensures that a corresponding data access object is created for every MenuItem y object
+        // this constructor ensures that a corresponding data access object is created for every MenuItem object
         public MenuUpdate()
         {
             menuData = new MenuUpdateDAO();

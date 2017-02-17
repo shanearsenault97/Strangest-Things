@@ -1,4 +1,10 @@
-﻿using System;
+﻿/* User: Jonathan Deschene
+* Date: 2017-01-20
+* Time: 2:45 PM
+* Purpose: Business layer class for Employee object
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,10 +28,10 @@ namespace PorkShopPOS
         private string empEndDate;
         private string empPosition;
 
-        // instantiate a corresponding BooksBusiness data access object
+        // instantiate a corresponding Employee data access object
         EmployeeDAO empData;
 
-        // this constructor ensures that a corresponding data access object is created for every BooksBusiness object
+        // this constructor ensures that a corresponding data access object is created for every Employee object
         public Employee()
         {
             empData = new EmployeeDAO();
@@ -134,12 +140,20 @@ namespace PorkShopPOS
             empData.Search(this);
         }
 
+<<<<<<< HEAD
         //Calls the SearchByName method from the data object layer
+=======
+        // calls the SearchbyName method from the data object layer
+>>>>>>> origin/UserAccessBranch
         public void SearchByName() {
             empData.SearchByName(this);
         }
 
+<<<<<<< HEAD
         //Calls the LoadEmployees method from the data object layer
+=======
+        // calls the LoadEmployees method from the data object layer
+>>>>>>> origin/UserAccessBranch
         public List<string> LoadEmployees() {
             List<string> lEmployees = new List<string>();
 

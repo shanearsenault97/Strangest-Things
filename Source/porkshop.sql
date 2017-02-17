@@ -297,7 +297,10 @@ INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
 INSERT INTO bar (barId, barDescription, barType, barPrice, barQOH) VALUES
 (NULL, 'Alabama Slammer', 'Cocktail', 7.5, 100);
 
-INSERT into `userAccess` VALUES(1, "M00001", "boss", "3");
+INSERT into `userAccess` 
+VALUES(1, "M00001", "boss", "3"),
+(2, "B00002", "pass", "2"),
+(3, "W00003", "word", "1");
 
 INSERT into `tables` (tableNum, tableSeats) VALUES("TBL001", "4"),
 ("TBL002", "4"),

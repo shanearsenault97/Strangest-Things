@@ -1,4 +1,10 @@
-﻿using System;
+﻿/* User: Jonathan Deschene
+* Date: 2017-01-20
+* Time: 2:45 PM
+* Purpose: Business layer class for ShowAll object
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,26 +26,19 @@ namespace PorkShopPOS
             showAllData = new ShowAllDAO();
         }
 
+        // calls the showAllEmployees from the data layer
         public void showAllEmployees(DataGridView dgv)
         {
             showAllData.showAllEmployees(dgv);
         }
 
-        public void showAllSalaries(DataGridView dgv)
-        {
-            showAllData.showAllSalaries(dgv);
-        }
-
-        public void showAllPayrolls(DataGridView dgv)
-        {
-            showAllData.showAllPayrolls(dgv);
-        }
-
+        // calls the showAllEmployees from the data layer
         public void showAllMenuItems(DataGridView dgv)
         {
             showAllData.showAllMenuItems(dgv);
         }
 
+        // calls the showAllEmployees from the data layer
         public void showAllReservations(DataGridView dgv)
         {
             showAllData.showAllReservations(dgv);

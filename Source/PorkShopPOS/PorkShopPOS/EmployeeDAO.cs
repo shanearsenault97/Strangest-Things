@@ -1,4 +1,10 @@
-﻿using System;
+﻿/* User: Jonathan Deschene
+* Date: 2017-01-20
+* Time: 2:45 PM
+* Purpose: Data layer class for Employee object
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -57,7 +63,7 @@ namespace PorkShopPOS
         }
 
         /* 
-        Function Name:    Add(BooksBusiness book)
+        Function Name:    Add(Employee emp)
         Version:          1
         Author:           Jonathan Deschene
         Description:      Adds a new employee entry to the database.
@@ -319,7 +325,6 @@ namespace PorkShopPOS
                     emp.EmpPosition = reader.GetValue(12).ToString();
                 }
 
-
                 reader.Close();
                 cmd.Dispose();
                 conn.Close();
@@ -361,6 +366,7 @@ namespace PorkShopPOS
                 MessageBox.Show("Connection to the database has failed.", "Database Connection Error");
             }
         }
+
         //Builds the query for the LoadEmployees method
         private String BuildLoadEmployeesQuery(Employee emp) {
             // create sql 

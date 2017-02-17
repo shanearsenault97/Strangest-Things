@@ -76,6 +76,13 @@
     <Compile Include="BillReport.Designer.cs">
       <DependentUpon>BillReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseCreation.cs" />
+    <Compile Include="UserAccessShowAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAccessShowAll.Designer.cs">
+      <DependentUpon>UserAccessShowAll.cs</DependentUpon>
+    </Compile>
     <Compile Include="SalaryHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +216,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserAccessShowAll.resx">
+      <DependentUpon>UserAccessShowAll.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
